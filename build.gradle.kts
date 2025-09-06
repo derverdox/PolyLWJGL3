@@ -6,6 +6,7 @@ import org.lwjgl.lwjgl
 plugins {
     id("java")
     id("org.lwjgl.plugin") version "0.0.35"
+    id("maven-publish")
 }
 
 group = "org.example"
@@ -39,4 +40,40 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+}
+
+group = "de.verdox.polylwjgl3"
+version = "1.0.0"
+java.sourceCompatibility = JavaVersion.VERSION_17
+
+java {
+    withSourcesJar()
+    withJavadocJar()
+}
+
+tasks.withType<Javadoc> {
+    // Warnings/Errors ignorieren
+    isFailOnError = false
+    //options.addStringOption("Xdoclint:none", "-quiet")
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("mavenJava") {
+            from(components["java"])
+
+            groupId = project.group.toString()
+            artifactId = "polylwjgl3"
+            version = project.version.toString()
+
+            pom {
+                name.set("PolyLWJGL3")
+                description.set("Unified OpenGL & OpenGL ES Accessors for LWJGL3")
+            }
+        }
+    }
+
+    repositories {
+        mavenLocal()
+    }
 }
