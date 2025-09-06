@@ -32,7 +32,7 @@ public interface glTexImage1D {
  *
  * @see <a href="https://docs.gl/gl4/glTexImage1D">Reference Page</a>
  */
-    public void glTexImage1D(int target, int level, int internalformat, int width, int border, int format, int type, @Nullable ByteBuffer pixels);
+    public void glTexImage1D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLint") int border, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") ByteBuffer pixels);
 
 /**
  * One-dimensional version of {@link #glTexImage2D TexImage2D}}.
@@ -48,7 +48,7 @@ public interface glTexImage1D {
  *
  * @see <a href="https://docs.gl/gl4/glTexImage1D">Reference Page</a>
  */
-    public void glTexImage1D(int target, int level, int internalformat, int width, int border, int format, int type, long pixels);
+    public void glTexImage1D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLint") int border, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void const *") long pixels);
 
 /**
  * One-dimensional version of {@link #glTexImage2D TexImage2D}}.
@@ -64,7 +64,7 @@ public interface glTexImage1D {
  *
  * @see <a href="https://docs.gl/gl4/glTexImage1D">Reference Page</a>
  */
-    public void glTexImage1D(int target, int level, int internalformat, int width, int border, int format, int type, @Nullable ShortBuffer pixels);
+    public void glTexImage1D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLint") int border, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") ShortBuffer pixels);
 
 /**
  * One-dimensional version of {@link #glTexImage2D TexImage2D}}.
@@ -80,7 +80,7 @@ public interface glTexImage1D {
  *
  * @see <a href="https://docs.gl/gl4/glTexImage1D">Reference Page</a>
  */
-    public void glTexImage1D(int target, int level, int internalformat, int width, int border, int format, int type, @Nullable IntBuffer pixels);
+    public void glTexImage1D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLint") int border, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") IntBuffer pixels);
 
 /**
  * One-dimensional version of {@link #glTexImage2D TexImage2D}}.
@@ -96,7 +96,7 @@ public interface glTexImage1D {
  *
  * @see <a href="https://docs.gl/gl4/glTexImage1D">Reference Page</a>
  */
-    public void glTexImage1D(int target, int level, int internalformat, int width, int border, int format, int type, @Nullable FloatBuffer pixels);
+    public void glTexImage1D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLint") int border, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") FloatBuffer pixels);
 
 /**
  * One-dimensional version of {@link #glTexImage2D TexImage2D}}.
@@ -112,34 +112,34 @@ public interface glTexImage1D {
  *
  * @see <a href="https://docs.gl/gl4/glTexImage1D">Reference Page</a>
  */
-    public void glTexImage1D(int target, int level, int internalformat, int width, int border, int format, int type, @Nullable DoubleBuffer pixels);
+    public void glTexImage1D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLint") int border, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") DoubleBuffer pixels);
 
 /**
  * Array version of: {@link #glTexImage1D TexImage1D}
  *
  * @see <a href="https://docs.gl/gl4/glTexImage1D">Reference Page</a>
  */
-    public void glTexImage1D(int target, int level, int internalformat, int width, int border, int format, int type, @Nullable short[] pixels);
+    public void glTexImage1D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLint") int border, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") short[] pixels);
 
 /**
  * Array version of: {@link #glTexImage1D TexImage1D}
  *
  * @see <a href="https://docs.gl/gl4/glTexImage1D">Reference Page</a>
  */
-    public void glTexImage1D(int target, int level, int internalformat, int width, int border, int format, int type, @Nullable int[] pixels);
+    public void glTexImage1D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLint") int border, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") int[] pixels);
 
 /**
  * Array version of: {@link #glTexImage1D TexImage1D}
  *
  * @see <a href="https://docs.gl/gl4/glTexImage1D">Reference Page</a>
  */
-    public void glTexImage1D(int target, int level, int internalformat, int width, int border, int format, int type, @Nullable float[] pixels);
+    public void glTexImage1D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLint") int border, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") float[] pixels);
 
 /**
  * Array version of: {@link #glTexImage1D TexImage1D}
  *
  * @see <a href="https://docs.gl/gl4/glTexImage1D">Reference Page</a>
  */
-    public void glTexImage1D(int target, int level, int internalformat, int width, int border, int format, int type, @Nullable double[] pixels);
+    public void glTexImage1D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLint") int border, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") double[] pixels);
 
 }

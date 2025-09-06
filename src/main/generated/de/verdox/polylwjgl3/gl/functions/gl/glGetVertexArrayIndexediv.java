@@ -30,13 +30,13 @@ public interface glGetVertexArrayIndexediv {
  *
  * @see <a href="https://docs.gl/gl4/glGetVertexArrayIndexed">Reference Page</a>
  */
-    public void glGetVertexArrayIndexediv(int vaobj, int index, int pname, IntBuffer param);
+    public void glGetVertexArrayIndexediv(@NativeType("GLuint") int vaobj, @NativeType("GLuint") int index, @NativeType("GLenum") int pname, @NativeType("GLint *") IntBuffer param);
 
 /**
  * Array version of: {@link #glGetVertexArrayIndexediv GetVertexArrayIndexediv}
  *
  * @see <a href="https://docs.gl/gl4/glGetVertexArrayIndexed">Reference Page</a>
  */
-    public void glGetVertexArrayIndexediv(int vaobj, int index, int pname, int[] param);
+    public void glGetVertexArrayIndexediv(@NativeType("GLuint") int vaobj, @NativeType("GLuint") int index, @NativeType("GLenum") int pname, @NativeType("GLint *") int[] param);
 
 }

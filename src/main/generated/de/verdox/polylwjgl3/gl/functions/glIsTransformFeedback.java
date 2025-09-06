@@ -19,6 +19,7 @@ public interface glIsTransformFeedback {
 /**
  * <a href="https://docs.gl/es3/glIsTransformFeedback">Reference Page</a>
  */
-    public boolean glIsTransformFeedback(int id);
+@NativeType("GLboolean")
+    public boolean glIsTransformFeedback(@NativeType("GLuint") int id);
 
 }

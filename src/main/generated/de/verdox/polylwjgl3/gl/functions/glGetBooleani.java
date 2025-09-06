@@ -18,6 +18,7 @@ public interface glGetBooleani {
 /**
  * <a href="https://docs.gl/es3/glGetBooleani_v">Reference Page</a>
  */
-    public boolean glGetBooleani(int target, int index);
+@NativeType("void")
+    public boolean glGetBooleani(@NativeType("GLenum") int target, @NativeType("GLuint") int index);
 
 }

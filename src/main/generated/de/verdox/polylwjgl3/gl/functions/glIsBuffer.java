@@ -16,6 +16,7 @@ public interface glIsBuffer {
 /**
  * <a href="https://docs.gl/es3/glIsBuffer">Reference Page</a>
  */
-    public boolean glIsBuffer(int buffer);
+@NativeType("GLboolean")
+    public boolean glIsBuffer(@NativeType("GLuint") int buffer);
 
 }

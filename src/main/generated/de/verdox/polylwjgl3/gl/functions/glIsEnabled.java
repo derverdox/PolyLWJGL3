@@ -16,6 +16,7 @@ public interface glIsEnabled {
 /**
  * <a href="https://docs.gl/es3/glIsEnabled">Reference Page</a>
  */
-    public boolean glIsEnabled(int cap);
+@NativeType("GLboolean")
+    public boolean glIsEnabled(@NativeType("GLenum") int cap);
 
 }

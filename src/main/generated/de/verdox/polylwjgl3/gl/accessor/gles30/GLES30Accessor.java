@@ -133,6 +133,104 @@ import org.lwjgl.system.JNI.*;
 import org.lwjgl.system.MemoryStack.*;
 import org.lwjgl.system.MemoryUtil.*;
 
+/**
+ * OpenGL ES 3.0 Accessor — 3D/immutable textures, integer attributes & uniforms, MRT,
+ * VAOs, transform feedback, instancing, queries & sync objects, buffer mapping/ranges,
+ * sampler objects, program binaries, and internal-format queries.
+ *
+ * <p>Extends {@link GLES20Accessor} with the major ES 3.0 feature set that aligns the
+ * mobile API with modern desktop GL concepts while remaining tile-renderer friendly.</p>
+ *
+ * <h2>Core Additions & Introspection</h2>
+ * <ul>
+ *   <li>{@code glGetStringi} — Indexed string queries (e.g., extension list).</li>
+ *   <li>{@code glReadBuffer} — Select read buffer for pixel transfers.</li>
+ *   <li>{@code glDrawRangeElements} — Hint min/max index to optimize indexed draws.</li>
+ * </ul>
+ *
+ * <h2>Textures</h2>
+ * <ul>
+ *   <li>{@code glTexImage3D}, {@code glTexSubImage3D}, {@code glCopyTexSubImage3D} —
+ *       True 3D textures and sub-region updates/copies.</li>
+ *   <li>{@code glCompressedTexImage3D}, {@code glCompressedTexSubImage3D} — Compressed 3D texture uploads.</li>
+ *   <li>{@code glTexStorage2D}, {@code glTexStorage3D} — Immutable texture storage (all mip levels allocated up front).</li>
+ *   <li>{@code glGetInternalformativ}/{@code glGetInternalformati} — Internal-format capabilities/limits.</li>
+ * </ul>
+ *
+ * <h2>Multiple Render Targets & Framebuffers</h2>
+ * <ul>
+ *   <li>{@code glDrawBuffers} — Multiple color attachments (MRT).</li>
+ *   <li>{@code glBlitFramebuffer} — Resolve/copy rectangles between FBOs.</li>
+ *   <li>{@code glRenderbufferStorageMultisample} — Multisample RBO storage.</li>
+ *   <li>{@code glFramebufferTextureLayer} — Attach a specific texture layer to FBOs.</li>
+ *   <li>{@code glInvalidateFramebuffer}, {@code glInvalidateSubFramebuffer} — Content discard hints for tilers.</li>
+ * </ul>
+ *
+ * <h2>Vertex Arrays & Attributes</h2>
+ * <ul>
+ *   <li>{@code glGenVertexArrays}, {@code glBindVertexArray}, {@code glDeleteVertexArrays}, {@code glIsVertexArray} — VAOs.</li>
+ *   <li>{@code glVertexAttribIPointer} — Integer attribute arrays (no normalization/float conversion).</li>
+ *   <li>{@code glVertexAttribI4i/ui}, {@code glVertexAttribI4iv/uiv} — Constant integer attribute values.</li>
+ *   <li>{@code glGetVertexAttribIiv/Iuiv}, {@code glGetVertexAttribIi/Iui} — Integer attribute state queries.</li>
+ *   <li>{@code glVertexAttribDivisor} — Per-instance step rate for instanced draws.</li>
+ * </ul>
+ *
+ * <h2>Instanced Rendering</h2>
+ * <ul>
+ *   <li>{@code glDrawArraysInstanced}, {@code glDrawElementsInstanced} — Draw many instances with a single call.</li>
+ * </ul>
+ *
+ * <h2>Transform Feedback</h2>
+ * <ul>
+ *   <li>{@code glBeginTransformFeedback}, {@code glEndTransformFeedback} — Capture shader outputs.</li>
+ *   <li>{@code glTransformFeedbackVaryings}, {@code glGetTransformFeedbackVarying} — Select/query captured varyings.</li>
+ *   <li>{@code glBindTransformFeedback}, {@code glGenTransformFeedbacks}, {@code glDeleteTransformFeedbacks},
+ *       {@code glIsTransformFeedback}, {@code glPauseTransformFeedback}, {@code glResumeTransformFeedback} — TF objects.</li>
+ * </ul>
+ *
+ * <h2>Uniforms & Uniform Blocks</h2>
+ * <ul>
+ *   <li>{@code glUniformMatrix* x *fv} — Non-square matrix uploads (2x3, 3x2, 2x4, 4x2, 3x4, 4x3).</li>
+ *   <li>{@code glUniform1/2/3/4ui}, {@code glUniform1/2/3/4uiv} — Unsigned-integer uniforms.</li>
+ *   <li>{@code glGetUniformuiv}/{@code glGetUniformui} — Read back unsigned-integer uniforms.</li>
+ *   <li>{@code glGetUniformIndices}, {@code glGetActiveUniformsiv}, {@code glGetUniformBlockIndex},
+ *       {@code glGetActiveUniformBlockiv}/{@code i}, {@code glGetActiveUniformBlockName},
+ *       {@code glUniformBlockBinding} — UBO discovery and binding.</li>
+ *   <li>{@code glBindBufferBase}, {@code glBindBufferRange} — Bind buffers to indexed UBO/TF binding points.</li>
+ *   <li>{@code glGetFragDataLocation} — Query fragment shader output location.</li>
+ * </ul>
+ *
+ * <h2>Buffer Objects: Mapping, Ranges & Copies</h2>
+ * <ul>
+ *   <li>{@code glMapBufferRange}, {@code glFlushMappedBufferRange}, {@code glUnmapBuffer} — Fine-grained mapping with access flags.</li>
+ *   <li>{@code glCopyBufferSubData} — GPU-to-GPU buffer copies.</li>
+ *   <li>{@code glGetBufferPointerv}/{@code glGetBufferPointer} — Query mapped pointer.</li>
+ *   <li>{@code glGetBufferParameteri64v}/{@code glGetBufferParameteri64} — 64-bit buffer parameter queries.</li>
+ * </ul>
+ *
+ * <h2>Queries & Synchronization</h2>
+ * <ul>
+ *   <li>{@code glGenQueries}, {@code glDeleteQueries}, {@code glIsQuery}, {@code glBeginQuery}, {@code glEndQuery} — Query objects.</li>
+ *   <li>{@code glGetQueryiv}/{@code glGetQueryi}, {@code glGetQueryObjectuiv}/{@code glGetQueryObjectui} — Query status/results.</li>
+ *   <li>{@code glFenceSync}, {@code glIsSync}, {@code glDeleteSync}, {@code glClientWaitSync}, {@code glWaitSync},
+ *       {@code glGetSynciv}/{@code glGetSynci} — Fence sync objects for explicit CPU/GPU coordination.</li>
+ *   <li>{@code glGetIntegeri_v}/{@code glGetIntegeri}, {@code glGetInteger64v}/{@code glGetInteger64},
+ *       {@code glGetInteger64i_v}/{@code glGetInteger64i} — Indexed and 64-bit state queries.</li>
+ * </ul>
+ *
+ * <h2>Sampler Objects</h2>
+ * <ul>
+ *   <li>{@code glGenSamplers}, {@code glDeleteSamplers}, {@code glIsSampler}, {@code glBindSampler} — Sampler lifecycle/binding.</li>
+ *   <li>{@code glSamplerParameteri/f}, {@code glSamplerParameteriv/fv} — Sampling parameters (wrap, filter, LOD, compare).</li>
+ *   <li>{@code glGetSamplerParameter*i/f/v} — Sampler state queries.</li>
+ * </ul>
+ *
+ * <h2>Program Binaries</h2>
+ * <ul>
+ *   <li>{@code glGetProgramBinary}, {@code glProgramBinary}, {@code glProgramParameteri} —
+ *       Save/load program binaries (e.g., for faster startup).</li>
+ * </ul>
+ */
 public interface GLES30Accessor extends GLES20Accessor, glReadBuffer, glDrawRangeElements, glTexImage3D, glTexSubImage3D, glCopyTexSubImage3D, glCompressedTexImage3D, glCompressedTexSubImage3D, glGenQueries, glDeleteQueries, glIsQuery, glBeginQuery, glEndQuery, glGetQueryiv, glGetQueryi, glGetQueryObjectuiv, glGetQueryObjectui, glUnmapBuffer, glGetBufferPointerv, glGetBufferPointer, glDrawBuffers, glUniformMatrix2x3fv, glUniformMatrix3x2fv, glUniformMatrix2x4fv, glUniformMatrix4x2fv, glUniformMatrix3x4fv, glUniformMatrix4x3fv, glBlitFramebuffer, glRenderbufferStorageMultisample, glFramebufferTextureLayer, glMapBufferRange, glFlushMappedBufferRange, glBindVertexArray, glDeleteVertexArrays, glGenVertexArrays, glIsVertexArray, glGetIntegeri_v, glGetIntegeri, glBeginTransformFeedback, glEndTransformFeedback, glBindBufferRange, glBindBufferBase, glTransformFeedbackVaryings, glGetTransformFeedbackVarying, glVertexAttribIPointer, glGetVertexAttribIiv, glGetVertexAttribIi, glGetVertexAttribIuiv, glGetVertexAttribIui, glVertexAttribI4i, glVertexAttribI4ui, glVertexAttribI4iv, glVertexAttribI4uiv, glGetUniformuiv, glGetUniformui, glGetFragDataLocation, glUniform1ui, glUniform2ui, glUniform3ui, glUniform4ui, glUniform1uiv, glUniform2uiv, glUniform3uiv, glUniform4uiv, glClearBufferiv, glClearBufferuiv, glClearBufferfv, glClearBufferfi, glGetStringi, glCopyBufferSubData, glGetUniformIndices, glGetActiveUniformsiv, glGetUniformBlockIndex, glGetActiveUniformBlockiv, glGetActiveUniformBlocki, glGetActiveUniformBlockName, glUniformBlockBinding, glDrawArraysInstanced, glDrawElementsInstanced, glFenceSync, glIsSync, glDeleteSync, glClientWaitSync, glWaitSync, glGetInteger64v, glGetInteger64, glGetSynciv, glGetSynci, glGetInteger64i_v, glGetInteger64i, glGetBufferParameteri64v, glGetBufferParameteri64, glGenSamplers, glDeleteSamplers, glIsSampler, glBindSampler, glSamplerParameteri, glSamplerParameteriv, glSamplerParameterf, glSamplerParameterfv, glGetSamplerParameteriv, glGetSamplerParameteri, glGetSamplerParameterfv, glGetSamplerParameterf, glVertexAttribDivisor, glBindTransformFeedback, glDeleteTransformFeedbacks, glGenTransformFeedbacks, glIsTransformFeedback, glPauseTransformFeedback, glResumeTransformFeedback, glGetProgramBinary, glProgramBinary, glProgramParameteri, glInvalidateFramebuffer, glInvalidateSubFramebuffer, glTexStorage2D, glTexStorage3D, glGetInternalformativ, glGetInternalformati {
 
 }

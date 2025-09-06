@@ -26,13 +26,13 @@ public interface glGetActiveSubroutineUniformiv {
  *
  * @see <a href="https://docs.gl/gl4/glGetActiveSubroutineUniform">Reference Page</a>
  */
-    public void glGetActiveSubroutineUniformiv(int program, int shadertype, int index, int pname, IntBuffer values);
+    public void glGetActiveSubroutineUniformiv(@NativeType("GLuint") int program, @NativeType("GLenum") int shadertype, @NativeType("GLuint") int index, @NativeType("GLenum") int pname, @NativeType("GLint *") IntBuffer values);
 
 /**
  * Array version of: {@link #glGetActiveSubroutineUniformiv GetActiveSubroutineUniformiv}
  *
  * @see <a href="https://docs.gl/gl4/glGetActiveSubroutineUniform">Reference Page</a>
  */
-    public void glGetActiveSubroutineUniformiv(int program, int shadertype, int index, int pname, int[] values);
+    public void glGetActiveSubroutineUniformiv(@NativeType("GLuint") int program, @NativeType("GLenum") int shadertype, @NativeType("GLuint") int index, @NativeType("GLenum") int pname, @NativeType("GLint *") int[] values);
 
 }

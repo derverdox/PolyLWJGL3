@@ -21,6 +21,6 @@ public interface glFogf {
  *
  * @see <a href="https://docs.gl/gl3/glFogf">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glFogf(int pname, float param);
+    public void glFogf(@NativeType("GLenum") int pname, @NativeType("GLfloat") float param);
 
 }

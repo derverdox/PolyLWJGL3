@@ -22,6 +22,6 @@ public interface glScissorIndexed {
  *
  * @see <a href="https://docs.gl/gl4/glScissorIndexed">Reference Page</a>
  */
-    public void glScissorIndexed(int index, int left, int bottom, int width, int height);
+    public void glScissorIndexed(@NativeType("GLuint") int index, @NativeType("GLint") int left, @NativeType("GLint") int bottom, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height);
 
 }

@@ -23,6 +23,6 @@ public interface glRectf {
  *
  * @see <a href="https://docs.gl/gl3/glRectf">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glRectf(float x1, float y1, float x2, float y2);
+    public void glRectf(@NativeType("GLfloat") float x1, @NativeType("GLfloat") float y1, @NativeType("GLfloat") float x2, @NativeType("GLfloat") float y2);
 
 }

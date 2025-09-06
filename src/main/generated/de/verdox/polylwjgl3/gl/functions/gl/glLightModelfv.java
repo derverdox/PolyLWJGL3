@@ -26,13 +26,13 @@ public interface glLightModelfv {
  *
  * @see <a href="https://docs.gl/gl3/glLightModel">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glLightModelfv(int pname, FloatBuffer params);
+    public void glLightModelfv(@NativeType("GLenum") int pname, @NativeType("GLfloat const *") FloatBuffer params);
 
 /**
  * Array version of: {@link #glLightModelfv LightModelfv}
  *
  * @see <a href="https://docs.gl/gl3/glLightModel">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glLightModelfv(int pname, float[] params);
+    public void glLightModelfv(@NativeType("GLenum") int pname, @NativeType("GLfloat const *") float[] params);
 
 }

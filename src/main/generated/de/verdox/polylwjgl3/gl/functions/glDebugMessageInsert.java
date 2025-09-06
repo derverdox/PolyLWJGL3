@@ -42,7 +42,7 @@ public interface glDebugMessageInsert {
  *
  * @see <a href="https://docs.gl/es3/glDebugMessageInsert">Reference Page</a>
  */
-    public void glDebugMessageInsert(int source, int type, int id, int severity, ByteBuffer message);
+    public void glDebugMessageInsert(@NativeType("GLenum") int source, @NativeType("GLenum") int type, @NativeType("GLuint") int id, @NativeType("GLenum") int severity, @NativeType("GLchar const *") ByteBuffer message);
 
 /**
  * This function can be called by applications and third-party libraries to generate their own messages, such as ones containing timestamp information or
@@ -64,6 +64,6 @@ public interface glDebugMessageInsert {
  *
  * @see <a href="https://docs.gl/es3/glDebugMessageInsert">Reference Page</a>
  */
-    public void glDebugMessageInsert(int source, int type, int id, int severity, CharSequence message);
+    public void glDebugMessageInsert(@NativeType("GLenum") int source, @NativeType("GLenum") int type, @NativeType("GLuint") int id, @NativeType("GLenum") int severity, @NativeType("GLchar const *") CharSequence message);
 
 }

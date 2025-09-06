@@ -22,6 +22,6 @@ public interface glTranslated {
  *
  * @see <a href="https://docs.gl/gl3/glTranslated">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glTranslated(double x, double y, double z);
+    public void glTranslated(@NativeType("GLdouble") double x, @NativeType("GLdouble") double y, @NativeType("GLdouble") double z);
 
 }

@@ -19,6 +19,7 @@ public interface glGetBufferParameteri64 {
 /**
  * <a href="https://docs.gl/es3/glGetBufferParameter">Reference Page</a>
  */
-    public long glGetBufferParameteri64(int target, int pname);
+@NativeType("void")
+    public long glGetBufferParameteri64(@NativeType("GLenum") int target, @NativeType("GLenum") int pname);
 
 }

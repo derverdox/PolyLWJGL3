@@ -22,6 +22,6 @@ public interface glFramebufferTexture1D {
  *
  * @see <a href="https://docs.gl/gl4/glFramebufferTexture1D">Reference Page</a>
  */
-    public void glFramebufferTexture1D(int target, int attachment, int textarget, int texture, int level);
+    public void glFramebufferTexture1D(@NativeType("GLenum") int target, @NativeType("GLenum") int attachment, @NativeType("GLenum") int textarget, @NativeType("GLuint") int texture, @NativeType("GLint") int level);
 
 }

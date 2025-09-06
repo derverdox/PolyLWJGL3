@@ -25,6 +25,6 @@ public interface glNamedRenderbufferStorageMultisample {
  *
  * @see <a href="https://docs.gl/gl4/glRenderbufferStorageMultisample">Reference Page</a>
  */
-    public void glNamedRenderbufferStorageMultisample(int renderbuffer, int samples, int internalformat, int width, int height);
+    public void glNamedRenderbufferStorageMultisample(@NativeType("GLuint") int renderbuffer, @NativeType("GLsizei") int samples, @NativeType("GLenum") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height);
 
 }

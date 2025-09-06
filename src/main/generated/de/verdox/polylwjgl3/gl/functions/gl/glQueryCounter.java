@@ -20,6 +20,6 @@ public interface glQueryCounter {
  *
  * @see <a href="https://docs.gl/gl4/glQueryCounter">Reference Page</a>
  */
-    public void glQueryCounter(int id, int target);
+    public void glQueryCounter(@NativeType("GLuint") int id, @NativeType("GLenum") int target);
 
 }

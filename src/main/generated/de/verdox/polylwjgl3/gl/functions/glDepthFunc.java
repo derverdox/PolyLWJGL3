@@ -16,6 +16,6 @@ public interface glDepthFunc {
 /**
  * <a href="https://docs.gl/es3/glDepthFunc">Reference Page</a>
  */
-    public void glDepthFunc(int func);
+    public void glDepthFunc(@NativeType("GLenum") int func);
 
 }

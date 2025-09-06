@@ -18,6 +18,7 @@ public interface glGetUniformd {
  *
  * @see <a href="https://docs.gl/gl4/glGetUniform">Reference Page</a>
  */
-    public double glGetUniformd(int program, int location);
+@NativeType("void")
+    public double glGetUniformd(@NativeType("GLuint") int program, @NativeType("GLint") int location);
 
 }

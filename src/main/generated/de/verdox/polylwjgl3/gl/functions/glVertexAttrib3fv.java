@@ -18,13 +18,13 @@ public interface glVertexAttrib3fv {
 /**
  * <a href="https://docs.gl/es3/glVertexAttrib">Reference Page</a>
  */
-    public void glVertexAttrib3fv(int index, FloatBuffer v);
+    public void glVertexAttrib3fv(@NativeType("GLuint") int index, @NativeType("GLfloat const *") FloatBuffer v);
 
 /**
  * Array version of: {@link #glVertexAttrib3fv VertexAttrib3fv}
  *
  * @see <a href="https://docs.gl/es3/glVertexAttrib">Reference Page</a>
  */
-    public void glVertexAttrib3fv(int index, float[] v);
+    public void glVertexAttrib3fv(@NativeType("GLuint") int index, @NativeType("GLfloat const *") float[] v);
 
 }

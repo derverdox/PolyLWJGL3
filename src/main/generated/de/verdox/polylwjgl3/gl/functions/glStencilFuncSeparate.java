@@ -16,6 +16,6 @@ public interface glStencilFuncSeparate {
 /**
  * <a href="https://docs.gl/es3/glStencilFuncSeparate">Reference Page</a>
  */
-    public void glStencilFuncSeparate(int face, int func, int ref, int mask);
+    public void glStencilFuncSeparate(@NativeType("GLenum") int face, @NativeType("GLenum") int func, @NativeType("GLint") int ref, @NativeType("GLuint") int mask);
 
 }

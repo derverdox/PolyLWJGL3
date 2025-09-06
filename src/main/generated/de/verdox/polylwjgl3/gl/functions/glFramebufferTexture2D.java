@@ -16,6 +16,6 @@ public interface glFramebufferTexture2D {
 /**
  * <a href="https://docs.gl/es3/glFramebufferTexture2D">Reference Page</a>
  */
-    public void glFramebufferTexture2D(int target, int attachment, int textarget, int texture, int level);
+    public void glFramebufferTexture2D(@NativeType("GLenum") int target, @NativeType("GLenum") int attachment, @NativeType("GLenum") int textarget, @NativeType("GLuint") int texture, @NativeType("GLint") int level);
 
 }

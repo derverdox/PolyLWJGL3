@@ -21,13 +21,13 @@ public interface glClearBufferiv {
 /**
  * <a href="https://docs.gl/es3/glClearBuffer">Reference Page</a>
  */
-    public void glClearBufferiv(int buffer, int drawbuffer, IntBuffer value);
+    public void glClearBufferiv(@NativeType("GLenum") int buffer, @NativeType("GLint") int drawbuffer, @NativeType("GLint const *") IntBuffer value);
 
 /**
  * Array version of: {@link #glClearBufferiv ClearBufferiv}
  *
  * @see <a href="https://docs.gl/es3/glClearBuffer">Reference Page</a>
  */
-    public void glClearBufferiv(int buffer, int drawbuffer, int[] value);
+    public void glClearBufferiv(@NativeType("GLenum") int buffer, @NativeType("GLint") int drawbuffer, @NativeType("GLint const *") int[] value);
 
 }

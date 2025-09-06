@@ -30,13 +30,13 @@ public interface glGetTransformFeedbacki64_v {
  *
  * @see <a href="https://docs.gl/gl4/glGetTransformFeedbacki64_v">Reference Page</a>
  */
-    public void glGetTransformFeedbacki64_v(int xfb, int pname, int index, LongBuffer param);
+    public void glGetTransformFeedbacki64_v(@NativeType("GLuint") int xfb, @NativeType("GLenum") int pname, @NativeType("GLuint") int index, @NativeType("GLint64 *") LongBuffer param);
 
 /**
  * Array version of: {@link #glGetTransformFeedbacki64_v GetTransformFeedbacki64_v}
  *
  * @see <a href="https://docs.gl/gl4/glGetTransformFeedbacki64_v">Reference Page</a>
  */
-    public void glGetTransformFeedbacki64_v(int xfb, int pname, int index, long[] param);
+    public void glGetTransformFeedbacki64_v(@NativeType("GLuint") int xfb, @NativeType("GLenum") int pname, @NativeType("GLuint") int index, @NativeType("GLint64 *") long[] param);
 
 }

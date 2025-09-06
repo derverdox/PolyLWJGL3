@@ -25,7 +25,7 @@ public interface glGetPolygonStipple {
  *
  * @see <a href="https://docs.gl/gl3/glGetPolygonStipple">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glGetPolygonStipple(ByteBuffer pattern);
+    public void glGetPolygonStipple(@NativeType("void *") ByteBuffer pattern);
 
 /**
  * Obtains the polygon stipple.
@@ -34,6 +34,6 @@ public interface glGetPolygonStipple {
  *
  * @see <a href="https://docs.gl/gl3/glGetPolygonStipple">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glGetPolygonStipple(long pattern);
+    public void glGetPolygonStipple(@NativeType("void *") long pattern);
 
 }

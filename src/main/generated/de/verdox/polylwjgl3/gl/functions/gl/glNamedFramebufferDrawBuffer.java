@@ -23,6 +23,6 @@ public interface glNamedFramebufferDrawBuffer {
  *
  * @see <a href="https://docs.gl/gl4/glFramebufferDrawBuffer">Reference Page</a>
  */
-    public void glNamedFramebufferDrawBuffer(int framebuffer, int buf);
+    public void glNamedFramebufferDrawBuffer(@NativeType("GLuint") int framebuffer, @NativeType("GLenum") int buf);
 
 }

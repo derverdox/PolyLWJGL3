@@ -24,6 +24,7 @@ public interface glGetNamedFramebufferAttachmentParameteri {
  *
  * @see <a href="https://docs.gl/gl4/glGetFramebufferAttachmentParameter">Reference Page</a>
  */
-    public int glGetNamedFramebufferAttachmentParameteri(int framebuffer, int attachment, int pname);
+@NativeType("void")
+    public int glGetNamedFramebufferAttachmentParameteri(@NativeType("GLuint") int framebuffer, @NativeType("GLenum") int attachment, @NativeType("GLenum") int pname);
 
 }

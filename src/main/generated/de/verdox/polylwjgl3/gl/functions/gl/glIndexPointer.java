@@ -29,7 +29,7 @@ public interface glIndexPointer {
  *
  * @see <a href="https://docs.gl/gl3/glIndexPointer">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glIndexPointer(int type, int stride, ByteBuffer pointer);
+    public void glIndexPointer(@NativeType("GLenum") int type, @NativeType("GLsizei") int stride, @NativeType("void const *") ByteBuffer pointer);
 
 /**
  * Specifies the location and organization of a color index array.
@@ -40,7 +40,7 @@ public interface glIndexPointer {
  *
  * @see <a href="https://docs.gl/gl3/glIndexPointer">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glIndexPointer(int type, int stride, long pointer);
+    public void glIndexPointer(@NativeType("GLenum") int type, @NativeType("GLsizei") int stride, @NativeType("void const *") long pointer);
 
 /**
  * Specifies the location and organization of a color index array.
@@ -50,7 +50,7 @@ public interface glIndexPointer {
  *
  * @see <a href="https://docs.gl/gl3/glIndexPointer">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glIndexPointer(int stride, ByteBuffer pointer);
+    public void glIndexPointer(@NativeType("GLsizei") int stride, @NativeType("void const *") ByteBuffer pointer);
 
 /**
  * Specifies the location and organization of a color index array.
@@ -60,7 +60,7 @@ public interface glIndexPointer {
  *
  * @see <a href="https://docs.gl/gl3/glIndexPointer">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glIndexPointer(int stride, ShortBuffer pointer);
+    public void glIndexPointer(@NativeType("GLsizei") int stride, @NativeType("void const *") ShortBuffer pointer);
 
 /**
  * Specifies the location and organization of a color index array.
@@ -70,6 +70,6 @@ public interface glIndexPointer {
  *
  * @see <a href="https://docs.gl/gl3/glIndexPointer">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glIndexPointer(int stride, IntBuffer pointer);
+    public void glIndexPointer(@NativeType("GLsizei") int stride, @NativeType("void const *") IntBuffer pointer);
 
 }

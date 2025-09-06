@@ -27,6 +27,6 @@ public interface glCopyTextureSubImage1D {
  *
  * @see <a href="https://docs.gl/gl4/glCopyTextureSubImage1D">Reference Page</a>
  */
-    public void glCopyTextureSubImage1D(int texture, int level, int xoffset, int x, int y, int width);
+    public void glCopyTextureSubImage1D(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width);
 
 }

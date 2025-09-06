@@ -16,11 +16,11 @@ public class GL33AccessorImpl extends GL32AccessorImpl implements GL33Accessor {
         org.lwjgl.opengl.GL33.nglBindFragDataLocationIndexed(program, colorNumber, index, name);
     }
 
-    @Override public void glBindFragDataLocationIndexed(int program, int colorNumber, int index, ByteBuffer name) {
+    @Override public void glBindFragDataLocationIndexed(@NativeType("GLuint") int program, @NativeType("GLuint") int colorNumber, @NativeType("GLuint") int index, @NativeType("GLchar const *") ByteBuffer name) {
         org.lwjgl.opengl.GL33.glBindFragDataLocationIndexed(program, colorNumber, index, name);
     }
 
-    @Override public void glBindFragDataLocationIndexed(int program, int colorNumber, int index, CharSequence name) {
+    @Override public void glBindFragDataLocationIndexed(@NativeType("GLuint") int program, @NativeType("GLuint") int colorNumber, @NativeType("GLuint") int index, @NativeType("GLchar const *") CharSequence name) {
         org.lwjgl.opengl.GL33.glBindFragDataLocationIndexed(program, colorNumber, index, name);
     }
 
@@ -28,11 +28,13 @@ public class GL33AccessorImpl extends GL32AccessorImpl implements GL33Accessor {
         return org.lwjgl.opengl.GL33.nglGetFragDataIndex(program, name);
     }
 
-    @Override public int glGetFragDataIndex(int program, ByteBuffer name) {
+@NativeType("GLint")
+    @Override public int glGetFragDataIndex(@NativeType("GLuint") int program, @NativeType("GLchar const *") ByteBuffer name) {
         return org.lwjgl.opengl.GL33.glGetFragDataIndex(program, name);
     }
 
-    @Override public int glGetFragDataIndex(int program, CharSequence name) {
+@NativeType("GLint")
+    @Override public int glGetFragDataIndex(@NativeType("GLuint") int program, @NativeType("GLchar const *") CharSequence name) {
         return org.lwjgl.opengl.GL33.glGetFragDataIndex(program, name);
     }
 
@@ -40,15 +42,16 @@ public class GL33AccessorImpl extends GL32AccessorImpl implements GL33Accessor {
         org.lwjgl.opengl.GL33.nglGenSamplers(count, samplers);
     }
 
-    @Override public void glGenSamplers(IntBuffer samplers) {
+    @Override public void glGenSamplers(@NativeType("GLuint *") IntBuffer samplers) {
         org.lwjgl.opengl.GL33.glGenSamplers(samplers);
     }
 
+@NativeType("void")
     @Override public int glGenSamplers() {
         return org.lwjgl.opengl.GL33.glGenSamplers();
     }
 
-    @Override public void glGenSamplers(int[] samplers) {
+    @Override public void glGenSamplers(@NativeType("GLuint *") int[] samplers) {
         org.lwjgl.opengl.GL33.glGenSamplers(samplers);
     }
 
@@ -56,31 +59,32 @@ public class GL33AccessorImpl extends GL32AccessorImpl implements GL33Accessor {
         org.lwjgl.opengl.GL33.nglDeleteSamplers(count, samplers);
     }
 
-    @Override public void glDeleteSamplers(IntBuffer samplers) {
+    @Override public void glDeleteSamplers(@NativeType("GLuint const *") IntBuffer samplers) {
         org.lwjgl.opengl.GL33.glDeleteSamplers(samplers);
     }
 
-    @Override public void glDeleteSamplers(int sampler) {
+    @Override public void glDeleteSamplers(@NativeType("GLuint const *") int sampler) {
         org.lwjgl.opengl.GL33.glDeleteSamplers(sampler);
     }
 
-    @Override public void glDeleteSamplers(int[] samplers) {
+    @Override public void glDeleteSamplers(@NativeType("GLuint const *") int[] samplers) {
         org.lwjgl.opengl.GL33.glDeleteSamplers(samplers);
     }
 
-    @Override public boolean glIsSampler(int sampler) {
+@NativeType("GLboolean")
+    @Override public boolean glIsSampler(@NativeType("GLuint") int sampler) {
         return org.lwjgl.opengl.GL33.glIsSampler(sampler);
     }
 
-    @Override public void glBindSampler(int unit, int sampler) {
+    @Override public void glBindSampler(@NativeType("GLuint") int unit, @NativeType("GLuint") int sampler) {
         org.lwjgl.opengl.GL33.glBindSampler(unit, sampler);
     }
 
-    @Override public void glSamplerParameteri(int sampler, int pname, int param) {
+    @Override public void glSamplerParameteri(@NativeType("GLuint") int sampler, @NativeType("GLenum") int pname, @NativeType("GLint") int param) {
         org.lwjgl.opengl.GL33.glSamplerParameteri(sampler, pname, param);
     }
 
-    @Override public void glSamplerParameterf(int sampler, int pname, float param) {
+    @Override public void glSamplerParameterf(@NativeType("GLuint") int sampler, @NativeType("GLenum") int pname, @NativeType("GLfloat") float param) {
         org.lwjgl.opengl.GL33.glSamplerParameterf(sampler, pname, param);
     }
 
@@ -88,11 +92,11 @@ public class GL33AccessorImpl extends GL32AccessorImpl implements GL33Accessor {
         org.lwjgl.opengl.GL33.nglSamplerParameteriv(sampler, pname, params);
     }
 
-    @Override public void glSamplerParameteriv(int sampler, int pname, IntBuffer params) {
+    @Override public void glSamplerParameteriv(@NativeType("GLuint") int sampler, @NativeType("GLenum") int pname, @NativeType("GLint const *") IntBuffer params) {
         org.lwjgl.opengl.GL33.glSamplerParameteriv(sampler, pname, params);
     }
 
-    @Override public void glSamplerParameteriv(int sampler, int pname, int[] params) {
+    @Override public void glSamplerParameteriv(@NativeType("GLuint") int sampler, @NativeType("GLenum") int pname, @NativeType("GLint const *") int[] params) {
         org.lwjgl.opengl.GL33.glSamplerParameteriv(sampler, pname, params);
     }
 
@@ -100,11 +104,11 @@ public class GL33AccessorImpl extends GL32AccessorImpl implements GL33Accessor {
         org.lwjgl.opengl.GL33.nglSamplerParameterfv(sampler, pname, params);
     }
 
-    @Override public void glSamplerParameterfv(int sampler, int pname, FloatBuffer params) {
+    @Override public void glSamplerParameterfv(@NativeType("GLuint") int sampler, @NativeType("GLenum") int pname, @NativeType("GLfloat const *") FloatBuffer params) {
         org.lwjgl.opengl.GL33.glSamplerParameterfv(sampler, pname, params);
     }
 
-    @Override public void glSamplerParameterfv(int sampler, int pname, float[] params) {
+    @Override public void glSamplerParameterfv(@NativeType("GLuint") int sampler, @NativeType("GLenum") int pname, @NativeType("GLfloat const *") float[] params) {
         org.lwjgl.opengl.GL33.glSamplerParameterfv(sampler, pname, params);
     }
 
@@ -112,11 +116,11 @@ public class GL33AccessorImpl extends GL32AccessorImpl implements GL33Accessor {
         org.lwjgl.opengl.GL33.nglSamplerParameterIiv(sampler, pname, params);
     }
 
-    @Override public void glSamplerParameterIiv(int sampler, int pname, IntBuffer params) {
+    @Override public void glSamplerParameterIiv(@NativeType("GLuint") int sampler, @NativeType("GLenum") int pname, @NativeType("GLint const *") IntBuffer params) {
         org.lwjgl.opengl.GL33.glSamplerParameterIiv(sampler, pname, params);
     }
 
-    @Override public void glSamplerParameterIiv(int sampler, int pname, int[] params) {
+    @Override public void glSamplerParameterIiv(@NativeType("GLuint") int sampler, @NativeType("GLenum") int pname, @NativeType("GLint const *") int[] params) {
         org.lwjgl.opengl.GL33.glSamplerParameterIiv(sampler, pname, params);
     }
 
@@ -124,11 +128,11 @@ public class GL33AccessorImpl extends GL32AccessorImpl implements GL33Accessor {
         org.lwjgl.opengl.GL33.nglSamplerParameterIuiv(sampler, pname, params);
     }
 
-    @Override public void glSamplerParameterIuiv(int sampler, int pname, IntBuffer params) {
+    @Override public void glSamplerParameterIuiv(@NativeType("GLuint") int sampler, @NativeType("GLenum") int pname, @NativeType("GLuint const *") IntBuffer params) {
         org.lwjgl.opengl.GL33.glSamplerParameterIuiv(sampler, pname, params);
     }
 
-    @Override public void glSamplerParameterIuiv(int sampler, int pname, int[] params) {
+    @Override public void glSamplerParameterIuiv(@NativeType("GLuint") int sampler, @NativeType("GLenum") int pname, @NativeType("GLuint const *") int[] params) {
         org.lwjgl.opengl.GL33.glSamplerParameterIuiv(sampler, pname, params);
     }
 
@@ -136,15 +140,16 @@ public class GL33AccessorImpl extends GL32AccessorImpl implements GL33Accessor {
         org.lwjgl.opengl.GL33.nglGetSamplerParameteriv(sampler, pname, params);
     }
 
-    @Override public void glGetSamplerParameteriv(int sampler, int pname, IntBuffer params) {
+    @Override public void glGetSamplerParameteriv(@NativeType("GLuint") int sampler, @NativeType("GLenum") int pname, @NativeType("GLint *") IntBuffer params) {
         org.lwjgl.opengl.GL33.glGetSamplerParameteriv(sampler, pname, params);
     }
 
-    @Override public void glGetSamplerParameteriv(int sampler, int pname, int[] params) {
+    @Override public void glGetSamplerParameteriv(@NativeType("GLuint") int sampler, @NativeType("GLenum") int pname, @NativeType("GLint *") int[] params) {
         org.lwjgl.opengl.GL33.glGetSamplerParameteriv(sampler, pname, params);
     }
 
-    @Override public int glGetSamplerParameteri(int sampler, int pname) {
+@NativeType("void")
+    @Override public int glGetSamplerParameteri(@NativeType("GLuint") int sampler, @NativeType("GLenum") int pname) {
         return org.lwjgl.opengl.GL33.glGetSamplerParameteri(sampler, pname);
     }
 
@@ -152,15 +157,16 @@ public class GL33AccessorImpl extends GL32AccessorImpl implements GL33Accessor {
         org.lwjgl.opengl.GL33.nglGetSamplerParameterfv(sampler, pname, params);
     }
 
-    @Override public void glGetSamplerParameterfv(int sampler, int pname, FloatBuffer params) {
+    @Override public void glGetSamplerParameterfv(@NativeType("GLuint") int sampler, @NativeType("GLenum") int pname, @NativeType("GLfloat *") FloatBuffer params) {
         org.lwjgl.opengl.GL33.glGetSamplerParameterfv(sampler, pname, params);
     }
 
-    @Override public void glGetSamplerParameterfv(int sampler, int pname, float[] params) {
+    @Override public void glGetSamplerParameterfv(@NativeType("GLuint") int sampler, @NativeType("GLenum") int pname, @NativeType("GLfloat *") float[] params) {
         org.lwjgl.opengl.GL33.glGetSamplerParameterfv(sampler, pname, params);
     }
 
-    @Override public float glGetSamplerParameterf(int sampler, int pname) {
+@NativeType("void")
+    @Override public float glGetSamplerParameterf(@NativeType("GLuint") int sampler, @NativeType("GLenum") int pname) {
         return org.lwjgl.opengl.GL33.glGetSamplerParameterf(sampler, pname);
     }
 
@@ -168,15 +174,16 @@ public class GL33AccessorImpl extends GL32AccessorImpl implements GL33Accessor {
         org.lwjgl.opengl.GL33.nglGetSamplerParameterIiv(sampler, pname, params);
     }
 
-    @Override public void glGetSamplerParameterIiv(int sampler, int pname, IntBuffer params) {
+    @Override public void glGetSamplerParameterIiv(@NativeType("GLuint") int sampler, @NativeType("GLenum") int pname, @NativeType("GLint *") IntBuffer params) {
         org.lwjgl.opengl.GL33.glGetSamplerParameterIiv(sampler, pname, params);
     }
 
-    @Override public void glGetSamplerParameterIiv(int sampler, int pname, int[] params) {
+    @Override public void glGetSamplerParameterIiv(@NativeType("GLuint") int sampler, @NativeType("GLenum") int pname, @NativeType("GLint *") int[] params) {
         org.lwjgl.opengl.GL33.glGetSamplerParameterIiv(sampler, pname, params);
     }
 
-    @Override public int glGetSamplerParameterIi(int sampler, int pname) {
+@NativeType("void")
+    @Override public int glGetSamplerParameterIi(@NativeType("GLuint") int sampler, @NativeType("GLenum") int pname) {
         return org.lwjgl.opengl.GL33.glGetSamplerParameterIi(sampler, pname);
     }
 
@@ -184,19 +191,20 @@ public class GL33AccessorImpl extends GL32AccessorImpl implements GL33Accessor {
         org.lwjgl.opengl.GL33.nglGetSamplerParameterIuiv(sampler, pname, params);
     }
 
-    @Override public void glGetSamplerParameterIuiv(int sampler, int pname, IntBuffer params) {
+    @Override public void glGetSamplerParameterIuiv(@NativeType("GLuint") int sampler, @NativeType("GLenum") int pname, @NativeType("GLuint *") IntBuffer params) {
         org.lwjgl.opengl.GL33.glGetSamplerParameterIuiv(sampler, pname, params);
     }
 
-    @Override public void glGetSamplerParameterIuiv(int sampler, int pname, int[] params) {
+    @Override public void glGetSamplerParameterIuiv(@NativeType("GLuint") int sampler, @NativeType("GLenum") int pname, @NativeType("GLuint *") int[] params) {
         org.lwjgl.opengl.GL33.glGetSamplerParameterIuiv(sampler, pname, params);
     }
 
-    @Override public int glGetSamplerParameterIui(int sampler, int pname) {
+@NativeType("void")
+    @Override public int glGetSamplerParameterIui(@NativeType("GLuint") int sampler, @NativeType("GLenum") int pname) {
         return org.lwjgl.opengl.GL33.glGetSamplerParameterIui(sampler, pname);
     }
 
-    @Override public void glQueryCounter(int id, int target) {
+    @Override public void glQueryCounter(@NativeType("GLuint") int id, @NativeType("GLenum") int target) {
         org.lwjgl.opengl.GL33.glQueryCounter(id, target);
     }
 
@@ -204,19 +212,20 @@ public class GL33AccessorImpl extends GL32AccessorImpl implements GL33Accessor {
         org.lwjgl.opengl.GL33.nglGetQueryObjecti64v(id, pname, params);
     }
 
-    @Override public void glGetQueryObjecti64v(int id, int pname, LongBuffer params) {
+    @Override public void glGetQueryObjecti64v(@NativeType("GLuint") int id, @NativeType("GLenum") int pname, @NativeType("GLint64 *") LongBuffer params) {
         org.lwjgl.opengl.GL33.glGetQueryObjecti64v(id, pname, params);
     }
 
-    @Override public void glGetQueryObjecti64v(int id, int pname, long params) {
+    @Override public void glGetQueryObjecti64v(@NativeType("GLuint") int id, @NativeType("GLenum") int pname, @NativeType("GLint64 *") long params) {
         org.lwjgl.opengl.GL33.glGetQueryObjecti64v(id, pname, params);
     }
 
-    @Override public void glGetQueryObjecti64v(int id, int pname, long[] params) {
+    @Override public void glGetQueryObjecti64v(@NativeType("GLuint") int id, @NativeType("GLenum") int pname, @NativeType("GLint64 *") long[] params) {
         org.lwjgl.opengl.GL33.glGetQueryObjecti64v(id, pname, params);
     }
 
-    @Override public long glGetQueryObjecti64(int id, int pname) {
+@NativeType("void")
+    @Override public long glGetQueryObjecti64(@NativeType("GLuint") int id, @NativeType("GLenum") int pname) {
         return org.lwjgl.opengl.GL33.glGetQueryObjecti64(id, pname);
     }
 
@@ -224,35 +233,36 @@ public class GL33AccessorImpl extends GL32AccessorImpl implements GL33Accessor {
         org.lwjgl.opengl.GL33.nglGetQueryObjectui64v(id, pname, params);
     }
 
-    @Override public void glGetQueryObjectui64v(int id, int pname, LongBuffer params) {
+    @Override public void glGetQueryObjectui64v(@NativeType("GLuint") int id, @NativeType("GLenum") int pname, @NativeType("GLuint64 *") LongBuffer params) {
         org.lwjgl.opengl.GL33.glGetQueryObjectui64v(id, pname, params);
     }
 
-    @Override public void glGetQueryObjectui64v(int id, int pname, long params) {
+    @Override public void glGetQueryObjectui64v(@NativeType("GLuint") int id, @NativeType("GLenum") int pname, @NativeType("GLuint64 *") long params) {
         org.lwjgl.opengl.GL33.glGetQueryObjectui64v(id, pname, params);
     }
 
-    @Override public void glGetQueryObjectui64v(int id, int pname, long[] params) {
+    @Override public void glGetQueryObjectui64v(@NativeType("GLuint") int id, @NativeType("GLenum") int pname, @NativeType("GLuint64 *") long[] params) {
         org.lwjgl.opengl.GL33.glGetQueryObjectui64v(id, pname, params);
     }
 
-    @Override public long glGetQueryObjectui64(int id, int pname) {
+@NativeType("void")
+    @Override public long glGetQueryObjectui64(@NativeType("GLuint") int id, @NativeType("GLenum") int pname) {
         return org.lwjgl.opengl.GL33.glGetQueryObjectui64(id, pname);
     }
 
-    @Override public void glVertexAttribDivisor(int index, int divisor) {
+    @Override public void glVertexAttribDivisor(@NativeType("GLuint") int index, @NativeType("GLuint") int divisor) {
         org.lwjgl.opengl.GL33.glVertexAttribDivisor(index, divisor);
     }
 
-    @Override public void glVertexP2ui(int type, int value) {
+    @Override public void glVertexP2ui(@NativeType("GLenum") int type, @NativeType("GLuint") int value) {
         org.lwjgl.opengl.GL33.glVertexP2ui(type, value);
     }
 
-    @Override public void glVertexP3ui(int type, int value) {
+    @Override public void glVertexP3ui(@NativeType("GLenum") int type, @NativeType("GLuint") int value) {
         org.lwjgl.opengl.GL33.glVertexP3ui(type, value);
     }
 
-    @Override public void glVertexP4ui(int type, int value) {
+    @Override public void glVertexP4ui(@NativeType("GLenum") int type, @NativeType("GLuint") int value) {
         org.lwjgl.opengl.GL33.glVertexP4ui(type, value);
     }
 
@@ -260,11 +270,11 @@ public class GL33AccessorImpl extends GL32AccessorImpl implements GL33Accessor {
         org.lwjgl.opengl.GL33.nglVertexP2uiv(type, value);
     }
 
-    @Override public void glVertexP2uiv(int type, IntBuffer value) {
+    @Override public void glVertexP2uiv(@NativeType("GLenum") int type, @NativeType("GLuint const *") IntBuffer value) {
         org.lwjgl.opengl.GL33.glVertexP2uiv(type, value);
     }
 
-    @Override public void glVertexP2uiv(int type, int[] value) {
+    @Override public void glVertexP2uiv(@NativeType("GLenum") int type, @NativeType("GLuint const *") int[] value) {
         org.lwjgl.opengl.GL33.glVertexP2uiv(type, value);
     }
 
@@ -272,11 +282,11 @@ public class GL33AccessorImpl extends GL32AccessorImpl implements GL33Accessor {
         org.lwjgl.opengl.GL33.nglVertexP3uiv(type, value);
     }
 
-    @Override public void glVertexP3uiv(int type, IntBuffer value) {
+    @Override public void glVertexP3uiv(@NativeType("GLenum") int type, @NativeType("GLuint const *") IntBuffer value) {
         org.lwjgl.opengl.GL33.glVertexP3uiv(type, value);
     }
 
-    @Override public void glVertexP3uiv(int type, int[] value) {
+    @Override public void glVertexP3uiv(@NativeType("GLenum") int type, @NativeType("GLuint const *") int[] value) {
         org.lwjgl.opengl.GL33.glVertexP3uiv(type, value);
     }
 
@@ -284,27 +294,27 @@ public class GL33AccessorImpl extends GL32AccessorImpl implements GL33Accessor {
         org.lwjgl.opengl.GL33.nglVertexP4uiv(type, value);
     }
 
-    @Override public void glVertexP4uiv(int type, IntBuffer value) {
+    @Override public void glVertexP4uiv(@NativeType("GLenum") int type, @NativeType("GLuint const *") IntBuffer value) {
         org.lwjgl.opengl.GL33.glVertexP4uiv(type, value);
     }
 
-    @Override public void glVertexP4uiv(int type, int[] value) {
+    @Override public void glVertexP4uiv(@NativeType("GLenum") int type, @NativeType("GLuint const *") int[] value) {
         org.lwjgl.opengl.GL33.glVertexP4uiv(type, value);
     }
 
-    @Override public void glTexCoordP1ui(int type, int coords) {
+    @Override public void glTexCoordP1ui(@NativeType("GLenum") int type, @NativeType("GLuint") int coords) {
         org.lwjgl.opengl.GL33.glTexCoordP1ui(type, coords);
     }
 
-    @Override public void glTexCoordP2ui(int type, int coords) {
+    @Override public void glTexCoordP2ui(@NativeType("GLenum") int type, @NativeType("GLuint") int coords) {
         org.lwjgl.opengl.GL33.glTexCoordP2ui(type, coords);
     }
 
-    @Override public void glTexCoordP3ui(int type, int coords) {
+    @Override public void glTexCoordP3ui(@NativeType("GLenum") int type, @NativeType("GLuint") int coords) {
         org.lwjgl.opengl.GL33.glTexCoordP3ui(type, coords);
     }
 
-    @Override public void glTexCoordP4ui(int type, int coords) {
+    @Override public void glTexCoordP4ui(@NativeType("GLenum") int type, @NativeType("GLuint") int coords) {
         org.lwjgl.opengl.GL33.glTexCoordP4ui(type, coords);
     }
 
@@ -312,11 +322,11 @@ public class GL33AccessorImpl extends GL32AccessorImpl implements GL33Accessor {
         org.lwjgl.opengl.GL33.nglTexCoordP1uiv(type, coords);
     }
 
-    @Override public void glTexCoordP1uiv(int type, IntBuffer coords) {
+    @Override public void glTexCoordP1uiv(@NativeType("GLenum") int type, @NativeType("GLuint const *") IntBuffer coords) {
         org.lwjgl.opengl.GL33.glTexCoordP1uiv(type, coords);
     }
 
-    @Override public void glTexCoordP1uiv(int type, int[] coords) {
+    @Override public void glTexCoordP1uiv(@NativeType("GLenum") int type, @NativeType("GLuint const *") int[] coords) {
         org.lwjgl.opengl.GL33.glTexCoordP1uiv(type, coords);
     }
 
@@ -324,11 +334,11 @@ public class GL33AccessorImpl extends GL32AccessorImpl implements GL33Accessor {
         org.lwjgl.opengl.GL33.nglTexCoordP2uiv(type, coords);
     }
 
-    @Override public void glTexCoordP2uiv(int type, IntBuffer coords) {
+    @Override public void glTexCoordP2uiv(@NativeType("GLenum") int type, @NativeType("GLuint const *") IntBuffer coords) {
         org.lwjgl.opengl.GL33.glTexCoordP2uiv(type, coords);
     }
 
-    @Override public void glTexCoordP2uiv(int type, int[] coords) {
+    @Override public void glTexCoordP2uiv(@NativeType("GLenum") int type, @NativeType("GLuint const *") int[] coords) {
         org.lwjgl.opengl.GL33.glTexCoordP2uiv(type, coords);
     }
 
@@ -336,11 +346,11 @@ public class GL33AccessorImpl extends GL32AccessorImpl implements GL33Accessor {
         org.lwjgl.opengl.GL33.nglTexCoordP3uiv(type, coords);
     }
 
-    @Override public void glTexCoordP3uiv(int type, IntBuffer coords) {
+    @Override public void glTexCoordP3uiv(@NativeType("GLenum") int type, @NativeType("GLuint const *") IntBuffer coords) {
         org.lwjgl.opengl.GL33.glTexCoordP3uiv(type, coords);
     }
 
-    @Override public void glTexCoordP3uiv(int type, int[] coords) {
+    @Override public void glTexCoordP3uiv(@NativeType("GLenum") int type, @NativeType("GLuint const *") int[] coords) {
         org.lwjgl.opengl.GL33.glTexCoordP3uiv(type, coords);
     }
 
@@ -348,27 +358,27 @@ public class GL33AccessorImpl extends GL32AccessorImpl implements GL33Accessor {
         org.lwjgl.opengl.GL33.nglTexCoordP4uiv(type, coords);
     }
 
-    @Override public void glTexCoordP4uiv(int type, IntBuffer coords) {
+    @Override public void glTexCoordP4uiv(@NativeType("GLenum") int type, @NativeType("GLuint const *") IntBuffer coords) {
         org.lwjgl.opengl.GL33.glTexCoordP4uiv(type, coords);
     }
 
-    @Override public void glTexCoordP4uiv(int type, int[] coords) {
+    @Override public void glTexCoordP4uiv(@NativeType("GLenum") int type, @NativeType("GLuint const *") int[] coords) {
         org.lwjgl.opengl.GL33.glTexCoordP4uiv(type, coords);
     }
 
-    @Override public void glMultiTexCoordP1ui(int texture, int type, int coords) {
+    @Override public void glMultiTexCoordP1ui(@NativeType("GLenum") int texture, @NativeType("GLenum") int type, @NativeType("GLuint") int coords) {
         org.lwjgl.opengl.GL33.glMultiTexCoordP1ui(texture, type, coords);
     }
 
-    @Override public void glMultiTexCoordP2ui(int texture, int type, int coords) {
+    @Override public void glMultiTexCoordP2ui(@NativeType("GLenum") int texture, @NativeType("GLenum") int type, @NativeType("GLuint") int coords) {
         org.lwjgl.opengl.GL33.glMultiTexCoordP2ui(texture, type, coords);
     }
 
-    @Override public void glMultiTexCoordP3ui(int texture, int type, int coords) {
+    @Override public void glMultiTexCoordP3ui(@NativeType("GLenum") int texture, @NativeType("GLenum") int type, @NativeType("GLuint") int coords) {
         org.lwjgl.opengl.GL33.glMultiTexCoordP3ui(texture, type, coords);
     }
 
-    @Override public void glMultiTexCoordP4ui(int texture, int type, int coords) {
+    @Override public void glMultiTexCoordP4ui(@NativeType("GLenum") int texture, @NativeType("GLenum") int type, @NativeType("GLuint") int coords) {
         org.lwjgl.opengl.GL33.glMultiTexCoordP4ui(texture, type, coords);
     }
 
@@ -376,11 +386,11 @@ public class GL33AccessorImpl extends GL32AccessorImpl implements GL33Accessor {
         org.lwjgl.opengl.GL33.nglMultiTexCoordP1uiv(texture, type, coords);
     }
 
-    @Override public void glMultiTexCoordP1uiv(int texture, int type, IntBuffer coords) {
+    @Override public void glMultiTexCoordP1uiv(@NativeType("GLenum") int texture, @NativeType("GLenum") int type, @NativeType("GLuint const *") IntBuffer coords) {
         org.lwjgl.opengl.GL33.glMultiTexCoordP1uiv(texture, type, coords);
     }
 
-    @Override public void glMultiTexCoordP1uiv(int texture, int type, int[] coords) {
+    @Override public void glMultiTexCoordP1uiv(@NativeType("GLenum") int texture, @NativeType("GLenum") int type, @NativeType("GLuint const *") int[] coords) {
         org.lwjgl.opengl.GL33.glMultiTexCoordP1uiv(texture, type, coords);
     }
 
@@ -388,11 +398,11 @@ public class GL33AccessorImpl extends GL32AccessorImpl implements GL33Accessor {
         org.lwjgl.opengl.GL33.nglMultiTexCoordP2uiv(texture, type, coords);
     }
 
-    @Override public void glMultiTexCoordP2uiv(int texture, int type, IntBuffer coords) {
+    @Override public void glMultiTexCoordP2uiv(@NativeType("GLenum") int texture, @NativeType("GLenum") int type, @NativeType("GLuint const *") IntBuffer coords) {
         org.lwjgl.opengl.GL33.glMultiTexCoordP2uiv(texture, type, coords);
     }
 
-    @Override public void glMultiTexCoordP2uiv(int texture, int type, int[] coords) {
+    @Override public void glMultiTexCoordP2uiv(@NativeType("GLenum") int texture, @NativeType("GLenum") int type, @NativeType("GLuint const *") int[] coords) {
         org.lwjgl.opengl.GL33.glMultiTexCoordP2uiv(texture, type, coords);
     }
 
@@ -400,11 +410,11 @@ public class GL33AccessorImpl extends GL32AccessorImpl implements GL33Accessor {
         org.lwjgl.opengl.GL33.nglMultiTexCoordP3uiv(texture, type, coords);
     }
 
-    @Override public void glMultiTexCoordP3uiv(int texture, int type, IntBuffer coords) {
+    @Override public void glMultiTexCoordP3uiv(@NativeType("GLenum") int texture, @NativeType("GLenum") int type, @NativeType("GLuint const *") IntBuffer coords) {
         org.lwjgl.opengl.GL33.glMultiTexCoordP3uiv(texture, type, coords);
     }
 
-    @Override public void glMultiTexCoordP3uiv(int texture, int type, int[] coords) {
+    @Override public void glMultiTexCoordP3uiv(@NativeType("GLenum") int texture, @NativeType("GLenum") int type, @NativeType("GLuint const *") int[] coords) {
         org.lwjgl.opengl.GL33.glMultiTexCoordP3uiv(texture, type, coords);
     }
 
@@ -412,15 +422,15 @@ public class GL33AccessorImpl extends GL32AccessorImpl implements GL33Accessor {
         org.lwjgl.opengl.GL33.nglMultiTexCoordP4uiv(texture, type, coords);
     }
 
-    @Override public void glMultiTexCoordP4uiv(int texture, int type, IntBuffer coords) {
+    @Override public void glMultiTexCoordP4uiv(@NativeType("GLenum") int texture, @NativeType("GLenum") int type, @NativeType("GLuint const *") IntBuffer coords) {
         org.lwjgl.opengl.GL33.glMultiTexCoordP4uiv(texture, type, coords);
     }
 
-    @Override public void glMultiTexCoordP4uiv(int texture, int type, int[] coords) {
+    @Override public void glMultiTexCoordP4uiv(@NativeType("GLenum") int texture, @NativeType("GLenum") int type, @NativeType("GLuint const *") int[] coords) {
         org.lwjgl.opengl.GL33.glMultiTexCoordP4uiv(texture, type, coords);
     }
 
-    @Override public void glNormalP3ui(int type, int coords) {
+    @Override public void glNormalP3ui(@NativeType("GLenum") int type, @NativeType("GLuint") int coords) {
         org.lwjgl.opengl.GL33.glNormalP3ui(type, coords);
     }
 
@@ -428,19 +438,19 @@ public class GL33AccessorImpl extends GL32AccessorImpl implements GL33Accessor {
         org.lwjgl.opengl.GL33.nglNormalP3uiv(type, coords);
     }
 
-    @Override public void glNormalP3uiv(int type, IntBuffer coords) {
+    @Override public void glNormalP3uiv(@NativeType("GLenum") int type, @NativeType("GLuint const *") IntBuffer coords) {
         org.lwjgl.opengl.GL33.glNormalP3uiv(type, coords);
     }
 
-    @Override public void glNormalP3uiv(int type, int[] coords) {
+    @Override public void glNormalP3uiv(@NativeType("GLenum") int type, @NativeType("GLuint const *") int[] coords) {
         org.lwjgl.opengl.GL33.glNormalP3uiv(type, coords);
     }
 
-    @Override public void glColorP3ui(int type, int color) {
+    @Override public void glColorP3ui(@NativeType("GLenum") int type, @NativeType("GLuint") int color) {
         org.lwjgl.opengl.GL33.glColorP3ui(type, color);
     }
 
-    @Override public void glColorP4ui(int type, int color) {
+    @Override public void glColorP4ui(@NativeType("GLenum") int type, @NativeType("GLuint") int color) {
         org.lwjgl.opengl.GL33.glColorP4ui(type, color);
     }
 
@@ -448,11 +458,11 @@ public class GL33AccessorImpl extends GL32AccessorImpl implements GL33Accessor {
         org.lwjgl.opengl.GL33.nglColorP3uiv(type, color);
     }
 
-    @Override public void glColorP3uiv(int type, IntBuffer color) {
+    @Override public void glColorP3uiv(@NativeType("GLenum") int type, @NativeType("GLuint const *") IntBuffer color) {
         org.lwjgl.opengl.GL33.glColorP3uiv(type, color);
     }
 
-    @Override public void glColorP3uiv(int type, int[] color) {
+    @Override public void glColorP3uiv(@NativeType("GLenum") int type, @NativeType("GLuint const *") int[] color) {
         org.lwjgl.opengl.GL33.glColorP3uiv(type, color);
     }
 
@@ -460,15 +470,15 @@ public class GL33AccessorImpl extends GL32AccessorImpl implements GL33Accessor {
         org.lwjgl.opengl.GL33.nglColorP4uiv(type, color);
     }
 
-    @Override public void glColorP4uiv(int type, IntBuffer color) {
+    @Override public void glColorP4uiv(@NativeType("GLenum") int type, @NativeType("GLuint const *") IntBuffer color) {
         org.lwjgl.opengl.GL33.glColorP4uiv(type, color);
     }
 
-    @Override public void glColorP4uiv(int type, int[] color) {
+    @Override public void glColorP4uiv(@NativeType("GLenum") int type, @NativeType("GLuint const *") int[] color) {
         org.lwjgl.opengl.GL33.glColorP4uiv(type, color);
     }
 
-    @Override public void glSecondaryColorP3ui(int type, int color) {
+    @Override public void glSecondaryColorP3ui(@NativeType("GLenum") int type, @NativeType("GLuint") int color) {
         org.lwjgl.opengl.GL33.glSecondaryColorP3ui(type, color);
     }
 
@@ -476,27 +486,27 @@ public class GL33AccessorImpl extends GL32AccessorImpl implements GL33Accessor {
         org.lwjgl.opengl.GL33.nglSecondaryColorP3uiv(type, color);
     }
 
-    @Override public void glSecondaryColorP3uiv(int type, IntBuffer color) {
+    @Override public void glSecondaryColorP3uiv(@NativeType("GLenum") int type, @NativeType("GLuint const *") IntBuffer color) {
         org.lwjgl.opengl.GL33.glSecondaryColorP3uiv(type, color);
     }
 
-    @Override public void glSecondaryColorP3uiv(int type, int[] color) {
+    @Override public void glSecondaryColorP3uiv(@NativeType("GLenum") int type, @NativeType("GLuint const *") int[] color) {
         org.lwjgl.opengl.GL33.glSecondaryColorP3uiv(type, color);
     }
 
-    @Override public void glVertexAttribP1ui(int index, int type, boolean normalized, int value) {
+    @Override public void glVertexAttribP1ui(@NativeType("GLuint") int index, @NativeType("GLenum") int type, @NativeType("GLboolean") boolean normalized, @NativeType("GLuint") int value) {
         org.lwjgl.opengl.GL33.glVertexAttribP1ui(index, type, normalized, value);
     }
 
-    @Override public void glVertexAttribP2ui(int index, int type, boolean normalized, int value) {
+    @Override public void glVertexAttribP2ui(@NativeType("GLuint") int index, @NativeType("GLenum") int type, @NativeType("GLboolean") boolean normalized, @NativeType("GLuint") int value) {
         org.lwjgl.opengl.GL33.glVertexAttribP2ui(index, type, normalized, value);
     }
 
-    @Override public void glVertexAttribP3ui(int index, int type, boolean normalized, int value) {
+    @Override public void glVertexAttribP3ui(@NativeType("GLuint") int index, @NativeType("GLenum") int type, @NativeType("GLboolean") boolean normalized, @NativeType("GLuint") int value) {
         org.lwjgl.opengl.GL33.glVertexAttribP3ui(index, type, normalized, value);
     }
 
-    @Override public void glVertexAttribP4ui(int index, int type, boolean normalized, int value) {
+    @Override public void glVertexAttribP4ui(@NativeType("GLuint") int index, @NativeType("GLenum") int type, @NativeType("GLboolean") boolean normalized, @NativeType("GLuint") int value) {
         org.lwjgl.opengl.GL33.glVertexAttribP4ui(index, type, normalized, value);
     }
 
@@ -504,11 +514,11 @@ public class GL33AccessorImpl extends GL32AccessorImpl implements GL33Accessor {
         org.lwjgl.opengl.GL33.nglVertexAttribP1uiv(index, type, normalized, value);
     }
 
-    @Override public void glVertexAttribP1uiv(int index, int type, boolean normalized, IntBuffer value) {
+    @Override public void glVertexAttribP1uiv(@NativeType("GLuint") int index, @NativeType("GLenum") int type, @NativeType("GLboolean") boolean normalized, @NativeType("GLuint const *") IntBuffer value) {
         org.lwjgl.opengl.GL33.glVertexAttribP1uiv(index, type, normalized, value);
     }
 
-    @Override public void glVertexAttribP1uiv(int index, int type, boolean normalized, int[] value) {
+    @Override public void glVertexAttribP1uiv(@NativeType("GLuint") int index, @NativeType("GLenum") int type, @NativeType("GLboolean") boolean normalized, @NativeType("GLuint const *") int[] value) {
         org.lwjgl.opengl.GL33.glVertexAttribP1uiv(index, type, normalized, value);
     }
 
@@ -516,11 +526,11 @@ public class GL33AccessorImpl extends GL32AccessorImpl implements GL33Accessor {
         org.lwjgl.opengl.GL33.nglVertexAttribP2uiv(index, type, normalized, value);
     }
 
-    @Override public void glVertexAttribP2uiv(int index, int type, boolean normalized, IntBuffer value) {
+    @Override public void glVertexAttribP2uiv(@NativeType("GLuint") int index, @NativeType("GLenum") int type, @NativeType("GLboolean") boolean normalized, @NativeType("GLuint const *") IntBuffer value) {
         org.lwjgl.opengl.GL33.glVertexAttribP2uiv(index, type, normalized, value);
     }
 
-    @Override public void glVertexAttribP2uiv(int index, int type, boolean normalized, int[] value) {
+    @Override public void glVertexAttribP2uiv(@NativeType("GLuint") int index, @NativeType("GLenum") int type, @NativeType("GLboolean") boolean normalized, @NativeType("GLuint const *") int[] value) {
         org.lwjgl.opengl.GL33.glVertexAttribP2uiv(index, type, normalized, value);
     }
 
@@ -528,11 +538,11 @@ public class GL33AccessorImpl extends GL32AccessorImpl implements GL33Accessor {
         org.lwjgl.opengl.GL33.nglVertexAttribP3uiv(index, type, normalized, value);
     }
 
-    @Override public void glVertexAttribP3uiv(int index, int type, boolean normalized, IntBuffer value) {
+    @Override public void glVertexAttribP3uiv(@NativeType("GLuint") int index, @NativeType("GLenum") int type, @NativeType("GLboolean") boolean normalized, @NativeType("GLuint const *") IntBuffer value) {
         org.lwjgl.opengl.GL33.glVertexAttribP3uiv(index, type, normalized, value);
     }
 
-    @Override public void glVertexAttribP3uiv(int index, int type, boolean normalized, int[] value) {
+    @Override public void glVertexAttribP3uiv(@NativeType("GLuint") int index, @NativeType("GLenum") int type, @NativeType("GLboolean") boolean normalized, @NativeType("GLuint const *") int[] value) {
         org.lwjgl.opengl.GL33.glVertexAttribP3uiv(index, type, normalized, value);
     }
 
@@ -540,11 +550,11 @@ public class GL33AccessorImpl extends GL32AccessorImpl implements GL33Accessor {
         org.lwjgl.opengl.GL33.nglVertexAttribP4uiv(index, type, normalized, value);
     }
 
-    @Override public void glVertexAttribP4uiv(int index, int type, boolean normalized, IntBuffer value) {
+    @Override public void glVertexAttribP4uiv(@NativeType("GLuint") int index, @NativeType("GLenum") int type, @NativeType("GLboolean") boolean normalized, @NativeType("GLuint const *") IntBuffer value) {
         org.lwjgl.opengl.GL33.glVertexAttribP4uiv(index, type, normalized, value);
     }
 
-    @Override public void glVertexAttribP4uiv(int index, int type, boolean normalized, int[] value) {
+    @Override public void glVertexAttribP4uiv(@NativeType("GLuint") int index, @NativeType("GLenum") int type, @NativeType("GLboolean") boolean normalized, @NativeType("GLuint const *") int[] value) {
         org.lwjgl.opengl.GL33.glVertexAttribP4uiv(index, type, normalized, value);
     }
 

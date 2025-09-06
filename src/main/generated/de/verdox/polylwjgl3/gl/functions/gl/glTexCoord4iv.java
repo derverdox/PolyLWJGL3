@@ -25,13 +25,13 @@ public interface glTexCoord4iv {
  *
  * @see <a href="https://docs.gl/gl3/glTexCoord">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glTexCoord4iv(IntBuffer v);
+    public void glTexCoord4iv(@NativeType("GLint const *") IntBuffer v);
 
 /**
  * Array version of: {@link #glTexCoord4iv TexCoord4iv}
  *
  * @see <a href="https://docs.gl/gl3/glTexCoord">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glTexCoord4iv(int[] v);
+    public void glTexCoord4iv(@NativeType("GLint const *") int[] v);
 
 }

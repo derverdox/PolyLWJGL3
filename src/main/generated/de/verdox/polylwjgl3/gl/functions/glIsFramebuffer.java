@@ -16,6 +16,7 @@ public interface glIsFramebuffer {
 /**
  * <a href="https://docs.gl/es3/glIsFramebuffer">Reference Page</a>
  */
-    public boolean glIsFramebuffer(int framebuffer);
+@NativeType("GLboolean")
+    public boolean glIsFramebuffer(@NativeType("GLuint") int framebuffer);
 
 }

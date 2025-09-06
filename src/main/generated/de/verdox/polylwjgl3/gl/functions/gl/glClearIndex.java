@@ -22,6 +22,6 @@ public interface glClearIndex {
  *
  * @see <a href="https://docs.gl/gl3/glClearIndex">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glClearIndex(float index);
+    public void glClearIndex(@NativeType("GLfloat") float index);
 
 }

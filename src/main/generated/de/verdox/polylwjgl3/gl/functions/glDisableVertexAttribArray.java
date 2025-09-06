@@ -16,6 +16,6 @@ public interface glDisableVertexAttribArray {
 /**
  * <a href="https://docs.gl/es3/glDisableVertexAttribArray">Reference Page</a>
  */
-    public void glDisableVertexAttribArray(int index);
+    public void glDisableVertexAttribArray(@NativeType("GLuint") int index);
 
 }

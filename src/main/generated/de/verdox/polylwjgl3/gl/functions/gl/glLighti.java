@@ -22,6 +22,6 @@ public interface glLighti {
  *
  * @see <a href="https://docs.gl/gl3/glLighti">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glLighti(int light, int pname, int param);
+    public void glLighti(@NativeType("GLenum") int light, @NativeType("GLenum") int pname, @NativeType("GLint") int param);
 
 }

@@ -30,13 +30,13 @@ public interface glClearNamedFramebufferuiv {
  *
  * @see <a href="https://docs.gl/gl4/glClearFramebuffer">Reference Page</a>
  */
-    public void glClearNamedFramebufferuiv(int framebuffer, int buffer, int drawbuffer, IntBuffer value);
+    public void glClearNamedFramebufferuiv(@NativeType("GLuint") int framebuffer, @NativeType("GLenum") int buffer, @NativeType("GLint") int drawbuffer, @NativeType("GLint const *") IntBuffer value);
 
 /**
  * Array version of: {@link #glClearNamedFramebufferuiv ClearNamedFramebufferuiv}
  *
  * @see <a href="https://docs.gl/gl4/glClearFramebuffer">Reference Page</a>
  */
-    public void glClearNamedFramebufferuiv(int framebuffer, int buffer, int drawbuffer, int[] value);
+    public void glClearNamedFramebufferuiv(@NativeType("GLuint") int framebuffer, @NativeType("GLenum") int buffer, @NativeType("GLint") int drawbuffer, @NativeType("GLint const *") int[] value);
 
 }

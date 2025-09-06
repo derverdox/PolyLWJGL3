@@ -33,7 +33,7 @@ public interface glClearNamedBufferData {
  *
  * @see <a href="https://docs.gl/gl4/glClearBufferData">Reference Page</a>
  */
-    public void glClearNamedBufferData(int buffer, int internalformat, int format, int type, @Nullable ByteBuffer data);
+    public void glClearNamedBufferData(@NativeType("GLuint") int buffer, @NativeType("GLenum") int internalformat, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") ByteBuffer data);
 
 /**
  * DSA version of {@link GL43C#glClearBufferData ClearBufferData}.
@@ -48,7 +48,7 @@ public interface glClearNamedBufferData {
  *
  * @see <a href="https://docs.gl/gl4/glClearBufferData">Reference Page</a>
  */
-    public void glClearNamedBufferData(int buffer, int internalformat, int format, int type, @Nullable ShortBuffer data);
+    public void glClearNamedBufferData(@NativeType("GLuint") int buffer, @NativeType("GLenum") int internalformat, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") ShortBuffer data);
 
 /**
  * DSA version of {@link GL43C#glClearBufferData ClearBufferData}.
@@ -63,7 +63,7 @@ public interface glClearNamedBufferData {
  *
  * @see <a href="https://docs.gl/gl4/glClearBufferData">Reference Page</a>
  */
-    public void glClearNamedBufferData(int buffer, int internalformat, int format, int type, @Nullable IntBuffer data);
+    public void glClearNamedBufferData(@NativeType("GLuint") int buffer, @NativeType("GLenum") int internalformat, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") IntBuffer data);
 
 /**
  * DSA version of {@link GL43C#glClearBufferData ClearBufferData}.
@@ -78,27 +78,27 @@ public interface glClearNamedBufferData {
  *
  * @see <a href="https://docs.gl/gl4/glClearBufferData">Reference Page</a>
  */
-    public void glClearNamedBufferData(int buffer, int internalformat, int format, int type, @Nullable FloatBuffer data);
+    public void glClearNamedBufferData(@NativeType("GLuint") int buffer, @NativeType("GLenum") int internalformat, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") FloatBuffer data);
 
 /**
  * Array version of: {@link #glClearNamedBufferData ClearNamedBufferData}
  *
  * @see <a href="https://docs.gl/gl4/glClearBufferData">Reference Page</a>
  */
-    public void glClearNamedBufferData(int buffer, int internalformat, int format, int type, @Nullable short[] data);
+    public void glClearNamedBufferData(@NativeType("GLuint") int buffer, @NativeType("GLenum") int internalformat, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") short[] data);
 
 /**
  * Array version of: {@link #glClearNamedBufferData ClearNamedBufferData}
  *
  * @see <a href="https://docs.gl/gl4/glClearBufferData">Reference Page</a>
  */
-    public void glClearNamedBufferData(int buffer, int internalformat, int format, int type, @Nullable int[] data);
+    public void glClearNamedBufferData(@NativeType("GLuint") int buffer, @NativeType("GLenum") int internalformat, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") int[] data);
 
 /**
  * Array version of: {@link #glClearNamedBufferData ClearNamedBufferData}
  *
  * @see <a href="https://docs.gl/gl4/glClearBufferData">Reference Page</a>
  */
-    public void glClearNamedBufferData(int buffer, int internalformat, int format, int type, @Nullable float[] data);
+    public void glClearNamedBufferData(@NativeType("GLuint") int buffer, @NativeType("GLenum") int internalformat, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") float[] data);
 
 }

@@ -27,13 +27,13 @@ public interface glGetMapdv {
  *
  * @see <a href="https://docs.gl/gl3/glGetMap">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glGetMapdv(int target, int query, DoubleBuffer data);
+    public void glGetMapdv(@NativeType("GLenum") int target, @NativeType("GLenum") int query, @NativeType("GLdouble *") DoubleBuffer data);
 
 /**
  * Array version of: {@link #glGetMapdv GetMapdv}
  *
  * @see <a href="https://docs.gl/gl3/glGetMap">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glGetMapdv(int target, int query, double[] data);
+    public void glGetMapdv(@NativeType("GLenum") int target, @NativeType("GLenum") int query, @NativeType("GLdouble *") double[] data);
 
 }

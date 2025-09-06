@@ -18,6 +18,6 @@ public interface glMinSampleShading {
 /**
  * <a href="https://docs.gl/es3/glMinSampleShading">Reference Page</a>
  */
-    public void glMinSampleShading(float value);
+    public void glMinSampleShading(@NativeType("GLfloat") float value);
 
 }

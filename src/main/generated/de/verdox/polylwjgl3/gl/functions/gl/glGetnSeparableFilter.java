@@ -36,7 +36,7 @@ public interface glGetnSeparableFilter {
  *
  * @see <a href="https://docs.gl/gl4/glGetnSeparableFilter">Reference Page</a>
  */
-    public void glGetnSeparableFilter(int target, int format, int type, int rowBufSize, long row, int columnBufSize, long column, @Nullable ByteBuffer span);
+    public void glGetnSeparableFilter(@NativeType("GLenum") int target, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("GLsizei") int rowBufSize, @NativeType("void *") long row, @NativeType("GLsizei") int columnBufSize, @NativeType("void *") long column, @Nullable @NativeType("void *") ByteBuffer span);
 
 /**
  * Robust version of {@link ARBImaging#glGetSeparableFilter GetSeparableFilter}
@@ -49,6 +49,6 @@ public interface glGetnSeparableFilter {
  *
  * @see <a href="https://docs.gl/gl4/glGetnSeparableFilter">Reference Page</a>
  */
-    public void glGetnSeparableFilter(int target, int format, int type, ByteBuffer row, ByteBuffer column, @Nullable ByteBuffer span);
+    public void glGetnSeparableFilter(@NativeType("GLenum") int target, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") ByteBuffer row, @NativeType("void *") ByteBuffer column, @Nullable @NativeType("void *") ByteBuffer span);
 
 }

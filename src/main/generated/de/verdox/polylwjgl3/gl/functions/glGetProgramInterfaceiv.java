@@ -20,13 +20,13 @@ public interface glGetProgramInterfaceiv {
 /**
  * <a href="https://docs.gl/es3/glGetProgramInterface">Reference Page</a>
  */
-    public void glGetProgramInterfaceiv(int program, int programInterface, int pname, IntBuffer params);
+    public void glGetProgramInterfaceiv(@NativeType("GLuint") int program, @NativeType("GLenum") int programInterface, @NativeType("GLenum") int pname, @NativeType("GLint *") IntBuffer params);
 
 /**
  * Array version of: {@link #glGetProgramInterfaceiv GetProgramInterfaceiv}
  *
  * @see <a href="https://docs.gl/es3/glGetProgramInterface">Reference Page</a>
  */
-    public void glGetProgramInterfaceiv(int program, int programInterface, int pname, int[] params);
+    public void glGetProgramInterfaceiv(@NativeType("GLuint") int program, @NativeType("GLenum") int programInterface, @NativeType("GLenum") int pname, @NativeType("GLint *") int[] params);
 
 }

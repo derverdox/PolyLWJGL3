@@ -22,6 +22,6 @@ public interface glSecondaryColor3s {
  *
  * @see <a href="https://docs.gl/gl3/glSecondaryColor">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glSecondaryColor3s(short red, short green, short blue);
+    public void glSecondaryColor3s(@NativeType("GLshort") short red, @NativeType("GLshort") short green, @NativeType("GLshort") short blue);
 
 }

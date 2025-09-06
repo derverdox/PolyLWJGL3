@@ -32,13 +32,13 @@ public interface glMultiDrawElements {
  *
  * @see <a href="https://docs.gl/gl4/glMultiDrawElements">Reference Page</a>
  */
-    public void glMultiDrawElements(int mode, IntBuffer count, int type, PointerBuffer indices);
+    public void glMultiDrawElements(@NativeType("GLenum") int mode, @NativeType("GLsizei *") IntBuffer count, @NativeType("GLenum") int type, @NativeType("void const **") PointerBuffer indices);
 
 /**
  * Array version of: {@link #glMultiDrawElements MultiDrawElements}
  *
  * @see <a href="https://docs.gl/gl4/glMultiDrawElements">Reference Page</a>
  */
-    public void glMultiDrawElements(int mode, int[] count, int type, PointerBuffer indices);
+    public void glMultiDrawElements(@NativeType("GLenum") int mode, @NativeType("GLsizei *") int[] count, @NativeType("GLenum") int type, @NativeType("void const **") PointerBuffer indices);
 
 }

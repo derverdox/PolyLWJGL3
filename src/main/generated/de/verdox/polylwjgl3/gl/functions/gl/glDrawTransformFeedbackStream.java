@@ -19,6 +19,6 @@ public interface glDrawTransformFeedbackStream {
  *
  * @see <a href="https://docs.gl/gl4/glDrawTransformFeedbackStream">Reference Page</a>
  */
-    public void glDrawTransformFeedbackStream(int mode, int id, int stream);
+    public void glDrawTransformFeedbackStream(@NativeType("GLenum") int mode, @NativeType("GLuint") int id, @NativeType("GLuint") int stream);
 
 }

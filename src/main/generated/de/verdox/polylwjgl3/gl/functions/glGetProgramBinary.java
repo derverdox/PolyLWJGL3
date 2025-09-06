@@ -21,13 +21,13 @@ public interface glGetProgramBinary {
 /**
  * <a href="https://docs.gl/es3/glGetProgramBinary">Reference Page</a>
  */
-    public void glGetProgramBinary(int program, @Nullable IntBuffer length, IntBuffer binaryFormat, ByteBuffer binary);
+    public void glGetProgramBinary(@NativeType("GLuint") int program, @Nullable @NativeType("GLsizei *") IntBuffer length, @NativeType("GLenum *") IntBuffer binaryFormat, @NativeType("void *") ByteBuffer binary);
 
 /**
  * Array version of: {@link #glGetProgramBinary GetProgramBinary}
  *
  * @see <a href="https://docs.gl/es3/glGetProgramBinary">Reference Page</a>
  */
-    public void glGetProgramBinary(int program, @Nullable int[] length, int[] binaryFormat, ByteBuffer binary);
+    public void glGetProgramBinary(@NativeType("GLuint") int program, @Nullable @NativeType("GLsizei *") int[] length, @NativeType("GLenum *") int[] binaryFormat, @NativeType("void *") ByteBuffer binary);
 
 }

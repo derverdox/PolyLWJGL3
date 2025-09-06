@@ -16,6 +16,6 @@ public interface glValidateProgram {
 /**
  * <a href="https://docs.gl/es3/glValidateProgram">Reference Page</a>
  */
-    public void glValidateProgram(int program);
+    public void glValidateProgram(@NativeType("GLuint") int program);
 
 }

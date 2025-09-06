@@ -26,6 +26,6 @@ public interface glTransformFeedbackBufferRange {
  *
  * @see <a href="https://docs.gl/gl4/glTransformFeedbackBufferRange">Reference Page</a>
  */
-    public void glTransformFeedbackBufferRange(int xfb, int index, int buffer, long offset, long size);
+    public void glTransformFeedbackBufferRange(@NativeType("GLuint") int xfb, @NativeType("GLuint") int index, @NativeType("GLuint") int buffer, @NativeType("GLintptr") long offset, @NativeType("GLsizeiptr") long size);
 
 }

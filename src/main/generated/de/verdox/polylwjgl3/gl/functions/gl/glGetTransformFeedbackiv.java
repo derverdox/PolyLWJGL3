@@ -29,13 +29,13 @@ public interface glGetTransformFeedbackiv {
  *
  * @see <a href="https://docs.gl/gl4/glGetTransformFeedback">Reference Page</a>
  */
-    public void glGetTransformFeedbackiv(int xfb, int pname, IntBuffer param);
+    public void glGetTransformFeedbackiv(@NativeType("GLuint") int xfb, @NativeType("GLenum") int pname, @NativeType("GLint *") IntBuffer param);
 
 /**
  * Array version of: {@link #glGetTransformFeedbackiv GetTransformFeedbackiv}
  *
  * @see <a href="https://docs.gl/gl4/glGetTransformFeedback">Reference Page</a>
  */
-    public void glGetTransformFeedbackiv(int xfb, int pname, int[] param);
+    public void glGetTransformFeedbackiv(@NativeType("GLuint") int xfb, @NativeType("GLenum") int pname, @NativeType("GLint *") int[] param);
 
 }

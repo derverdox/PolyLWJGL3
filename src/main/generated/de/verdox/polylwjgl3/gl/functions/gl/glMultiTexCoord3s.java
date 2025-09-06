@@ -23,6 +23,6 @@ public interface glMultiTexCoord3s {
  *
  * @see <a href="https://docs.gl/gl3/glMultiTexCoord">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glMultiTexCoord3s(int texture, short s, short t, short r);
+    public void glMultiTexCoord3s(@NativeType("GLenum") int texture, @NativeType("GLshort") short s, @NativeType("GLshort") short t, @NativeType("GLshort") short r);
 
 }

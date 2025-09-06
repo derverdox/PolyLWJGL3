@@ -26,13 +26,13 @@ public interface glRectfv {
  *
  * @see <a href="https://docs.gl/gl3/glRect">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glRectfv(FloatBuffer v1, FloatBuffer v2);
+    public void glRectfv(@NativeType("GLfloat const *") FloatBuffer v1, @NativeType("GLfloat const *") FloatBuffer v2);
 
 /**
  * Array version of: {@link #glRectfv Rectfv}
  *
  * @see <a href="https://docs.gl/gl3/glRect">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glRectfv(float[] v1, float[] v2);
+    public void glRectfv(@NativeType("GLfloat const *") float[] v1, @NativeType("GLfloat const *") float[] v2);
 
 }

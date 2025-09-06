@@ -20,23 +20,23 @@ public interface glDrawArraysIndirect {
 /**
  * <a href="https://docs.gl/es3/glDrawArraysIndirect">Reference Page</a>
  */
-    public void glDrawArraysIndirect(int mode, ByteBuffer indirect);
+    public void glDrawArraysIndirect(@NativeType("GLenum") int mode, @NativeType("void const *") ByteBuffer indirect);
 
 /**
  * <a href="https://docs.gl/es3/glDrawArraysIndirect">Reference Page</a>
  */
-    public void glDrawArraysIndirect(int mode, long indirect);
+    public void glDrawArraysIndirect(@NativeType("GLenum") int mode, @NativeType("void const *") long indirect);
 
 /**
  * <a href="https://docs.gl/es3/glDrawArraysIndirect">Reference Page</a>
  */
-    public void glDrawArraysIndirect(int mode, IntBuffer indirect);
+    public void glDrawArraysIndirect(@NativeType("GLenum") int mode, @NativeType("void const *") IntBuffer indirect);
 
 /**
  * Array version of: {@link #glDrawArraysIndirect DrawArraysIndirect}
  *
  * @see <a href="https://docs.gl/es3/glDrawArraysIndirect">Reference Page</a>
  */
-    public void glDrawArraysIndirect(int mode, int[] indirect);
+    public void glDrawArraysIndirect(@NativeType("GLenum") int mode, @NativeType("void const *") int[] indirect);
 
 }

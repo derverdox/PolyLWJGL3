@@ -24,6 +24,6 @@ public interface glTextureBuffer {
  *
  * @see <a href="https://docs.gl/gl4/glTextureBuffer">Reference Page</a>
  */
-    public void glTextureBuffer(int texture, int internalformat, int buffer);
+    public void glTextureBuffer(@NativeType("GLuint") int texture, @NativeType("GLenum") int internalformat, @NativeType("GLuint") int buffer);
 
 }

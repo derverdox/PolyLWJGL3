@@ -24,6 +24,6 @@ public interface glCopyPixels {
  *
  * @see <a href="https://docs.gl/gl3/glCopyPixels">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glCopyPixels(int x, int y, int width, int height, int type);
+    public void glCopyPixels(@NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int type);
 
 }

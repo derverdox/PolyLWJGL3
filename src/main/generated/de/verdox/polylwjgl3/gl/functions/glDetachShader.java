@@ -16,6 +16,6 @@ public interface glDetachShader {
 /**
  * <a href="https://docs.gl/es3/glDetachShader">Reference Page</a>
  */
-    public void glDetachShader(int program, int shader);
+    public void glDetachShader(@NativeType("GLuint") int program, @NativeType("GLuint") int shader);
 
 }

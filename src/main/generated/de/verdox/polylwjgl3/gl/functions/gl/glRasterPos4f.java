@@ -23,6 +23,6 @@ public interface glRasterPos4f {
  *
  * @see <a href="https://docs.gl/gl3/glRasterPos">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glRasterPos4f(float x, float y, float z, float w);
+    public void glRasterPos4f(@NativeType("GLfloat") float x, @NativeType("GLfloat") float y, @NativeType("GLfloat") float z, @NativeType("GLfloat") float w);
 
 }

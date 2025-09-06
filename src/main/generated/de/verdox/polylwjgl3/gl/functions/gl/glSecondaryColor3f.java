@@ -22,6 +22,6 @@ public interface glSecondaryColor3f {
  *
  * @see <a href="https://docs.gl/gl3/glSecondaryColor">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glSecondaryColor3f(float red, float green, float blue);
+    public void glSecondaryColor3f(@NativeType("GLfloat") float red, @NativeType("GLfloat") float green, @NativeType("GLfloat") float blue);
 
 }

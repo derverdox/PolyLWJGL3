@@ -23,6 +23,6 @@ public interface glColor4ub {
  *
  * @see <a href="https://docs.gl/gl3/glColor">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glColor4ub(byte red, byte green, byte blue, byte alpha);
+    public void glColor4ub(@NativeType("GLubyte") byte red, @NativeType("GLubyte") byte green, @NativeType("GLubyte") byte blue, @NativeType("GLubyte") byte alpha);
 
 }

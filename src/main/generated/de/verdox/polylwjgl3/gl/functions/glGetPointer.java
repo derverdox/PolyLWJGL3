@@ -18,6 +18,7 @@ public interface glGetPointer {
 /**
  * <a href="https://docs.gl/es3/glGetPointerv">Reference Page</a>
  */
-    public long glGetPointer(int pname);
+@NativeType("void")
+    public long glGetPointer(@NativeType("GLenum") int pname);
 
 }

@@ -20,6 +20,7 @@ public interface glIsList {
  *
  * @see <a href="https://docs.gl/gl3/glIsList">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public boolean glIsList(int list);
+@NativeType("GLboolean")
+    public boolean glIsList(@NativeType("GLuint") int list);
 
 }

@@ -26,6 +26,6 @@ public interface glTextureBufferRange {
  *
  * @see <a href="https://docs.gl/gl4/glTextureBufferRange">Reference Page</a>
  */
-    public void glTextureBufferRange(int texture, int internalformat, int buffer, long offset, long size);
+    public void glTextureBufferRange(@NativeType("GLuint") int texture, @NativeType("GLenum") int internalformat, @NativeType("GLuint") int buffer, @NativeType("GLintptr") long offset, @NativeType("GLsizeiptr") long size);
 
 }

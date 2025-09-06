@@ -16,6 +16,7 @@ public interface glIsShader {
 /**
  * <a href="https://docs.gl/es3/glIsShader">Reference Page</a>
  */
-    public boolean glIsShader(int shader);
+@NativeType("GLboolean")
+    public boolean glIsShader(@NativeType("GLuint") int shader);
 
 }

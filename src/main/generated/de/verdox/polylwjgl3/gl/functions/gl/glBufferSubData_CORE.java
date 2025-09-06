@@ -21,7 +21,7 @@ public interface glBufferSubData_CORE extends glBufferSubData {
  *
  * @see <a href="https://docs.gl/gl4/glBufferSubData">Reference Page</a>
  */
-    public void glBufferSubData(int target, long offset, LongBuffer data);
+    public void glBufferSubData(@NativeType("GLenum") int target, @NativeType("GLintptr") long offset, @NativeType("void const *") LongBuffer data);
 
 /**
  * Updates a subset of a buffer object's data store.
@@ -32,20 +32,20 @@ public interface glBufferSubData_CORE extends glBufferSubData {
  *
  * @see <a href="https://docs.gl/gl4/glBufferSubData">Reference Page</a>
  */
-    public void glBufferSubData(int target, long offset, DoubleBuffer data);
+    public void glBufferSubData(@NativeType("GLenum") int target, @NativeType("GLintptr") long offset, @NativeType("void const *") DoubleBuffer data);
 
 /**
  * Array version of: {@link #glBufferSubData BufferSubData}
  *
  * @see <a href="https://docs.gl/gl4/glBufferSubData">Reference Page</a>
  */
-    public void glBufferSubData(int target, long offset, long[] data);
+    public void glBufferSubData(@NativeType("GLenum") int target, @NativeType("GLintptr") long offset, @NativeType("void const *") long[] data);
 
 /**
  * Array version of: {@link #glBufferSubData BufferSubData}
  *
  * @see <a href="https://docs.gl/gl4/glBufferSubData">Reference Page</a>
  */
-    public void glBufferSubData(int target, long offset, double[] data);
+    public void glBufferSubData(@NativeType("GLenum") int target, @NativeType("GLintptr") long offset, @NativeType("void const *") double[] data);
 
 }

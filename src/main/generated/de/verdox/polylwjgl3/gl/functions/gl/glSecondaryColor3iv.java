@@ -25,13 +25,13 @@ public interface glSecondaryColor3iv {
  *
  * @see <a href="https://docs.gl/gl3/glSecondaryColor">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glSecondaryColor3iv(IntBuffer v);
+    public void glSecondaryColor3iv(@NativeType("GLint const *") IntBuffer v);
 
 /**
  * Array version of: {@link #glSecondaryColor3iv SecondaryColor3iv}
  *
  * @see <a href="https://docs.gl/gl3/glSecondaryColor">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glSecondaryColor3iv(int[] v);
+    public void glSecondaryColor3iv(@NativeType("GLint const *") int[] v);
 
 }

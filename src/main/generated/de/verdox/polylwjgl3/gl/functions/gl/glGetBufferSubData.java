@@ -27,7 +27,7 @@ public interface glGetBufferSubData {
  *
  * @see <a href="https://docs.gl/gl4/glGetBufferSubData">Reference Page</a>
  */
-    public void glGetBufferSubData(int target, long offset, ByteBuffer data);
+    public void glGetBufferSubData(@NativeType("GLenum") int target, @NativeType("GLintptr") long offset, @NativeType("void *") ByteBuffer data);
 
 /**
  * Returns a subset of a buffer object's data store.
@@ -38,7 +38,7 @@ public interface glGetBufferSubData {
  *
  * @see <a href="https://docs.gl/gl4/glGetBufferSubData">Reference Page</a>
  */
-    public void glGetBufferSubData(int target, long offset, ShortBuffer data);
+    public void glGetBufferSubData(@NativeType("GLenum") int target, @NativeType("GLintptr") long offset, @NativeType("void *") ShortBuffer data);
 
 /**
  * Returns a subset of a buffer object's data store.
@@ -49,7 +49,7 @@ public interface glGetBufferSubData {
  *
  * @see <a href="https://docs.gl/gl4/glGetBufferSubData">Reference Page</a>
  */
-    public void glGetBufferSubData(int target, long offset, IntBuffer data);
+    public void glGetBufferSubData(@NativeType("GLenum") int target, @NativeType("GLintptr") long offset, @NativeType("void *") IntBuffer data);
 
 /**
  * Returns a subset of a buffer object's data store.
@@ -60,7 +60,7 @@ public interface glGetBufferSubData {
  *
  * @see <a href="https://docs.gl/gl4/glGetBufferSubData">Reference Page</a>
  */
-    public void glGetBufferSubData(int target, long offset, LongBuffer data);
+    public void glGetBufferSubData(@NativeType("GLenum") int target, @NativeType("GLintptr") long offset, @NativeType("void *") LongBuffer data);
 
 /**
  * Returns a subset of a buffer object's data store.
@@ -71,7 +71,7 @@ public interface glGetBufferSubData {
  *
  * @see <a href="https://docs.gl/gl4/glGetBufferSubData">Reference Page</a>
  */
-    public void glGetBufferSubData(int target, long offset, FloatBuffer data);
+    public void glGetBufferSubData(@NativeType("GLenum") int target, @NativeType("GLintptr") long offset, @NativeType("void *") FloatBuffer data);
 
 /**
  * Returns a subset of a buffer object's data store.
@@ -82,41 +82,41 @@ public interface glGetBufferSubData {
  *
  * @see <a href="https://docs.gl/gl4/glGetBufferSubData">Reference Page</a>
  */
-    public void glGetBufferSubData(int target, long offset, DoubleBuffer data);
+    public void glGetBufferSubData(@NativeType("GLenum") int target, @NativeType("GLintptr") long offset, @NativeType("void *") DoubleBuffer data);
 
 /**
  * Array version of: {@link #glGetBufferSubData GetBufferSubData}
  *
  * @see <a href="https://docs.gl/gl4/glGetBufferSubData">Reference Page</a>
  */
-    public void glGetBufferSubData(int target, long offset, short[] data);
+    public void glGetBufferSubData(@NativeType("GLenum") int target, @NativeType("GLintptr") long offset, @NativeType("void *") short[] data);
 
 /**
  * Array version of: {@link #glGetBufferSubData GetBufferSubData}
  *
  * @see <a href="https://docs.gl/gl4/glGetBufferSubData">Reference Page</a>
  */
-    public void glGetBufferSubData(int target, long offset, int[] data);
+    public void glGetBufferSubData(@NativeType("GLenum") int target, @NativeType("GLintptr") long offset, @NativeType("void *") int[] data);
 
 /**
  * Array version of: {@link #glGetBufferSubData GetBufferSubData}
  *
  * @see <a href="https://docs.gl/gl4/glGetBufferSubData">Reference Page</a>
  */
-    public void glGetBufferSubData(int target, long offset, long[] data);
+    public void glGetBufferSubData(@NativeType("GLenum") int target, @NativeType("GLintptr") long offset, @NativeType("void *") long[] data);
 
 /**
  * Array version of: {@link #glGetBufferSubData GetBufferSubData}
  *
  * @see <a href="https://docs.gl/gl4/glGetBufferSubData">Reference Page</a>
  */
-    public void glGetBufferSubData(int target, long offset, float[] data);
+    public void glGetBufferSubData(@NativeType("GLenum") int target, @NativeType("GLintptr") long offset, @NativeType("void *") float[] data);
 
 /**
  * Array version of: {@link #glGetBufferSubData GetBufferSubData}
  *
  * @see <a href="https://docs.gl/gl4/glGetBufferSubData">Reference Page</a>
  */
-    public void glGetBufferSubData(int target, long offset, double[] data);
+    public void glGetBufferSubData(@NativeType("GLenum") int target, @NativeType("GLintptr") long offset, @NativeType("void *") double[] data);
 
 }

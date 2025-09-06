@@ -18,13 +18,13 @@ public interface glShaderBinary {
 /**
  * <a href="https://docs.gl/es3/glShaderBinary">Reference Page</a>
  */
-    public void glShaderBinary(IntBuffer shaders, int binaryformat, ByteBuffer binary);
+    public void glShaderBinary(@NativeType("GLuint const *") IntBuffer shaders, @NativeType("GLenum") int binaryformat, @NativeType("void const *") ByteBuffer binary);
 
 /**
  * Array version of: {@link #glShaderBinary ShaderBinary}
  *
  * @see <a href="https://docs.gl/es3/glShaderBinary">Reference Page</a>
  */
-    public void glShaderBinary(int[] shaders, int binaryformat, ByteBuffer binary);
+    public void glShaderBinary(@NativeType("GLuint const *") int[] shaders, @NativeType("GLenum") int binaryformat, @NativeType("void const *") ByteBuffer binary);
 
 }

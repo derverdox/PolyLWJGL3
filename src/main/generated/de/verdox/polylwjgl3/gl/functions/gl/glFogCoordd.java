@@ -20,6 +20,6 @@ public interface glFogCoordd {
  *
  * @see <a href="https://docs.gl/gl3/glFogCoordd">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glFogCoordd(double coord);
+    public void glFogCoordd(@NativeType("GLdouble") double coord);
 
 }

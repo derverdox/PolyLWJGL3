@@ -21,6 +21,6 @@ public interface glWaitSync {
 /**
  * <a href="https://docs.gl/es3/glWaitSync">Reference Page</a>
  */
-    public void glWaitSync(long sync, int flags, long timeout);
+    public void glWaitSync(@NativeType("GLsync") long sync, @NativeType("GLbitfield") int flags, @NativeType("GLuint64") long timeout);
 
 }

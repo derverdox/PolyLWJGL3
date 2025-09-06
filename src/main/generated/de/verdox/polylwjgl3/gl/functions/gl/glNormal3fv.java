@@ -25,13 +25,13 @@ public interface glNormal3fv {
  *
  * @see <a href="https://docs.gl/gl3/glNormal">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glNormal3fv(FloatBuffer v);
+    public void glNormal3fv(@NativeType("GLfloat const *") FloatBuffer v);
 
 /**
  * Array version of: {@link #glNormal3fv Normal3fv}
  *
  * @see <a href="https://docs.gl/gl3/glNormal">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glNormal3fv(float[] v);
+    public void glNormal3fv(@NativeType("GLfloat const *") float[] v);
 
 }

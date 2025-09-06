@@ -18,23 +18,25 @@ public interface glGetShaderSource {
 /**
  * <a href="https://docs.gl/es3/glGetShaderSource">Reference Page</a>
  */
-    public void glGetShaderSource(int shader, @Nullable IntBuffer length, ByteBuffer source);
+    public void glGetShaderSource(@NativeType("GLuint") int shader, @Nullable @NativeType("GLsizei *") IntBuffer length, @NativeType("GLchar *") ByteBuffer source);
 
 /**
  * <a href="https://docs.gl/es3/glGetShaderSource">Reference Page</a>
  */
-    public String glGetShaderSource(int shader, int bufSize);
+@NativeType("void")
+    public String glGetShaderSource(@NativeType("GLuint") int shader, @NativeType("GLsizei") int bufSize);
 
 /**
  * <a href="https://docs.gl/es3/glGetShaderSource">Reference Page</a>
  */
-    public String glGetShaderSource(int shader);
+@NativeType("void")
+    public String glGetShaderSource(@NativeType("GLuint") int shader);
 
 /**
  * Array version of: {@link #glGetShaderSource GetShaderSource}
  *
  * @see <a href="https://docs.gl/es3/glGetShaderSource">Reference Page</a>
  */
-    public void glGetShaderSource(int shader, @Nullable int[] length, ByteBuffer source);
+    public void glGetShaderSource(@NativeType("GLuint") int shader, @Nullable @NativeType("GLsizei *") int[] length, @NativeType("GLchar *") ByteBuffer source);
 
 }

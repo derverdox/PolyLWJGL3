@@ -23,6 +23,7 @@ public interface glCheckNamedFramebufferStatus {
  *
  * @see <a href="https://docs.gl/gl4/glCheckFramebufferStatus">Reference Page</a>
  */
-    public int glCheckNamedFramebufferStatus(int framebuffer, int target);
+@NativeType("GLenum")
+    public int glCheckNamedFramebufferStatus(@NativeType("GLuint") int framebuffer, @NativeType("GLenum") int target);
 
 }

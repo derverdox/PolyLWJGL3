@@ -26,13 +26,13 @@ public interface glDepthRangeArrayv {
  *
  * @see <a href="https://docs.gl/gl4/glDepthRangeArrayv">Reference Page</a>
  */
-    public void glDepthRangeArrayv(int first, DoubleBuffer v);
+    public void glDepthRangeArrayv(@NativeType("GLuint") int first, @NativeType("GLdouble const *") DoubleBuffer v);
 
 /**
  * Array version of: {@link #glDepthRangeArrayv DepthRangeArrayv}
  *
  * @see <a href="https://docs.gl/gl4/glDepthRangeArrayv">Reference Page</a>
  */
-    public void glDepthRangeArrayv(int first, double[] v);
+    public void glDepthRangeArrayv(@NativeType("GLuint") int first, @NativeType("GLdouble const *") double[] v);
 
 }

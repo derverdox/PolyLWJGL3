@@ -21,13 +21,13 @@ public interface glGetUniformuiv {
 /**
  * <a href="https://docs.gl/es3/glGetUniform">Reference Page</a>
  */
-    public void glGetUniformuiv(int program, int location, IntBuffer params);
+    public void glGetUniformuiv(@NativeType("GLuint") int program, @NativeType("GLint") int location, @NativeType("GLuint *") IntBuffer params);
 
 /**
  * Array version of: {@link #glGetUniformuiv GetUniformuiv}
  *
  * @see <a href="https://docs.gl/es3/glGetUniform">Reference Page</a>
  */
-    public void glGetUniformuiv(int program, int location, int[] params);
+    public void glGetUniformuiv(@NativeType("GLuint") int program, @NativeType("GLint") int location, @NativeType("GLuint *") int[] params);
 
 }

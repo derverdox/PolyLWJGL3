@@ -24,6 +24,6 @@ public interface glTextureParameteri {
  *
  * @see <a href="https://docs.gl/gl4/glTextureParameteri">Reference Page</a>
  */
-    public void glTextureParameteri(int texture, int pname, int param);
+    public void glTextureParameteri(@NativeType("GLuint") int texture, @NativeType("GLenum") int pname, @NativeType("GLint") int param);
 
 }

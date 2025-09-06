@@ -34,7 +34,7 @@ public interface glGetnTexImage {
  *
  * @see <a href="https://docs.gl/gl4/glGetnTexImage">Reference Page</a>
  */
-    public void glGetnTexImage(int tex, int level, int format, int type, int bufSize, long img);
+    public void glGetnTexImage(@NativeType("GLenum") int tex, @NativeType("GLint") int level, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("GLsizei") int bufSize, @NativeType("void *") long img);
 
 /**
  * Robust version of {@link GL11C#glGetTexImage GetTexImage}
@@ -47,7 +47,7 @@ public interface glGetnTexImage {
  *
  * @see <a href="https://docs.gl/gl4/glGetnTexImage">Reference Page</a>
  */
-    public void glGetnTexImage(int tex, int level, int format, int type, ByteBuffer img);
+    public void glGetnTexImage(@NativeType("GLenum") int tex, @NativeType("GLint") int level, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") ByteBuffer img);
 
 /**
  * Robust version of {@link GL11C#glGetTexImage GetTexImage}
@@ -60,7 +60,7 @@ public interface glGetnTexImage {
  *
  * @see <a href="https://docs.gl/gl4/glGetnTexImage">Reference Page</a>
  */
-    public void glGetnTexImage(int tex, int level, int format, int type, ShortBuffer img);
+    public void glGetnTexImage(@NativeType("GLenum") int tex, @NativeType("GLint") int level, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") ShortBuffer img);
 
 /**
  * Robust version of {@link GL11C#glGetTexImage GetTexImage}
@@ -73,7 +73,7 @@ public interface glGetnTexImage {
  *
  * @see <a href="https://docs.gl/gl4/glGetnTexImage">Reference Page</a>
  */
-    public void glGetnTexImage(int tex, int level, int format, int type, IntBuffer img);
+    public void glGetnTexImage(@NativeType("GLenum") int tex, @NativeType("GLint") int level, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") IntBuffer img);
 
 /**
  * Robust version of {@link GL11C#glGetTexImage GetTexImage}
@@ -86,7 +86,7 @@ public interface glGetnTexImage {
  *
  * @see <a href="https://docs.gl/gl4/glGetnTexImage">Reference Page</a>
  */
-    public void glGetnTexImage(int tex, int level, int format, int type, FloatBuffer img);
+    public void glGetnTexImage(@NativeType("GLenum") int tex, @NativeType("GLint") int level, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") FloatBuffer img);
 
 /**
  * Robust version of {@link GL11C#glGetTexImage GetTexImage}
@@ -99,34 +99,34 @@ public interface glGetnTexImage {
  *
  * @see <a href="https://docs.gl/gl4/glGetnTexImage">Reference Page</a>
  */
-    public void glGetnTexImage(int tex, int level, int format, int type, DoubleBuffer img);
+    public void glGetnTexImage(@NativeType("GLenum") int tex, @NativeType("GLint") int level, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") DoubleBuffer img);
 
 /**
  * Array version of: {@link #glGetnTexImage GetnTexImage}
  *
  * @see <a href="https://docs.gl/gl4/glGetnTexImage">Reference Page</a>
  */
-    public void glGetnTexImage(int tex, int level, int format, int type, short[] img);
+    public void glGetnTexImage(@NativeType("GLenum") int tex, @NativeType("GLint") int level, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") short[] img);
 
 /**
  * Array version of: {@link #glGetnTexImage GetnTexImage}
  *
  * @see <a href="https://docs.gl/gl4/glGetnTexImage">Reference Page</a>
  */
-    public void glGetnTexImage(int tex, int level, int format, int type, int[] img);
+    public void glGetnTexImage(@NativeType("GLenum") int tex, @NativeType("GLint") int level, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") int[] img);
 
 /**
  * Array version of: {@link #glGetnTexImage GetnTexImage}
  *
  * @see <a href="https://docs.gl/gl4/glGetnTexImage">Reference Page</a>
  */
-    public void glGetnTexImage(int tex, int level, int format, int type, float[] img);
+    public void glGetnTexImage(@NativeType("GLenum") int tex, @NativeType("GLint") int level, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") float[] img);
 
 /**
  * Array version of: {@link #glGetnTexImage GetnTexImage}
  *
  * @see <a href="https://docs.gl/gl4/glGetnTexImage">Reference Page</a>
  */
-    public void glGetnTexImage(int tex, int level, int format, int type, double[] img);
+    public void glGetnTexImage(@NativeType("GLenum") int tex, @NativeType("GLint") int level, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") double[] img);
 
 }

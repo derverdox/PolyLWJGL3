@@ -18,13 +18,13 @@ public interface glGetBufferParameteriv {
 /**
  * <a href="https://docs.gl/es3/glGetBufferParameter">Reference Page</a>
  */
-    public void glGetBufferParameteriv(int target, int pname, IntBuffer params);
+    public void glGetBufferParameteriv(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLint *") IntBuffer params);
 
 /**
  * Array version of: {@link #glGetBufferParameteriv GetBufferParameteriv}
  *
  * @see <a href="https://docs.gl/es3/glGetBufferParameter">Reference Page</a>
  */
-    public void glGetBufferParameteriv(int target, int pname, int[] params);
+    public void glGetBufferParameteriv(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLint *") int[] params);
 
 }

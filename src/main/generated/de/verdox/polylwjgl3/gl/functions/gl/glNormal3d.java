@@ -22,6 +22,6 @@ public interface glNormal3d {
  *
  * @see <a href="https://docs.gl/gl3/glNormal">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glNormal3d(double nx, double ny, double nz);
+    public void glNormal3d(@NativeType("GLdouble") double nx, @NativeType("GLdouble") double ny, @NativeType("GLdouble") double nz);
 
 }

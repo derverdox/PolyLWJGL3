@@ -34,13 +34,13 @@ public interface glLoadTransposeMatrixf {
  *
  * @see <a href="https://docs.gl/gl3/glLoadTransposeMatrixf">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glLoadTransposeMatrixf(FloatBuffer m);
+    public void glLoadTransposeMatrixf(@NativeType("GLfloat const *") FloatBuffer m);
 
 /**
  * Array version of: {@link #glLoadTransposeMatrixf LoadTransposeMatrixf}
  *
  * @see <a href="https://docs.gl/gl3/glLoadTransposeMatrixf">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glLoadTransposeMatrixf(float[] m);
+    public void glLoadTransposeMatrixf(@NativeType("GLfloat const *") float[] m);
 
 }

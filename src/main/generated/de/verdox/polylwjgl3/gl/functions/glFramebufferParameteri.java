@@ -18,6 +18,6 @@ public interface glFramebufferParameteri {
 /**
  * <a href="https://docs.gl/es3/glFramebufferParameteri">Reference Page</a>
  */
-    public void glFramebufferParameteri(int target, int pname, int param);
+    public void glFramebufferParameteri(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLint") int param);
 
 }

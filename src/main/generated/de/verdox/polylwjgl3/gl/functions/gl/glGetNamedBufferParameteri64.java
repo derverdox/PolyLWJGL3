@@ -23,6 +23,7 @@ public interface glGetNamedBufferParameteri64 {
  *
  * @see <a href="https://docs.gl/gl4/glGetBufferParameter">Reference Page</a>
  */
-    public long glGetNamedBufferParameteri64(int buffer, int pname);
+@NativeType("void")
+    public long glGetNamedBufferParameteri64(@NativeType("GLuint") int buffer, @NativeType("GLenum") int pname);
 
 }

@@ -19,6 +19,6 @@ public interface glUniform2ui {
 /**
  * <a href="https://docs.gl/es3/glUniform">Reference Page</a>
  */
-    public void glUniform2ui(int location, int v0, int v1);
+    public void glUniform2ui(@NativeType("GLint") int location, @NativeType("GLuint") int v0, @NativeType("GLuint") int v1);
 
 }

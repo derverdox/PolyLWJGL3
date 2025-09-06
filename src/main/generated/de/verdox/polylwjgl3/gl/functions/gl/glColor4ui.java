@@ -23,6 +23,6 @@ public interface glColor4ui {
  *
  * @see <a href="https://docs.gl/gl3/glColor">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glColor4ui(int red, int green, int blue, int alpha);
+    public void glColor4ui(@NativeType("GLint") int red, @NativeType("GLint") int green, @NativeType("GLint") int blue, @NativeType("GLint") int alpha);
 
 }

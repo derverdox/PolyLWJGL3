@@ -22,6 +22,6 @@ public interface glNormal3s {
  *
  * @see <a href="https://docs.gl/gl3/glNormal">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glNormal3s(short nx, short ny, short nz);
+    public void glNormal3s(@NativeType("GLshort") short nx, @NativeType("GLshort") short ny, @NativeType("GLshort") short nz);
 
 }

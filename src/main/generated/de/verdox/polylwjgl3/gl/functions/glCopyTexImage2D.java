@@ -16,6 +16,6 @@ public interface glCopyTexImage2D {
 /**
  * <a href="https://docs.gl/es3/glCopyTexImage2D">Reference Page</a>
  */
-    public void glCopyTexImage2D(int target, int level, int internalformat, int x, int y, int width, int height, int border);
+    public void glCopyTexImage2D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLenum") int internalformat, @NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLint") int border);
 
 }

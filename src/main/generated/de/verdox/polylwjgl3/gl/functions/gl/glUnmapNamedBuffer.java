@@ -22,6 +22,7 @@ public interface glUnmapNamedBuffer {
  *
  * @see <a href="https://docs.gl/gl4/glUnmapBuffer">Reference Page</a>
  */
-    public boolean glUnmapNamedBuffer(int buffer);
+@NativeType("GLboolean")
+    public boolean glUnmapNamedBuffer(@NativeType("GLuint") int buffer);
 
 }

@@ -20,6 +20,6 @@ public interface glLogicOp {
  *
  * @see <a href="https://docs.gl/gl4/glLogicOp">Reference Page</a>
  */
-    public void glLogicOp(int op);
+    public void glLogicOp(@NativeType("GLenum") int op);
 
 }

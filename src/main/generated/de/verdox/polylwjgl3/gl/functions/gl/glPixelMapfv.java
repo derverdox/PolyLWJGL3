@@ -29,7 +29,7 @@ public interface glPixelMapfv {
  *
  * @see <a href="https://docs.gl/gl3/glPixelMap">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glPixelMapfv(int map, int size, long values);
+    public void glPixelMapfv(@NativeType("GLenum") int map, @NativeType("GLsizei") int size, @NativeType("GLfloat const *") long values);
 
 /**
  * Sets a pixel map lookup table.
@@ -39,13 +39,13 @@ public interface glPixelMapfv {
  *
  * @see <a href="https://docs.gl/gl3/glPixelMap">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glPixelMapfv(int map, FloatBuffer values);
+    public void glPixelMapfv(@NativeType("GLenum") int map, @NativeType("GLfloat const *") FloatBuffer values);
 
 /**
  * Array version of: {@link #glPixelMapfv PixelMapfv}
  *
  * @see <a href="https://docs.gl/gl3/glPixelMap">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glPixelMapfv(int map, float[] values);
+    public void glPixelMapfv(@NativeType("GLenum") int map, @NativeType("GLfloat const *") float[] values);
 
 }

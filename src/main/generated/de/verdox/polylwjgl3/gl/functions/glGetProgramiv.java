@@ -18,13 +18,13 @@ public interface glGetProgramiv {
 /**
  * <a href="https://docs.gl/es3/glGetProgram">Reference Page</a>
  */
-    public void glGetProgramiv(int program, int pname, IntBuffer params);
+    public void glGetProgramiv(@NativeType("GLuint") int program, @NativeType("GLenum") int pname, @NativeType("GLint *") IntBuffer params);
 
 /**
  * Array version of: {@link #glGetProgramiv GetProgramiv}
  *
  * @see <a href="https://docs.gl/es3/glGetProgram">Reference Page</a>
  */
-    public void glGetProgramiv(int program, int pname, int[] params);
+    public void glGetProgramiv(@NativeType("GLuint") int program, @NativeType("GLenum") int pname, @NativeType("GLint *") int[] params);
 
 }

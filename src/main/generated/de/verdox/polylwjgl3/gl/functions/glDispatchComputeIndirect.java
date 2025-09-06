@@ -18,6 +18,6 @@ public interface glDispatchComputeIndirect {
 /**
  * <a href="https://docs.gl/es3/glDispatchComputeIndirect">Reference Page</a>
  */
-    public void glDispatchComputeIndirect(long indirect);
+    public void glDispatchComputeIndirect(@NativeType("GLintptr") long indirect);
 
 }

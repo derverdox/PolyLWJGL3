@@ -57,7 +57,7 @@ public interface glDebugMessageControl {
  *
  * @see <a href="https://docs.gl/es3/glDebugMessageControl">Reference Page</a>
  */
-    public void glDebugMessageControl(int source, int type, int severity, IntBuffer ids, boolean enabled);
+    public void glDebugMessageControl(@NativeType("GLenum") int source, @NativeType("GLenum") int type, @NativeType("GLenum") int severity, @NativeType("GLuint const *") IntBuffer ids, @NativeType("GLboolean") boolean enabled);
 
 /**
  * Controls the volume of debug output in the active debug group, by disabling specific or groups of messages.
@@ -93,13 +93,13 @@ public interface glDebugMessageControl {
  *
  * @see <a href="https://docs.gl/es3/glDebugMessageControl">Reference Page</a>
  */
-    public void glDebugMessageControl(int source, int type, int severity, int id, boolean enabled);
+    public void glDebugMessageControl(@NativeType("GLenum") int source, @NativeType("GLenum") int type, @NativeType("GLenum") int severity, @NativeType("GLuint const *") int id, @NativeType("GLboolean") boolean enabled);
 
 /**
  * Array version of: {@link #glDebugMessageControl DebugMessageControl}
  *
  * @see <a href="https://docs.gl/es3/glDebugMessageControl">Reference Page</a>
  */
-    public void glDebugMessageControl(int source, int type, int severity, int[] ids, boolean enabled);
+    public void glDebugMessageControl(@NativeType("GLenum") int source, @NativeType("GLenum") int type, @NativeType("GLenum") int severity, @NativeType("GLuint const *") int[] ids, @NativeType("GLboolean") boolean enabled);
 
 }

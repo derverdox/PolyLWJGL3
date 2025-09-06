@@ -19,6 +19,6 @@ public interface glBindSampler {
 /**
  * <a href="https://docs.gl/es3/glBindSampler">Reference Page</a>
  */
-    public void glBindSampler(int unit, int sampler);
+    public void glBindSampler(@NativeType("GLuint") int unit, @NativeType("GLuint") int sampler);
 
 }

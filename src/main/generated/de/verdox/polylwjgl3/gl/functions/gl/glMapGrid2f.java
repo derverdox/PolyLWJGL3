@@ -25,6 +25,6 @@ public interface glMapGrid2f {
  *
  * @see <a href="https://docs.gl/gl3/glMapGrid">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glMapGrid2f(int un, float u1, float u2, int vn, float v1, float v2);
+    public void glMapGrid2f(@NativeType("GLint") int un, @NativeType("GLfloat") float u1, @NativeType("GLfloat") float u2, @NativeType("GLint") int vn, @NativeType("GLfloat") float v1, @NativeType("GLfloat") float v2);
 
 }

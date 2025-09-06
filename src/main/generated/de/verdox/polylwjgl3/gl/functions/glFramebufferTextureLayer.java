@@ -19,6 +19,6 @@ public interface glFramebufferTextureLayer {
 /**
  * <a href="https://docs.gl/es3/glFramebufferTextureLayer">Reference Page</a>
  */
-    public void glFramebufferTextureLayer(int target, int attachment, int texture, int level, int layer);
+    public void glFramebufferTextureLayer(@NativeType("GLenum") int target, @NativeType("GLenum") int attachment, @NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLint") int layer);
 
 }

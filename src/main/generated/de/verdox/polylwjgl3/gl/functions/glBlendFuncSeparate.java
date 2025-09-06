@@ -16,6 +16,6 @@ public interface glBlendFuncSeparate {
 /**
  * <a href="https://docs.gl/es3/glBlendFuncSeparate">Reference Page</a>
  */
-    public void glBlendFuncSeparate(int sfactorRGB, int dfactorRGB, int sfactorAlpha, int dfactorAlpha);
+    public void glBlendFuncSeparate(@NativeType("GLenum") int sfactorRGB, @NativeType("GLenum") int dfactorRGB, @NativeType("GLenum") int sfactorAlpha, @NativeType("GLenum") int dfactorAlpha);
 
 }

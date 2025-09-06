@@ -20,6 +20,6 @@ public interface glGetBooleani_v {
 /**
  * <a href="https://docs.gl/es3/glGetBooleani_v">Reference Page</a>
  */
-    public void glGetBooleani_v(int target, int index, ByteBuffer data);
+    public void glGetBooleani_v(@NativeType("GLenum") int target, @NativeType("GLuint") int index, @NativeType("GLboolean *") ByteBuffer data);
 
 }

@@ -22,6 +22,6 @@ public interface glVertexAttrib4s {
  *
  * @see <a href="https://docs.gl/gl4/glVertexAttrib">Reference Page</a>
  */
-    public void glVertexAttrib4s(int index, short v0, short v1, short v2, short v3);
+    public void glVertexAttrib4s(@NativeType("GLuint") int index, @NativeType("GLshort") short v0, @NativeType("GLshort") short v1, @NativeType("GLshort") short v2, @NativeType("GLshort") short v3);
 
 }

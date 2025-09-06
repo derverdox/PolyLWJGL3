@@ -24,13 +24,13 @@ public interface glGetUniformdv {
  *
  * @see <a href="https://docs.gl/gl4/glGetUniform">Reference Page</a>
  */
-    public void glGetUniformdv(int program, int location, DoubleBuffer params);
+    public void glGetUniformdv(@NativeType("GLuint") int program, @NativeType("GLint") int location, @NativeType("GLdouble *") DoubleBuffer params);
 
 /**
  * Array version of: {@link #glGetUniformdv GetUniformdv}
  *
  * @see <a href="https://docs.gl/gl4/glGetUniform">Reference Page</a>
  */
-    public void glGetUniformdv(int program, int location, double[] params);
+    public void glGetUniformdv(@NativeType("GLuint") int program, @NativeType("GLint") int location, @NativeType("GLdouble *") double[] params);
 
 }

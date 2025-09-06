@@ -20,6 +20,6 @@ public interface glBegin {
  *
  * @see <a href="https://docs.gl/gl3/glBegin">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glBegin(int mode);
+    public void glBegin(@NativeType("GLenum") int mode);
 
 }

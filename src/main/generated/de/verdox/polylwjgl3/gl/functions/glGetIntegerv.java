@@ -18,13 +18,13 @@ public interface glGetIntegerv {
 /**
  * <a href="https://docs.gl/es3/glGetIntegerv">Reference Page</a>
  */
-    public void glGetIntegerv(int pname, IntBuffer data);
+    public void glGetIntegerv(@NativeType("GLenum") int pname, @NativeType("GLint *") IntBuffer data);
 
 /**
  * Array version of: {@link #glGetIntegerv GetIntegerv}
  *
  * @see <a href="https://docs.gl/es3/glGetIntegerv">Reference Page</a>
  */
-    public void glGetIntegerv(int pname, int[] data);
+    public void glGetIntegerv(@NativeType("GLenum") int pname, @NativeType("GLint *") int[] data);
 
 }

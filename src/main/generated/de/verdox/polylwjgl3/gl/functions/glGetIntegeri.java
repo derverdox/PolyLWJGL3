@@ -19,6 +19,7 @@ public interface glGetIntegeri {
 /**
  * <a href="https://docs.gl/es3/glGetIntegeri_v">Reference Page</a>
  */
-    public int glGetIntegeri(int target, int index);
+@NativeType("void")
+    public int glGetIntegeri(@NativeType("GLenum") int target, @NativeType("GLuint") int index);
 
 }

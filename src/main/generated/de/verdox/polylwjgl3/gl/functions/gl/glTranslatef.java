@@ -31,6 +31,6 @@ public interface glTranslatef {
  *
  * @see <a href="https://docs.gl/gl3/glTranslatef">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glTranslatef(float x, float y, float z);
+    public void glTranslatef(@NativeType("GLfloat") float x, @NativeType("GLfloat") float y, @NativeType("GLfloat") float z);
 
 }

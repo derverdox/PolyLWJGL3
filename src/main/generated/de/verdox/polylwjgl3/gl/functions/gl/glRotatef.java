@@ -44,6 +44,6 @@ public interface glRotatef {
  *
  * @see <a href="https://docs.gl/gl3/glRotatef">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glRotatef(float angle, float x, float y, float z);
+    public void glRotatef(@NativeType("GLfloat") float angle, @NativeType("GLfloat") float x, @NativeType("GLfloat") float y, @NativeType("GLfloat") float z);
 
 }

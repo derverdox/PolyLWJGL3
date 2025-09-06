@@ -19,6 +19,6 @@ public interface glBeginQuery {
 /**
  * <a href="https://docs.gl/es3/glBeginQuery">Reference Page</a>
  */
-    public void glBeginQuery(int target, int id);
+    public void glBeginQuery(@NativeType("GLenum") int target, @NativeType("GLuint") int id);
 
 }

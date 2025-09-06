@@ -27,13 +27,13 @@ public interface glProgramUniform2dv {
  *
  * @see <a href="https://docs.gl/gl4/glProgramUniform">Reference Page</a>
  */
-    public void glProgramUniform2dv(int program, int location, DoubleBuffer value);
+    public void glProgramUniform2dv(@NativeType("GLuint") int program, @NativeType("GLint") int location, @NativeType("GLdouble const *") DoubleBuffer value);
 
 /**
  * Array version of: {@link #glProgramUniform2dv ProgramUniform2dv}
  *
  * @see <a href="https://docs.gl/gl4/glProgramUniform">Reference Page</a>
  */
-    public void glProgramUniform2dv(int program, int location, double[] value);
+    public void glProgramUniform2dv(@NativeType("GLuint") int program, @NativeType("GLint") int location, @NativeType("GLdouble const *") double[] value);
 
 }

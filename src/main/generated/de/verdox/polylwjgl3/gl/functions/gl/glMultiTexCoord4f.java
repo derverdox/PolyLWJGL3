@@ -24,6 +24,6 @@ public interface glMultiTexCoord4f {
  *
  * @see <a href="https://docs.gl/gl3/glMultiTexCoord">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glMultiTexCoord4f(int texture, float s, float t, float r, float q);
+    public void glMultiTexCoord4f(@NativeType("GLenum") int texture, @NativeType("GLfloat") float s, @NativeType("GLfloat") float t, @NativeType("GLfloat") float r, @NativeType("GLfloat") float q);
 
 }

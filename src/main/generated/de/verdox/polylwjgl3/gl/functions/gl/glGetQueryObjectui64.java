@@ -20,6 +20,7 @@ public interface glGetQueryObjectui64 {
  *
  * @see <a href="https://docs.gl/gl4/glGetQueryObject">Reference Page</a>
  */
-    public long glGetQueryObjectui64(int id, int pname);
+@NativeType("void")
+    public long glGetQueryObjectui64(@NativeType("GLuint") int id, @NativeType("GLenum") int pname);
 
 }

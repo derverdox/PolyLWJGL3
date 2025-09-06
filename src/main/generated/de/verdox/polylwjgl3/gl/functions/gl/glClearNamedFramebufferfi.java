@@ -26,6 +26,6 @@ public interface glClearNamedFramebufferfi {
  *
  * @see <a href="https://docs.gl/gl4/glClearFramebufferfi">Reference Page</a>
  */
-    public void glClearNamedFramebufferfi(int framebuffer, int buffer, int drawbuffer, float depth, int stencil);
+    public void glClearNamedFramebufferfi(@NativeType("GLuint") int framebuffer, @NativeType("GLenum") int buffer, @NativeType("GLint") int drawbuffer, @NativeType("GLfloat") float depth, @NativeType("GLint") int stencil);
 
 }

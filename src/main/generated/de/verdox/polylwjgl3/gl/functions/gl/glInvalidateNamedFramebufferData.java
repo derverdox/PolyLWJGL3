@@ -30,7 +30,7 @@ public interface glInvalidateNamedFramebufferData {
  *
  * @see <a href="https://docs.gl/gl4/glInvalidateFramebufferData">Reference Page</a>
  */
-    public void glInvalidateNamedFramebufferData(int framebuffer, IntBuffer attachments);
+    public void glInvalidateNamedFramebufferData(@NativeType("GLuint") int framebuffer, @NativeType("GLenum const *") IntBuffer attachments);
 
 /**
  * DSA version of {@link GL43C#glInvalidateFramebuffer InvalidateFramebuffer}.
@@ -39,13 +39,13 @@ public interface glInvalidateNamedFramebufferData {
  *
  * @see <a href="https://docs.gl/gl4/glInvalidateFramebufferData">Reference Page</a>
  */
-    public void glInvalidateNamedFramebufferData(int framebuffer, int attachment);
+    public void glInvalidateNamedFramebufferData(@NativeType("GLuint") int framebuffer, @NativeType("GLenum const *") int attachment);
 
 /**
  * Array version of: {@link #glInvalidateNamedFramebufferData InvalidateNamedFramebufferData}
  *
  * @see <a href="https://docs.gl/gl4/glInvalidateFramebufferData">Reference Page</a>
  */
-    public void glInvalidateNamedFramebufferData(int framebuffer, int[] attachments);
+    public void glInvalidateNamedFramebufferData(@NativeType("GLuint") int framebuffer, @NativeType("GLenum const *") int[] attachments);
 
 }

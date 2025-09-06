@@ -20,6 +20,6 @@ public interface glPushName {
  *
  * @see <a href="https://docs.gl/gl3/glPushName">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glPushName(int name);
+    public void glPushName(@NativeType("GLuint") int name);
 
 }

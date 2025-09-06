@@ -25,13 +25,13 @@ public interface glGetProgramStageiv {
  *
  * @see <a href="https://docs.gl/gl4/glGetProgramStage">Reference Page</a>
  */
-    public void glGetProgramStageiv(int program, int shadertype, int pname, IntBuffer values);
+    public void glGetProgramStageiv(@NativeType("GLuint") int program, @NativeType("GLenum") int shadertype, @NativeType("GLenum") int pname, @NativeType("GLint *") IntBuffer values);
 
 /**
  * Array version of: {@link #glGetProgramStageiv GetProgramStageiv}
  *
  * @see <a href="https://docs.gl/gl4/glGetProgramStage">Reference Page</a>
  */
-    public void glGetProgramStageiv(int program, int shadertype, int pname, int[] values);
+    public void glGetProgramStageiv(@NativeType("GLuint") int program, @NativeType("GLenum") int shadertype, @NativeType("GLenum") int pname, @NativeType("GLint *") int[] values);
 
 }

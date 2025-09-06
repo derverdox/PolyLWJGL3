@@ -20,13 +20,13 @@ public interface glGetProgramResourceiv {
 /**
  * <a href="https://docs.gl/es3/glGetProgramResource">Reference Page</a>
  */
-    public void glGetProgramResourceiv(int program, int programInterface, int index, IntBuffer props, @Nullable IntBuffer length, IntBuffer params);
+    public void glGetProgramResourceiv(@NativeType("GLuint") int program, @NativeType("GLenum") int programInterface, @NativeType("GLuint") int index, @NativeType("GLenum const *") IntBuffer props, @Nullable @NativeType("GLsizei *") IntBuffer length, @NativeType("GLint *") IntBuffer params);
 
 /**
  * Array version of: {@link #glGetProgramResourceiv GetProgramResourceiv}
  *
  * @see <a href="https://docs.gl/es3/glGetProgramResource">Reference Page</a>
  */
-    public void glGetProgramResourceiv(int program, int programInterface, int index, int[] props, @Nullable int[] length, int[] params);
+    public void glGetProgramResourceiv(@NativeType("GLuint") int program, @NativeType("GLenum") int programInterface, @NativeType("GLuint") int index, @NativeType("GLenum const *") int[] props, @Nullable @NativeType("GLsizei *") int[] length, @NativeType("GLint *") int[] params);
 
 }

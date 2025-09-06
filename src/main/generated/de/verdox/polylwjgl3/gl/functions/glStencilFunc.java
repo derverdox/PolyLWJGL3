@@ -16,6 +16,6 @@ public interface glStencilFunc {
 /**
  * <a href="https://docs.gl/es3/glStencilFunc">Reference Page</a>
  */
-    public void glStencilFunc(int func, int ref, int mask);
+    public void glStencilFunc(@NativeType("GLenum") int func, @NativeType("GLint") int ref, @NativeType("GLuint") int mask);
 
 }

@@ -18,6 +18,6 @@ public interface glProgramUniform3i {
 /**
  * <a href="https://docs.gl/es3/glProgramUniform">Reference Page</a>
  */
-    public void glProgramUniform3i(int program, int location, int v0, int v1, int v2);
+    public void glProgramUniform3i(@NativeType("GLuint") int program, @NativeType("GLint") int location, @NativeType("GLint") int v0, @NativeType("GLint") int v1, @NativeType("GLint") int v2);
 
 }

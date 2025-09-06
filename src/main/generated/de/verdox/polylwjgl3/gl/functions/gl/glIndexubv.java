@@ -25,6 +25,6 @@ public interface glIndexubv {
  *
  * @see <a href="https://docs.gl/gl3/glIndex">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glIndexubv(ByteBuffer index);
+    public void glIndexubv(@NativeType("GLubyte const *") ByteBuffer index);
 
 }

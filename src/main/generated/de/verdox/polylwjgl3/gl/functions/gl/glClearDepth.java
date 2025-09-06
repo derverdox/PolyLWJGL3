@@ -21,6 +21,6 @@ public interface glClearDepth {
  *
  * @see <a href="https://docs.gl/gl4/glClearDepth">Reference Page</a>
  */
-    public void glClearDepth(double depth);
+    public void glClearDepth(@NativeType("GLdouble") double depth);
 
 }

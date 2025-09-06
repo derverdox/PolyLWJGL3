@@ -21,6 +21,6 @@ public interface glPixelTransferf {
  *
  * @see <a href="https://docs.gl/gl3/glPixelTransferf">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glPixelTransferf(int pname, float param);
+    public void glPixelTransferf(@NativeType("GLenum") int pname, @NativeType("GLfloat") float param);
 
 }

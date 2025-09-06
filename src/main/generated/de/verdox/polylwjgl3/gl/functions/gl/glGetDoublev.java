@@ -30,13 +30,13 @@ public interface glGetDoublev {
  *
  * @see <a href="https://docs.gl/gl4/glGetDoublev">Reference Page</a>
  */
-    public void glGetDoublev(int pname, DoubleBuffer params);
+    public void glGetDoublev(@NativeType("GLenum") int pname, @NativeType("GLdouble *") DoubleBuffer params);
 
 /**
  * Array version of: {@link #glGetDoublev GetDoublev}
  *
  * @see <a href="https://docs.gl/gl4/glGetDoublev">Reference Page</a>
  */
-    public void glGetDoublev(int pname, double[] params);
+    public void glGetDoublev(@NativeType("GLenum") int pname, @NativeType("GLdouble *") double[] params);
 
 }

@@ -21,6 +21,6 @@ public interface glTexCoord2i {
  *
  * @see <a href="https://docs.gl/gl3/glTexCoord">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glTexCoord2i(int s, int t);
+    public void glTexCoord2i(@NativeType("GLint") int s, @NativeType("GLint") int t);
 
 }

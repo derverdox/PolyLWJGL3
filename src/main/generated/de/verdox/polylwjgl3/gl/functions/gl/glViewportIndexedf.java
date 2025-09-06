@@ -22,6 +22,6 @@ public interface glViewportIndexedf {
  *
  * @see <a href="https://docs.gl/gl4/glViewportIndexedf">Reference Page</a>
  */
-    public void glViewportIndexedf(int index, float x, float y, float w, float h);
+    public void glViewportIndexedf(@NativeType("GLuint") int index, @NativeType("GLfloat") float x, @NativeType("GLfloat") float y, @NativeType("GLfloat") float w, @NativeType("GLfloat") float h);
 
 }

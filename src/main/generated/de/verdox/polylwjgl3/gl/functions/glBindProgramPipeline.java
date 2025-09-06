@@ -18,6 +18,6 @@ public interface glBindProgramPipeline {
 /**
  * <a href="https://docs.gl/es3/glBindProgramPipeline">Reference Page</a>
  */
-    public void glBindProgramPipeline(int pipeline);
+    public void glBindProgramPipeline(@NativeType("GLuint") int pipeline);
 
 }

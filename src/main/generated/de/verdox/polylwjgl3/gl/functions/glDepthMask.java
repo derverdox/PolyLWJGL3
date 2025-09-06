@@ -16,6 +16,6 @@ public interface glDepthMask {
 /**
  * <a href="https://docs.gl/es3/glDepthMask">Reference Page</a>
  */
-    public void glDepthMask(boolean flag);
+    public void glDepthMask(@NativeType("GLboolean") boolean flag);
 
 }

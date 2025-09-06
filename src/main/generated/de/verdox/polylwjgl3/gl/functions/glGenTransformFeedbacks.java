@@ -21,11 +21,12 @@ public interface glGenTransformFeedbacks {
 /**
  * <a href="https://docs.gl/es3/glGenTransformFeedbacks">Reference Page</a>
  */
-    public void glGenTransformFeedbacks(IntBuffer ids);
+    public void glGenTransformFeedbacks(@NativeType("GLuint *") IntBuffer ids);
 
 /**
  * <a href="https://docs.gl/es3/glGenTransformFeedbacks">Reference Page</a>
  */
+@NativeType("void")
     public int glGenTransformFeedbacks();
 
 /**
@@ -33,6 +34,6 @@ public interface glGenTransformFeedbacks {
  *
  * @see <a href="https://docs.gl/es3/glGenTransformFeedbacks">Reference Page</a>
  */
-    public void glGenTransformFeedbacks(int[] ids);
+    public void glGenTransformFeedbacks(@NativeType("GLuint *") int[] ids);
 
 }

@@ -27,13 +27,13 @@ public interface glVertexAttribP4uiv {
  *
  * @see <a href="https://docs.gl/gl4/glVertexAttrib">Reference Page</a>
  */
-    public void glVertexAttribP4uiv(int index, int type, boolean normalized, IntBuffer value);
+    public void glVertexAttribP4uiv(@NativeType("GLuint") int index, @NativeType("GLenum") int type, @NativeType("GLboolean") boolean normalized, @NativeType("GLuint const *") IntBuffer value);
 
 /**
  * Array version of: {@link #glVertexAttribP4uiv VertexAttribP4uiv}
  *
  * @see <a href="https://docs.gl/gl4/glVertexAttrib">Reference Page</a>
  */
-    public void glVertexAttribP4uiv(int index, int type, boolean normalized, int[] value);
+    public void glVertexAttribP4uiv(@NativeType("GLuint") int index, @NativeType("GLenum") int type, @NativeType("GLboolean") boolean normalized, @NativeType("GLuint const *") int[] value);
 
 }

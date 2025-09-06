@@ -18,42 +18,42 @@ public interface glBufferSubData {
 /**
  * <a href="https://docs.gl/es3/glBufferSubData">Reference Page</a>
  */
-    public void glBufferSubData(int target, long offset, ByteBuffer data);
+    public void glBufferSubData(@NativeType("GLenum") int target, @NativeType("GLintptr") long offset, @NativeType("void const *") ByteBuffer data);
 
 /**
  * <a href="https://docs.gl/es3/glBufferSubData">Reference Page</a>
  */
-    public void glBufferSubData(int target, long offset, ShortBuffer data);
+    public void glBufferSubData(@NativeType("GLenum") int target, @NativeType("GLintptr") long offset, @NativeType("void const *") ShortBuffer data);
 
 /**
  * <a href="https://docs.gl/es3/glBufferSubData">Reference Page</a>
  */
-    public void glBufferSubData(int target, long offset, IntBuffer data);
+    public void glBufferSubData(@NativeType("GLenum") int target, @NativeType("GLintptr") long offset, @NativeType("void const *") IntBuffer data);
 
 /**
  * <a href="https://docs.gl/es3/glBufferSubData">Reference Page</a>
  */
-    public void glBufferSubData(int target, long offset, FloatBuffer data);
+    public void glBufferSubData(@NativeType("GLenum") int target, @NativeType("GLintptr") long offset, @NativeType("void const *") FloatBuffer data);
 
 /**
  * Array version of: {@link #glBufferSubData BufferSubData}
  *
  * @see <a href="https://docs.gl/es3/glBufferSubData">Reference Page</a>
  */
-    public void glBufferSubData(int target, long offset, short[] data);
+    public void glBufferSubData(@NativeType("GLenum") int target, @NativeType("GLintptr") long offset, @NativeType("void const *") short[] data);
 
 /**
  * Array version of: {@link #glBufferSubData BufferSubData}
  *
  * @see <a href="https://docs.gl/es3/glBufferSubData">Reference Page</a>
  */
-    public void glBufferSubData(int target, long offset, int[] data);
+    public void glBufferSubData(@NativeType("GLenum") int target, @NativeType("GLintptr") long offset, @NativeType("void const *") int[] data);
 
 /**
  * Array version of: {@link #glBufferSubData BufferSubData}
  *
  * @see <a href="https://docs.gl/es3/glBufferSubData">Reference Page</a>
  */
-    public void glBufferSubData(int target, long offset, float[] data);
+    public void glBufferSubData(@NativeType("GLenum") int target, @NativeType("GLintptr") long offset, @NativeType("void const *") float[] data);
 
 }

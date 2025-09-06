@@ -29,13 +29,13 @@ public interface glGetNamedBufferParameteriv {
  *
  * @see <a href="https://docs.gl/gl4/glGetBufferParameter">Reference Page</a>
  */
-    public void glGetNamedBufferParameteriv(int buffer, int pname, IntBuffer params);
+    public void glGetNamedBufferParameteriv(@NativeType("GLuint") int buffer, @NativeType("GLenum") int pname, @NativeType("GLint *") IntBuffer params);
 
 /**
  * Array version of: {@link #glGetNamedBufferParameteriv GetNamedBufferParameteriv}
  *
  * @see <a href="https://docs.gl/gl4/glGetBufferParameter">Reference Page</a>
  */
-    public void glGetNamedBufferParameteriv(int buffer, int pname, int[] params);
+    public void glGetNamedBufferParameteriv(@NativeType("GLuint") int buffer, @NativeType("GLenum") int pname, @NativeType("GLint *") int[] params);
 
 }

@@ -21,6 +21,6 @@ public interface glDepthRange {
  *
  * @see <a href="https://docs.gl/gl4/glDepthRange">Reference Page</a>
  */
-    public void glDepthRange(double zNear, double zFar);
+    public void glDepthRange(@NativeType("GLdouble") double zNear, @NativeType("GLdouble") double zFar);
 
 }

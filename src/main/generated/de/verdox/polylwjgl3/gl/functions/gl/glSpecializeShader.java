@@ -49,7 +49,7 @@ public interface glSpecializeShader {
  *
  * @see <a href="https://docs.gl/gl4/glSpecializeShader">Reference Page</a>
  */
-    public void glSpecializeShader(int shader, ByteBuffer pEntryPoint, @Nullable IntBuffer pConstantIndex, @Nullable IntBuffer pConstantValue);
+    public void glSpecializeShader(@NativeType("GLuint") int shader, @NativeType("GLchar const *") ByteBuffer pEntryPoint, @Nullable @NativeType("GLuint const *") IntBuffer pConstantIndex, @Nullable @NativeType("GLuint const *") IntBuffer pConstantValue);
 
 /**
  * Specializes a shader created from a SPIR-V module.
@@ -83,20 +83,20 @@ public interface glSpecializeShader {
  *
  * @see <a href="https://docs.gl/gl4/glSpecializeShader">Reference Page</a>
  */
-    public void glSpecializeShader(int shader, CharSequence pEntryPoint, @Nullable IntBuffer pConstantIndex, @Nullable IntBuffer pConstantValue);
+    public void glSpecializeShader(@NativeType("GLuint") int shader, @NativeType("GLchar const *") CharSequence pEntryPoint, @Nullable @NativeType("GLuint const *") IntBuffer pConstantIndex, @Nullable @NativeType("GLuint const *") IntBuffer pConstantValue);
 
 /**
  * Array version of: {@link #glSpecializeShader SpecializeShader}
  *
  * @see <a href="https://docs.gl/gl4/glSpecializeShader">Reference Page</a>
  */
-    public void glSpecializeShader(int shader, ByteBuffer pEntryPoint, @Nullable int[] pConstantIndex, @Nullable int[] pConstantValue);
+    public void glSpecializeShader(@NativeType("GLuint") int shader, @NativeType("GLchar const *") ByteBuffer pEntryPoint, @Nullable @NativeType("GLuint const *") int[] pConstantIndex, @Nullable @NativeType("GLuint const *") int[] pConstantValue);
 
 /**
  * Array version of: {@link #glSpecializeShader SpecializeShader}
  *
  * @see <a href="https://docs.gl/gl4/glSpecializeShader">Reference Page</a>
  */
-    public void glSpecializeShader(int shader, CharSequence pEntryPoint, @Nullable int[] pConstantIndex, @Nullable int[] pConstantValue);
+    public void glSpecializeShader(@NativeType("GLuint") int shader, @NativeType("GLchar const *") CharSequence pEntryPoint, @Nullable @NativeType("GLuint const *") int[] pConstantIndex, @Nullable @NativeType("GLuint const *") int[] pConstantValue);
 
 }

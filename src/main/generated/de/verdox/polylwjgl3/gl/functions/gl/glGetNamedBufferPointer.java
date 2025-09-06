@@ -23,6 +23,7 @@ public interface glGetNamedBufferPointer {
  *
  * @see <a href="https://docs.gl/gl4/glGetBufferPointerv">Reference Page</a>
  */
-    public long glGetNamedBufferPointer(int buffer, int pname);
+@NativeType("void")
+    public long glGetNamedBufferPointer(@NativeType("GLuint") int buffer, @NativeType("GLenum") int pname);
 
 }

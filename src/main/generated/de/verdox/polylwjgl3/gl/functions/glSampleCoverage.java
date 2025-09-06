@@ -16,6 +16,6 @@ public interface glSampleCoverage {
 /**
  * <a href="https://docs.gl/es3/glSampleCoverage">Reference Page</a>
  */
-    public void glSampleCoverage(float value, boolean invert);
+    public void glSampleCoverage(@NativeType("GLfloat") float value, @NativeType("GLboolean") boolean invert);
 
 }

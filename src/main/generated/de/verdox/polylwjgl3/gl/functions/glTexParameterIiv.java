@@ -20,13 +20,13 @@ public interface glTexParameterIiv {
 /**
  * <a href="https://docs.gl/es3/glTexParameter">Reference Page</a>
  */
-    public void glTexParameterIiv(int target, int pname, IntBuffer params);
+    public void glTexParameterIiv(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLint const *") IntBuffer params);
 
 /**
  * Array version of: {@link #glTexParameterIiv TexParameterIiv}
  *
  * @see <a href="https://docs.gl/es3/glTexParameter">Reference Page</a>
  */
-    public void glTexParameterIiv(int target, int pname, int[] params);
+    public void glTexParameterIiv(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLint const *") int[] params);
 
 }

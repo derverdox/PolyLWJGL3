@@ -19,6 +19,6 @@ public interface glBindVertexArray {
 /**
  * <a href="https://docs.gl/es3/glBindVertexArray">Reference Page</a>
  */
-    public void glBindVertexArray(int array);
+    public void glBindVertexArray(@NativeType("GLuint") int array);
 
 }

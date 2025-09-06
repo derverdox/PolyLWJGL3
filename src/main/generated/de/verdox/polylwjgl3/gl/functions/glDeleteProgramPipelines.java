@@ -20,18 +20,18 @@ public interface glDeleteProgramPipelines {
 /**
  * <a href="https://docs.gl/es3/glDeleteProgramPipelines">Reference Page</a>
  */
-    public void glDeleteProgramPipelines(IntBuffer pipelines);
+    public void glDeleteProgramPipelines(@NativeType("GLuint const *") IntBuffer pipelines);
 
 /**
  * <a href="https://docs.gl/es3/glDeleteProgramPipelines">Reference Page</a>
  */
-    public void glDeleteProgramPipelines(int pipeline);
+    public void glDeleteProgramPipelines(@NativeType("GLuint const *") int pipeline);
 
 /**
  * Array version of: {@link #glDeleteProgramPipelines DeleteProgramPipelines}
  *
  * @see <a href="https://docs.gl/es3/glDeleteProgramPipelines">Reference Page</a>
  */
-    public void glDeleteProgramPipelines(int[] pipelines);
+    public void glDeleteProgramPipelines(@NativeType("GLuint const *") int[] pipelines);
 
 }

@@ -21,21 +21,21 @@ public interface glVertexAttribIPointer {
 /**
  * <a href="https://docs.gl/es3/glVertexAttribIPointer">Reference Page</a>
  */
-    public void glVertexAttribIPointer(int index, int size, int type, int stride, ByteBuffer pointer);
+    public void glVertexAttribIPointer(@NativeType("GLuint") int index, @NativeType("GLint") int size, @NativeType("GLenum") int type, @NativeType("GLsizei") int stride, @NativeType("void const *") ByteBuffer pointer);
 
 /**
  * <a href="https://docs.gl/es3/glVertexAttribIPointer">Reference Page</a>
  */
-    public void glVertexAttribIPointer(int index, int size, int type, int stride, long pointer);
+    public void glVertexAttribIPointer(@NativeType("GLuint") int index, @NativeType("GLint") int size, @NativeType("GLenum") int type, @NativeType("GLsizei") int stride, @NativeType("void const *") long pointer);
 
 /**
  * <a href="https://docs.gl/es3/glVertexAttribIPointer">Reference Page</a>
  */
-    public void glVertexAttribIPointer(int index, int size, int type, int stride, ShortBuffer pointer);
+    public void glVertexAttribIPointer(@NativeType("GLuint") int index, @NativeType("GLint") int size, @NativeType("GLenum") int type, @NativeType("GLsizei") int stride, @NativeType("void const *") ShortBuffer pointer);
 
 /**
  * <a href="https://docs.gl/es3/glVertexAttribIPointer">Reference Page</a>
  */
-    public void glVertexAttribIPointer(int index, int size, int type, int stride, IntBuffer pointer);
+    public void glVertexAttribIPointer(@NativeType("GLuint") int index, @NativeType("GLint") int size, @NativeType("GLenum") int type, @NativeType("GLsizei") int stride, @NativeType("void const *") IntBuffer pointer);
 
 }

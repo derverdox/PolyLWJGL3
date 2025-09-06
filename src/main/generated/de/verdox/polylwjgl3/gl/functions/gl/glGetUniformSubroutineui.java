@@ -18,6 +18,7 @@ public interface glGetUniformSubroutineui {
  *
  * @see <a href="https://docs.gl/gl4/glGetUniformSubroutine">Reference Page</a>
  */
-    public int glGetUniformSubroutineui(int shadertype, int location);
+@NativeType("void")
+    public int glGetUniformSubroutineui(@NativeType("GLenum") int shadertype, @NativeType("GLint") int location);
 
 }

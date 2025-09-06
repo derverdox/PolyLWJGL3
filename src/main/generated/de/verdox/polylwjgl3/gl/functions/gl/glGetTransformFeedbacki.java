@@ -23,7 +23,8 @@ public interface glGetTransformFeedbacki {
  *
  * @see <a href="https://docs.gl/gl4/glGetTransformFeedback">Reference Page</a>
  */
-    public int glGetTransformFeedbacki(int xfb, int pname);
+@NativeType("void")
+    public int glGetTransformFeedbacki(@NativeType("GLuint") int xfb, @NativeType("GLenum") int pname);
 
 /**
  * Returns information about a transform feedback object.
@@ -34,6 +35,7 @@ public interface glGetTransformFeedbacki {
  *
  * @see <a href="https://docs.gl/gl4/glGetTransformFeedbacki_v">Reference Page</a>
  */
-    public int glGetTransformFeedbacki(int xfb, int pname, int index);
+@NativeType("void")
+    public int glGetTransformFeedbacki(@NativeType("GLuint") int xfb, @NativeType("GLenum") int pname, @NativeType("GLuint") int index);
 
 }

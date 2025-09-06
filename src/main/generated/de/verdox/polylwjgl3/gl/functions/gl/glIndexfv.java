@@ -25,13 +25,13 @@ public interface glIndexfv {
  *
  * @see <a href="https://docs.gl/gl3/glIndex">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glIndexfv(FloatBuffer index);
+    public void glIndexfv(@NativeType("GLfloat const *") FloatBuffer index);
 
 /**
  * Array version of: {@link #glIndexfv Indexfv}
  *
  * @see <a href="https://docs.gl/gl3/glIndex">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glIndexfv(float[] index);
+    public void glIndexfv(@NativeType("GLfloat const *") float[] index);
 
 }

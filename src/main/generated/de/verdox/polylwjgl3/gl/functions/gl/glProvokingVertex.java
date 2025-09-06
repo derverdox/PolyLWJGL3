@@ -18,6 +18,6 @@ public interface glProvokingVertex {
  *
  * @see <a href="https://docs.gl/gl4/glProvokingVertex">Reference Page</a>
  */
-    public void glProvokingVertex(int mode);
+    public void glProvokingVertex(@NativeType("GLenum") int mode);
 
 }

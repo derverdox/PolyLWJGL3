@@ -30,13 +30,13 @@ public interface glGetNamedFramebufferAttachmentParameteriv {
  *
  * @see <a href="https://docs.gl/gl4/glGetFramebufferAttachmentParameter">Reference Page</a>
  */
-    public void glGetNamedFramebufferAttachmentParameteriv(int framebuffer, int attachment, int pname, IntBuffer params);
+    public void glGetNamedFramebufferAttachmentParameteriv(@NativeType("GLuint") int framebuffer, @NativeType("GLenum") int attachment, @NativeType("GLenum") int pname, @NativeType("GLint *") IntBuffer params);
 
 /**
  * Array version of: {@link #glGetNamedFramebufferAttachmentParameteriv GetNamedFramebufferAttachmentParameteriv}
  *
  * @see <a href="https://docs.gl/gl4/glGetFramebufferAttachmentParameter">Reference Page</a>
  */
-    public void glGetNamedFramebufferAttachmentParameteriv(int framebuffer, int attachment, int pname, int[] params);
+    public void glGetNamedFramebufferAttachmentParameteriv(@NativeType("GLuint") int framebuffer, @NativeType("GLenum") int attachment, @NativeType("GLenum") int pname, @NativeType("GLint *") int[] params);
 
 }

@@ -40,7 +40,7 @@ public interface glBufferData_CORE extends glBufferData {
  *
  * @see <a href="https://docs.gl/gl4/glBufferData">Reference Page</a>
  */
-    public void glBufferData(int target, LongBuffer data, int usage);
+    public void glBufferData(@NativeType("GLenum") int target, @NativeType("void const *") LongBuffer data, @NativeType("GLenum") int usage);
 
 /**
  * Creates and initializes a buffer object's data store.
@@ -70,20 +70,20 @@ public interface glBufferData_CORE extends glBufferData {
  *
  * @see <a href="https://docs.gl/gl4/glBufferData">Reference Page</a>
  */
-    public void glBufferData(int target, DoubleBuffer data, int usage);
+    public void glBufferData(@NativeType("GLenum") int target, @NativeType("void const *") DoubleBuffer data, @NativeType("GLenum") int usage);
 
 /**
  * Array version of: {@link #glBufferData BufferData}
  *
  * @see <a href="https://docs.gl/gl4/glBufferData">Reference Page</a>
  */
-    public void glBufferData(int target, long[] data, int usage);
+    public void glBufferData(@NativeType("GLenum") int target, @NativeType("void const *") long[] data, @NativeType("GLenum") int usage);
 
 /**
  * Array version of: {@link #glBufferData BufferData}
  *
  * @see <a href="https://docs.gl/gl4/glBufferData">Reference Page</a>
  */
-    public void glBufferData(int target, double[] data, int usage);
+    public void glBufferData(@NativeType("GLenum") int target, @NativeType("void const *") double[] data, @NativeType("GLenum") int usage);
 
 }

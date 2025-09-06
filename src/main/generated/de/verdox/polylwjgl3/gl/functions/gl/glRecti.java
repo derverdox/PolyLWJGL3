@@ -36,6 +36,6 @@ public interface glRecti {
  *
  * @see <a href="https://docs.gl/gl3/glRecti">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glRecti(int x1, int y1, int x2, int y2);
+    public void glRecti(@NativeType("GLint") int x1, @NativeType("GLint") int y1, @NativeType("GLint") int x2, @NativeType("GLint") int y2);
 
 }

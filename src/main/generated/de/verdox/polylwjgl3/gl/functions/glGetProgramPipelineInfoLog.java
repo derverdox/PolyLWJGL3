@@ -20,23 +20,25 @@ public interface glGetProgramPipelineInfoLog {
 /**
  * <a href="https://docs.gl/es3/glGetProgramPipelineInfoLog">Reference Page</a>
  */
-    public void glGetProgramPipelineInfoLog(int pipeline, @Nullable IntBuffer length, ByteBuffer infoLog);
+    public void glGetProgramPipelineInfoLog(@NativeType("GLuint") int pipeline, @Nullable @NativeType("GLsizei *") IntBuffer length, @NativeType("GLchar *") ByteBuffer infoLog);
 
 /**
  * <a href="https://docs.gl/es3/glGetProgramPipelineInfoLog">Reference Page</a>
  */
-    public String glGetProgramPipelineInfoLog(int pipeline, int bufSize);
+@NativeType("void")
+    public String glGetProgramPipelineInfoLog(@NativeType("GLuint") int pipeline, @NativeType("GLsizei") int bufSize);
 
 /**
  * <a href="https://docs.gl/es3/glGetProgramPipelineInfoLog">Reference Page</a>
  */
-    public String glGetProgramPipelineInfoLog(int pipeline);
+@NativeType("void")
+    public String glGetProgramPipelineInfoLog(@NativeType("GLuint") int pipeline);
 
 /**
  * Array version of: {@link #glGetProgramPipelineInfoLog GetProgramPipelineInfoLog}
  *
  * @see <a href="https://docs.gl/es3/glGetProgramPipelineInfoLog">Reference Page</a>
  */
-    public void glGetProgramPipelineInfoLog(int pipeline, @Nullable int[] length, ByteBuffer infoLog);
+    public void glGetProgramPipelineInfoLog(@NativeType("GLuint") int pipeline, @Nullable @NativeType("GLsizei *") int[] length, @NativeType("GLchar *") ByteBuffer infoLog);
 
 }

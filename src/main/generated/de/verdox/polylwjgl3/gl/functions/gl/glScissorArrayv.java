@@ -26,13 +26,13 @@ public interface glScissorArrayv {
  *
  * @see <a href="https://docs.gl/gl4/glScissorArrayv">Reference Page</a>
  */
-    public void glScissorArrayv(int first, IntBuffer v);
+    public void glScissorArrayv(@NativeType("GLuint") int first, @NativeType("GLint const *") IntBuffer v);
 
 /**
  * Array version of: {@link #glScissorArrayv ScissorArrayv}
  *
  * @see <a href="https://docs.gl/gl4/glScissorArrayv">Reference Page</a>
  */
-    public void glScissorArrayv(int first, int[] v);
+    public void glScissorArrayv(@NativeType("GLuint") int first, @NativeType("GLint const *") int[] v);
 
 }

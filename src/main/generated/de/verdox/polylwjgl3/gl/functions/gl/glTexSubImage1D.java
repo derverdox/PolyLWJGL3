@@ -31,7 +31,7 @@ public interface glTexSubImage1D {
  *
  * @see <a href="https://docs.gl/gl4/glTexSubImage1D">Reference Page</a>
  */
-    public void glTexSubImage1D(int target, int level, int xoffset, int width, int format, int type, ByteBuffer pixels);
+    public void glTexSubImage1D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLsizei") int width, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void const *") ByteBuffer pixels);
 
 /**
  * One-dimensional version of {@link #glTexSubImage2D TexSubImage2D}.
@@ -46,7 +46,7 @@ public interface glTexSubImage1D {
  *
  * @see <a href="https://docs.gl/gl4/glTexSubImage1D">Reference Page</a>
  */
-    public void glTexSubImage1D(int target, int level, int xoffset, int width, int format, int type, long pixels);
+    public void glTexSubImage1D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLsizei") int width, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void const *") long pixels);
 
 /**
  * One-dimensional version of {@link #glTexSubImage2D TexSubImage2D}.
@@ -61,7 +61,7 @@ public interface glTexSubImage1D {
  *
  * @see <a href="https://docs.gl/gl4/glTexSubImage1D">Reference Page</a>
  */
-    public void glTexSubImage1D(int target, int level, int xoffset, int width, int format, int type, ShortBuffer pixels);
+    public void glTexSubImage1D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLsizei") int width, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void const *") ShortBuffer pixels);
 
 /**
  * One-dimensional version of {@link #glTexSubImage2D TexSubImage2D}.
@@ -76,7 +76,7 @@ public interface glTexSubImage1D {
  *
  * @see <a href="https://docs.gl/gl4/glTexSubImage1D">Reference Page</a>
  */
-    public void glTexSubImage1D(int target, int level, int xoffset, int width, int format, int type, IntBuffer pixels);
+    public void glTexSubImage1D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLsizei") int width, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void const *") IntBuffer pixels);
 
 /**
  * One-dimensional version of {@link #glTexSubImage2D TexSubImage2D}.
@@ -91,7 +91,7 @@ public interface glTexSubImage1D {
  *
  * @see <a href="https://docs.gl/gl4/glTexSubImage1D">Reference Page</a>
  */
-    public void glTexSubImage1D(int target, int level, int xoffset, int width, int format, int type, FloatBuffer pixels);
+    public void glTexSubImage1D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLsizei") int width, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void const *") FloatBuffer pixels);
 
 /**
  * One-dimensional version of {@link #glTexSubImage2D TexSubImage2D}.
@@ -106,34 +106,34 @@ public interface glTexSubImage1D {
  *
  * @see <a href="https://docs.gl/gl4/glTexSubImage1D">Reference Page</a>
  */
-    public void glTexSubImage1D(int target, int level, int xoffset, int width, int format, int type, DoubleBuffer pixels);
+    public void glTexSubImage1D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLsizei") int width, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void const *") DoubleBuffer pixels);
 
 /**
  * Array version of: {@link #glTexSubImage1D TexSubImage1D}
  *
  * @see <a href="https://docs.gl/gl4/glTexSubImage1D">Reference Page</a>
  */
-    public void glTexSubImage1D(int target, int level, int xoffset, int width, int format, int type, short[] pixels);
+    public void glTexSubImage1D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLsizei") int width, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void const *") short[] pixels);
 
 /**
  * Array version of: {@link #glTexSubImage1D TexSubImage1D}
  *
  * @see <a href="https://docs.gl/gl4/glTexSubImage1D">Reference Page</a>
  */
-    public void glTexSubImage1D(int target, int level, int xoffset, int width, int format, int type, int[] pixels);
+    public void glTexSubImage1D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLsizei") int width, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void const *") int[] pixels);
 
 /**
  * Array version of: {@link #glTexSubImage1D TexSubImage1D}
  *
  * @see <a href="https://docs.gl/gl4/glTexSubImage1D">Reference Page</a>
  */
-    public void glTexSubImage1D(int target, int level, int xoffset, int width, int format, int type, float[] pixels);
+    public void glTexSubImage1D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLsizei") int width, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void const *") float[] pixels);
 
 /**
  * Array version of: {@link #glTexSubImage1D TexSubImage1D}
  *
  * @see <a href="https://docs.gl/gl4/glTexSubImage1D">Reference Page</a>
  */
-    public void glTexSubImage1D(int target, int level, int xoffset, int width, int format, int type, double[] pixels);
+    public void glTexSubImage1D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLsizei") int width, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void const *") double[] pixels);
 
 }

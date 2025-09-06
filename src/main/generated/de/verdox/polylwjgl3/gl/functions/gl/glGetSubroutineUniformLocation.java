@@ -24,7 +24,8 @@ public interface glGetSubroutineUniformLocation {
  *
  * @see <a href="https://docs.gl/gl4/glGetSubroutineUniformLocation">Reference Page</a>
  */
-    public int glGetSubroutineUniformLocation(int program, int shadertype, ByteBuffer name);
+@NativeType("GLint")
+    public int glGetSubroutineUniformLocation(@NativeType("GLuint") int program, @NativeType("GLenum") int shadertype, @NativeType("GLchar const *") ByteBuffer name);
 
 /**
  * Retrieves the location of a subroutine uniform of a given shader stage within a program.
@@ -35,6 +36,7 @@ public interface glGetSubroutineUniformLocation {
  *
  * @see <a href="https://docs.gl/gl4/glGetSubroutineUniformLocation">Reference Page</a>
  */
-    public int glGetSubroutineUniformLocation(int program, int shadertype, CharSequence name);
+@NativeType("GLint")
+    public int glGetSubroutineUniformLocation(@NativeType("GLuint") int program, @NativeType("GLenum") int shadertype, @NativeType("GLchar const *") CharSequence name);
 
 }

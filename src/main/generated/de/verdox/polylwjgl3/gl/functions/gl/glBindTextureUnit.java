@@ -27,6 +27,6 @@ public interface glBindTextureUnit {
  *
  * @see <a href="https://docs.gl/gl4/glBindTextureUnit">Reference Page</a>
  */
-    public void glBindTextureUnit(int unit, int texture);
+    public void glBindTextureUnit(@NativeType("GLuint") int unit, @NativeType("GLuint") int texture);
 
 }

@@ -29,13 +29,13 @@ public interface glGetVertexArrayiv {
  *
  * @see <a href="https://docs.gl/gl4/glGetVertexArray">Reference Page</a>
  */
-    public void glGetVertexArrayiv(int vaobj, int pname, IntBuffer param);
+    public void glGetVertexArrayiv(@NativeType("GLuint") int vaobj, @NativeType("GLenum") int pname, @NativeType("GLint *") IntBuffer param);
 
 /**
  * Array version of: {@link #glGetVertexArrayiv GetVertexArrayiv}
  *
  * @see <a href="https://docs.gl/gl4/glGetVertexArray">Reference Page</a>
  */
-    public void glGetVertexArrayiv(int vaobj, int pname, int[] param);
+    public void glGetVertexArrayiv(@NativeType("GLuint") int vaobj, @NativeType("GLenum") int pname, @NativeType("GLint *") int[] param);
 
 }

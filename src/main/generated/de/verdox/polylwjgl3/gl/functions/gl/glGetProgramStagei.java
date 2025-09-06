@@ -19,6 +19,7 @@ public interface glGetProgramStagei {
  *
  * @see <a href="https://docs.gl/gl4/glGetProgramStage">Reference Page</a>
  */
-    public int glGetProgramStagei(int program, int shadertype, int pname);
+@NativeType("void")
+    public int glGetProgramStagei(@NativeType("GLuint") int program, @NativeType("GLenum") int shadertype, @NativeType("GLenum") int pname);
 
 }

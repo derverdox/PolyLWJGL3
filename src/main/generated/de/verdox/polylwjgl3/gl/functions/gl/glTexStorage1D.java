@@ -19,6 +19,6 @@ public interface glTexStorage1D {
  *
  * @see <a href="https://docs.gl/gl4/glTexStorage1D">Reference Page</a>
  */
-    public void glTexStorage1D(int target, int levels, int internalformat, int width);
+    public void glTexStorage1D(@NativeType("GLenum") int target, @NativeType("GLsizei") int levels, @NativeType("GLenum") int internalformat, @NativeType("GLsizei") int width);
 
 }

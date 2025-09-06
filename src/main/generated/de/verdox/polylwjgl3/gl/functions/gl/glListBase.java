@@ -20,6 +20,6 @@ public interface glListBase {
  *
  * @see <a href="https://docs.gl/gl3/glListBase">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glListBase(int base);
+    public void glListBase(@NativeType("GLuint") int base);
 
 }

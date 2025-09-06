@@ -18,6 +18,6 @@ public interface glBlendEquationi {
 /**
  * <a href="https://docs.gl/es3/glBlendEquationi">Reference Page</a>
  */
-    public void glBlendEquationi(int buf, int mode);
+    public void glBlendEquationi(@NativeType("GLuint") int buf, @NativeType("GLenum") int mode);
 
 }

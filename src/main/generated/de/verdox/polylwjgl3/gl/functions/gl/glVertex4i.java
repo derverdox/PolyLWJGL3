@@ -23,6 +23,6 @@ public interface glVertex4i {
  *
  * @see <a href="https://docs.gl/gl3/glVertex">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glVertex4i(int x, int y, int z, int w);
+    public void glVertex4i(@NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLint") int z, @NativeType("GLint") int w);
 
 }

@@ -18,6 +18,6 @@ public interface glColorMaski {
 /**
  * <a href="https://docs.gl/es3/glColorMaski">Reference Page</a>
  */
-    public void glColorMaski(int index, boolean r, boolean g, boolean b, boolean a);
+    public void glColorMaski(@NativeType("GLuint") int index, @NativeType("GLboolean") boolean r, @NativeType("GLboolean") boolean g, @NativeType("GLboolean") boolean b, @NativeType("GLboolean") boolean a);
 
 }

@@ -20,26 +20,26 @@ public interface glDrawElementsBaseVertex {
 /**
  * <a href="https://docs.gl/es3/glDrawElementsBaseVertex">Reference Page</a>
  */
-    public void glDrawElementsBaseVertex(int mode, int count, int type, long indices, int basevertex);
+    public void glDrawElementsBaseVertex(@NativeType("GLenum") int mode, @NativeType("GLsizei") int count, @NativeType("GLenum") int type, @NativeType("void const *") long indices, @NativeType("GLint") int basevertex);
 
 /**
  * <a href="https://docs.gl/es3/glDrawElementsBaseVertex">Reference Page</a>
  */
-    public void glDrawElementsBaseVertex(int mode, int type, ByteBuffer indices, int basevertex);
+    public void glDrawElementsBaseVertex(@NativeType("GLenum") int mode, @NativeType("GLenum") int type, @NativeType("void const *") ByteBuffer indices, @NativeType("GLint") int basevertex);
 
 /**
  * <a href="https://docs.gl/es3/glDrawElementsBaseVertex">Reference Page</a>
  */
-    public void glDrawElementsBaseVertex(int mode, ByteBuffer indices, int basevertex);
+    public void glDrawElementsBaseVertex(@NativeType("GLenum") int mode, @NativeType("void const *") ByteBuffer indices, @NativeType("GLint") int basevertex);
 
 /**
  * <a href="https://docs.gl/es3/glDrawElementsBaseVertex">Reference Page</a>
  */
-    public void glDrawElementsBaseVertex(int mode, ShortBuffer indices, int basevertex);
+    public void glDrawElementsBaseVertex(@NativeType("GLenum") int mode, @NativeType("void const *") ShortBuffer indices, @NativeType("GLint") int basevertex);
 
 /**
  * <a href="https://docs.gl/es3/glDrawElementsBaseVertex">Reference Page</a>
  */
-    public void glDrawElementsBaseVertex(int mode, IntBuffer indices, int basevertex);
+    public void glDrawElementsBaseVertex(@NativeType("GLenum") int mode, @NativeType("void const *") IntBuffer indices, @NativeType("GLint") int basevertex);
 
 }

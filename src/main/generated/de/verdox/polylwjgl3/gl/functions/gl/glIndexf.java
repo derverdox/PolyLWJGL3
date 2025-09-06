@@ -20,6 +20,6 @@ public interface glIndexf {
  *
  * @see <a href="https://docs.gl/gl3/glIndexf">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glIndexf(float index);
+    public void glIndexf(@NativeType("GLfloat") float index);
 
 }

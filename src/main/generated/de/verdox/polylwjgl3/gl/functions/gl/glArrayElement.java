@@ -20,6 +20,6 @@ public interface glArrayElement {
  *
  * @see <a href="https://docs.gl/gl3/glArrayElement">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glArrayElement(int i);
+    public void glArrayElement(@NativeType("GLint") int i);
 
 }

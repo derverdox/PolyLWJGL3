@@ -18,6 +18,6 @@ public interface glPrimitiveRestartIndex {
  *
  * @see <a href="https://docs.gl/gl4/glPrimitiveRestartIndex">Reference Page</a>
  */
-    public void glPrimitiveRestartIndex(int index);
+    public void glPrimitiveRestartIndex(@NativeType("GLuint") int index);
 
 }

@@ -21,6 +21,6 @@ public interface glMultiTexCoord1i {
  *
  * @see <a href="https://docs.gl/gl3/glMultiTexCoord">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glMultiTexCoord1i(int texture, int s);
+    public void glMultiTexCoord1i(@NativeType("GLenum") int texture, @NativeType("GLint") int s);
 
 }

@@ -25,13 +25,13 @@ public interface glWindowPos2sv {
  *
  * @see <a href="https://docs.gl/gl3/glWindowPos">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glWindowPos2sv(ShortBuffer p);
+    public void glWindowPos2sv(@NativeType("GLshort const *") ShortBuffer p);
 
 /**
  * Array version of: {@link #glWindowPos2sv WindowPos2sv}
  *
  * @see <a href="https://docs.gl/gl3/glWindowPos">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glWindowPos2sv(short[] p);
+    public void glWindowPos2sv(@NativeType("GLshort const *") short[] p);
 
 }

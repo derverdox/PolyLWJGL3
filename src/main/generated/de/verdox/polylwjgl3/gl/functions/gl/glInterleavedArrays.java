@@ -27,7 +27,7 @@ public interface glInterleavedArrays {
  *
  * @see <a href="https://docs.gl/gl3/glInterleavedArrays">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glInterleavedArrays(int format, int stride, ByteBuffer pointer);
+    public void glInterleavedArrays(@NativeType("GLenum") int format, @NativeType("GLsizei") int stride, @NativeType("void const *") ByteBuffer pointer);
 
 /**
  * Efficiently initializes the six vertex arrays and their enables to one of 14 configurations.
@@ -38,7 +38,7 @@ public interface glInterleavedArrays {
  *
  * @see <a href="https://docs.gl/gl3/glInterleavedArrays">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glInterleavedArrays(int format, int stride, long pointer);
+    public void glInterleavedArrays(@NativeType("GLenum") int format, @NativeType("GLsizei") int stride, @NativeType("void const *") long pointer);
 
 /**
  * Efficiently initializes the six vertex arrays and their enables to one of 14 configurations.
@@ -49,7 +49,7 @@ public interface glInterleavedArrays {
  *
  * @see <a href="https://docs.gl/gl3/glInterleavedArrays">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glInterleavedArrays(int format, int stride, ShortBuffer pointer);
+    public void glInterleavedArrays(@NativeType("GLenum") int format, @NativeType("GLsizei") int stride, @NativeType("void const *") ShortBuffer pointer);
 
 /**
  * Efficiently initializes the six vertex arrays and their enables to one of 14 configurations.
@@ -60,7 +60,7 @@ public interface glInterleavedArrays {
  *
  * @see <a href="https://docs.gl/gl3/glInterleavedArrays">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glInterleavedArrays(int format, int stride, IntBuffer pointer);
+    public void glInterleavedArrays(@NativeType("GLenum") int format, @NativeType("GLsizei") int stride, @NativeType("void const *") IntBuffer pointer);
 
 /**
  * Efficiently initializes the six vertex arrays and their enables to one of 14 configurations.
@@ -71,7 +71,7 @@ public interface glInterleavedArrays {
  *
  * @see <a href="https://docs.gl/gl3/glInterleavedArrays">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glInterleavedArrays(int format, int stride, FloatBuffer pointer);
+    public void glInterleavedArrays(@NativeType("GLenum") int format, @NativeType("GLsizei") int stride, @NativeType("void const *") FloatBuffer pointer);
 
 /**
  * Efficiently initializes the six vertex arrays and their enables to one of 14 configurations.
@@ -82,34 +82,34 @@ public interface glInterleavedArrays {
  *
  * @see <a href="https://docs.gl/gl3/glInterleavedArrays">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glInterleavedArrays(int format, int stride, DoubleBuffer pointer);
+    public void glInterleavedArrays(@NativeType("GLenum") int format, @NativeType("GLsizei") int stride, @NativeType("void const *") DoubleBuffer pointer);
 
 /**
  * Array version of: {@link #glInterleavedArrays InterleavedArrays}
  *
  * @see <a href="https://docs.gl/gl3/glInterleavedArrays">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glInterleavedArrays(int format, int stride, short[] pointer);
+    public void glInterleavedArrays(@NativeType("GLenum") int format, @NativeType("GLsizei") int stride, @NativeType("void const *") short[] pointer);
 
 /**
  * Array version of: {@link #glInterleavedArrays InterleavedArrays}
  *
  * @see <a href="https://docs.gl/gl3/glInterleavedArrays">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glInterleavedArrays(int format, int stride, int[] pointer);
+    public void glInterleavedArrays(@NativeType("GLenum") int format, @NativeType("GLsizei") int stride, @NativeType("void const *") int[] pointer);
 
 /**
  * Array version of: {@link #glInterleavedArrays InterleavedArrays}
  *
  * @see <a href="https://docs.gl/gl3/glInterleavedArrays">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glInterleavedArrays(int format, int stride, float[] pointer);
+    public void glInterleavedArrays(@NativeType("GLenum") int format, @NativeType("GLsizei") int stride, @NativeType("void const *") float[] pointer);
 
 /**
  * Array version of: {@link #glInterleavedArrays InterleavedArrays}
  *
  * @see <a href="https://docs.gl/gl3/glInterleavedArrays">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glInterleavedArrays(int format, int stride, double[] pointer);
+    public void glInterleavedArrays(@NativeType("GLenum") int format, @NativeType("GLsizei") int stride, @NativeType("void const *") double[] pointer);
 
 }

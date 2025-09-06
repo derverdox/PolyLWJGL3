@@ -20,13 +20,13 @@ public interface glGetSamplerParameterIuiv {
 /**
  * <a href="https://docs.gl/es3/glGetSamplerParameter">Reference Page</a>
  */
-    public void glGetSamplerParameterIuiv(int sampler, int pname, IntBuffer params);
+    public void glGetSamplerParameterIuiv(@NativeType("GLuint") int sampler, @NativeType("GLenum") int pname, @NativeType("GLuint *") IntBuffer params);
 
 /**
  * Array version of: {@link #glGetSamplerParameterIuiv GetSamplerParameterIuiv}
  *
  * @see <a href="https://docs.gl/es3/glGetSamplerParameter">Reference Page</a>
  */
-    public void glGetSamplerParameterIuiv(int sampler, int pname, int[] params);
+    public void glGetSamplerParameterIuiv(@NativeType("GLuint") int sampler, @NativeType("GLenum") int pname, @NativeType("GLuint *") int[] params);
 
 }

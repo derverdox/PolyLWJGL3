@@ -20,13 +20,13 @@ public interface glGetFramebufferParameteriv {
 /**
  * <a href="https://docs.gl/es3/glGetFramebufferParameter">Reference Page</a>
  */
-    public void glGetFramebufferParameteriv(int target, int pname, IntBuffer params);
+    public void glGetFramebufferParameteriv(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLint *") IntBuffer params);
 
 /**
  * Array version of: {@link #glGetFramebufferParameteriv GetFramebufferParameteriv}
  *
  * @see <a href="https://docs.gl/es3/glGetFramebufferParameter">Reference Page</a>
  */
-    public void glGetFramebufferParameteriv(int target, int pname, int[] params);
+    public void glGetFramebufferParameteriv(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLint *") int[] params);
 
 }

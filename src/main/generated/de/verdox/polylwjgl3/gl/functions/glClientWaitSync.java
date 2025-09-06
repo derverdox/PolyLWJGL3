@@ -21,6 +21,7 @@ public interface glClientWaitSync {
 /**
  * <a href="https://docs.gl/es3/glClientWaitSync">Reference Page</a>
  */
-    public int glClientWaitSync(long sync, int flags, long timeout);
+@NativeType("GLenum")
+    public int glClientWaitSync(@NativeType("GLsync") long sync, @NativeType("GLbitfield") int flags, @NativeType("GLuint64") long timeout);
 
 }

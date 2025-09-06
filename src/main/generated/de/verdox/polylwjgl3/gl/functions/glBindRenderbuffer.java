@@ -16,6 +16,6 @@ public interface glBindRenderbuffer {
 /**
  * <a href="https://docs.gl/es3/glBindRenderbuffer">Reference Page</a>
  */
-    public void glBindRenderbuffer(int target, int renderbuffer);
+    public void glBindRenderbuffer(@NativeType("GLenum") int target, @NativeType("GLuint") int renderbuffer);
 
 }

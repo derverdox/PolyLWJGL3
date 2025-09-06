@@ -25,13 +25,13 @@ public interface glMultTransposeMatrixd {
  *
  * @see <a href="https://docs.gl/gl3/glMultTransposeMatrixd">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glMultTransposeMatrixd(DoubleBuffer m);
+    public void glMultTransposeMatrixd(@NativeType("GLdouble const *") DoubleBuffer m);
 
 /**
  * Array version of: {@link #glMultTransposeMatrixd MultTransposeMatrixd}
  *
  * @see <a href="https://docs.gl/gl3/glMultTransposeMatrixd">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glMultTransposeMatrixd(double[] m);
+    public void glMultTransposeMatrixd(@NativeType("GLdouble const *") double[] m);
 
 }

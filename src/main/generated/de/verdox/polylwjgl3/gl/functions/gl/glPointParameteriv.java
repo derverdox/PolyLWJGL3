@@ -26,13 +26,13 @@ public interface glPointParameteriv {
  *
  * @see <a href="https://docs.gl/gl4/glPointParameter">Reference Page</a>
  */
-    public void glPointParameteriv(int pname, IntBuffer params);
+    public void glPointParameteriv(@NativeType("GLenum") int pname, @NativeType("GLint const *") IntBuffer params);
 
 /**
  * Array version of: {@link #glPointParameteriv PointParameteriv}
  *
  * @see <a href="https://docs.gl/gl4/glPointParameter">Reference Page</a>
  */
-    public void glPointParameteriv(int pname, int[] params);
+    public void glPointParameteriv(@NativeType("GLenum") int pname, @NativeType("GLint const *") int[] params);
 
 }

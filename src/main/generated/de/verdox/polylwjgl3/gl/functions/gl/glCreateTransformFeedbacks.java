@@ -29,13 +29,14 @@ public interface glCreateTransformFeedbacks {
  *
  * @see <a href="https://docs.gl/gl4/glCreateTransformFeedbacks">Reference Page</a>
  */
-    public void glCreateTransformFeedbacks(IntBuffer ids);
+    public void glCreateTransformFeedbacks(@NativeType("GLuint *") IntBuffer ids);
 
 /**
  * Returns {@code n} previously unused transform feedback object names in {@code ids}, each representing a new state vector.
  *
  * @see <a href="https://docs.gl/gl4/glCreateTransformFeedbacks">Reference Page</a>
  */
+@NativeType("void")
     public int glCreateTransformFeedbacks();
 
 /**
@@ -43,6 +44,6 @@ public interface glCreateTransformFeedbacks {
  *
  * @see <a href="https://docs.gl/gl4/glCreateTransformFeedbacks">Reference Page</a>
  */
-    public void glCreateTransformFeedbacks(int[] ids);
+    public void glCreateTransformFeedbacks(@NativeType("GLuint *") int[] ids);
 
 }

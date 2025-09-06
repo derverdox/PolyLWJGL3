@@ -25,13 +25,13 @@ public interface glRasterPos3dv {
  *
  * @see <a href="https://docs.gl/gl3/glRasterPos">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glRasterPos3dv(DoubleBuffer coords);
+    public void glRasterPos3dv(@NativeType("GLdouble const *") DoubleBuffer coords);
 
 /**
  * Array version of: {@link #glRasterPos3dv RasterPos3dv}
  *
  * @see <a href="https://docs.gl/gl3/glRasterPos">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glRasterPos3dv(double[] coords);
+    public void glRasterPos3dv(@NativeType("GLdouble const *") double[] coords);
 
 }

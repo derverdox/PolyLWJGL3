@@ -31,13 +31,13 @@ public interface glClearNamedFramebufferfv {
  *
  * @see <a href="https://docs.gl/gl4/glClearFramebuffer">Reference Page</a>
  */
-    public void glClearNamedFramebufferfv(int framebuffer, int buffer, int drawbuffer, FloatBuffer value);
+    public void glClearNamedFramebufferfv(@NativeType("GLuint") int framebuffer, @NativeType("GLenum") int buffer, @NativeType("GLint") int drawbuffer, @NativeType("GLfloat const *") FloatBuffer value);
 
 /**
  * Array version of: {@link #glClearNamedFramebufferfv ClearNamedFramebufferfv}
  *
  * @see <a href="https://docs.gl/gl4/glClearFramebuffer">Reference Page</a>
  */
-    public void glClearNamedFramebufferfv(int framebuffer, int buffer, int drawbuffer, float[] value);
+    public void glClearNamedFramebufferfv(@NativeType("GLuint") int framebuffer, @NativeType("GLenum") int buffer, @NativeType("GLint") int drawbuffer, @NativeType("GLfloat const *") float[] value);
 
 }

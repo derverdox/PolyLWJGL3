@@ -38,7 +38,7 @@ public interface glGetCompressedTextureSubImage {
  *
  * @see <a href="https://docs.gl/gl4/glGetCompressedTextureSubImage">Reference Page</a>
  */
-    public void glGetCompressedTextureSubImage(int texture, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, int bufSize, long pixels);
+    public void glGetCompressedTextureSubImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int yoffset, @NativeType("GLint") int zoffset, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLsizei") int depth, @NativeType("GLsizei") int bufSize, @NativeType("void *") long pixels);
 
 /**
  * Obtains a sub-region of a compressed texture image.
@@ -55,7 +55,7 @@ public interface glGetCompressedTextureSubImage {
  *
  * @see <a href="https://docs.gl/gl4/glGetCompressedTextureSubImage">Reference Page</a>
  */
-    public void glGetCompressedTextureSubImage(int texture, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, ByteBuffer pixels);
+    public void glGetCompressedTextureSubImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int yoffset, @NativeType("GLint") int zoffset, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLsizei") int depth, @NativeType("void *") ByteBuffer pixels);
 
 /**
  * Obtains a sub-region of a compressed texture image.
@@ -72,7 +72,7 @@ public interface glGetCompressedTextureSubImage {
  *
  * @see <a href="https://docs.gl/gl4/glGetCompressedTextureSubImage">Reference Page</a>
  */
-    public void glGetCompressedTextureSubImage(int texture, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, ShortBuffer pixels);
+    public void glGetCompressedTextureSubImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int yoffset, @NativeType("GLint") int zoffset, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLsizei") int depth, @NativeType("void *") ShortBuffer pixels);
 
 /**
  * Obtains a sub-region of a compressed texture image.
@@ -89,7 +89,7 @@ public interface glGetCompressedTextureSubImage {
  *
  * @see <a href="https://docs.gl/gl4/glGetCompressedTextureSubImage">Reference Page</a>
  */
-    public void glGetCompressedTextureSubImage(int texture, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, IntBuffer pixels);
+    public void glGetCompressedTextureSubImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int yoffset, @NativeType("GLint") int zoffset, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLsizei") int depth, @NativeType("void *") IntBuffer pixels);
 
 /**
  * Obtains a sub-region of a compressed texture image.
@@ -106,7 +106,7 @@ public interface glGetCompressedTextureSubImage {
  *
  * @see <a href="https://docs.gl/gl4/glGetCompressedTextureSubImage">Reference Page</a>
  */
-    public void glGetCompressedTextureSubImage(int texture, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, FloatBuffer pixels);
+    public void glGetCompressedTextureSubImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int yoffset, @NativeType("GLint") int zoffset, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLsizei") int depth, @NativeType("void *") FloatBuffer pixels);
 
 /**
  * Obtains a sub-region of a compressed texture image.
@@ -123,34 +123,34 @@ public interface glGetCompressedTextureSubImage {
  *
  * @see <a href="https://docs.gl/gl4/glGetCompressedTextureSubImage">Reference Page</a>
  */
-    public void glGetCompressedTextureSubImage(int texture, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, DoubleBuffer pixels);
+    public void glGetCompressedTextureSubImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int yoffset, @NativeType("GLint") int zoffset, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLsizei") int depth, @NativeType("void *") DoubleBuffer pixels);
 
 /**
  * Array version of: {@link #glGetCompressedTextureSubImage GetCompressedTextureSubImage}
  *
  * @see <a href="https://docs.gl/gl4/glGetCompressedTextureSubImage">Reference Page</a>
  */
-    public void glGetCompressedTextureSubImage(int texture, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, short[] pixels);
+    public void glGetCompressedTextureSubImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int yoffset, @NativeType("GLint") int zoffset, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLsizei") int depth, @NativeType("void *") short[] pixels);
 
 /**
  * Array version of: {@link #glGetCompressedTextureSubImage GetCompressedTextureSubImage}
  *
  * @see <a href="https://docs.gl/gl4/glGetCompressedTextureSubImage">Reference Page</a>
  */
-    public void glGetCompressedTextureSubImage(int texture, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, int[] pixels);
+    public void glGetCompressedTextureSubImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int yoffset, @NativeType("GLint") int zoffset, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLsizei") int depth, @NativeType("void *") int[] pixels);
 
 /**
  * Array version of: {@link #glGetCompressedTextureSubImage GetCompressedTextureSubImage}
  *
  * @see <a href="https://docs.gl/gl4/glGetCompressedTextureSubImage">Reference Page</a>
  */
-    public void glGetCompressedTextureSubImage(int texture, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, float[] pixels);
+    public void glGetCompressedTextureSubImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int yoffset, @NativeType("GLint") int zoffset, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLsizei") int depth, @NativeType("void *") float[] pixels);
 
 /**
  * Array version of: {@link #glGetCompressedTextureSubImage GetCompressedTextureSubImage}
  *
  * @see <a href="https://docs.gl/gl4/glGetCompressedTextureSubImage">Reference Page</a>
  */
-    public void glGetCompressedTextureSubImage(int texture, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, double[] pixels);
+    public void glGetCompressedTextureSubImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int yoffset, @NativeType("GLint") int zoffset, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLsizei") int depth, @NativeType("void *") double[] pixels);
 
 }

@@ -26,13 +26,13 @@ public interface glMultiTexCoord4dv {
  *
  * @see <a href="https://docs.gl/gl3/glMultiTexCoord">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glMultiTexCoord4dv(int texture, DoubleBuffer v);
+    public void glMultiTexCoord4dv(@NativeType("GLenum") int texture, @NativeType("GLdouble const *") DoubleBuffer v);
 
 /**
  * Array version of: {@link #glMultiTexCoord4dv MultiTexCoord4dv}
  *
  * @see <a href="https://docs.gl/gl3/glMultiTexCoord">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glMultiTexCoord4dv(int texture, double[] v);
+    public void glMultiTexCoord4dv(@NativeType("GLenum") int texture, @NativeType("GLdouble const *") double[] v);
 
 }

@@ -23,6 +23,6 @@ public interface glVertexArrayElementBuffer {
  *
  * @see <a href="https://docs.gl/gl4/glVertexArrayElementBuffer">Reference Page</a>
  */
-    public void glVertexArrayElementBuffer(int vaobj, int buffer);
+    public void glVertexArrayElementBuffer(@NativeType("GLuint") int vaobj, @NativeType("GLuint") int buffer);
 
 }

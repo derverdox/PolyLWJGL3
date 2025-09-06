@@ -18,23 +18,23 @@ public interface glShaderSource {
 /**
  * <a href="https://docs.gl/es3/glShaderSource">Reference Page</a>
  */
-    public void glShaderSource(int shader, PointerBuffer string, @Nullable IntBuffer length);
+    public void glShaderSource(@NativeType("GLuint") int shader, @NativeType("GLchar const * const *") PointerBuffer string, @Nullable @NativeType("GLint const *") IntBuffer length);
 
 /**
  * <a href="https://docs.gl/es3/glShaderSource">Reference Page</a>
  */
-    public void glShaderSource(int shader, CharSequence... string);
+    public void glShaderSource(@NativeType("GLuint") int shader, @NativeType("GLchar const * const *") CharSequence... string);
 
 /**
  * <a href="https://docs.gl/es3/glShaderSource">Reference Page</a>
  */
-    public void glShaderSource(int shader, CharSequence string);
+    public void glShaderSource(@NativeType("GLuint") int shader, @NativeType("GLchar const * const *") CharSequence string);
 
 /**
  * Array version of: {@link #glShaderSource ShaderSource}
  *
  * @see <a href="https://docs.gl/es3/glShaderSource">Reference Page</a>
  */
-    public void glShaderSource(int shader, PointerBuffer string, @Nullable int[] length);
+    public void glShaderSource(@NativeType("GLuint") int shader, @NativeType("GLchar const * const *") PointerBuffer string, @Nullable @NativeType("GLint const *") int[] length);
 
 }

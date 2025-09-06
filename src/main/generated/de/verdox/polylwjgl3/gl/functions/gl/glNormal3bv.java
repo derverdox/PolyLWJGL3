@@ -25,6 +25,6 @@ public interface glNormal3bv {
  *
  * @see <a href="https://docs.gl/gl3/glNormal">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glNormal3bv(ByteBuffer v);
+    public void glNormal3bv(@NativeType("GLbyte const *") ByteBuffer v);
 
 }

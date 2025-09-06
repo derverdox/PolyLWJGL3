@@ -24,6 +24,6 @@ public interface glTransformFeedbackBufferBase {
  *
  * @see <a href="https://docs.gl/gl4/glTransformFeedbackBufferBase">Reference Page</a>
  */
-    public void glTransformFeedbackBufferBase(int xfb, int index, int buffer);
+    public void glTransformFeedbackBufferBase(@NativeType("GLuint") int xfb, @NativeType("GLuint") int index, @NativeType("GLuint") int buffer);
 
 }

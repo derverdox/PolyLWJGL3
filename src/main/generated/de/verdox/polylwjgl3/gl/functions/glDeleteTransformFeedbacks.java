@@ -21,18 +21,18 @@ public interface glDeleteTransformFeedbacks {
 /**
  * <a href="https://docs.gl/es3/glDeleteTransformFeedbacks">Reference Page</a>
  */
-    public void glDeleteTransformFeedbacks(IntBuffer ids);
+    public void glDeleteTransformFeedbacks(@NativeType("GLuint const *") IntBuffer ids);
 
 /**
  * <a href="https://docs.gl/es3/glDeleteTransformFeedbacks">Reference Page</a>
  */
-    public void glDeleteTransformFeedbacks(int id);
+    public void glDeleteTransformFeedbacks(@NativeType("GLuint const *") int id);
 
 /**
  * Array version of: {@link #glDeleteTransformFeedbacks DeleteTransformFeedbacks}
  *
  * @see <a href="https://docs.gl/es3/glDeleteTransformFeedbacks">Reference Page</a>
  */
-    public void glDeleteTransformFeedbacks(int[] ids);
+    public void glDeleteTransformFeedbacks(@NativeType("GLuint const *") int[] ids);
 
 }

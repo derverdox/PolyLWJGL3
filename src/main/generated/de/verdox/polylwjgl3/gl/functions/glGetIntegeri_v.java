@@ -21,13 +21,13 @@ public interface glGetIntegeri_v {
 /**
  * <a href="https://docs.gl/es3/glGetIntegeri_v">Reference Page</a>
  */
-    public void glGetIntegeri_v(int target, int index, IntBuffer data);
+    public void glGetIntegeri_v(@NativeType("GLenum") int target, @NativeType("GLuint") int index, @NativeType("GLint *") IntBuffer data);
 
 /**
  * Array version of: {@link #glGetIntegeri_v GetIntegeri_v}
  *
  * @see <a href="https://docs.gl/es3/glGetIntegeri_v">Reference Page</a>
  */
-    public void glGetIntegeri_v(int target, int index, int[] data);
+    public void glGetIntegeri_v(@NativeType("GLenum") int target, @NativeType("GLuint") int index, @NativeType("GLint *") int[] data);
 
 }

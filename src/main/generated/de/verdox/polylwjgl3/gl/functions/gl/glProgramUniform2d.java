@@ -21,6 +21,6 @@ public interface glProgramUniform2d {
  *
  * @see <a href="https://docs.gl/gl4/glProgramUniform">Reference Page</a>
  */
-    public void glProgramUniform2d(int program, int location, double x, double y);
+    public void glProgramUniform2d(@NativeType("GLuint") int program, @NativeType("GLint") int location, @NativeType("GLdouble") double x, @NativeType("GLdouble") double y);
 
 }

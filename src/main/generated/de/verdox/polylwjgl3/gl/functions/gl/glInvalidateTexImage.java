@@ -18,6 +18,6 @@ public interface glInvalidateTexImage {
  *
  * @see <a href="https://docs.gl/gl4/glInvalidateTexImage">Reference Page</a>
  */
-    public void glInvalidateTexImage(int texture, int level);
+    public void glInvalidateTexImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level);
 
 }

@@ -16,6 +16,6 @@ public interface glUseProgram {
 /**
  * <a href="https://docs.gl/es3/glUseProgram">Reference Page</a>
  */
-    public void glUseProgram(int program);
+    public void glUseProgram(@NativeType("GLuint") int program);
 
 }

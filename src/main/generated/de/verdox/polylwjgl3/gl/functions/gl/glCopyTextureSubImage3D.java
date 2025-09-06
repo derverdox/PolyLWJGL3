@@ -30,6 +30,6 @@ public interface glCopyTextureSubImage3D {
  *
  * @see <a href="https://docs.gl/gl4/glCopyTextureSubImage3D">Reference Page</a>
  */
-    public void glCopyTextureSubImage3D(int texture, int level, int xoffset, int yoffset, int zoffset, int x, int y, int width, int height);
+    public void glCopyTextureSubImage3D(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int yoffset, @NativeType("GLint") int zoffset, @NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height);
 
 }

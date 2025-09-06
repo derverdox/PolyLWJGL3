@@ -23,6 +23,6 @@ public interface glRects {
  *
  * @see <a href="https://docs.gl/gl3/glRects">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glRects(short x1, short y1, short x2, short y2);
+    public void glRects(@NativeType("GLshort") short x1, @NativeType("GLshort") short y1, @NativeType("GLshort") short x2, @NativeType("GLshort") short y2);
 
 }

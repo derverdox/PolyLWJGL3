@@ -26,13 +26,13 @@ public interface glLightModeliv {
  *
  * @see <a href="https://docs.gl/gl3/glLightModel">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glLightModeliv(int pname, IntBuffer params);
+    public void glLightModeliv(@NativeType("GLenum") int pname, @NativeType("GLint const *") IntBuffer params);
 
 /**
  * Array version of: {@link #glLightModeliv LightModeliv}
  *
  * @see <a href="https://docs.gl/gl3/glLightModel">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glLightModeliv(int pname, int[] params);
+    public void glLightModeliv(@NativeType("GLenum") int pname, @NativeType("GLint const *") int[] params);
 
 }

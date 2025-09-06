@@ -19,6 +19,6 @@ public interface glBindBufferRange {
 /**
  * <a href="https://docs.gl/es3/glBindBufferRange">Reference Page</a>
  */
-    public void glBindBufferRange(int target, int index, int buffer, long offset, long size);
+    public void glBindBufferRange(@NativeType("GLenum") int target, @NativeType("GLuint") int index, @NativeType("GLuint") int buffer, @NativeType("GLintptr") long offset, @NativeType("GLsizeiptr") long size);
 
 }

@@ -22,6 +22,6 @@ public interface glNormal3f {
  *
  * @see <a href="https://docs.gl/gl3/glNormal">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glNormal3f(float nx, float ny, float nz);
+    public void glNormal3f(@NativeType("GLfloat") float nx, @NativeType("GLfloat") float ny, @NativeType("GLfloat") float nz);
 
 }

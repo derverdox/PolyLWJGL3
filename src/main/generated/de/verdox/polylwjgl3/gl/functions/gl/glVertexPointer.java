@@ -28,7 +28,7 @@ public interface glVertexPointer {
  *
  * @see <a href="https://docs.gl/gl3/glVertexPointer">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glVertexPointer(int size, int type, int stride, ByteBuffer pointer);
+    public void glVertexPointer(@NativeType("GLint") int size, @NativeType("GLenum") int type, @NativeType("GLsizei") int stride, @NativeType("void const *") ByteBuffer pointer);
 
 /**
  * Specifies the location and organization of a vertex array.
@@ -40,7 +40,7 @@ public interface glVertexPointer {
  *
  * @see <a href="https://docs.gl/gl3/glVertexPointer">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glVertexPointer(int size, int type, int stride, long pointer);
+    public void glVertexPointer(@NativeType("GLint") int size, @NativeType("GLenum") int type, @NativeType("GLsizei") int stride, @NativeType("void const *") long pointer);
 
 /**
  * Specifies the location and organization of a vertex array.
@@ -52,7 +52,7 @@ public interface glVertexPointer {
  *
  * @see <a href="https://docs.gl/gl3/glVertexPointer">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glVertexPointer(int size, int type, int stride, ShortBuffer pointer);
+    public void glVertexPointer(@NativeType("GLint") int size, @NativeType("GLenum") int type, @NativeType("GLsizei") int stride, @NativeType("void const *") ShortBuffer pointer);
 
 /**
  * Specifies the location and organization of a vertex array.
@@ -64,7 +64,7 @@ public interface glVertexPointer {
  *
  * @see <a href="https://docs.gl/gl3/glVertexPointer">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glVertexPointer(int size, int type, int stride, IntBuffer pointer);
+    public void glVertexPointer(@NativeType("GLint") int size, @NativeType("GLenum") int type, @NativeType("GLsizei") int stride, @NativeType("void const *") IntBuffer pointer);
 
 /**
  * Specifies the location and organization of a vertex array.
@@ -76,6 +76,6 @@ public interface glVertexPointer {
  *
  * @see <a href="https://docs.gl/gl3/glVertexPointer">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glVertexPointer(int size, int type, int stride, FloatBuffer pointer);
+    public void glVertexPointer(@NativeType("GLint") int size, @NativeType("GLenum") int type, @NativeType("GLsizei") int stride, @NativeType("void const *") FloatBuffer pointer);
 
 }

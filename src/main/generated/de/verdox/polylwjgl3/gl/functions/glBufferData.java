@@ -18,47 +18,47 @@ public interface glBufferData {
 /**
  * <a href="https://docs.gl/es3/glBufferData">Reference Page</a>
  */
-    public void glBufferData(int target, long size, int usage);
+    public void glBufferData(@NativeType("GLenum") int target, @NativeType("GLsizeiptr") long size, @NativeType("GLenum") int usage);
 
 /**
  * <a href="https://docs.gl/es3/glBufferData">Reference Page</a>
  */
-    public void glBufferData(int target, ByteBuffer data, int usage);
+    public void glBufferData(@NativeType("GLenum") int target, @NativeType("void const *") ByteBuffer data, @NativeType("GLenum") int usage);
 
 /**
  * <a href="https://docs.gl/es3/glBufferData">Reference Page</a>
  */
-    public void glBufferData(int target, ShortBuffer data, int usage);
+    public void glBufferData(@NativeType("GLenum") int target, @NativeType("void const *") ShortBuffer data, @NativeType("GLenum") int usage);
 
 /**
  * <a href="https://docs.gl/es3/glBufferData">Reference Page</a>
  */
-    public void glBufferData(int target, IntBuffer data, int usage);
+    public void glBufferData(@NativeType("GLenum") int target, @NativeType("void const *") IntBuffer data, @NativeType("GLenum") int usage);
 
 /**
  * <a href="https://docs.gl/es3/glBufferData">Reference Page</a>
  */
-    public void glBufferData(int target, FloatBuffer data, int usage);
+    public void glBufferData(@NativeType("GLenum") int target, @NativeType("void const *") FloatBuffer data, @NativeType("GLenum") int usage);
 
 /**
  * Array version of: {@link #glBufferData BufferData}
  *
  * @see <a href="https://docs.gl/es3/glBufferData">Reference Page</a>
  */
-    public void glBufferData(int target, short[] data, int usage);
+    public void glBufferData(@NativeType("GLenum") int target, @NativeType("void const *") short[] data, @NativeType("GLenum") int usage);
 
 /**
  * Array version of: {@link #glBufferData BufferData}
  *
  * @see <a href="https://docs.gl/es3/glBufferData">Reference Page</a>
  */
-    public void glBufferData(int target, int[] data, int usage);
+    public void glBufferData(@NativeType("GLenum") int target, @NativeType("void const *") int[] data, @NativeType("GLenum") int usage);
 
 /**
  * Array version of: {@link #glBufferData BufferData}
  *
  * @see <a href="https://docs.gl/es3/glBufferData">Reference Page</a>
  */
-    public void glBufferData(int target, float[] data, int usage);
+    public void glBufferData(@NativeType("GLenum") int target, @NativeType("void const *") float[] data, @NativeType("GLenum") int usage);
 
 }

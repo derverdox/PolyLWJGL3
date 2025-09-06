@@ -19,6 +19,6 @@ public interface glCopyBufferSubData {
 /**
  * <a href="https://docs.gl/es3/glCopyBufferSubData">Reference Page</a>
  */
-    public void glCopyBufferSubData(int readTarget, int writeTarget, long readOffset, long writeOffset, long size);
+    public void glCopyBufferSubData(@NativeType("GLenum") int readTarget, @NativeType("GLenum") int writeTarget, @NativeType("GLintptr") long readOffset, @NativeType("GLintptr") long writeOffset, @NativeType("GLsizeiptr") long size);
 
 }

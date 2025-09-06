@@ -19,6 +19,7 @@ public interface glGetQueryObjectui {
 /**
  * <a href="https://docs.gl/es3/glGetQueryObject">Reference Page</a>
  */
-    public int glGetQueryObjectui(int id, int pname);
+@NativeType("void")
+    public int glGetQueryObjectui(@NativeType("GLuint") int id, @NativeType("GLenum") int pname);
 
 }

@@ -22,6 +22,6 @@ public interface glVertex2f {
  *
  * @see <a href="https://docs.gl/gl3/glVertex">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glVertex2f(float x, float y);
+    public void glVertex2f(@NativeType("GLfloat") float x, @NativeType("GLfloat") float y);
 
 }

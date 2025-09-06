@@ -21,18 +21,18 @@ public interface glDeleteQueries {
 /**
  * <a href="https://docs.gl/es3/glDeleteQueries">Reference Page</a>
  */
-    public void glDeleteQueries(IntBuffer ids);
+    public void glDeleteQueries(@NativeType("GLuint const *") IntBuffer ids);
 
 /**
  * <a href="https://docs.gl/es3/glDeleteQueries">Reference Page</a>
  */
-    public void glDeleteQueries(int id);
+    public void glDeleteQueries(@NativeType("GLuint const *") int id);
 
 /**
  * Array version of: {@link #glDeleteQueries DeleteQueries}
  *
  * @see <a href="https://docs.gl/es3/glDeleteQueries">Reference Page</a>
  */
-    public void glDeleteQueries(int[] ids);
+    public void glDeleteQueries(@NativeType("GLuint const *") int[] ids);
 
 }

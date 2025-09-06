@@ -24,6 +24,6 @@ public interface glNamedRenderbufferStorage {
  *
  * @see <a href="https://docs.gl/gl4/glRenderbufferStorage">Reference Page</a>
  */
-    public void glNamedRenderbufferStorage(int renderbuffer, int internalformat, int width, int height);
+    public void glNamedRenderbufferStorage(@NativeType("GLuint") int renderbuffer, @NativeType("GLenum") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height);
 
 }

@@ -16,6 +16,6 @@ public interface glStencilMask {
 /**
  * <a href="https://docs.gl/es3/glStencilMask">Reference Page</a>
  */
-    public void glStencilMask(int mask);
+    public void glStencilMask(@NativeType("GLuint") int mask);
 
 }

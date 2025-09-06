@@ -22,6 +22,6 @@ public interface glMaterialf {
  *
  * @see <a href="https://docs.gl/gl3/glMaterialf">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glMaterialf(int face, int pname, float param);
+    public void glMaterialf(@NativeType("GLenum") int face, @NativeType("GLenum") int pname, @NativeType("GLfloat") float param);
 
 }

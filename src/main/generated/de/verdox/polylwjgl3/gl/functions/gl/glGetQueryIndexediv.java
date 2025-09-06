@@ -25,13 +25,13 @@ public interface glGetQueryIndexediv {
  *
  * @see <a href="https://docs.gl/gl4/glGetQueryIndexed">Reference Page</a>
  */
-    public void glGetQueryIndexediv(int target, int index, int pname, IntBuffer params);
+    public void glGetQueryIndexediv(@NativeType("GLenum") int target, @NativeType("GLuint") int index, @NativeType("GLenum") int pname, @NativeType("GLint *") IntBuffer params);
 
 /**
  * Array version of: {@link #glGetQueryIndexediv GetQueryIndexediv}
  *
  * @see <a href="https://docs.gl/gl4/glGetQueryIndexed">Reference Page</a>
  */
-    public void glGetQueryIndexediv(int target, int index, int pname, int[] params);
+    public void glGetQueryIndexediv(@NativeType("GLenum") int target, @NativeType("GLuint") int index, @NativeType("GLenum") int pname, @NativeType("GLint *") int[] params);
 
 }

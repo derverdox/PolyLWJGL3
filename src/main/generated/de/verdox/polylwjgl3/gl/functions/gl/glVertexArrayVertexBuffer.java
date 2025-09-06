@@ -26,6 +26,6 @@ public interface glVertexArrayVertexBuffer {
  *
  * @see <a href="https://docs.gl/gl4/glVertexArrayVertexBuffer">Reference Page</a>
  */
-    public void glVertexArrayVertexBuffer(int vaobj, int bindingindex, int buffer, long offset, int stride);
+    public void glVertexArrayVertexBuffer(@NativeType("GLuint") int vaobj, @NativeType("GLuint") int bindingindex, @NativeType("GLuint") int buffer, @NativeType("GLintptr") long offset, @NativeType("GLsizei") int stride);
 
 }

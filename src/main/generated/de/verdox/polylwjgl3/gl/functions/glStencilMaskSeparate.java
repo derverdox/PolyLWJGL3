@@ -16,6 +16,6 @@ public interface glStencilMaskSeparate {
 /**
  * <a href="https://docs.gl/es3/glStencilMaskSeparate">Reference Page</a>
  */
-    public void glStencilMaskSeparate(int face, int mask);
+    public void glStencilMaskSeparate(@NativeType("GLenum") int face, @NativeType("GLuint") int mask);
 
 }

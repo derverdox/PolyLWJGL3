@@ -21,6 +21,6 @@ public interface glRasterPos2d {
  *
  * @see <a href="https://docs.gl/gl3/glRasterPos">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glRasterPos2d(double x, double y);
+    public void glRasterPos2d(@NativeType("GLdouble") double x, @NativeType("GLdouble") double y);
 
 }

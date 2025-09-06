@@ -19,6 +19,6 @@ public interface glEndQuery {
 /**
  * <a href="https://docs.gl/es3/glEndQuery">Reference Page</a>
  */
-    public void glEndQuery(int target);
+    public void glEndQuery(@NativeType("GLenum") int target);
 
 }

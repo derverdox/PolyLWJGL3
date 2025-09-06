@@ -32,7 +32,7 @@ public interface glGetObjectLabel {
  *
  * @see <a href="https://docs.gl/es3/glGetObjectLabel">Reference Page</a>
  */
-    public void glGetObjectLabel(int identifier, int name, @Nullable IntBuffer length, ByteBuffer label);
+    public void glGetObjectLabel(@NativeType("GLenum") int identifier, @NativeType("GLuint") int name, @Nullable @NativeType("GLsizei *") IntBuffer length, @NativeType("GLchar *") ByteBuffer label);
 
 /**
  * Retrieves the label of a named object identified within a namespace.
@@ -43,7 +43,8 @@ public interface glGetObjectLabel {
  *
  * @see <a href="https://docs.gl/es3/glGetObjectLabel">Reference Page</a>
  */
-    public String glGetObjectLabel(int identifier, int name, int bufSize);
+@NativeType("void")
+    public String glGetObjectLabel(@NativeType("GLenum") int identifier, @NativeType("GLuint") int name, @NativeType("GLsizei") int bufSize);
 
 /**
  * Retrieves the label of a named object identified within a namespace.
@@ -53,13 +54,14 @@ public interface glGetObjectLabel {
  *
  * @see <a href="https://docs.gl/es3/glGetObjectLabel">Reference Page</a>
  */
-    public String glGetObjectLabel(int identifier, int name);
+@NativeType("void")
+    public String glGetObjectLabel(@NativeType("GLenum") int identifier, @NativeType("GLuint") int name);
 
 /**
  * Array version of: {@link #glGetObjectLabel GetObjectLabel}
  *
  * @see <a href="https://docs.gl/es3/glGetObjectLabel">Reference Page</a>
  */
-    public void glGetObjectLabel(int identifier, int name, @Nullable int[] length, ByteBuffer label);
+    public void glGetObjectLabel(@NativeType("GLenum") int identifier, @NativeType("GLuint") int name, @Nullable @NativeType("GLsizei *") int[] length, @NativeType("GLchar *") ByteBuffer label);
 
 }

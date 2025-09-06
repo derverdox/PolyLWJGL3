@@ -22,6 +22,6 @@ public interface glVertexAttribP3ui {
  *
  * @see <a href="https://docs.gl/gl4/glVertexAttrib">Reference Page</a>
  */
-    public void glVertexAttribP3ui(int index, int type, boolean normalized, int value);
+    public void glVertexAttribP3ui(@NativeType("GLuint") int index, @NativeType("GLenum") int type, @NativeType("GLboolean") boolean normalized, @NativeType("GLuint") int value);
 
 }

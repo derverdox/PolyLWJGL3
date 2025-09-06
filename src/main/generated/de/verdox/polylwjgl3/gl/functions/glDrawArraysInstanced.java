@@ -19,6 +19,6 @@ public interface glDrawArraysInstanced {
 /**
  * <a href="https://docs.gl/es3/glDrawArraysInstanced">Reference Page</a>
  */
-    public void glDrawArraysInstanced(int mode, int first, int count, int instancecount);
+    public void glDrawArraysInstanced(@NativeType("GLenum") int mode, @NativeType("GLint") int first, @NativeType("GLsizei") int count, @NativeType("GLsizei") int instancecount);
 
 }

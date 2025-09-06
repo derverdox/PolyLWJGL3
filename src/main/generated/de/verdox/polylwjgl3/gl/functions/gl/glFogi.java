@@ -21,6 +21,6 @@ public interface glFogi {
  *
  * @see <a href="https://docs.gl/gl3/glFogi">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glFogi(int pname, int param);
+    public void glFogi(@NativeType("GLenum") int pname, @NativeType("GLint") int param);
 
 }

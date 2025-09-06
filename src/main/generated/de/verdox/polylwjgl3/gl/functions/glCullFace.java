@@ -16,6 +16,6 @@ public interface glCullFace {
 /**
  * <a href="https://docs.gl/es3/glCullFace">Reference Page</a>
  */
-    public void glCullFace(int mode);
+    public void glCullFace(@NativeType("GLenum") int mode);
 
 }

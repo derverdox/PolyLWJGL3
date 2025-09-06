@@ -21,13 +21,13 @@ public interface glUniform2uiv {
 /**
  * <a href="https://docs.gl/es3/glUniform">Reference Page</a>
  */
-    public void glUniform2uiv(int location, IntBuffer value);
+    public void glUniform2uiv(@NativeType("GLint") int location, @NativeType("GLuint const *") IntBuffer value);
 
 /**
  * Array version of: {@link #glUniform2uiv Uniform2uiv}
  *
  * @see <a href="https://docs.gl/es3/glUniform">Reference Page</a>
  */
-    public void glUniform2uiv(int location, int[] value);
+    public void glUniform2uiv(@NativeType("GLint") int location, @NativeType("GLuint const *") int[] value);
 
 }

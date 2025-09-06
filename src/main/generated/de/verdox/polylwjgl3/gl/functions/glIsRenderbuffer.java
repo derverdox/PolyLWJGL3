@@ -16,6 +16,7 @@ public interface glIsRenderbuffer {
 /**
  * <a href="https://docs.gl/es3/glIsRenderbuffer">Reference Page</a>
  */
-    public boolean glIsRenderbuffer(int renderbuffer);
+@NativeType("GLboolean")
+    public boolean glIsRenderbuffer(@NativeType("GLuint") int renderbuffer);
 
 }

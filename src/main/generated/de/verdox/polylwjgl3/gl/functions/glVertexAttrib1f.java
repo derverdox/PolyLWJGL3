@@ -16,6 +16,6 @@ public interface glVertexAttrib1f {
 /**
  * <a href="https://docs.gl/es3/glVertexAttrib">Reference Page</a>
  */
-    public void glVertexAttrib1f(int index, float x);
+    public void glVertexAttrib1f(@NativeType("GLuint") int index, @NativeType("GLfloat") float x);
 
 }

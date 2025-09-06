@@ -43,13 +43,13 @@ public interface glBindSamplers {
  *
  * @see <a href="https://docs.gl/gl4/glBindSamplers">Reference Page</a>
  */
-    public void glBindSamplers(int first, @Nullable IntBuffer samplers);
+    public void glBindSamplers(@NativeType("GLuint") int first, @Nullable @NativeType("GLuint const *") IntBuffer samplers);
 
 /**
  * Array version of: {@link #glBindSamplers BindSamplers}
  *
  * @see <a href="https://docs.gl/gl4/glBindSamplers">Reference Page</a>
  */
-    public void glBindSamplers(int first, @Nullable int[] samplers);
+    public void glBindSamplers(@NativeType("GLuint") int first, @Nullable @NativeType("GLuint const *") int[] samplers);
 
 }

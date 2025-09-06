@@ -21,18 +21,18 @@ public interface glInvalidateFramebuffer {
 /**
  * <a href="https://docs.gl/es3/glInvalidateFramebuffer">Reference Page</a>
  */
-    public void glInvalidateFramebuffer(int target, IntBuffer attachments);
+    public void glInvalidateFramebuffer(@NativeType("GLenum") int target, @NativeType("GLenum const *") IntBuffer attachments);
 
 /**
  * <a href="https://docs.gl/es3/glInvalidateFramebuffer">Reference Page</a>
  */
-    public void glInvalidateFramebuffer(int target, int attachment);
+    public void glInvalidateFramebuffer(@NativeType("GLenum") int target, @NativeType("GLenum const *") int attachment);
 
 /**
  * Array version of: {@link #glInvalidateFramebuffer InvalidateFramebuffer}
  *
  * @see <a href="https://docs.gl/es3/glInvalidateFramebuffer">Reference Page</a>
  */
-    public void glInvalidateFramebuffer(int target, int[] attachments);
+    public void glInvalidateFramebuffer(@NativeType("GLenum") int target, @NativeType("GLenum const *") int[] attachments);
 
 }

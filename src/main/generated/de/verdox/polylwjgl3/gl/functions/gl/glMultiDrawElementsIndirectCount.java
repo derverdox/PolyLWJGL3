@@ -31,7 +31,7 @@ public interface glMultiDrawElementsIndirectCount {
  *
  * @see <a href="https://docs.gl/gl4/glMultiDrawElementsIndirectCount">Reference Page</a>
  */
-    public void glMultiDrawElementsIndirectCount(int mode, int type, ByteBuffer indirect, long drawcount, int maxdrawcount, int stride);
+    public void glMultiDrawElementsIndirectCount(@NativeType("GLenum") int mode, @NativeType("GLenum") int type, @NativeType("void const *") ByteBuffer indirect, @NativeType("GLintptr") long drawcount, @NativeType("GLsizei") int maxdrawcount, @NativeType("GLsizei") int stride);
 
 /**
  * Behaves similarly to {@link GL43C#glMultiDrawElementsIndirect MultiDrawElementsIndirect}, except that {@code drawcount} defines an offset (in bytes) into the buffer object bound to the
@@ -49,7 +49,7 @@ public interface glMultiDrawElementsIndirectCount {
  *
  * @see <a href="https://docs.gl/gl4/glMultiDrawElementsIndirectCount">Reference Page</a>
  */
-    public void glMultiDrawElementsIndirectCount(int mode, int type, long indirect, long drawcount, int maxdrawcount, int stride);
+    public void glMultiDrawElementsIndirectCount(@NativeType("GLenum") int mode, @NativeType("GLenum") int type, @NativeType("void const *") long indirect, @NativeType("GLintptr") long drawcount, @NativeType("GLsizei") int maxdrawcount, @NativeType("GLsizei") int stride);
 
 /**
  * Behaves similarly to {@link GL43C#glMultiDrawElementsIndirect MultiDrawElementsIndirect}, except that {@code drawcount} defines an offset (in bytes) into the buffer object bound to the
@@ -67,13 +67,13 @@ public interface glMultiDrawElementsIndirectCount {
  *
  * @see <a href="https://docs.gl/gl4/glMultiDrawElementsIndirectCount">Reference Page</a>
  */
-    public void glMultiDrawElementsIndirectCount(int mode, int type, IntBuffer indirect, long drawcount, int maxdrawcount, int stride);
+    public void glMultiDrawElementsIndirectCount(@NativeType("GLenum") int mode, @NativeType("GLenum") int type, @NativeType("void const *") IntBuffer indirect, @NativeType("GLintptr") long drawcount, @NativeType("GLsizei") int maxdrawcount, @NativeType("GLsizei") int stride);
 
 /**
  * Array version of: {@link #glMultiDrawElementsIndirectCount MultiDrawElementsIndirectCount}
  *
  * @see <a href="https://docs.gl/gl4/glMultiDrawElementsIndirectCount">Reference Page</a>
  */
-    public void glMultiDrawElementsIndirectCount(int mode, int type, int[] indirect, long drawcount, int maxdrawcount, int stride);
+    public void glMultiDrawElementsIndirectCount(@NativeType("GLenum") int mode, @NativeType("GLenum") int type, @NativeType("void const *") int[] indirect, @NativeType("GLintptr") long drawcount, @NativeType("GLsizei") int maxdrawcount, @NativeType("GLsizei") int stride);
 
 }

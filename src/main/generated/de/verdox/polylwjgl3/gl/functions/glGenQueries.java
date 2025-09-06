@@ -21,11 +21,12 @@ public interface glGenQueries {
 /**
  * <a href="https://docs.gl/es3/glGenQueries">Reference Page</a>
  */
-    public void glGenQueries(IntBuffer ids);
+    public void glGenQueries(@NativeType("GLuint *") IntBuffer ids);
 
 /**
  * <a href="https://docs.gl/es3/glGenQueries">Reference Page</a>
  */
+@NativeType("void")
     public int glGenQueries();
 
 /**
@@ -33,6 +34,6 @@ public interface glGenQueries {
  *
  * @see <a href="https://docs.gl/es3/glGenQueries">Reference Page</a>
  */
-    public void glGenQueries(int[] ids);
+    public void glGenQueries(@NativeType("GLuint *") int[] ids);
 
 }

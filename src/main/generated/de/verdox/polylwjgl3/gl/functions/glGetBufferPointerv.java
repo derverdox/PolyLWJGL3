@@ -21,6 +21,6 @@ public interface glGetBufferPointerv {
 /**
  * <a href="https://docs.gl/es3/glGetBufferPointerv">Reference Page</a>
  */
-    public void glGetBufferPointerv(int target, int pname, PointerBuffer params);
+    public void glGetBufferPointerv(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("void **") PointerBuffer params);
 
 }

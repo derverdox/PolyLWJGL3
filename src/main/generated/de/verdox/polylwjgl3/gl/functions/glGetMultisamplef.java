@@ -18,6 +18,7 @@ public interface glGetMultisamplef {
 /**
  * <a href="https://docs.gl/es3/glGetMultisample">Reference Page</a>
  */
-    public float glGetMultisamplef(int pname, int index);
+@NativeType("void")
+    public float glGetMultisamplef(@NativeType("GLenum") int pname, @NativeType("GLuint") int index);
 
 }

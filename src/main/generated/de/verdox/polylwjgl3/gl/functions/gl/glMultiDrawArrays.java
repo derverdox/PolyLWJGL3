@@ -29,13 +29,13 @@ public interface glMultiDrawArrays {
  *
  * @see <a href="https://docs.gl/gl4/glMultiDrawArrays">Reference Page</a>
  */
-    public void glMultiDrawArrays(int mode, IntBuffer first, IntBuffer count);
+    public void glMultiDrawArrays(@NativeType("GLenum") int mode, @NativeType("GLint const *") IntBuffer first, @NativeType("GLsizei const *") IntBuffer count);
 
 /**
  * Array version of: {@link #glMultiDrawArrays MultiDrawArrays}
  *
  * @see <a href="https://docs.gl/gl4/glMultiDrawArrays">Reference Page</a>
  */
-    public void glMultiDrawArrays(int mode, int[] first, int[] count);
+    public void glMultiDrawArrays(@NativeType("GLenum") int mode, @NativeType("GLint const *") int[] first, @NativeType("GLsizei const *") int[] count);
 
 }

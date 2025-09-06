@@ -21,18 +21,18 @@ public interface glDeleteSamplers {
 /**
  * <a href="https://docs.gl/es3/glDeleteSamplers">Reference Page</a>
  */
-    public void glDeleteSamplers(IntBuffer samplers);
+    public void glDeleteSamplers(@NativeType("GLuint const *") IntBuffer samplers);
 
 /**
  * <a href="https://docs.gl/es3/glDeleteSamplers">Reference Page</a>
  */
-    public void glDeleteSamplers(int sampler);
+    public void glDeleteSamplers(@NativeType("GLuint const *") int sampler);
 
 /**
  * Array version of: {@link #glDeleteSamplers DeleteSamplers}
  *
  * @see <a href="https://docs.gl/es3/glDeleteSamplers">Reference Page</a>
  */
-    public void glDeleteSamplers(int[] samplers);
+    public void glDeleteSamplers(@NativeType("GLuint const *") int[] samplers);
 
 }

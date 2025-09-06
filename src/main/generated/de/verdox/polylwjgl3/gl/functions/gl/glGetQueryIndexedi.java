@@ -19,6 +19,7 @@ public interface glGetQueryIndexedi {
  *
  * @see <a href="https://docs.gl/gl4/glGetQueryIndexed">Reference Page</a>
  */
-    public int glGetQueryIndexedi(int target, int index, int pname);
+@NativeType("void")
+    public int glGetQueryIndexedi(@NativeType("GLenum") int target, @NativeType("GLuint") int index, @NativeType("GLenum") int pname);
 
 }

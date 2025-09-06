@@ -16,6 +16,6 @@ public interface glRenderbufferStorage {
 /**
  * <a href="https://docs.gl/es3/glRenderbufferStorage">Reference Page</a>
  */
-    public void glRenderbufferStorage(int target, int internalformat, int width, int height);
+    public void glRenderbufferStorage(@NativeType("GLenum") int target, @NativeType("GLenum") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height);
 
 }

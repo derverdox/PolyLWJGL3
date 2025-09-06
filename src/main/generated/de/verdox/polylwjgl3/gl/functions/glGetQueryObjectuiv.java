@@ -21,13 +21,13 @@ public interface glGetQueryObjectuiv {
 /**
  * <a href="https://docs.gl/es3/glGetQueryObject">Reference Page</a>
  */
-    public void glGetQueryObjectuiv(int id, int pname, IntBuffer params);
+    public void glGetQueryObjectuiv(@NativeType("GLuint") int id, @NativeType("GLenum") int pname, @NativeType("GLuint *") IntBuffer params);
 
 /**
  * Array version of: {@link #glGetQueryObjectuiv GetQueryObjectuiv}
  *
  * @see <a href="https://docs.gl/es3/glGetQueryObject">Reference Page</a>
  */
-    public void glGetQueryObjectuiv(int id, int pname, int[] params);
+    public void glGetQueryObjectuiv(@NativeType("GLuint") int id, @NativeType("GLenum") int pname, @NativeType("GLuint *") int[] params);
 
 }

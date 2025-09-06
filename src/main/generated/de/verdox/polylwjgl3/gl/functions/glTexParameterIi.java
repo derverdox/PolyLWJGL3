@@ -18,6 +18,6 @@ public interface glTexParameterIi {
 /**
  * <a href="https://docs.gl/es3/glTexParameter">Reference Page</a>
  */
-    public void glTexParameterIi(int target, int pname, int param);
+    public void glTexParameterIi(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLint const *") int param);
 
 }

@@ -30,7 +30,7 @@ public interface glNamedFramebufferDrawBuffers {
  *
  * @see <a href="https://docs.gl/gl4/glFramebufferDrawBuffers">Reference Page</a>
  */
-    public void glNamedFramebufferDrawBuffers(int framebuffer, IntBuffer bufs);
+    public void glNamedFramebufferDrawBuffers(@NativeType("GLuint") int framebuffer, @NativeType("GLenum const *") IntBuffer bufs);
 
 /**
  * DSA version of {@link GL20C#glDrawBuffers DrawBuffers}.
@@ -39,13 +39,13 @@ public interface glNamedFramebufferDrawBuffers {
  *
  * @see <a href="https://docs.gl/gl4/glFramebufferDrawBuffers">Reference Page</a>
  */
-    public void glNamedFramebufferDrawBuffers(int framebuffer, int buf);
+    public void glNamedFramebufferDrawBuffers(@NativeType("GLuint") int framebuffer, @NativeType("GLenum const *") int buf);
 
 /**
  * Array version of: {@link #glNamedFramebufferDrawBuffers NamedFramebufferDrawBuffers}
  *
  * @see <a href="https://docs.gl/gl4/glFramebufferDrawBuffers">Reference Page</a>
  */
-    public void glNamedFramebufferDrawBuffers(int framebuffer, int[] bufs);
+    public void glNamedFramebufferDrawBuffers(@NativeType("GLuint") int framebuffer, @NativeType("GLenum const *") int[] bufs);
 
 }

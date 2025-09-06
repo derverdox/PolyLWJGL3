@@ -20,6 +20,6 @@ public interface glTexCoord1f {
  *
  * @see <a href="https://docs.gl/gl3/glTexCoord">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glTexCoord1f(float s);
+    public void glTexCoord1f(@NativeType("GLfloat") float s);
 
 }

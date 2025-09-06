@@ -16,6 +16,6 @@ public interface glBlendFunc {
 /**
  * <a href="https://docs.gl/es3/glBlendFunc">Reference Page</a>
  */
-    public void glBlendFunc(int sfactor, int dfactor);
+    public void glBlendFunc(@NativeType("GLenum") int sfactor, @NativeType("GLenum") int dfactor);
 
 }

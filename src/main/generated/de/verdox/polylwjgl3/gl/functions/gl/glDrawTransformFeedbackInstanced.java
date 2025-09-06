@@ -18,6 +18,6 @@ public interface glDrawTransformFeedbackInstanced {
  *
  * @see <a href="https://docs.gl/gl4/glDrawTransformFeedbackInstanced">Reference Page</a>
  */
-    public void glDrawTransformFeedbackInstanced(int mode, int id, int primcount);
+    public void glDrawTransformFeedbackInstanced(@NativeType("GLenum") int mode, @NativeType("GLuint") int id, @NativeType("GLsizei") int primcount);
 
 }

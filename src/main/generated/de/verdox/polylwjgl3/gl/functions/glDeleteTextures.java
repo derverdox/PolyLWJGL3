@@ -18,18 +18,18 @@ public interface glDeleteTextures {
 /**
  * <a href="https://docs.gl/es3/glDeleteTextures">Reference Page</a>
  */
-    public void glDeleteTextures(IntBuffer textures);
+    public void glDeleteTextures(@NativeType("GLuint const *") IntBuffer textures);
 
 /**
  * <a href="https://docs.gl/es3/glDeleteTextures">Reference Page</a>
  */
-    public void glDeleteTextures(int texture);
+    public void glDeleteTextures(@NativeType("GLuint const *") int texture);
 
 /**
  * Array version of: {@link #glDeleteTextures DeleteTextures}
  *
  * @see <a href="https://docs.gl/es3/glDeleteTextures">Reference Page</a>
  */
-    public void glDeleteTextures(int[] textures);
+    public void glDeleteTextures(@NativeType("GLuint const *") int[] textures);
 
 }

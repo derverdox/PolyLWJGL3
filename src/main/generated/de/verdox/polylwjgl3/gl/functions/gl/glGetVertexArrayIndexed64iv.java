@@ -30,13 +30,13 @@ public interface glGetVertexArrayIndexed64iv {
  *
  * @see <a href="https://docs.gl/gl4/glGetVertexArrayIndexed">Reference Page</a>
  */
-    public void glGetVertexArrayIndexed64iv(int vaobj, int index, int pname, LongBuffer param);
+    public void glGetVertexArrayIndexed64iv(@NativeType("GLuint") int vaobj, @NativeType("GLuint") int index, @NativeType("GLenum") int pname, @NativeType("GLint64 *") LongBuffer param);
 
 /**
  * Array version of: {@link #glGetVertexArrayIndexed64iv GetVertexArrayIndexed64iv}
  *
  * @see <a href="https://docs.gl/gl4/glGetVertexArrayIndexed">Reference Page</a>
  */
-    public void glGetVertexArrayIndexed64iv(int vaobj, int index, int pname, long[] param);
+    public void glGetVertexArrayIndexed64iv(@NativeType("GLuint") int vaobj, @NativeType("GLuint") int index, @NativeType("GLenum") int pname, @NativeType("GLint64 *") long[] param);
 
 }

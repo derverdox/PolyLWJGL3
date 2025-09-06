@@ -19,6 +19,7 @@ public interface glGetUniformui {
 /**
  * <a href="https://docs.gl/es3/glGetUniform">Reference Page</a>
  */
-    public int glGetUniformui(int program, int location);
+@NativeType("void")
+    public int glGetUniformui(@NativeType("GLuint") int program, @NativeType("GLint") int location);
 
 }

@@ -22,6 +22,6 @@ public interface glSecondaryColor3b {
  *
  * @see <a href="https://docs.gl/gl3/glSecondaryColor">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glSecondaryColor3b(byte red, byte green, byte blue);
+    public void glSecondaryColor3b(@NativeType("GLbyte") byte red, @NativeType("GLbyte") byte green, @NativeType("GLbyte") byte blue);
 
 }

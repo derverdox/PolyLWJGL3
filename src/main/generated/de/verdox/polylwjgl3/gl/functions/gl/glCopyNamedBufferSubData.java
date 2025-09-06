@@ -26,6 +26,6 @@ public interface glCopyNamedBufferSubData {
  *
  * @see <a href="https://docs.gl/gl4/glCopyBufferSubData">Reference Page</a>
  */
-    public void glCopyNamedBufferSubData(int readBuffer, int writeBuffer, long readOffset, long writeOffset, long size);
+    public void glCopyNamedBufferSubData(@NativeType("GLuint") int readBuffer, @NativeType("GLuint") int writeBuffer, @NativeType("GLintptr") long readOffset, @NativeType("GLintptr") long writeOffset, @NativeType("GLsizeiptr") long size);
 
 }

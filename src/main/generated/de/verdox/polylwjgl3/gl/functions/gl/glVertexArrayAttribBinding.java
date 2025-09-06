@@ -24,6 +24,6 @@ public interface glVertexArrayAttribBinding {
  *
  * @see <a href="https://docs.gl/gl4/glVertexArrayAttribBinding">Reference Page</a>
  */
-    public void glVertexArrayAttribBinding(int vaobj, int attribindex, int bindingindex);
+    public void glVertexArrayAttribBinding(@NativeType("GLuint") int vaobj, @NativeType("GLuint") int attribindex, @NativeType("GLuint") int bindingindex);
 
 }

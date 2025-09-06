@@ -21,11 +21,11 @@ public interface glCompressedTexImage3D {
 /**
  * <a href="https://docs.gl/es3/glCompressedTexImage3D">Reference Page</a>
  */
-    public void glCompressedTexImage3D(int target, int level, int internalformat, int width, int height, int depth, int border, int imageSize, long data);
+    public void glCompressedTexImage3D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLenum") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLsizei") int depth, @NativeType("GLint") int border, @NativeType("GLsizei") int imageSize, @NativeType("void const *") long data);
 
 /**
  * <a href="https://docs.gl/es3/glCompressedTexImage3D">Reference Page</a>
  */
-    public void glCompressedTexImage3D(int target, int level, int internalformat, int width, int height, int depth, int border, @Nullable ByteBuffer data);
+    public void glCompressedTexImage3D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLenum") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLsizei") int depth, @NativeType("GLint") int border, @Nullable @NativeType("void const *") ByteBuffer data);
 
 }

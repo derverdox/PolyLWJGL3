@@ -18,6 +18,6 @@ public interface glGetBooleanv {
 /**
  * <a href="https://docs.gl/es3/glGetBooleanv">Reference Page</a>
  */
-    public void glGetBooleanv(int pname, ByteBuffer data);
+    public void glGetBooleanv(@NativeType("GLenum") int pname, @NativeType("GLboolean *") ByteBuffer data);
 
 }

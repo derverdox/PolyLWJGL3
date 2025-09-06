@@ -18,6 +18,6 @@ public interface glBlendEquationSeparatei {
 /**
  * <a href="https://docs.gl/es3/glBlendEquationSeparatei">Reference Page</a>
  */
-    public void glBlendEquationSeparatei(int buf, int modeRGB, int modeAlpha);
+    public void glBlendEquationSeparatei(@NativeType("GLuint") int buf, @NativeType("GLenum") int modeRGB, @NativeType("GLenum") int modeAlpha);
 
 }

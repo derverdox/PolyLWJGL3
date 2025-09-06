@@ -29,6 +29,6 @@ public interface glClipControl {
  *
  * @see <a href="https://docs.gl/gl4/glClipControl">Reference Page</a>
  */
-    public void glClipControl(int origin, int depth);
+    public void glClipControl(@NativeType("GLenum") int origin, @NativeType("GLenum") int depth);
 
 }

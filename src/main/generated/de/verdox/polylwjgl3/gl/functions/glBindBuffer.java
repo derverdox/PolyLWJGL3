@@ -16,6 +16,6 @@ public interface glBindBuffer {
 /**
  * <a href="https://docs.gl/es3/glBindBuffer">Reference Page</a>
  */
-    public void glBindBuffer(int target, int buffer);
+    public void glBindBuffer(@NativeType("GLenum") int target, @NativeType("GLuint") int buffer);
 
 }

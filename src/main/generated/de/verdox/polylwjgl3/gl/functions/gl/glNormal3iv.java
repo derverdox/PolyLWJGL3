@@ -25,13 +25,13 @@ public interface glNormal3iv {
  *
  * @see <a href="https://docs.gl/gl3/glNormal">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glNormal3iv(IntBuffer v);
+    public void glNormal3iv(@NativeType("GLint const *") IntBuffer v);
 
 /**
  * Array version of: {@link #glNormal3iv Normal3iv}
  *
  * @see <a href="https://docs.gl/gl3/glNormal">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glNormal3iv(int[] v);
+    public void glNormal3iv(@NativeType("GLint const *") int[] v);
 
 }

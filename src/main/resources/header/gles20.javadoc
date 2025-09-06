@@ -1,0 +1,92 @@
+/**
+ * OpenGL ES 2.0 Accessor — Programmable pipeline for mobile/embedded: shaders & programs,
+ * vertex buffers/attributes, textures & samplers, framebuffers, and core fixed-function state.
+ *
+ * <p>Defines the ES 2.0 API surface used by most mobile GPUs. Compared to desktop GL,
+ * ES 2.0 is leaner (no fixed-function lighting/texgen, no immediate mode) and centers
+ * everything around GLSL ES shaders, vertex arrays, 2D textures, and FBOs.</p>
+ *
+ * <h2>Shaders & Programs</h2>
+ * <ul>
+ *   <li>{@code glCreateShader}, {@code glShaderSource}, {@code glCompileShader},
+ *       {@code glDeleteShader}, {@code glIsShader} — Manage shader objects.</li>
+ *   <li>{@code glCreateProgram}, {@code glAttachShader}, {@code glBindAttribLocation},
+ *       {@code glLinkProgram}, {@code glUseProgram}, {@code glValidateProgram},
+ *       {@code glDeleteProgram}, {@code glIsProgram} — Manage/link program objects.</li>
+ *   <li>{@code glGetShaderiv}/{@code glGetShaderi}, {@code glGetShaderInfoLog},
+ *       {@code glGetProgramiv}/{@code glGetProgrami}, {@code glGetProgramInfoLog},
+ *       {@code glGetAttachedShaders}, {@code glGetShaderSource} — Introspection & logs.</li>
+ *   <li>{@code glGetUniformLocation} — Look up uniform locations by name.</li>
+ *   <li>{@code glUniform*} / {@code glUniform*fv} / {@code glUniform*iv} —
+ *       Upload scalar/vector/matrix uniforms to the current program.</li>
+ *   <li>{@code glGetUniformf/i} / {@code glGetUniformfv/iv} — Read current uniform values.</li>
+ *   <li>{@code glReleaseShaderCompiler} — Hint to free internal compiler resources.</li>
+ *   <li>{@code glShaderBinary}, {@code glGetShaderPrecisionFormat} —
+ *       Load binary shaders and query numeric precision/ranges (ES-style qualifiers).</li>
+ * </ul>
+ *
+ * <h2>Vertex Input</h2>
+ * <ul>
+ *   <li>{@code glGenBuffers}, {@code glDeleteBuffers}, {@code glBindBuffer},
+ *       {@code glIsBuffer} — Create/bind VBOs (array/element array).</li>
+ *   <li>{@code glBufferData}, {@code glBufferSubData} — Allocate and update buffer storage.</li>
+ *   <li>{@code glGetBufferParameteri}/{@code glGetBufferParameteriv} — Query buffer parameters.</li>
+ *   <li>{@code glVertexAttribPointer}, {@code glEnableVertexAttribArray},
+ *       {@code glDisableVertexAttribArray} — Describe/enable generic vertex attributes.</li>
+ *   <li>{@code glVertexAttrib*}, {@code glVertexAttrib*fv} — Set constant (non-array) attribute values.</li>
+ *   <li>{@code glGetVertexAttribfv/iv}, {@code glGetVertexAttribPointerv} — Query attribute state/pointers.</li>
+ *   <li>{@code glDrawArrays}, {@code glDrawElements} — Issue draw calls.</li>
+ * </ul>
+ *
+ * <h2>Textures & Sampling</h2>
+ * <ul>
+ *   <li>{@code glGenTextures}, {@code glDeleteTextures}, {@code glBindTexture}, {@code glIsTexture} — Manage textures.</li>
+ *   <li>{@code glTexImage2D}, {@code glTexSubImage2D} — Define/replace 2D texture images.</li>
+ *   <li>{@code glCompressedTexImage2D}, {@code glCompressedTexSubImage2D} — Use compressed texture formats.</li>
+ *   <li>{@code glCopyTexImage2D}, {@code glCopyTexSubImage2D} — Copy from framebuffer to texture.</li>
+ *   <li>{@code glTexParameterf/i/fv/iv} — Set filtering, wrap modes, LOD bias, etc.; {@code glGetTexParameter*} to query.</li>
+ *   <li>{@code glGenerateMipmap} — Generate mip chains for the bound texture.</li>
+ * </ul>
+ *
+ * <h2>Framebuffers & Renderbuffers</h2>
+ * <ul>
+ *   <li>{@code glGenFramebuffers}, {@code glDeleteFramebuffers}, {@code glBindFramebuffer}, {@code glIsFramebuffer} — FBOs.</li>
+ *   <li>{@code glGenRenderbuffers}, {@code glDeleteRenderbuffers}, {@code glBindRenderbuffer}, {@code glIsRenderbuffer} — RBOs.</li>
+ *   <li>{@code glRenderbufferStorage} — Allocate renderbuffer storage.</li>
+ *   <li>{@code glFramebufferTexture2D}, {@code glFramebufferRenderbuffer} — Attach textures/RBOs to FBOs.</li>
+ *   <li>{@code glCheckFramebufferStatus} — Verify FBO completeness.</li>
+ *   <li>{@code glGetFramebufferAttachmentParameteriv}/{@code i} — Inspect FBO attachments.</li>
+ *   <li>{@code glGetRenderbufferParameteriv}/{@code i} — Query RBO properties.</li>
+ * </ul>
+ *
+ * <h2>Pipeline State & Rasterization</h2>
+ * <ul>
+ *   <li>{@code glEnable}/{@code glDisable}, {@code glIsEnabled} — Toggle capabilities (blend, cull, depth test, stencil, scissor).</li>
+ *   <li>{@code glBlendFunc}, {@code glBlendFuncSeparate}, {@code glBlendEquation}, {@code glBlendEquationSeparate}, {@code glBlendColor} — Blending.</li>
+ *   <li>{@code glDepthFunc}, {@code glDepthMask}, {@code glDepthRangef}, {@code glClearDepthf} — Depth testing & clear value.</li>
+ *   <li>{@code glStencilFunc}, {@code glStencilFuncSeparate}, {@code glStencilOp}, {@code glStencilOpSeparate}, {@code glStencilMask}, {@code glStencilMaskSeparate} — Stencil.</li>
+ *   <li>{@code glCullFace}, {@code glFrontFace} — Face culling.</li>
+ *   <li>{@code glPolygonOffset} — Depth bias for polygons.</li>
+ *   <li>{@code glSampleCoverage} — Control multisample coverage (if supported).</li>
+ *   <li>{@code glViewport}, {@code glScissor} — Rasterization rectangles.</li>
+ *   <li>{@code glHint}, {@code glLineWidth} — Quality/performance hints and line width.</li>
+ * </ul>
+ *
+ * <h2>Clears, Reads & Queries</h2>
+ * <ul>
+ *   <li>{@code glClear}, {@code glClearColor}, {@code glClearStencil} — Clear framebuffer buffers.</li>
+ *   <li>{@code glReadPixels} — Read back pixels from the framebuffer.</li>
+ *   <li>{@code glGetString} — Obtain renderer/version/extension strings.</li>
+ *   <li>{@code glGetError} — Retrieve the current GL error flag.</li>
+ *   <li>{@code glGetBoolean/Float/Integer*v} — Query scalar/vector state.</li>
+ *   <li>{@code glFinish}, {@code glFlush} — Synchronize command execution.</li>
+ * </ul>
+ *
+ * <h3>Notes</h3>
+ * <ul>
+ *   <li>ES 2.0 requires vertex/fragment shaders for all drawing; fixed-function transforms/lighting are not available.</li>
+ *   <li>Only 2D textures are core; cube maps and others may depend on extensions/ES version.</li>
+ *   <li>Precision qualifiers in GLSL ES interact with {@code glGetShaderPrecisionFormat} capabilities.</li>
+ *   <li>Always check framebuffer completeness before rendering to FBOs.</li>
+ * </ul>
+ */

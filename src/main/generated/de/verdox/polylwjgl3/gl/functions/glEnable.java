@@ -16,6 +16,6 @@ public interface glEnable {
 /**
  * <a href="https://docs.gl/es3/glEnable">Reference Page</a>
  */
-    public void glEnable(int cap);
+    public void glEnable(@NativeType("GLenum") int cap);
 
 }

@@ -33,7 +33,8 @@ public interface glMapBuffer {
  * @see <a href="https://docs.gl/gl4/glMapBuffer">Reference Page</a>
  */
 @Nullable
-    public ByteBuffer glMapBuffer(int target, int access);
+@NativeType("void *")
+    public ByteBuffer glMapBuffer(@NativeType("GLenum") int target, @NativeType("GLenum") int access);
 
 /**
  * Maps a buffer object's data store.
@@ -52,7 +53,8 @@ public interface glMapBuffer {
  * @see <a href="https://docs.gl/gl4/glMapBuffer">Reference Page</a>
  */
 @Nullable
-    public ByteBuffer glMapBuffer(int target, int access, @Nullable ByteBuffer old_buffer);
+@NativeType("void *")
+    public ByteBuffer glMapBuffer(@NativeType("GLenum") int target, @NativeType("GLenum") int access, @Nullable ByteBuffer old_buffer);
 
 /**
  * Maps a buffer object's data store.
@@ -71,6 +73,7 @@ public interface glMapBuffer {
  * @see <a href="https://docs.gl/gl4/glMapBuffer">Reference Page</a>
  */
 @Nullable
-    public ByteBuffer glMapBuffer(int target, int access, long length, @Nullable ByteBuffer old_buffer);
+@NativeType("void *")
+    public ByteBuffer glMapBuffer(@NativeType("GLenum") int target, @NativeType("GLenum") int access, long length, @Nullable ByteBuffer old_buffer);
 
 }

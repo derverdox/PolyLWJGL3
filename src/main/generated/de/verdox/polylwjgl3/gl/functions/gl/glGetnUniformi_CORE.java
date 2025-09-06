@@ -24,6 +24,7 @@ public interface glGetnUniformi_CORE extends glGetnUniformi {
  *
  * @see <a href="https://docs.gl/gl4/glGetUniform">Reference Page</a>
  */
-    public int glGetnUniformi(int program, int location);
+@NativeType("void")
+    public int glGetnUniformi(@NativeType("GLuint") int program, @NativeType("GLint") int location);
 
 }

@@ -20,13 +20,13 @@ public interface glGetTexLevelParameteriv {
 /**
  * <a href="https://docs.gl/es3/glGetTexLevelParameter">Reference Page</a>
  */
-    public void glGetTexLevelParameteriv(int target, int level, int pname, IntBuffer params);
+    public void glGetTexLevelParameteriv(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLenum") int pname, @NativeType("GLint *") IntBuffer params);
 
 /**
  * Array version of: {@link #glGetTexLevelParameteriv GetTexLevelParameteriv}
  *
  * @see <a href="https://docs.gl/es3/glGetTexLevelParameter">Reference Page</a>
  */
-    public void glGetTexLevelParameteriv(int target, int level, int pname, int[] params);
+    public void glGetTexLevelParameteriv(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLenum") int pname, @NativeType("GLint *") int[] params);
 
 }

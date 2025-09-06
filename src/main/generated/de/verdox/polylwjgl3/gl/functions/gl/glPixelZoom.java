@@ -29,6 +29,6 @@ public interface glPixelZoom {
  *
  * @see <a href="https://docs.gl/gl3/glPixelZoom">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glPixelZoom(float xfactor, float yfactor);
+    public void glPixelZoom(@NativeType("GLfloat") float xfactor, @NativeType("GLfloat") float yfactor);
 
 }

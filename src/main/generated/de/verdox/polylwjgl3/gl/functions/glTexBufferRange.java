@@ -18,6 +18,6 @@ public interface glTexBufferRange {
 /**
  * <a href="https://docs.gl/es3/glTexBufferRange">Reference Page</a>
  */
-    public void glTexBufferRange(int target, int internalformat, int buffer, long offset, long size);
+    public void glTexBufferRange(@NativeType("GLenum") int target, @NativeType("GLenum") int internalformat, @NativeType("GLuint") int buffer, @NativeType("GLintptr") long offset, @NativeType("GLsizeiptr") long size);
 
 }

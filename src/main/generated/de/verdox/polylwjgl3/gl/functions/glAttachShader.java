@@ -16,6 +16,6 @@ public interface glAttachShader {
 /**
  * <a href="https://docs.gl/es3/glAttachShader">Reference Page</a>
  */
-    public void glAttachShader(int program, int shader);
+    public void glAttachShader(@NativeType("GLuint") int program, @NativeType("GLuint") int shader);
 
 }

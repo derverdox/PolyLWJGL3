@@ -19,6 +19,6 @@ public interface glVertexAttribDivisor {
 /**
  * <a href="https://docs.gl/es3/glVertexAttribDivisor">Reference Page</a>
  */
-    public void glVertexAttribDivisor(int index, int divisor);
+    public void glVertexAttribDivisor(@NativeType("GLuint") int index, @NativeType("GLuint") int divisor);
 
 }

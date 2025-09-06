@@ -26,13 +26,13 @@ public interface glMultiTexCoord2sv {
  *
  * @see <a href="https://docs.gl/gl3/glMultiTexCoord">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glMultiTexCoord2sv(int texture, ShortBuffer v);
+    public void glMultiTexCoord2sv(@NativeType("GLenum") int texture, @NativeType("GLshort const *") ShortBuffer v);
 
 /**
  * Array version of: {@link #glMultiTexCoord2sv MultiTexCoord2sv}
  *
  * @see <a href="https://docs.gl/gl3/glMultiTexCoord">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glMultiTexCoord2sv(int texture, short[] v);
+    public void glMultiTexCoord2sv(@NativeType("GLenum") int texture, @NativeType("GLshort const *") short[] v);
 
 }

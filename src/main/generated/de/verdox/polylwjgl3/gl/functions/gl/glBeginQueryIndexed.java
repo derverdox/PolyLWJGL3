@@ -19,6 +19,6 @@ public interface glBeginQueryIndexed {
  *
  * @see <a href="https://docs.gl/gl4/glBeginQueryIndexed">Reference Page</a>
  */
-    public void glBeginQueryIndexed(int target, int index, int id);
+    public void glBeginQueryIndexed(@NativeType("GLenum") int target, @NativeType("GLuint") int index, @NativeType("GLuint") int id);
 
 }

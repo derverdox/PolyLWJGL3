@@ -20,6 +20,6 @@ public interface glGetPointerv {
 /**
  * <a href="https://docs.gl/es3/glGetPointerv">Reference Page</a>
  */
-    public void glGetPointerv(int pname, PointerBuffer params);
+    public void glGetPointerv(@NativeType("GLenum") int pname, @NativeType("void **") PointerBuffer params);
 
 }

@@ -19,6 +19,7 @@ public interface glFenceSync {
 /**
  * <a href="https://docs.gl/es3/glFenceSync">Reference Page</a>
  */
-    public long glFenceSync(int condition, int flags);
+@NativeType("GLsync")
+    public long glFenceSync(@NativeType("GLenum") int condition, @NativeType("GLbitfield") int flags);
 
 }

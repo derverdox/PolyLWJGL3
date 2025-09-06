@@ -19,6 +19,6 @@ public interface glBindTransformFeedback {
 /**
  * <a href="https://docs.gl/es3/glBindTransformFeedback">Reference Page</a>
  */
-    public void glBindTransformFeedback(int target, int id);
+    public void glBindTransformFeedback(@NativeType("GLenum") int target, @NativeType("GLuint") int id);
 
 }

@@ -31,13 +31,13 @@ public interface glMultiDrawElementsBaseVertex {
  *
  * @see <a href="https://docs.gl/gl4/glMultiDrawElementsBaseVertex">Reference Page</a>
  */
-    public void glMultiDrawElementsBaseVertex(int mode, IntBuffer count, int type, PointerBuffer indices, IntBuffer basevertex);
+    public void glMultiDrawElementsBaseVertex(@NativeType("GLenum") int mode, @NativeType("GLsizei const *") IntBuffer count, @NativeType("GLenum") int type, @NativeType("void const * const *") PointerBuffer indices, @NativeType("GLint *") IntBuffer basevertex);
 
 /**
  * Array version of: {@link #glMultiDrawElementsBaseVertex MultiDrawElementsBaseVertex}
  *
  * @see <a href="https://docs.gl/gl4/glMultiDrawElementsBaseVertex">Reference Page</a>
  */
-    public void glMultiDrawElementsBaseVertex(int mode, int[] count, int type, PointerBuffer indices, int[] basevertex);
+    public void glMultiDrawElementsBaseVertex(@NativeType("GLenum") int mode, @NativeType("GLsizei const *") int[] count, @NativeType("GLenum") int type, @NativeType("void const * const *") PointerBuffer indices, @NativeType("GLint *") int[] basevertex);
 
 }

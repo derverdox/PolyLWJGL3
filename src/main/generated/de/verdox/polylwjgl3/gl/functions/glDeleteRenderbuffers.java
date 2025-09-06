@@ -18,18 +18,18 @@ public interface glDeleteRenderbuffers {
 /**
  * <a href="https://docs.gl/es3/glDeleteRenderbuffers">Reference Page</a>
  */
-    public void glDeleteRenderbuffers(IntBuffer renderbuffers);
+    public void glDeleteRenderbuffers(@NativeType("GLuint const *") IntBuffer renderbuffers);
 
 /**
  * <a href="https://docs.gl/es3/glDeleteRenderbuffers">Reference Page</a>
  */
-    public void glDeleteRenderbuffers(int renderbuffer);
+    public void glDeleteRenderbuffers(@NativeType("GLuint const *") int renderbuffer);
 
 /**
  * Array version of: {@link #glDeleteRenderbuffers DeleteRenderbuffers}
  *
  * @see <a href="https://docs.gl/es3/glDeleteRenderbuffers">Reference Page</a>
  */
-    public void glDeleteRenderbuffers(int[] renderbuffers);
+    public void glDeleteRenderbuffers(@NativeType("GLuint const *") int[] renderbuffers);
 
 }

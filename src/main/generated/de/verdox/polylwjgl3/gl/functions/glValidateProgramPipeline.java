@@ -18,6 +18,6 @@ public interface glValidateProgramPipeline {
 /**
  * <a href="https://docs.gl/es3/glValidateProgramPipeline">Reference Page</a>
  */
-    public void glValidateProgramPipeline(int pipeline);
+    public void glValidateProgramPipeline(@NativeType("GLuint") int pipeline);
 
 }

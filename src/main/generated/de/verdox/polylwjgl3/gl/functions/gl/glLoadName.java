@@ -20,6 +20,6 @@ public interface glLoadName {
  *
  * @see <a href="https://docs.gl/gl3/glLoadName">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glLoadName(int name);
+    public void glLoadName(@NativeType("GLuint") int name);
 
 }

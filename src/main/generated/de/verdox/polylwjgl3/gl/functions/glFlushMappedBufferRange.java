@@ -19,6 +19,6 @@ public interface glFlushMappedBufferRange {
 /**
  * <a href="https://docs.gl/es3/glFlushMappedBufferRange">Reference Page</a>
  */
-    public void glFlushMappedBufferRange(int target, long offset, long length);
+    public void glFlushMappedBufferRange(@NativeType("GLenum") int target, @NativeType("GLintptr") long offset, @NativeType("GLsizeiptr") long length);
 
 }

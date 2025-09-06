@@ -25,13 +25,13 @@ public interface glGetDoublei_v {
  *
  * @see <a href="https://docs.gl/gl4/glGetDoublei_v">Reference Page</a>
  */
-    public void glGetDoublei_v(int target, int index, DoubleBuffer data);
+    public void glGetDoublei_v(@NativeType("GLenum") int target, @NativeType("GLuint") int index, @NativeType("GLdouble *") DoubleBuffer data);
 
 /**
  * Array version of: {@link #glGetDoublei_v GetDoublei_v}
  *
  * @see <a href="https://docs.gl/gl4/glGetDoublei_v">Reference Page</a>
  */
-    public void glGetDoublei_v(int target, int index, double[] data);
+    public void glGetDoublei_v(@NativeType("GLenum") int target, @NativeType("GLuint") int index, @NativeType("GLdouble *") double[] data);
 
 }

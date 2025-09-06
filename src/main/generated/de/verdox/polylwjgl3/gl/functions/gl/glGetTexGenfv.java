@@ -27,13 +27,13 @@ public interface glGetTexGenfv {
  *
  * @see <a href="https://docs.gl/gl3/glGetTexGen">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glGetTexGenfv(int coord, int pname, FloatBuffer data);
+    public void glGetTexGenfv(@NativeType("GLenum") int coord, @NativeType("GLenum") int pname, @NativeType("GLfloat *") FloatBuffer data);
 
 /**
  * Array version of: {@link #glGetTexGenfv GetTexGenfv}
  *
  * @see <a href="https://docs.gl/gl3/glGetTexGen">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glGetTexGenfv(int coord, int pname, float[] data);
+    public void glGetTexGenfv(@NativeType("GLenum") int coord, @NativeType("GLenum") int pname, @NativeType("GLfloat *") float[] data);
 
 }

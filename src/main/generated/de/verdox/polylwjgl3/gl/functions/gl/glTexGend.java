@@ -22,6 +22,6 @@ public interface glTexGend {
  *
  * @see <a href="https://docs.gl/gl3/glTexGend">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glTexGend(int coord, int pname, double param);
+    public void glTexGend(@NativeType("GLenum") int coord, @NativeType("GLenum") int pname, @NativeType("GLdouble") double param);
 
 }

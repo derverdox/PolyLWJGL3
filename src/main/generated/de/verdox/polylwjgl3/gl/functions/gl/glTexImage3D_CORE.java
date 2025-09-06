@@ -27,13 +27,13 @@ public interface glTexImage3D_CORE extends glTexImage3D {
  *
  * @see <a href="https://docs.gl/gl4/glTexImage3D">Reference Page</a>
  */
-    public void glTexImage3D(int target, int level, int internalformat, int width, int height, int depth, int border, int format, int type, @Nullable DoubleBuffer pixels);
+    public void glTexImage3D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLsizei") int depth, @NativeType("GLint") int border, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") DoubleBuffer pixels);
 
 /**
  * Array version of: {@link #glTexImage3D TexImage3D}
  *
  * @see <a href="https://docs.gl/gl4/glTexImage3D">Reference Page</a>
  */
-    public void glTexImage3D(int target, int level, int internalformat, int width, int height, int depth, int border, int format, int type, @Nullable double[] pixels);
+    public void glTexImage3D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLsizei") int depth, @NativeType("GLint") int border, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") double[] pixels);
 
 }

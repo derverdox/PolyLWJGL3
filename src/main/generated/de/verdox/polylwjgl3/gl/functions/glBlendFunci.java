@@ -18,6 +18,6 @@ public interface glBlendFunci {
 /**
  * <a href="https://docs.gl/es3/glBlendFunci">Reference Page</a>
  */
-    public void glBlendFunci(int buf, int src, int dst);
+    public void glBlendFunci(@NativeType("GLuint") int buf, @NativeType("GLenum") int src, @NativeType("GLenum") int dst);
 
 }

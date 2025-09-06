@@ -29,13 +29,13 @@ public interface glTextureParameterIiv {
  *
  * @see <a href="https://docs.gl/gl4/glTextureParameter">Reference Page</a>
  */
-    public void glTextureParameterIiv(int texture, int pname, IntBuffer params);
+    public void glTextureParameterIiv(@NativeType("GLuint") int texture, @NativeType("GLenum") int pname, @NativeType("GLint const *") IntBuffer params);
 
 /**
  * Array version of: {@link #glTextureParameterIiv TextureParameterIiv}
  *
  * @see <a href="https://docs.gl/gl4/glTextureParameter">Reference Page</a>
  */
-    public void glTextureParameterIiv(int texture, int pname, int[] params);
+    public void glTextureParameterIiv(@NativeType("GLuint") int texture, @NativeType("GLenum") int pname, @NativeType("GLint const *") int[] params);
 
 }

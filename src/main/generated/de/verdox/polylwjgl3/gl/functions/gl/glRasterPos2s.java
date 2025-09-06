@@ -21,6 +21,6 @@ public interface glRasterPos2s {
  *
  * @see <a href="https://docs.gl/gl3/glRasterPos">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glRasterPos2s(short x, short y);
+    public void glRasterPos2s(@NativeType("GLshort") short x, @NativeType("GLshort") short y);
 
 }

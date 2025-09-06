@@ -25,13 +25,13 @@ public interface glUniform3dv {
  *
  * @see <a href="https://docs.gl/gl4/glUniform">Reference Page</a>
  */
-    public void glUniform3dv(int location, DoubleBuffer value);
+    public void glUniform3dv(@NativeType("GLint") int location, @NativeType("GLdouble const *") DoubleBuffer value);
 
 /**
  * Array version of: {@link #glUniform3dv Uniform3dv}
  *
  * @see <a href="https://docs.gl/gl4/glUniform">Reference Page</a>
  */
-    public void glUniform3dv(int location, double[] value);
+    public void glUniform3dv(@NativeType("GLint") int location, @NativeType("GLdouble const *") double[] value);
 
 }

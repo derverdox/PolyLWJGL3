@@ -25,6 +25,6 @@ public interface glGetQueryBufferObjectuiv {
  *
  * @see <a href="https://docs.gl/gl4/glGetQueryBufferObject">Reference Page</a>
  */
-    public void glGetQueryBufferObjectuiv(int id, int buffer, int pname, long offset);
+    public void glGetQueryBufferObjectuiv(@NativeType("GLuint") int id, @NativeType("GLuint") int buffer, @NativeType("GLenum") int pname, @NativeType("GLintptr") long offset);
 
 }

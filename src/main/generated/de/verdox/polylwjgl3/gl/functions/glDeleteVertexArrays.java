@@ -21,18 +21,18 @@ public interface glDeleteVertexArrays {
 /**
  * <a href="https://docs.gl/es3/glDeleteVertexArrays">Reference Page</a>
  */
-    public void glDeleteVertexArrays(IntBuffer arrays);
+    public void glDeleteVertexArrays(@NativeType("GLuint const *") IntBuffer arrays);
 
 /**
  * <a href="https://docs.gl/es3/glDeleteVertexArrays">Reference Page</a>
  */
-    public void glDeleteVertexArrays(int array);
+    public void glDeleteVertexArrays(@NativeType("GLuint const *") int array);
 
 /**
  * Array version of: {@link #glDeleteVertexArrays DeleteVertexArrays}
  *
  * @see <a href="https://docs.gl/es3/glDeleteVertexArrays">Reference Page</a>
  */
-    public void glDeleteVertexArrays(int[] arrays);
+    public void glDeleteVertexArrays(@NativeType("GLuint const *") int[] arrays);
 
 }

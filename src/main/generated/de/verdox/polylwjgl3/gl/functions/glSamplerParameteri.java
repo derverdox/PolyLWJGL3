@@ -19,6 +19,6 @@ public interface glSamplerParameteri {
 /**
  * <a href="https://docs.gl/es3/glSamplerParameteri">Reference Page</a>
  */
-    public void glSamplerParameteri(int sampler, int pname, int param);
+    public void glSamplerParameteri(@NativeType("GLuint") int sampler, @NativeType("GLenum") int pname, @NativeType("GLint") int param);
 
 }

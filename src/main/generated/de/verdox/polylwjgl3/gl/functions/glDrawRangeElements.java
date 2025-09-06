@@ -21,26 +21,26 @@ public interface glDrawRangeElements {
 /**
  * <a href="https://docs.gl/es3/glDrawRangeElements">Reference Page</a>
  */
-    public void glDrawRangeElements(int mode, int start, int end, int count, int type, long indices);
+    public void glDrawRangeElements(@NativeType("GLenum") int mode, @NativeType("GLuint") int start, @NativeType("GLuint") int end, @NativeType("GLsizei") int count, @NativeType("GLenum") int type, @NativeType("void const *") long indices);
 
 /**
  * <a href="https://docs.gl/es3/glDrawRangeElements">Reference Page</a>
  */
-    public void glDrawRangeElements(int mode, int start, int end, int type, ByteBuffer indices);
+    public void glDrawRangeElements(@NativeType("GLenum") int mode, @NativeType("GLuint") int start, @NativeType("GLuint") int end, @NativeType("GLenum") int type, @NativeType("void const *") ByteBuffer indices);
 
 /**
  * <a href="https://docs.gl/es3/glDrawRangeElements">Reference Page</a>
  */
-    public void glDrawRangeElements(int mode, int start, int end, ByteBuffer indices);
+    public void glDrawRangeElements(@NativeType("GLenum") int mode, @NativeType("GLuint") int start, @NativeType("GLuint") int end, @NativeType("void const *") ByteBuffer indices);
 
 /**
  * <a href="https://docs.gl/es3/glDrawRangeElements">Reference Page</a>
  */
-    public void glDrawRangeElements(int mode, int start, int end, ShortBuffer indices);
+    public void glDrawRangeElements(@NativeType("GLenum") int mode, @NativeType("GLuint") int start, @NativeType("GLuint") int end, @NativeType("void const *") ShortBuffer indices);
 
 /**
  * <a href="https://docs.gl/es3/glDrawRangeElements">Reference Page</a>
  */
-    public void glDrawRangeElements(int mode, int start, int end, IntBuffer indices);
+    public void glDrawRangeElements(@NativeType("GLenum") int mode, @NativeType("GLuint") int start, @NativeType("GLuint") int end, @NativeType("void const *") IntBuffer indices);
 
 }

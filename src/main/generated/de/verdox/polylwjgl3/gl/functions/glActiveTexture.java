@@ -16,6 +16,6 @@ public interface glActiveTexture {
 /**
  * <a href="https://docs.gl/es3/glActiveTexture">Reference Page</a>
  */
-    public void glActiveTexture(int texture);
+    public void glActiveTexture(@NativeType("GLenum") int texture);
 
 }

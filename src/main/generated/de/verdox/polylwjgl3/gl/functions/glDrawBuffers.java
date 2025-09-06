@@ -21,18 +21,18 @@ public interface glDrawBuffers {
 /**
  * <a href="https://docs.gl/es3/glDrawBuffers">Reference Page</a>
  */
-    public void glDrawBuffers(IntBuffer bufs);
+    public void glDrawBuffers(@NativeType("GLenum const *") IntBuffer bufs);
 
 /**
  * <a href="https://docs.gl/es3/glDrawBuffers">Reference Page</a>
  */
-    public void glDrawBuffers(int buf);
+    public void glDrawBuffers(@NativeType("GLenum const *") int buf);
 
 /**
  * Array version of: {@link #glDrawBuffers DrawBuffers}
  *
  * @see <a href="https://docs.gl/es3/glDrawBuffers">Reference Page</a>
  */
-    public void glDrawBuffers(int[] bufs);
+    public void glDrawBuffers(@NativeType("GLenum const *") int[] bufs);
 
 }

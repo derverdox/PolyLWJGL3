@@ -19,6 +19,7 @@ public interface glGetInteger64 {
 /**
  * <a href="https://docs.gl/es3/glGetInteger64v">Reference Page</a>
  */
-    public long glGetInteger64(int pname);
+@NativeType("void")
+    public long glGetInteger64(@NativeType("GLenum") int pname);
 
 }

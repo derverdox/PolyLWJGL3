@@ -20,6 +20,6 @@ public interface glIndexs {
  *
  * @see <a href="https://docs.gl/gl3/glIndexs">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glIndexs(short index);
+    public void glIndexs(@NativeType("GLshort") short index);
 
 }

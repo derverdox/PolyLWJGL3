@@ -19,6 +19,6 @@ public interface glClampColor {
  *
  * @see <a href="https://docs.gl/gl4/glClampColor">Reference Page</a>
  */
-    public void glClampColor(int target, int clamp);
+    public void glClampColor(@NativeType("GLenum") int target, @NativeType("GLenum") int clamp);
 
 }

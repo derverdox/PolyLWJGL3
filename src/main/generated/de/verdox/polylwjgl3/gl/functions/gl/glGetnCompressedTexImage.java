@@ -32,7 +32,7 @@ public interface glGetnCompressedTexImage {
  *
  * @see <a href="https://docs.gl/gl4/glGetnCompressedTexImage">Reference Page</a>
  */
-    public void glGetnCompressedTexImage(int target, int level, int bufSize, long img);
+    public void glGetnCompressedTexImage(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLsizei") int bufSize, @NativeType("void *") long img);
 
 /**
  * Robust version of {@link GL13C#glGetCompressedTexImage GetCompressedTexImage}
@@ -43,6 +43,6 @@ public interface glGetnCompressedTexImage {
  *
  * @see <a href="https://docs.gl/gl4/glGetnCompressedTexImage">Reference Page</a>
  */
-    public void glGetnCompressedTexImage(int target, int level, ByteBuffer img);
+    public void glGetnCompressedTexImage(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("void *") ByteBuffer img);
 
 }

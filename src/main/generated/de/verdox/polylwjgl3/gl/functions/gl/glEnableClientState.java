@@ -22,6 +22,6 @@ public interface glEnableClientState {
  *
  * @see <a href="https://docs.gl/gl3/glEnableClientState">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glEnableClientState(int cap);
+    public void glEnableClientState(@NativeType("GLenum") int cap);
 
 }

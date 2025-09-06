@@ -20,6 +20,6 @@ public interface glMatrixMode {
  *
  * @see <a href="https://docs.gl/gl3/glMatrixMode">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glMatrixMode(int mode);
+    public void glMatrixMode(@NativeType("GLenum") int mode);
 
 }

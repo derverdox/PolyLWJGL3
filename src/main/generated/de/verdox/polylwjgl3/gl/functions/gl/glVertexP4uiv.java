@@ -25,13 +25,13 @@ public interface glVertexP4uiv {
  *
  * @see <a href="https://docs.gl/gl3/glVertex">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glVertexP4uiv(int type, IntBuffer value);
+    public void glVertexP4uiv(@NativeType("GLenum") int type, @NativeType("GLuint const *") IntBuffer value);
 
 /**
  * Array version of: {@link #glVertexP4uiv VertexP4uiv}
  *
  * @see <a href="https://docs.gl/gl3/glVertex">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glVertexP4uiv(int type, int[] value);
+    public void glVertexP4uiv(@NativeType("GLenum") int type, @NativeType("GLuint const *") int[] value);
 
 }

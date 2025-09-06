@@ -18,6 +18,6 @@ public interface glActiveShaderProgram {
 /**
  * <a href="https://docs.gl/es3/glActiveShaderProgram">Reference Page</a>
  */
-    public void glActiveShaderProgram(int pipeline, int program);
+    public void glActiveShaderProgram(@NativeType("GLuint") int pipeline, @NativeType("GLuint") int program);
 
 }

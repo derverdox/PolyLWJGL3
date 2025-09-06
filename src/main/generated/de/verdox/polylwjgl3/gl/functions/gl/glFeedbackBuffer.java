@@ -28,13 +28,13 @@ public interface glFeedbackBuffer {
  *
  * @see <a href="https://docs.gl/gl3/glFeedbackBuffer">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glFeedbackBuffer(int type, FloatBuffer buffer);
+    public void glFeedbackBuffer(@NativeType("GLenum") int type, @NativeType("GLfloat *") FloatBuffer buffer);
 
 /**
  * Array version of: {@link #glFeedbackBuffer FeedbackBuffer}
  *
  * @see <a href="https://docs.gl/gl3/glFeedbackBuffer">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glFeedbackBuffer(int type, float[] buffer);
+    public void glFeedbackBuffer(@NativeType("GLenum") int type, @NativeType("GLfloat *") float[] buffer);
 
 }

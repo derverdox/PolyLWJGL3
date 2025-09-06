@@ -19,6 +19,6 @@ public interface glReadBuffer {
 /**
  * <a href="https://docs.gl/es3/glReadBuffer">Reference Page</a>
  */
-    public void glReadBuffer(int src);
+    public void glReadBuffer(@NativeType("GLenum") int src);
 
 }

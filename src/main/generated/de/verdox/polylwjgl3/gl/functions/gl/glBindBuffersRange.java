@@ -48,13 +48,13 @@ public interface glBindBuffersRange {
  *
  * @see <a href="https://docs.gl/gl4/glBindBuffersRange">Reference Page</a>
  */
-    public void glBindBuffersRange(int target, int first, @Nullable IntBuffer buffers, @Nullable PointerBuffer offsets, @Nullable PointerBuffer sizes);
+    public void glBindBuffersRange(@NativeType("GLenum") int target, @NativeType("GLuint") int first, @Nullable @NativeType("GLuint const *") IntBuffer buffers, @Nullable @NativeType("GLintptr const *") PointerBuffer offsets, @Nullable @NativeType("GLsizeiptr const *") PointerBuffer sizes);
 
 /**
  * Array version of: {@link #glBindBuffersRange BindBuffersRange}
  *
  * @see <a href="https://docs.gl/gl4/glBindBuffersRange">Reference Page</a>
  */
-    public void glBindBuffersRange(int target, int first, @Nullable int[] buffers, @Nullable PointerBuffer offsets, @Nullable PointerBuffer sizes);
+    public void glBindBuffersRange(@NativeType("GLenum") int target, @NativeType("GLuint") int first, @Nullable @NativeType("GLuint const *") int[] buffers, @Nullable @NativeType("GLintptr const *") PointerBuffer offsets, @Nullable @NativeType("GLsizeiptr const *") PointerBuffer sizes);
 
 }

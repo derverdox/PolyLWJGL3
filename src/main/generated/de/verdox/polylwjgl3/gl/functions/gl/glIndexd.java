@@ -20,6 +20,6 @@ public interface glIndexd {
  *
  * @see <a href="https://docs.gl/gl3/glIndexd">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glIndexd(double index);
+    public void glIndexd(@NativeType("GLdouble") double index);
 
 }

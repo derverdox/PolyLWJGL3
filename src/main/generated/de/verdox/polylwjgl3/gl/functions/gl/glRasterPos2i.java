@@ -27,6 +27,6 @@ public interface glRasterPos2i {
  *
  * @see <a href="https://docs.gl/gl3/glRasterPos">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glRasterPos2i(int x, int y);
+    public void glRasterPos2i(@NativeType("GLint") int x, @NativeType("GLint") int y);
 
 }

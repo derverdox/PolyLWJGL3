@@ -25,13 +25,13 @@ public interface glColor3iv {
  *
  * @see <a href="https://docs.gl/gl3/glColor">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glColor3iv(IntBuffer v);
+    public void glColor3iv(@NativeType("GLint const *") IntBuffer v);
 
 /**
  * Array version of: {@link #glColor3iv Color3iv}
  *
  * @see <a href="https://docs.gl/gl3/glColor">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glColor3iv(int[] v);
+    public void glColor3iv(@NativeType("GLint const *") int[] v);
 
 }

@@ -31,7 +31,8 @@ public interface glMapNamedBufferRange {
  * @see <a href="https://docs.gl/gl4/glMapBufferRange">Reference Page</a>
  */
 @Nullable
-    public ByteBuffer glMapNamedBufferRange(int buffer, long offset, long length, int access);
+@NativeType("void *")
+    public ByteBuffer glMapNamedBufferRange(@NativeType("GLuint") int buffer, @NativeType("GLintptr") long offset, @NativeType("GLsizeiptr") long length, @NativeType("GLbitfield") int access);
 
 /**
  * DSA version of {@link GL30C#glMapBufferRange MapBufferRange}.
@@ -44,6 +45,7 @@ public interface glMapNamedBufferRange {
  * @see <a href="https://docs.gl/gl4/glMapBufferRange">Reference Page</a>
  */
 @Nullable
-    public ByteBuffer glMapNamedBufferRange(int buffer, long offset, long length, int access, @Nullable ByteBuffer old_buffer);
+@NativeType("void *")
+    public ByteBuffer glMapNamedBufferRange(@NativeType("GLuint") int buffer, @NativeType("GLintptr") long offset, @NativeType("GLsizeiptr") long length, @NativeType("GLbitfield") int access, @Nullable ByteBuffer old_buffer);
 
 }

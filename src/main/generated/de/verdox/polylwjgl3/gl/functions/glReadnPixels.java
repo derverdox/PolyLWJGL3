@@ -36,7 +36,7 @@ public interface glReadnPixels {
  *
  * @see <a href="https://docs.gl/es3/glReadnPixels">Reference Page</a>
  */
-    public void glReadnPixels(int x, int y, int width, int height, int format, int type, int bufSize, long pixels);
+    public void glReadnPixels(@NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("GLsizei") int bufSize, @NativeType("void *") long pixels);
 
 /**
  * Behaves identically to {@link GLES20#glReadPixels ReadPixels} except that it does not write more than {@code bufSize} bytes into {@code data}
@@ -51,7 +51,7 @@ public interface glReadnPixels {
  *
  * @see <a href="https://docs.gl/es3/glReadnPixels">Reference Page</a>
  */
-    public void glReadnPixels(int x, int y, int width, int height, int format, int type, ByteBuffer pixels);
+    public void glReadnPixels(@NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") ByteBuffer pixels);
 
 /**
  * Behaves identically to {@link GLES20#glReadPixels ReadPixels} except that it does not write more than {@code bufSize} bytes into {@code data}
@@ -66,7 +66,7 @@ public interface glReadnPixels {
  *
  * @see <a href="https://docs.gl/es3/glReadnPixels">Reference Page</a>
  */
-    public void glReadnPixels(int x, int y, int width, int height, int format, int type, ShortBuffer pixels);
+    public void glReadnPixels(@NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") ShortBuffer pixels);
 
 /**
  * Behaves identically to {@link GLES20#glReadPixels ReadPixels} except that it does not write more than {@code bufSize} bytes into {@code data}
@@ -81,7 +81,7 @@ public interface glReadnPixels {
  *
  * @see <a href="https://docs.gl/es3/glReadnPixels">Reference Page</a>
  */
-    public void glReadnPixels(int x, int y, int width, int height, int format, int type, IntBuffer pixels);
+    public void glReadnPixels(@NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") IntBuffer pixels);
 
 /**
  * Behaves identically to {@link GLES20#glReadPixels ReadPixels} except that it does not write more than {@code bufSize} bytes into {@code data}
@@ -96,27 +96,27 @@ public interface glReadnPixels {
  *
  * @see <a href="https://docs.gl/es3/glReadnPixels">Reference Page</a>
  */
-    public void glReadnPixels(int x, int y, int width, int height, int format, int type, FloatBuffer pixels);
+    public void glReadnPixels(@NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") FloatBuffer pixels);
 
 /**
  * Array version of: {@link #glReadnPixels ReadnPixels}
  *
  * @see <a href="https://docs.gl/es3/glReadnPixels">Reference Page</a>
  */
-    public void glReadnPixels(int x, int y, int width, int height, int format, int type, short[] pixels);
+    public void glReadnPixels(@NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") short[] pixels);
 
 /**
  * Array version of: {@link #glReadnPixels ReadnPixels}
  *
  * @see <a href="https://docs.gl/es3/glReadnPixels">Reference Page</a>
  */
-    public void glReadnPixels(int x, int y, int width, int height, int format, int type, int[] pixels);
+    public void glReadnPixels(@NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") int[] pixels);
 
 /**
  * Array version of: {@link #glReadnPixels ReadnPixels}
  *
  * @see <a href="https://docs.gl/es3/glReadnPixels">Reference Page</a>
  */
-    public void glReadnPixels(int x, int y, int width, int height, int format, int type, float[] pixels);
+    public void glReadnPixels(@NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") float[] pixels);
 
 }

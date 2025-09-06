@@ -21,6 +21,6 @@ public interface glEvalPoint2 {
  *
  * @see <a href="https://docs.gl/gl3/glEvalPoint2">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glEvalPoint2(int i, int j);
+    public void glEvalPoint2(@NativeType("GLint") int i, @NativeType("GLint") int j);
 
 }

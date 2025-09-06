@@ -26,7 +26,7 @@ public interface glEdgeFlagPointer {
  *
  * @see <a href="https://docs.gl/gl3/glEdgeFlagPointer">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glEdgeFlagPointer(int stride, ByteBuffer pointer);
+    public void glEdgeFlagPointer(@NativeType("GLsizei") int stride, @NativeType("GLboolean const *") ByteBuffer pointer);
 
 /**
  * Specifies the location and organization of an edge flag array.
@@ -36,6 +36,6 @@ public interface glEdgeFlagPointer {
  *
  * @see <a href="https://docs.gl/gl3/glEdgeFlagPointer">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glEdgeFlagPointer(int stride, long pointer);
+    public void glEdgeFlagPointer(@NativeType("GLsizei") int stride, @NativeType("GLboolean const *") long pointer);
 
 }

@@ -29,13 +29,14 @@ public interface glCreateProgramPipelines {
  *
  * @see <a href="https://docs.gl/gl4/glCreateProgramPipelines">Reference Page</a>
  */
-    public void glCreateProgramPipelines(IntBuffer pipelines);
+    public void glCreateProgramPipelines(@NativeType("GLuint *") IntBuffer pipelines);
 
 /**
  * Returns {@code n} previously unused program pipeline names in {@code pipelines}, each representing a new program pipeline object.
  *
  * @see <a href="https://docs.gl/gl4/glCreateProgramPipelines">Reference Page</a>
  */
+@NativeType("void")
     public int glCreateProgramPipelines();
 
 /**
@@ -43,6 +44,6 @@ public interface glCreateProgramPipelines {
  *
  * @see <a href="https://docs.gl/gl4/glCreateProgramPipelines">Reference Page</a>
  */
-    public void glCreateProgramPipelines(int[] pipelines);
+    public void glCreateProgramPipelines(@NativeType("GLuint *") int[] pipelines);
 
 }

@@ -27,13 +27,13 @@ public interface glGetTexEnvfv {
  *
  * @see <a href="https://docs.gl/gl3/glGetTexEnv">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glGetTexEnvfv(int env, int pname, FloatBuffer data);
+    public void glGetTexEnvfv(@NativeType("GLenum") int env, @NativeType("GLenum") int pname, @NativeType("GLfloat *") FloatBuffer data);
 
 /**
  * Array version of: {@link #glGetTexEnvfv GetTexEnvfv}
  *
  * @see <a href="https://docs.gl/gl3/glGetTexEnv">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glGetTexEnvfv(int env, int pname, float[] data);
+    public void glGetTexEnvfv(@NativeType("GLenum") int env, @NativeType("GLenum") int pname, @NativeType("GLfloat *") float[] data);
 
 }

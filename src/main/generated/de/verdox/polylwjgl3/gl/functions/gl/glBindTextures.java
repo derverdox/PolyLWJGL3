@@ -59,13 +59,13 @@ public interface glBindTextures {
  *
  * @see <a href="https://docs.gl/gl4/glBindTextures">Reference Page</a>
  */
-    public void glBindTextures(int first, @Nullable IntBuffer textures);
+    public void glBindTextures(@NativeType("GLuint") int first, @Nullable @NativeType("GLuint const *") IntBuffer textures);
 
 /**
  * Array version of: {@link #glBindTextures BindTextures}
  *
  * @see <a href="https://docs.gl/gl4/glBindTextures">Reference Page</a>
  */
-    public void glBindTextures(int first, @Nullable int[] textures);
+    public void glBindTextures(@NativeType("GLuint") int first, @Nullable @NativeType("GLuint const *") int[] textures);
 
 }

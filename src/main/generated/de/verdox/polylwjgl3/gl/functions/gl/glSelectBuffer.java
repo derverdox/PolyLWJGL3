@@ -27,13 +27,13 @@ public interface glSelectBuffer {
  *
  * @see <a href="https://docs.gl/gl3/glSelectBuffer">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glSelectBuffer(IntBuffer buffer);
+    public void glSelectBuffer(@NativeType("GLuint *") IntBuffer buffer);
 
 /**
  * Array version of: {@link #glSelectBuffer SelectBuffer}
  *
  * @see <a href="https://docs.gl/gl3/glSelectBuffer">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glSelectBuffer(int[] buffer);
+    public void glSelectBuffer(@NativeType("GLuint *") int[] buffer);
 
 }

@@ -18,6 +18,6 @@ public interface glPatchParameteri {
 /**
  * <a href="https://docs.gl/es3/glPatchParameteri">Reference Page</a>
  */
-    public void glPatchParameteri(int pname, int value);
+    public void glPatchParameteri(@NativeType("GLenum") int pname, @NativeType("GLint") int value);
 
 }

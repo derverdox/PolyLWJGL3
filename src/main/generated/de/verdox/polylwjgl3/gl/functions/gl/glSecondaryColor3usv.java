@@ -25,13 +25,13 @@ public interface glSecondaryColor3usv {
  *
  * @see <a href="https://docs.gl/gl3/glSecondaryColor">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glSecondaryColor3usv(ShortBuffer v);
+    public void glSecondaryColor3usv(@NativeType("GLushort const *") ShortBuffer v);
 
 /**
  * Array version of: {@link #glSecondaryColor3usv SecondaryColor3usv}
  *
  * @see <a href="https://docs.gl/gl3/glSecondaryColor">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glSecondaryColor3usv(short[] v);
+    public void glSecondaryColor3usv(@NativeType("GLushort const *") short[] v);
 
 }

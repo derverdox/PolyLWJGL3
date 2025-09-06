@@ -25,13 +25,13 @@ public interface glTexCoord3dv {
  *
  * @see <a href="https://docs.gl/gl3/glTexCoord">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glTexCoord3dv(DoubleBuffer v);
+    public void glTexCoord3dv(@NativeType("GLdouble const *") DoubleBuffer v);
 
 /**
  * Array version of: {@link #glTexCoord3dv TexCoord3dv}
  *
  * @see <a href="https://docs.gl/gl3/glTexCoord">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glTexCoord3dv(double[] v);
+    public void glTexCoord3dv(@NativeType("GLdouble const *") double[] v);
 
 }

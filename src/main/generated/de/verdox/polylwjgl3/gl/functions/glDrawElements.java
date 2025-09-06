@@ -18,26 +18,26 @@ public interface glDrawElements {
 /**
  * <a href="https://docs.gl/es3/glDrawElements">Reference Page</a>
  */
-    public void glDrawElements(int mode, int count, int type, long indices);
+    public void glDrawElements(@NativeType("GLenum") int mode, @NativeType("GLsizei") int count, @NativeType("GLenum") int type, @NativeType("void const *") long indices);
 
 /**
  * <a href="https://docs.gl/es3/glDrawElements">Reference Page</a>
  */
-    public void glDrawElements(int mode, int type, ByteBuffer indices);
+    public void glDrawElements(@NativeType("GLenum") int mode, @NativeType("GLenum") int type, @NativeType("void const *") ByteBuffer indices);
 
 /**
  * <a href="https://docs.gl/es3/glDrawElements">Reference Page</a>
  */
-    public void glDrawElements(int mode, ByteBuffer indices);
+    public void glDrawElements(@NativeType("GLenum") int mode, @NativeType("void const *") ByteBuffer indices);
 
 /**
  * <a href="https://docs.gl/es3/glDrawElements">Reference Page</a>
  */
-    public void glDrawElements(int mode, ShortBuffer indices);
+    public void glDrawElements(@NativeType("GLenum") int mode, @NativeType("void const *") ShortBuffer indices);
 
 /**
  * <a href="https://docs.gl/es3/glDrawElements">Reference Page</a>
  */
-    public void glDrawElements(int mode, IntBuffer indices);
+    public void glDrawElements(@NativeType("GLenum") int mode, @NativeType("void const *") IntBuffer indices);
 
 }

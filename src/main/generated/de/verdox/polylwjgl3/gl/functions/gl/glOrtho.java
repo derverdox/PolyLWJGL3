@@ -37,6 +37,6 @@ public interface glOrtho {
  *
  * @see <a href="https://docs.gl/gl3/glOrtho">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glOrtho(double l, double r, double b, double t, double n, double f);
+    public void glOrtho(@NativeType("GLdouble") double l, @NativeType("GLdouble") double r, @NativeType("GLdouble") double b, @NativeType("GLdouble") double t, @NativeType("GLdouble") double n, @NativeType("GLdouble") double f);
 
 }

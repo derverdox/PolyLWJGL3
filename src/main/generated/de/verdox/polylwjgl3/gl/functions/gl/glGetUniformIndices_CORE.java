@@ -21,7 +21,7 @@ public interface glGetUniformIndices_CORE extends glGetUniformIndices {
  *
  * @see <a href="https://docs.gl/gl4/glGetUniformIndices">Reference Page</a>
  */
-    public void glGetUniformIndices(int program, CharSequence[] uniformNames, IntBuffer uniformIndices);
+    public void glGetUniformIndices(@NativeType("GLuint") int program, @NativeType("GLchar const * const *") CharSequence[] uniformNames, @NativeType("GLuint *") IntBuffer uniformIndices);
 
 /**
  * Retrieves the indices of a number of uniforms within a program object
@@ -30,6 +30,7 @@ public interface glGetUniformIndices_CORE extends glGetUniformIndices {
  *
  * @see <a href="https://docs.gl/gl4/glGetUniformIndices">Reference Page</a>
  */
-    public int glGetUniformIndices(int program, CharSequence uniformName);
+@NativeType("void")
+    public int glGetUniformIndices(@NativeType("GLuint") int program, @NativeType("GLchar const * const *") CharSequence uniformName);
 
 }

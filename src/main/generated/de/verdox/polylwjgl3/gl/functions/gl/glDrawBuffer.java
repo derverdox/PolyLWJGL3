@@ -23,6 +23,6 @@ public interface glDrawBuffer {
  *
  * @see <a href="https://docs.gl/gl4/glDrawBuffer">Reference Page</a>
  */
-    public void glDrawBuffer(int buf);
+    public void glDrawBuffer(@NativeType("GLenum") int buf);
 
 }

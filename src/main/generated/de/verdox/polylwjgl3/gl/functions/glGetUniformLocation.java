@@ -18,11 +18,13 @@ public interface glGetUniformLocation {
 /**
  * <a href="https://docs.gl/es3/glGetUniformLocation">Reference Page</a>
  */
-    public int glGetUniformLocation(int program, ByteBuffer name);
+@NativeType("GLint")
+    public int glGetUniformLocation(@NativeType("GLuint") int program, @NativeType("GLchar const *") ByteBuffer name);
 
 /**
  * <a href="https://docs.gl/es3/glGetUniformLocation">Reference Page</a>
  */
-    public int glGetUniformLocation(int program, CharSequence name);
+@NativeType("GLint")
+    public int glGetUniformLocation(@NativeType("GLuint") int program, @NativeType("GLchar const *") CharSequence name);
 
 }

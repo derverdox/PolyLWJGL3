@@ -16,6 +16,6 @@ public interface glViewport {
 /**
  * <a href="https://docs.gl/es3/glViewport">Reference Page</a>
  */
-    public void glViewport(int x, int y, int width, int height);
+    public void glViewport(@NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height);
 
 }

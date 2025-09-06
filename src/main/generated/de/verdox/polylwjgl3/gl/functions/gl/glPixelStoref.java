@@ -21,6 +21,6 @@ public interface glPixelStoref {
  *
  * @see <a href="https://docs.gl/gl4/glPixelStoref">Reference Page</a>
  */
-    public void glPixelStoref(int pname, float param);
+    public void glPixelStoref(@NativeType("GLenum") int pname, @NativeType("GLfloat") float param);
 
 }

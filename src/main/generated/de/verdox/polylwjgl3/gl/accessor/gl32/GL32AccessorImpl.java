@@ -15,15 +15,16 @@ public class GL32AccessorImpl extends GL31AccessorImpl implements GL32Accessor {
         org.lwjgl.opengl.GL32.nglGetBufferParameteri64v(target, pname, params);
     }
 
-    @Override public void glGetBufferParameteri64v(int target, int pname, LongBuffer params) {
+    @Override public void glGetBufferParameteri64v(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLint64 *") LongBuffer params) {
         org.lwjgl.opengl.GL32.glGetBufferParameteri64v(target, pname, params);
     }
 
-    @Override public void glGetBufferParameteri64v(int target, int pname, long[] params) {
+    @Override public void glGetBufferParameteri64v(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLint64 *") long[] params) {
         org.lwjgl.opengl.GL32.glGetBufferParameteri64v(target, pname, params);
     }
 
-    @Override public long glGetBufferParameteri64(int target, int pname) {
+@NativeType("void")
+    @Override public long glGetBufferParameteri64(@NativeType("GLenum") int target, @NativeType("GLenum") int pname) {
         return org.lwjgl.opengl.GL32.glGetBufferParameteri64(target, pname);
     }
 
@@ -31,23 +32,23 @@ public class GL32AccessorImpl extends GL31AccessorImpl implements GL32Accessor {
         org.lwjgl.opengl.GL32.nglDrawElementsBaseVertex(mode, count, type, indices, basevertex);
     }
 
-    @Override public void glDrawElementsBaseVertex(int mode, int count, int type, long indices, int basevertex) {
+    @Override public void glDrawElementsBaseVertex(@NativeType("GLenum") int mode, @NativeType("GLsizei") int count, @NativeType("GLenum") int type, @NativeType("void const *") long indices, @NativeType("GLint") int basevertex) {
         org.lwjgl.opengl.GL32.glDrawElementsBaseVertex(mode, count, type, indices, basevertex);
     }
 
-    @Override public void glDrawElementsBaseVertex(int mode, int type, ByteBuffer indices, int basevertex) {
+    @Override public void glDrawElementsBaseVertex(@NativeType("GLenum") int mode, @NativeType("GLenum") int type, @NativeType("void const *") ByteBuffer indices, @NativeType("GLint") int basevertex) {
         org.lwjgl.opengl.GL32.glDrawElementsBaseVertex(mode, type, indices, basevertex);
     }
 
-    @Override public void glDrawElementsBaseVertex(int mode, ByteBuffer indices, int basevertex) {
+    @Override public void glDrawElementsBaseVertex(@NativeType("GLenum") int mode, @NativeType("void const *") ByteBuffer indices, @NativeType("GLint") int basevertex) {
         org.lwjgl.opengl.GL32.glDrawElementsBaseVertex(mode, indices, basevertex);
     }
 
-    @Override public void glDrawElementsBaseVertex(int mode, ShortBuffer indices, int basevertex) {
+    @Override public void glDrawElementsBaseVertex(@NativeType("GLenum") int mode, @NativeType("void const *") ShortBuffer indices, @NativeType("GLint") int basevertex) {
         org.lwjgl.opengl.GL32.glDrawElementsBaseVertex(mode, indices, basevertex);
     }
 
-    @Override public void glDrawElementsBaseVertex(int mode, IntBuffer indices, int basevertex) {
+    @Override public void glDrawElementsBaseVertex(@NativeType("GLenum") int mode, @NativeType("void const *") IntBuffer indices, @NativeType("GLint") int basevertex) {
         org.lwjgl.opengl.GL32.glDrawElementsBaseVertex(mode, indices, basevertex);
     }
 
@@ -55,23 +56,23 @@ public class GL32AccessorImpl extends GL31AccessorImpl implements GL32Accessor {
         org.lwjgl.opengl.GL32.nglDrawRangeElementsBaseVertex(mode, start, end, count, type, indices, basevertex);
     }
 
-    @Override public void glDrawRangeElementsBaseVertex(int mode, int start, int end, int count, int type, long indices, int basevertex) {
+    @Override public void glDrawRangeElementsBaseVertex(@NativeType("GLenum") int mode, @NativeType("GLuint") int start, @NativeType("GLuint") int end, @NativeType("GLsizei") int count, @NativeType("GLenum") int type, @NativeType("void const *") long indices, @NativeType("GLint") int basevertex) {
         org.lwjgl.opengl.GL32.glDrawRangeElementsBaseVertex(mode, start, end, count, type, indices, basevertex);
     }
 
-    @Override public void glDrawRangeElementsBaseVertex(int mode, int start, int end, int type, ByteBuffer indices, int basevertex) {
+    @Override public void glDrawRangeElementsBaseVertex(@NativeType("GLenum") int mode, @NativeType("GLuint") int start, @NativeType("GLuint") int end, @NativeType("GLenum") int type, @NativeType("void const *") ByteBuffer indices, @NativeType("GLint") int basevertex) {
         org.lwjgl.opengl.GL32.glDrawRangeElementsBaseVertex(mode, start, end, type, indices, basevertex);
     }
 
-    @Override public void glDrawRangeElementsBaseVertex(int mode, int start, int end, ByteBuffer indices, int basevertex) {
+    @Override public void glDrawRangeElementsBaseVertex(@NativeType("GLenum") int mode, @NativeType("GLuint") int start, @NativeType("GLuint") int end, @NativeType("void const *") ByteBuffer indices, @NativeType("GLint") int basevertex) {
         org.lwjgl.opengl.GL32.glDrawRangeElementsBaseVertex(mode, start, end, indices, basevertex);
     }
 
-    @Override public void glDrawRangeElementsBaseVertex(int mode, int start, int end, ShortBuffer indices, int basevertex) {
+    @Override public void glDrawRangeElementsBaseVertex(@NativeType("GLenum") int mode, @NativeType("GLuint") int start, @NativeType("GLuint") int end, @NativeType("void const *") ShortBuffer indices, @NativeType("GLint") int basevertex) {
         org.lwjgl.opengl.GL32.glDrawRangeElementsBaseVertex(mode, start, end, indices, basevertex);
     }
 
-    @Override public void glDrawRangeElementsBaseVertex(int mode, int start, int end, IntBuffer indices, int basevertex) {
+    @Override public void glDrawRangeElementsBaseVertex(@NativeType("GLenum") int mode, @NativeType("GLuint") int start, @NativeType("GLuint") int end, @NativeType("void const *") IntBuffer indices, @NativeType("GLint") int basevertex) {
         org.lwjgl.opengl.GL32.glDrawRangeElementsBaseVertex(mode, start, end, indices, basevertex);
     }
 
@@ -79,23 +80,23 @@ public class GL32AccessorImpl extends GL31AccessorImpl implements GL32Accessor {
         org.lwjgl.opengl.GL32.nglDrawElementsInstancedBaseVertex(mode, count, type, indices, primcount, basevertex);
     }
 
-    @Override public void glDrawElementsInstancedBaseVertex(int mode, int count, int type, long indices, int primcount, int basevertex) {
+    @Override public void glDrawElementsInstancedBaseVertex(@NativeType("GLenum") int mode, @NativeType("GLsizei") int count, @NativeType("GLenum") int type, @NativeType("void const *") long indices, @NativeType("GLsizei") int primcount, @NativeType("GLint") int basevertex) {
         org.lwjgl.opengl.GL32.glDrawElementsInstancedBaseVertex(mode, count, type, indices, primcount, basevertex);
     }
 
-    @Override public void glDrawElementsInstancedBaseVertex(int mode, int type, ByteBuffer indices, int primcount, int basevertex) {
+    @Override public void glDrawElementsInstancedBaseVertex(@NativeType("GLenum") int mode, @NativeType("GLenum") int type, @NativeType("void const *") ByteBuffer indices, @NativeType("GLsizei") int primcount, @NativeType("GLint") int basevertex) {
         org.lwjgl.opengl.GL32.glDrawElementsInstancedBaseVertex(mode, type, indices, primcount, basevertex);
     }
 
-    @Override public void glDrawElementsInstancedBaseVertex(int mode, ByteBuffer indices, int primcount, int basevertex) {
+    @Override public void glDrawElementsInstancedBaseVertex(@NativeType("GLenum") int mode, @NativeType("void const *") ByteBuffer indices, @NativeType("GLsizei") int primcount, @NativeType("GLint") int basevertex) {
         org.lwjgl.opengl.GL32.glDrawElementsInstancedBaseVertex(mode, indices, primcount, basevertex);
     }
 
-    @Override public void glDrawElementsInstancedBaseVertex(int mode, ShortBuffer indices, int primcount, int basevertex) {
+    @Override public void glDrawElementsInstancedBaseVertex(@NativeType("GLenum") int mode, @NativeType("void const *") ShortBuffer indices, @NativeType("GLsizei") int primcount, @NativeType("GLint") int basevertex) {
         org.lwjgl.opengl.GL32.glDrawElementsInstancedBaseVertex(mode, indices, primcount, basevertex);
     }
 
-    @Override public void glDrawElementsInstancedBaseVertex(int mode, IntBuffer indices, int primcount, int basevertex) {
+    @Override public void glDrawElementsInstancedBaseVertex(@NativeType("GLenum") int mode, @NativeType("void const *") IntBuffer indices, @NativeType("GLsizei") int primcount, @NativeType("GLint") int basevertex) {
         org.lwjgl.opengl.GL32.glDrawElementsInstancedBaseVertex(mode, indices, primcount, basevertex);
     }
 
@@ -103,23 +104,23 @@ public class GL32AccessorImpl extends GL31AccessorImpl implements GL32Accessor {
         org.lwjgl.opengl.GL32.nglMultiDrawElementsBaseVertex(mode, count, type, indices, drawcount, basevertex);
     }
 
-    @Override public void glMultiDrawElementsBaseVertex(int mode, IntBuffer count, int type, PointerBuffer indices, IntBuffer basevertex) {
+    @Override public void glMultiDrawElementsBaseVertex(@NativeType("GLenum") int mode, @NativeType("GLsizei const *") IntBuffer count, @NativeType("GLenum") int type, @NativeType("void const * const *") PointerBuffer indices, @NativeType("GLint *") IntBuffer basevertex) {
         org.lwjgl.opengl.GL32.glMultiDrawElementsBaseVertex(mode, count, type, indices, basevertex);
     }
 
-    @Override public void glMultiDrawElementsBaseVertex(int mode, int[] count, int type, PointerBuffer indices, int[] basevertex) {
+    @Override public void glMultiDrawElementsBaseVertex(@NativeType("GLenum") int mode, @NativeType("GLsizei const *") int[] count, @NativeType("GLenum") int type, @NativeType("void const * const *") PointerBuffer indices, @NativeType("GLint *") int[] basevertex) {
         org.lwjgl.opengl.GL32.glMultiDrawElementsBaseVertex(mode, count, type, indices, basevertex);
     }
 
-    @Override public void glProvokingVertex(int mode) {
+    @Override public void glProvokingVertex(@NativeType("GLenum") int mode) {
         org.lwjgl.opengl.GL32.glProvokingVertex(mode);
     }
 
-    @Override public void glTexImage2DMultisample(int target, int samples, int internalformat, int width, int height, boolean fixedsamplelocations) {
+    @Override public void glTexImage2DMultisample(@NativeType("GLenum") int target, @NativeType("GLsizei") int samples, @NativeType("GLint") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLboolean") boolean fixedsamplelocations) {
         org.lwjgl.opengl.GL32.glTexImage2DMultisample(target, samples, internalformat, width, height, fixedsamplelocations);
     }
 
-    @Override public void glTexImage3DMultisample(int target, int samples, int internalformat, int width, int height, int depth, boolean fixedsamplelocations) {
+    @Override public void glTexImage3DMultisample(@NativeType("GLenum") int target, @NativeType("GLsizei") int samples, @NativeType("GLint") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLsizei") int depth, @NativeType("GLboolean") boolean fixedsamplelocations) {
         org.lwjgl.opengl.GL32.glTexImage3DMultisample(target, samples, internalformat, width, height, depth, fixedsamplelocations);
     }
 
@@ -127,27 +128,29 @@ public class GL32AccessorImpl extends GL31AccessorImpl implements GL32Accessor {
         org.lwjgl.opengl.GL32.nglGetMultisamplefv(pname, index, val);
     }
 
-    @Override public void glGetMultisamplefv(int pname, int index, FloatBuffer val) {
+    @Override public void glGetMultisamplefv(@NativeType("GLenum") int pname, @NativeType("GLuint") int index, @NativeType("GLfloat *") FloatBuffer val) {
         org.lwjgl.opengl.GL32.glGetMultisamplefv(pname, index, val);
     }
 
-    @Override public void glGetMultisamplefv(int pname, int index, float[] val) {
+    @Override public void glGetMultisamplefv(@NativeType("GLenum") int pname, @NativeType("GLuint") int index, @NativeType("GLfloat *") float[] val) {
         org.lwjgl.opengl.GL32.glGetMultisamplefv(pname, index, val);
     }
 
-    @Override public float glGetMultisamplef(int pname, int index) {
+@NativeType("void")
+    @Override public float glGetMultisamplef(@NativeType("GLenum") int pname, @NativeType("GLuint") int index) {
         return org.lwjgl.opengl.GL32.glGetMultisamplef(pname, index);
     }
 
-    @Override public void glSampleMaski(int index, int mask) {
+    @Override public void glSampleMaski(@NativeType("GLuint") int index, @NativeType("GLbitfield") int mask) {
         org.lwjgl.opengl.GL32.glSampleMaski(index, mask);
     }
 
-    @Override public void glFramebufferTexture(int target, int attachment, int texture, int level) {
+    @Override public void glFramebufferTexture(@NativeType("GLenum") int target, @NativeType("GLenum") int attachment, @NativeType("GLuint") int texture, @NativeType("GLint") int level) {
         org.lwjgl.opengl.GL32.glFramebufferTexture(target, attachment, texture, level);
     }
 
-    @Override public long glFenceSync(int condition, int flags) {
+@NativeType("GLsync")
+    @Override public long glFenceSync(@NativeType("GLenum") int condition, @NativeType("GLbitfield") int flags) {
         return org.lwjgl.opengl.GL32.glFenceSync(condition, flags);
     }
 
@@ -155,7 +158,8 @@ public class GL32AccessorImpl extends GL31AccessorImpl implements GL32Accessor {
         return org.lwjgl.opengl.GL32.nglIsSync(sync);
     }
 
-    @Override public boolean glIsSync(long sync) {
+@NativeType("GLboolean")
+    @Override public boolean glIsSync(@NativeType("GLsync") long sync) {
         return org.lwjgl.opengl.GL32.glIsSync(sync);
     }
 
@@ -163,7 +167,7 @@ public class GL32AccessorImpl extends GL31AccessorImpl implements GL32Accessor {
         org.lwjgl.opengl.GL32.nglDeleteSync(sync);
     }
 
-    @Override public void glDeleteSync(long sync) {
+    @Override public void glDeleteSync(@NativeType("GLsync") long sync) {
         org.lwjgl.opengl.GL32.glDeleteSync(sync);
     }
 
@@ -171,7 +175,8 @@ public class GL32AccessorImpl extends GL31AccessorImpl implements GL32Accessor {
         return org.lwjgl.opengl.GL32.nglClientWaitSync(sync, flags, timeout);
     }
 
-    @Override public int glClientWaitSync(long sync, int flags, long timeout) {
+@NativeType("GLenum")
+    @Override public int glClientWaitSync(@NativeType("GLsync") long sync, @NativeType("GLbitfield") int flags, @NativeType("GLuint64") long timeout) {
         return org.lwjgl.opengl.GL32.glClientWaitSync(sync, flags, timeout);
     }
 
@@ -179,7 +184,7 @@ public class GL32AccessorImpl extends GL31AccessorImpl implements GL32Accessor {
         org.lwjgl.opengl.GL32.nglWaitSync(sync, flags, timeout);
     }
 
-    @Override public void glWaitSync(long sync, int flags, long timeout) {
+    @Override public void glWaitSync(@NativeType("GLsync") long sync, @NativeType("GLbitfield") int flags, @NativeType("GLuint64") long timeout) {
         org.lwjgl.opengl.GL32.glWaitSync(sync, flags, timeout);
     }
 
@@ -187,15 +192,16 @@ public class GL32AccessorImpl extends GL31AccessorImpl implements GL32Accessor {
         org.lwjgl.opengl.GL32.nglGetInteger64v(pname, params);
     }
 
-    @Override public void glGetInteger64v(int pname, LongBuffer params) {
+    @Override public void glGetInteger64v(@NativeType("GLenum") int pname, @NativeType("GLint64 *") LongBuffer params) {
         org.lwjgl.opengl.GL32.glGetInteger64v(pname, params);
     }
 
-    @Override public void glGetInteger64v(int pname, long[] params) {
+    @Override public void glGetInteger64v(@NativeType("GLenum") int pname, @NativeType("GLint64 *") long[] params) {
         org.lwjgl.opengl.GL32.glGetInteger64v(pname, params);
     }
 
-    @Override public long glGetInteger64(int pname) {
+@NativeType("void")
+    @Override public long glGetInteger64(@NativeType("GLenum") int pname) {
         return org.lwjgl.opengl.GL32.glGetInteger64(pname);
     }
 
@@ -203,15 +209,16 @@ public class GL32AccessorImpl extends GL31AccessorImpl implements GL32Accessor {
         org.lwjgl.opengl.GL32.nglGetInteger64i_v(pname, index, params);
     }
 
-    @Override public void glGetInteger64i_v(int pname, int index, LongBuffer params) {
+    @Override public void glGetInteger64i_v(@NativeType("GLenum") int pname, @NativeType("GLuint") int index, @NativeType("GLint64 *") LongBuffer params) {
         org.lwjgl.opengl.GL32.glGetInteger64i_v(pname, index, params);
     }
 
-    @Override public void glGetInteger64i_v(int pname, int index, long[] params) {
+    @Override public void glGetInteger64i_v(@NativeType("GLenum") int pname, @NativeType("GLuint") int index, @NativeType("GLint64 *") long[] params) {
         org.lwjgl.opengl.GL32.glGetInteger64i_v(pname, index, params);
     }
 
-    @Override public long glGetInteger64i(int pname, int index) {
+@NativeType("void")
+    @Override public long glGetInteger64i(@NativeType("GLenum") int pname, @NativeType("GLuint") int index) {
         return org.lwjgl.opengl.GL32.glGetInteger64i(pname, index);
     }
 
@@ -219,15 +226,16 @@ public class GL32AccessorImpl extends GL31AccessorImpl implements GL32Accessor {
         org.lwjgl.opengl.GL32.nglGetSynciv(sync, pname, bufSize, length, values);
     }
 
-    @Override public void glGetSynciv(long sync, int pname, @Nullable IntBuffer length, IntBuffer values) {
+    @Override public void glGetSynciv(@NativeType("GLsync") long sync, @NativeType("GLenum") int pname, @Nullable @NativeType("GLsizei *") IntBuffer length, @NativeType("GLint *") IntBuffer values) {
         org.lwjgl.opengl.GL32.glGetSynciv(sync, pname, length, values);
     }
 
-    @Override public void glGetSynciv(long sync, int pname, @Nullable int[] length, int[] values) {
+    @Override public void glGetSynciv(@NativeType("GLsync") long sync, @NativeType("GLenum") int pname, @Nullable @NativeType("GLsizei *") int[] length, @NativeType("GLint *") int[] values) {
         org.lwjgl.opengl.GL32.glGetSynciv(sync, pname, length, values);
     }
 
-    @Override public int glGetSynci(long sync, int pname, @Nullable IntBuffer length) {
+@NativeType("void")
+    @Override public int glGetSynci(@NativeType("GLsync") long sync, @NativeType("GLenum") int pname, @Nullable @NativeType("GLsizei *") IntBuffer length) {
         return org.lwjgl.opengl.GL32.glGetSynci(sync, pname, length);
     }
 

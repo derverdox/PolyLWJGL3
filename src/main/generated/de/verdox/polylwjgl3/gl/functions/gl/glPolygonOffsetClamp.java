@@ -27,6 +27,6 @@ public interface glPolygonOffsetClamp {
  *
  * @see <a href="https://docs.gl/gl4/glPolygonOffsetClamp">Reference Page</a>
  */
-    public void glPolygonOffsetClamp(float factor, float units, float clamp);
+    public void glPolygonOffsetClamp(@NativeType("GLfloat") float factor, @NativeType("GLfloat") float units, @NativeType("GLfloat") float clamp);
 
 }

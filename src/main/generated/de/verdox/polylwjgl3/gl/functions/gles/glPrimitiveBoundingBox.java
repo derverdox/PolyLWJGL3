@@ -33,6 +33,6 @@ public interface glPrimitiveBoundingBox {
  *
  * @see <a href="https://docs.gl/es3/glPrimitiveBoundingBox">Reference Page</a>
  */
-    public void glPrimitiveBoundingBox(float minX, float minY, float minZ, float minW, float maxX, float maxY, float maxZ, float maxW);
+    public void glPrimitiveBoundingBox(@NativeType("GLfloat") float minX, @NativeType("GLfloat") float minY, @NativeType("GLfloat") float minZ, @NativeType("GLfloat") float minW, @NativeType("GLfloat") float maxX, @NativeType("GLfloat") float maxY, @NativeType("GLfloat") float maxZ, @NativeType("GLfloat") float maxW);
 
 }

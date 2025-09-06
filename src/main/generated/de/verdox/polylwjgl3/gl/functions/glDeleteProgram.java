@@ -16,6 +16,6 @@ public interface glDeleteProgram {
 /**
  * <a href="https://docs.gl/es3/glDeleteProgram">Reference Page</a>
  */
-    public void glDeleteProgram(int program);
+    public void glDeleteProgram(@NativeType("GLuint") int program);
 
 }

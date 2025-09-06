@@ -28,7 +28,7 @@ public interface glGetActiveUniformName {
  *
  * @see <a href="https://docs.gl/gl4/glGetActiveUniformName">Reference Page</a>
  */
-    public void glGetActiveUniformName(int program, int uniformIndex, @Nullable IntBuffer length, ByteBuffer uniformName);
+    public void glGetActiveUniformName(@NativeType("GLuint") int program, @NativeType("GLuint") int uniformIndex, @Nullable @NativeType("GLsizei *") IntBuffer length, @NativeType("GLchar *") ByteBuffer uniformName);
 
 /**
  * Queries the name of an active uniform.
@@ -39,7 +39,8 @@ public interface glGetActiveUniformName {
  *
  * @see <a href="https://docs.gl/gl4/glGetActiveUniformName">Reference Page</a>
  */
-    public String glGetActiveUniformName(int program, int uniformIndex, int bufSize);
+@NativeType("void")
+    public String glGetActiveUniformName(@NativeType("GLuint") int program, @NativeType("GLuint") int uniformIndex, @NativeType("GLsizei") int bufSize);
 
 /**
  * Queries the name of an active uniform.
@@ -49,13 +50,14 @@ public interface glGetActiveUniformName {
  *
  * @see <a href="https://docs.gl/gl4/glGetActiveUniformName">Reference Page</a>
  */
-    public String glGetActiveUniformName(int program, int uniformIndex);
+@NativeType("void")
+    public String glGetActiveUniformName(@NativeType("GLuint") int program, @NativeType("GLuint") int uniformIndex);
 
 /**
  * Array version of: {@link #glGetActiveUniformName GetActiveUniformName}
  *
  * @see <a href="https://docs.gl/gl4/glGetActiveUniformName">Reference Page</a>
  */
-    public void glGetActiveUniformName(int program, int uniformIndex, @Nullable int[] length, ByteBuffer uniformName);
+    public void glGetActiveUniformName(@NativeType("GLuint") int program, @NativeType("GLuint") int uniformIndex, @Nullable @NativeType("GLsizei *") int[] length, @NativeType("GLchar *") ByteBuffer uniformName);
 
 }

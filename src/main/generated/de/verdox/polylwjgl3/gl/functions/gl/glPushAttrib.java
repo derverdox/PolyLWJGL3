@@ -27,6 +27,6 @@ public interface glPushAttrib {
  *
  * @see <a href="https://docs.gl/gl3/glPushAttrib">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glPushAttrib(int mask);
+    public void glPushAttrib(@NativeType("GLbitfield") int mask);
 
 }

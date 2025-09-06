@@ -20,6 +20,6 @@ public interface glProgramUniform1d {
  *
  * @see <a href="https://docs.gl/gl4/glProgramUniform">Reference Page</a>
  */
-    public void glProgramUniform1d(int program, int location, double x);
+    public void glProgramUniform1d(@NativeType("GLuint") int program, @NativeType("GLint") int location, @NativeType("GLdouble") double x);
 
 }

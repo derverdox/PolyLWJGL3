@@ -27,6 +27,6 @@ public interface glTextureStorage3D {
  *
  * @see <a href="https://docs.gl/gl4/glTextureStorage3D">Reference Page</a>
  */
-    public void glTextureStorage3D(int texture, int levels, int internalformat, int width, int height, int depth);
+    public void glTextureStorage3D(@NativeType("GLuint") int texture, @NativeType("GLsizei") int levels, @NativeType("GLenum") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLsizei") int depth);
 
 }

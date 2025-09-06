@@ -20,6 +20,6 @@ public interface glPointSize {
  *
  * @see <a href="https://docs.gl/gl4/glPointSize">Reference Page</a>
  */
-    public void glPointSize(float size);
+    public void glPointSize(@NativeType("GLfloat") float size);
 
 }

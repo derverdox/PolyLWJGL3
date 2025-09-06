@@ -20,6 +20,7 @@ public interface glRenderMode {
  *
  * @see <a href="https://docs.gl/gl3/glRenderMode">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public int glRenderMode(int mode);
+@NativeType("GLint")
+    public int glRenderMode(@NativeType("GLenum") int mode);
 
 }

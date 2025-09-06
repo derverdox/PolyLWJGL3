@@ -23,6 +23,6 @@ public interface glNamedFramebufferReadBuffer {
  *
  * @see <a href="https://docs.gl/gl4/glFramebufferReadBuffer">Reference Page</a>
  */
-    public void glNamedFramebufferReadBuffer(int framebuffer, int src);
+    public void glNamedFramebufferReadBuffer(@NativeType("GLuint") int framebuffer, @NativeType("GLenum") int src);
 
 }

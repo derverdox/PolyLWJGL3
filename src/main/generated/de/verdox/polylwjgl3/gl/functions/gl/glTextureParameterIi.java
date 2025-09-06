@@ -23,6 +23,6 @@ public interface glTextureParameterIi {
  *
  * @see <a href="https://docs.gl/gl4/glTextureParameter">Reference Page</a>
  */
-    public void glTextureParameterIi(int texture, int pname, int param);
+    public void glTextureParameterIi(@NativeType("GLuint") int texture, @NativeType("GLenum") int pname, @NativeType("GLint const *") int param);
 
 }

@@ -24,13 +24,13 @@ public interface glScissorIndexedv {
  *
  * @see <a href="https://docs.gl/gl4/glScissorIndexed">Reference Page</a>
  */
-    public void glScissorIndexedv(int index, IntBuffer v);
+    public void glScissorIndexedv(@NativeType("GLuint") int index, @NativeType("GLint const *") IntBuffer v);
 
 /**
  * Array version of: {@link #glScissorIndexedv ScissorIndexedv}
  *
  * @see <a href="https://docs.gl/gl4/glScissorIndexed">Reference Page</a>
  */
-    public void glScissorIndexedv(int index, int[] v);
+    public void glScissorIndexedv(@NativeType("GLuint") int index, @NativeType("GLint const *") int[] v);
 
 }

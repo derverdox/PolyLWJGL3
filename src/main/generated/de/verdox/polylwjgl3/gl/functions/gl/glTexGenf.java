@@ -22,6 +22,6 @@ public interface glTexGenf {
  *
  * @see <a href="https://docs.gl/gl3/glTexGenf">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glTexGenf(int coord, int pname, float param);
+    public void glTexGenf(@NativeType("GLenum") int coord, @NativeType("GLenum") int pname, @NativeType("GLfloat") float param);
 
 }

@@ -18,6 +18,6 @@ public interface glBindImageTexture {
 /**
  * <a href="https://docs.gl/es3/glBindImageTexture">Reference Page</a>
  */
-    public void glBindImageTexture(int unit, int texture, int level, boolean layered, int layer, int access, int format);
+    public void glBindImageTexture(@NativeType("GLuint") int unit, @NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLboolean") boolean layered, @NativeType("GLint") int layer, @NativeType("GLenum") int access, @NativeType("GLenum") int format);
 
 }

@@ -26,13 +26,13 @@ public interface glUniformMatrix4x2dv {
  *
  * @see <a href="https://docs.gl/gl4/glUniform">Reference Page</a>
  */
-    public void glUniformMatrix4x2dv(int location, boolean transpose, DoubleBuffer value);
+    public void glUniformMatrix4x2dv(@NativeType("GLint") int location, @NativeType("GLboolean") boolean transpose, @NativeType("GLdouble const *") DoubleBuffer value);
 
 /**
  * Array version of: {@link #glUniformMatrix4x2dv UniformMatrix4x2dv}
  *
  * @see <a href="https://docs.gl/gl4/glUniform">Reference Page</a>
  */
-    public void glUniformMatrix4x2dv(int location, boolean transpose, double[] value);
+    public void glUniformMatrix4x2dv(@NativeType("GLint") int location, @NativeType("GLboolean") boolean transpose, @NativeType("GLdouble const *") double[] value);
 
 }

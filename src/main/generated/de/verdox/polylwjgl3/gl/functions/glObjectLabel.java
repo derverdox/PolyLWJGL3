@@ -31,7 +31,7 @@ public interface glObjectLabel {
  *
  * @see <a href="https://docs.gl/es3/glObjectLabel">Reference Page</a>
  */
-    public void glObjectLabel(int identifier, int name, ByteBuffer label);
+    public void glObjectLabel(@NativeType("GLenum") int identifier, @NativeType("GLuint") int name, @NativeType("GLchar const *") ByteBuffer label);
 
 /**
  * Labels a named object identified within a namespace.
@@ -42,6 +42,6 @@ public interface glObjectLabel {
  *
  * @see <a href="https://docs.gl/es3/glObjectLabel">Reference Page</a>
  */
-    public void glObjectLabel(int identifier, int name, CharSequence label);
+    public void glObjectLabel(@NativeType("GLenum") int identifier, @NativeType("GLuint") int name, @NativeType("GLchar const *") CharSequence label);
 
 }

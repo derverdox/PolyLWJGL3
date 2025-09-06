@@ -18,13 +18,13 @@ public interface glGetAttachedShaders {
 /**
  * <a href="https://docs.gl/es3/glGetAttachedShaders">Reference Page</a>
  */
-    public void glGetAttachedShaders(int program, @Nullable IntBuffer count, IntBuffer shaders);
+    public void glGetAttachedShaders(@NativeType("GLuint") int program, @Nullable @NativeType("GLsizei *") IntBuffer count, @NativeType("GLuint *") IntBuffer shaders);
 
 /**
  * Array version of: {@link #glGetAttachedShaders GetAttachedShaders}
  *
  * @see <a href="https://docs.gl/es3/glGetAttachedShaders">Reference Page</a>
  */
-    public void glGetAttachedShaders(int program, @Nullable int[] count, int[] shaders);
+    public void glGetAttachedShaders(@NativeType("GLuint") int program, @Nullable @NativeType("GLsizei *") int[] count, @NativeType("GLuint *") int[] shaders);
 
 }

@@ -25,13 +25,13 @@ public interface glRasterPos2iv {
  *
  * @see <a href="https://docs.gl/gl3/glRasterPos">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glRasterPos2iv(IntBuffer coords);
+    public void glRasterPos2iv(@NativeType("GLint const *") IntBuffer coords);
 
 /**
  * Array version of: {@link #glRasterPos2iv RasterPos2iv}
  *
  * @see <a href="https://docs.gl/gl3/glRasterPos">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glRasterPos2iv(int[] coords);
+    public void glRasterPos2iv(@NativeType("GLint const *") int[] coords);
 
 }

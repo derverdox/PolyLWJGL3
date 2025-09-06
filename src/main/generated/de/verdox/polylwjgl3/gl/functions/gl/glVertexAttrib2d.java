@@ -20,6 +20,6 @@ public interface glVertexAttrib2d {
  *
  * @see <a href="https://docs.gl/gl4/glVertexAttrib">Reference Page</a>
  */
-    public void glVertexAttrib2d(int index, double v0, double v1);
+    public void glVertexAttrib2d(@NativeType("GLuint") int index, @NativeType("GLdouble") double v0, @NativeType("GLdouble") double v1);
 
 }

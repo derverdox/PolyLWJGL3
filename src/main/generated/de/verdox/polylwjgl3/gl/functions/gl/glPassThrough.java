@@ -22,6 +22,6 @@ public interface glPassThrough {
  *
  * @see <a href="https://docs.gl/gl3/glPassThrough">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glPassThrough(float token);
+    public void glPassThrough(@NativeType("GLfloat") float token);
 
 }

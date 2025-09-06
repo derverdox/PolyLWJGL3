@@ -18,6 +18,6 @@ public interface glFramebufferTexture {
 /**
  * <a href="https://docs.gl/es3/glFramebufferTexture">Reference Page</a>
  */
-    public void glFramebufferTexture(int target, int attachment, int texture, int level);
+    public void glFramebufferTexture(@NativeType("GLenum") int target, @NativeType("GLenum") int attachment, @NativeType("GLuint") int texture, @NativeType("GLint") int level);
 
 }

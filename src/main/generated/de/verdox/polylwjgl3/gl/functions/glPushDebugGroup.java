@@ -41,7 +41,7 @@ public interface glPushDebugGroup {
  *
  * @see <a href="https://docs.gl/es3/glPushDebugGroup">Reference Page</a>
  */
-    public void glPushDebugGroup(int source, int id, ByteBuffer message);
+    public void glPushDebugGroup(@NativeType("GLenum") int source, @NativeType("GLuint") int id, @NativeType("GLchar const *") ByteBuffer message);
 
 /**
  * Pushes a debug group described by the string {@code message} into the command stream. The value of {@code id} specifies the ID of messages generated.
@@ -62,6 +62,6 @@ public interface glPushDebugGroup {
  *
  * @see <a href="https://docs.gl/es3/glPushDebugGroup">Reference Page</a>
  */
-    public void glPushDebugGroup(int source, int id, CharSequence message);
+    public void glPushDebugGroup(@NativeType("GLenum") int source, @NativeType("GLuint") int id, @NativeType("GLchar const *") CharSequence message);
 
 }

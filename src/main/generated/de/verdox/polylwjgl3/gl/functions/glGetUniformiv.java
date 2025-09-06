@@ -18,13 +18,13 @@ public interface glGetUniformiv {
 /**
  * <a href="https://docs.gl/es3/glGetUniform">Reference Page</a>
  */
-    public void glGetUniformiv(int program, int location, IntBuffer params);
+    public void glGetUniformiv(@NativeType("GLuint") int program, @NativeType("GLint") int location, @NativeType("GLint *") IntBuffer params);
 
 /**
  * Array version of: {@link #glGetUniformiv GetUniformiv}
  *
  * @see <a href="https://docs.gl/es3/glGetUniform">Reference Page</a>
  */
-    public void glGetUniformiv(int program, int location, int[] params);
+    public void glGetUniformiv(@NativeType("GLuint") int program, @NativeType("GLint") int location, @NativeType("GLint *") int[] params);
 
 }

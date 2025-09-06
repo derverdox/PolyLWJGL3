@@ -33,7 +33,7 @@ public interface glGetnColorTable {
  *
  * @see <a href="https://docs.gl/gl4/glGetnColorTable">Reference Page</a>
  */
-    public void glGetnColorTable(int target, int format, int type, int bufSize, long table);
+    public void glGetnColorTable(@NativeType("GLenum") int target, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("GLsizei") int bufSize, @NativeType("void *") long table);
 
 /**
  * Robust version of {@link ARBImaging#glGetColorTable GetColorTable}
@@ -45,7 +45,7 @@ public interface glGetnColorTable {
  *
  * @see <a href="https://docs.gl/gl4/glGetnColorTable">Reference Page</a>
  */
-    public void glGetnColorTable(int target, int format, int type, ByteBuffer table);
+    public void glGetnColorTable(@NativeType("GLenum") int target, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") ByteBuffer table);
 
 /**
  * Robust version of {@link ARBImaging#glGetColorTable GetColorTable}
@@ -57,7 +57,7 @@ public interface glGetnColorTable {
  *
  * @see <a href="https://docs.gl/gl4/glGetnColorTable">Reference Page</a>
  */
-    public void glGetnColorTable(int target, int format, int type, ShortBuffer table);
+    public void glGetnColorTable(@NativeType("GLenum") int target, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") ShortBuffer table);
 
 /**
  * Robust version of {@link ARBImaging#glGetColorTable GetColorTable}
@@ -69,7 +69,7 @@ public interface glGetnColorTable {
  *
  * @see <a href="https://docs.gl/gl4/glGetnColorTable">Reference Page</a>
  */
-    public void glGetnColorTable(int target, int format, int type, IntBuffer table);
+    public void glGetnColorTable(@NativeType("GLenum") int target, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") IntBuffer table);
 
 /**
  * Robust version of {@link ARBImaging#glGetColorTable GetColorTable}
@@ -81,27 +81,27 @@ public interface glGetnColorTable {
  *
  * @see <a href="https://docs.gl/gl4/glGetnColorTable">Reference Page</a>
  */
-    public void glGetnColorTable(int target, int format, int type, FloatBuffer table);
+    public void glGetnColorTable(@NativeType("GLenum") int target, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") FloatBuffer table);
 
 /**
  * Array version of: {@link #glGetnColorTable GetnColorTable}
  *
  * @see <a href="https://docs.gl/gl4/glGetnColorTable">Reference Page</a>
  */
-    public void glGetnColorTable(int target, int format, int type, short[] table);
+    public void glGetnColorTable(@NativeType("GLenum") int target, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") short[] table);
 
 /**
  * Array version of: {@link #glGetnColorTable GetnColorTable}
  *
  * @see <a href="https://docs.gl/gl4/glGetnColorTable">Reference Page</a>
  */
-    public void glGetnColorTable(int target, int format, int type, int[] table);
+    public void glGetnColorTable(@NativeType("GLenum") int target, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") int[] table);
 
 /**
  * Array version of: {@link #glGetnColorTable GetnColorTable}
  *
  * @see <a href="https://docs.gl/gl4/glGetnColorTable">Reference Page</a>
  */
-    public void glGetnColorTable(int target, int format, int type, float[] table);
+    public void glGetnColorTable(@NativeType("GLenum") int target, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") float[] table);
 
 }

@@ -40,13 +40,13 @@ public interface glBindBuffersBase {
  *
  * @see <a href="https://docs.gl/gl4/glBindBuffersBase">Reference Page</a>
  */
-    public void glBindBuffersBase(int target, int first, @Nullable IntBuffer buffers);
+    public void glBindBuffersBase(@NativeType("GLenum") int target, @NativeType("GLuint") int first, @Nullable @NativeType("GLuint const *") IntBuffer buffers);
 
 /**
  * Array version of: {@link #glBindBuffersBase BindBuffersBase}
  *
  * @see <a href="https://docs.gl/gl4/glBindBuffersBase">Reference Page</a>
  */
-    public void glBindBuffersBase(int target, int first, @Nullable int[] buffers);
+    public void glBindBuffersBase(@NativeType("GLenum") int target, @NativeType("GLuint") int first, @Nullable @NativeType("GLuint const *") int[] buffers);
 
 }

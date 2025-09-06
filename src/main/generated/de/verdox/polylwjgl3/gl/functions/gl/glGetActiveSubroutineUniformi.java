@@ -20,6 +20,7 @@ public interface glGetActiveSubroutineUniformi {
  *
  * @see <a href="https://docs.gl/gl4/glGetActiveSubroutineUniform">Reference Page</a>
  */
-    public int glGetActiveSubroutineUniformi(int program, int shadertype, int index, int pname);
+@NativeType("void")
+    public int glGetActiveSubroutineUniformi(@NativeType("GLuint") int program, @NativeType("GLenum") int shadertype, @NativeType("GLuint") int index, @NativeType("GLenum") int pname);
 
 }

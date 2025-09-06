@@ -18,13 +18,13 @@ public interface glTexParameterfv {
 /**
  * <a href="https://docs.gl/es3/glTexParameter">Reference Page</a>
  */
-    public void glTexParameterfv(int target, int pname, FloatBuffer params);
+    public void glTexParameterfv(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLfloat const *") FloatBuffer params);
 
 /**
  * Array version of: {@link #glTexParameterfv TexParameterfv}
  *
  * @see <a href="https://docs.gl/es3/glTexParameter">Reference Page</a>
  */
-    public void glTexParameterfv(int target, int pname, float[] params);
+    public void glTexParameterfv(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLfloat const *") float[] params);
 
 }

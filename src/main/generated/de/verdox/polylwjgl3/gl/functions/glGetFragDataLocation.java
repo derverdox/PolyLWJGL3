@@ -21,11 +21,13 @@ public interface glGetFragDataLocation {
 /**
  * <a href="https://docs.gl/es3/glGetFragDataLocation">Reference Page</a>
  */
-    public int glGetFragDataLocation(int program, ByteBuffer name);
+@NativeType("GLint")
+    public int glGetFragDataLocation(@NativeType("GLuint") int program, @NativeType("GLchar const *") ByteBuffer name);
 
 /**
  * <a href="https://docs.gl/es3/glGetFragDataLocation">Reference Page</a>
  */
-    public int glGetFragDataLocation(int program, CharSequence name);
+@NativeType("GLint")
+    public int glGetFragDataLocation(@NativeType("GLuint") int program, @NativeType("GLchar const *") CharSequence name);
 
 }

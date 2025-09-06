@@ -25,13 +25,13 @@ public interface glNormalP3uiv {
  *
  * @see <a href="https://docs.gl/gl3/glNormal">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glNormalP3uiv(int type, IntBuffer coords);
+    public void glNormalP3uiv(@NativeType("GLenum") int type, @NativeType("GLuint const *") IntBuffer coords);
 
 /**
  * Array version of: {@link #glNormalP3uiv NormalP3uiv}
  *
  * @see <a href="https://docs.gl/gl3/glNormal">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glNormalP3uiv(int type, int[] coords);
+    public void glNormalP3uiv(@NativeType("GLenum") int type, @NativeType("GLuint const *") int[] coords);
 
 }

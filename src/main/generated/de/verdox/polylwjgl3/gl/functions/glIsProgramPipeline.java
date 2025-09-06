@@ -18,6 +18,7 @@ public interface glIsProgramPipeline {
 /**
  * <a href="https://docs.gl/es3/glIsProgramPipeline">Reference Page</a>
  */
-    public boolean glIsProgramPipeline(int pipeline);
+@NativeType("GLboolean")
+    public boolean glIsProgramPipeline(@NativeType("GLuint") int pipeline);
 
 }

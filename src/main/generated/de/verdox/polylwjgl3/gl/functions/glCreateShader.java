@@ -16,6 +16,7 @@ public interface glCreateShader {
 /**
  * <a href="https://docs.gl/es3/glCreateShader">Reference Page</a>
  */
-    public int glCreateShader(int type);
+@NativeType("GLuint")
+    public int glCreateShader(@NativeType("GLenum") int type);
 
 }

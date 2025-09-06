@@ -16,6 +16,6 @@ public interface glLineWidth {
 /**
  * <a href="https://docs.gl/es3/glLineWidth">Reference Page</a>
  */
-    public void glLineWidth(float width);
+    public void glLineWidth(@NativeType("GLfloat") float width);
 
 }

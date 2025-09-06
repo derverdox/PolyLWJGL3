@@ -24,13 +24,13 @@ public interface glVertexAttrib4usv {
  *
  * @see <a href="https://docs.gl/gl4/glVertexAttrib">Reference Page</a>
  */
-    public void glVertexAttrib4usv(int index, ShortBuffer v);
+    public void glVertexAttrib4usv(@NativeType("GLuint") int index, @NativeType("GLushort const *") ShortBuffer v);
 
 /**
  * Array version of: {@link #glVertexAttrib4usv VertexAttrib4usv}
  *
  * @see <a href="https://docs.gl/gl4/glVertexAttrib">Reference Page</a>
  */
-    public void glVertexAttrib4usv(int index, short[] v);
+    public void glVertexAttrib4usv(@NativeType("GLuint") int index, @NativeType("GLushort const *") short[] v);
 
 }

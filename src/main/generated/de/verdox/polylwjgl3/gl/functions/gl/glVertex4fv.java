@@ -25,13 +25,13 @@ public interface glVertex4fv {
  *
  * @see <a href="https://docs.gl/gl3/glVertex">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glVertex4fv(FloatBuffer coords);
+    public void glVertex4fv(@NativeType("GLfloat const *") FloatBuffer coords);
 
 /**
  * Array version of: {@link #glVertex4fv Vertex4fv}
  *
  * @see <a href="https://docs.gl/gl3/glVertex">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glVertex4fv(float[] coords);
+    public void glVertex4fv(@NativeType("GLfloat const *") float[] coords);
 
 }

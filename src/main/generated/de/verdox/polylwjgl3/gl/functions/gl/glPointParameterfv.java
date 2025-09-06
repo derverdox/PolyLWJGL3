@@ -26,13 +26,13 @@ public interface glPointParameterfv {
  *
  * @see <a href="https://docs.gl/gl4/glPointParameter">Reference Page</a>
  */
-    public void glPointParameterfv(int pname, FloatBuffer params);
+    public void glPointParameterfv(@NativeType("GLenum") int pname, @NativeType("GLfloat const *") FloatBuffer params);
 
 /**
  * Array version of: {@link #glPointParameterfv PointParameterfv}
  *
  * @see <a href="https://docs.gl/gl4/glPointParameter">Reference Page</a>
  */
-    public void glPointParameterfv(int pname, float[] params);
+    public void glPointParameterfv(@NativeType("GLenum") int pname, @NativeType("GLfloat const *") float[] params);
 
 }

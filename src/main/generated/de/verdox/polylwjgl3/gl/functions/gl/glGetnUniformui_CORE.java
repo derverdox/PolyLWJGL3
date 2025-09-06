@@ -24,6 +24,7 @@ public interface glGetnUniformui_CORE extends glGetnUniformui {
  *
  * @see <a href="https://docs.gl/gl4/glGetUniform">Reference Page</a>
  */
-    public int glGetnUniformui(int program, int location);
+@NativeType("void")
+    public int glGetnUniformui(@NativeType("GLuint") int program, @NativeType("GLint") int location);
 
 }

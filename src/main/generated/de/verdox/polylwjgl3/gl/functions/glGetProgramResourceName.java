@@ -20,23 +20,25 @@ public interface glGetProgramResourceName {
 /**
  * <a href="https://docs.gl/es3/glGetProgramResourceName">Reference Page</a>
  */
-    public void glGetProgramResourceName(int program, int programInterface, int index, @Nullable IntBuffer length, ByteBuffer name);
+    public void glGetProgramResourceName(@NativeType("GLuint") int program, @NativeType("GLenum") int programInterface, @NativeType("GLuint") int index, @Nullable @NativeType("GLsizei *") IntBuffer length, @NativeType("GLchar *") ByteBuffer name);
 
 /**
  * <a href="https://docs.gl/es3/glGetProgramResourceName">Reference Page</a>
  */
-    public String glGetProgramResourceName(int program, int programInterface, int index, int bufSize);
+@NativeType("void")
+    public String glGetProgramResourceName(@NativeType("GLuint") int program, @NativeType("GLenum") int programInterface, @NativeType("GLuint") int index, @NativeType("GLsizei") int bufSize);
 
 /**
  * <a href="https://docs.gl/es3/glGetProgramResourceName">Reference Page</a>
  */
-    public String glGetProgramResourceName(int program, int programInterface, int index);
+@NativeType("void")
+    public String glGetProgramResourceName(@NativeType("GLuint") int program, @NativeType("GLenum") int programInterface, @NativeType("GLuint") int index);
 
 /**
  * Array version of: {@link #glGetProgramResourceName GetProgramResourceName}
  *
  * @see <a href="https://docs.gl/es3/glGetProgramResourceName">Reference Page</a>
  */
-    public void glGetProgramResourceName(int program, int programInterface, int index, @Nullable int[] length, ByteBuffer name);
+    public void glGetProgramResourceName(@NativeType("GLuint") int program, @NativeType("GLenum") int programInterface, @NativeType("GLuint") int index, @Nullable @NativeType("GLsizei *") int[] length, @NativeType("GLchar *") ByteBuffer name);
 
 }

@@ -18,6 +18,7 @@ public interface glGetProgramPipelinei {
 /**
  * <a href="https://docs.gl/es3/glGetProgramPipeline">Reference Page</a>
  */
-    public int glGetProgramPipelinei(int pipeline, int pname);
+@NativeType("void")
+    public int glGetProgramPipelinei(@NativeType("GLuint") int pipeline, @NativeType("GLenum") int pname);
 
 }

@@ -25,13 +25,13 @@ public interface glNormal3sv {
  *
  * @see <a href="https://docs.gl/gl3/glNormal">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glNormal3sv(ShortBuffer v);
+    public void glNormal3sv(@NativeType("GLshort const *") ShortBuffer v);
 
 /**
  * Array version of: {@link #glNormal3sv Normal3sv}
  *
  * @see <a href="https://docs.gl/gl3/glNormal">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glNormal3sv(short[] v);
+    public void glNormal3sv(@NativeType("GLshort const *") short[] v);
 
 }

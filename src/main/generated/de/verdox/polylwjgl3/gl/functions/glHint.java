@@ -16,6 +16,6 @@ public interface glHint {
 /**
  * <a href="https://docs.gl/es3/glHint">Reference Page</a>
  */
-    public void glHint(int target, int mode);
+    public void glHint(@NativeType("GLenum") int target, @NativeType("GLenum") int mode);
 
 }

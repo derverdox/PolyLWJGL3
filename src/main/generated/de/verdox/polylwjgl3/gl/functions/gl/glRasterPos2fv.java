@@ -25,13 +25,13 @@ public interface glRasterPos2fv {
  *
  * @see <a href="https://docs.gl/gl3/glRasterPos">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glRasterPos2fv(FloatBuffer coords);
+    public void glRasterPos2fv(@NativeType("GLfloat const *") FloatBuffer coords);
 
 /**
  * Array version of: {@link #glRasterPos2fv RasterPos2fv}
  *
  * @see <a href="https://docs.gl/gl3/glRasterPos">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glRasterPos2fv(float[] coords);
+    public void glRasterPos2fv(@NativeType("GLfloat const *") float[] coords);
 
 }

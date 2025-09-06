@@ -22,6 +22,6 @@ public interface glScaled {
  *
  * @see <a href="https://docs.gl/gl3/glScaled">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glScaled(double x, double y, double z);
+    public void glScaled(@NativeType("GLdouble") double x, @NativeType("GLdouble") double y, @NativeType("GLdouble") double z);
 
 }

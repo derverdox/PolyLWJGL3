@@ -18,11 +18,12 @@ public interface glGenFramebuffers {
 /**
  * <a href="https://docs.gl/es3/glGenFramebuffers">Reference Page</a>
  */
-    public void glGenFramebuffers(IntBuffer framebuffers);
+    public void glGenFramebuffers(@NativeType("GLuint *") IntBuffer framebuffers);
 
 /**
  * <a href="https://docs.gl/es3/glGenFramebuffers">Reference Page</a>
  */
+@NativeType("void")
     public int glGenFramebuffers();
 
 /**
@@ -30,6 +31,6 @@ public interface glGenFramebuffers {
  *
  * @see <a href="https://docs.gl/es3/glGenFramebuffers">Reference Page</a>
  */
-    public void glGenFramebuffers(int[] framebuffers);
+    public void glGenFramebuffers(@NativeType("GLuint *") int[] framebuffers);
 
 }

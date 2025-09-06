@@ -30,13 +30,13 @@ public interface glGetTextureLevelParameteriv {
  *
  * @see <a href="https://docs.gl/gl4/glGetTextureLevelParameter">Reference Page</a>
  */
-    public void glGetTextureLevelParameteriv(int texture, int level, int pname, IntBuffer params);
+    public void glGetTextureLevelParameteriv(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLenum") int pname, @NativeType("GLint *") IntBuffer params);
 
 /**
  * Array version of: {@link #glGetTextureLevelParameteriv GetTextureLevelParameteriv}
  *
  * @see <a href="https://docs.gl/gl4/glGetTextureLevelParameter">Reference Page</a>
  */
-    public void glGetTextureLevelParameteriv(int texture, int level, int pname, int[] params);
+    public void glGetTextureLevelParameteriv(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLenum") int pname, @NativeType("GLint *") int[] params);
 
 }

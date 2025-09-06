@@ -16,6 +16,6 @@ public interface glFrontFace {
 /**
  * <a href="https://docs.gl/es3/glFrontFace">Reference Page</a>
  */
-    public void glFrontFace(int mode);
+    public void glFrontFace(@NativeType("GLenum") int mode);
 
 }

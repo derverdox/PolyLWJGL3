@@ -31,7 +31,7 @@ public interface glVertexAttribLPointer {
  *
  * @see <a href="https://docs.gl/gl4/glVertexAttribLPointer">Reference Page</a>
  */
-    public void glVertexAttribLPointer(int index, int size, int type, int stride, ByteBuffer pointer);
+    public void glVertexAttribLPointer(@NativeType("GLuint") int index, @NativeType("GLint") int size, @NativeType("GLenum") int type, @NativeType("GLsizei") int stride, @NativeType("void const *") ByteBuffer pointer);
 
 /**
  * Specifies the location and organization of a 64-bit vertex attribute array.
@@ -46,7 +46,7 @@ public interface glVertexAttribLPointer {
  *
  * @see <a href="https://docs.gl/gl4/glVertexAttribLPointer">Reference Page</a>
  */
-    public void glVertexAttribLPointer(int index, int size, int type, int stride, long pointer);
+    public void glVertexAttribLPointer(@NativeType("GLuint") int index, @NativeType("GLint") int size, @NativeType("GLenum") int type, @NativeType("GLsizei") int stride, @NativeType("void const *") long pointer);
 
 /**
  * Specifies the location and organization of a 64-bit vertex attribute array.
@@ -60,6 +60,6 @@ public interface glVertexAttribLPointer {
  *
  * @see <a href="https://docs.gl/gl4/glVertexAttribLPointer">Reference Page</a>
  */
-    public void glVertexAttribLPointer(int index, int size, int stride, DoubleBuffer pointer);
+    public void glVertexAttribLPointer(@NativeType("GLuint") int index, @NativeType("GLint") int size, @NativeType("GLsizei") int stride, @NativeType("void const *") DoubleBuffer pointer);
 
 }

@@ -20,6 +20,6 @@ public interface glEvalCoord1f {
  *
  * @see <a href="https://docs.gl/gl3/glEvalCoord">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glEvalCoord1f(float u);
+    public void glEvalCoord1f(@NativeType("GLfloat") float u);
 
 }

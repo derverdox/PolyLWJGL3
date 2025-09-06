@@ -23,6 +23,6 @@ public interface glAlphaFunc {
  *
  * @see <a href="https://docs.gl/gl3/glAlphaFunc">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glAlphaFunc(int func, float ref);
+    public void glAlphaFunc(@NativeType("GLenum") int func, @NativeType("GLfloat") float ref);
 
 }

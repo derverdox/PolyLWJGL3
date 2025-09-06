@@ -20,6 +20,6 @@ public interface glNormalP3ui {
  *
  * @see <a href="https://docs.gl/gl3/glNormal">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glNormalP3ui(int type, int coords);
+    public void glNormalP3ui(@NativeType("GLenum") int type, @NativeType("GLuint") int coords);
 
 }

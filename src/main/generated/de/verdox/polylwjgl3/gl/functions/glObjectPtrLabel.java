@@ -30,7 +30,7 @@ public interface glObjectPtrLabel {
  *
  * @see <a href="https://docs.gl/es3/glObjectPtrLabel">Reference Page</a>
  */
-    public void glObjectPtrLabel(long ptr, ByteBuffer label);
+    public void glObjectPtrLabel(@NativeType("void *") long ptr, @NativeType("GLchar const *") ByteBuffer label);
 
 /**
  * Labels a sync object identified by a pointer.
@@ -40,6 +40,6 @@ public interface glObjectPtrLabel {
  *
  * @see <a href="https://docs.gl/es3/glObjectPtrLabel">Reference Page</a>
  */
-    public void glObjectPtrLabel(long ptr, CharSequence label);
+    public void glObjectPtrLabel(@NativeType("void *") long ptr, @NativeType("GLchar const *") CharSequence label);
 
 }

@@ -16,6 +16,7 @@ public interface glIsTexture {
 /**
  * <a href="https://docs.gl/es3/glIsTexture">Reference Page</a>
  */
-    public boolean glIsTexture(int texture);
+@NativeType("GLboolean")
+    public boolean glIsTexture(@NativeType("GLuint") int texture);
 
 }

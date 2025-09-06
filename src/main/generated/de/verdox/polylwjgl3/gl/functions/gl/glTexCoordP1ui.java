@@ -20,6 +20,6 @@ public interface glTexCoordP1ui {
  *
  * @see <a href="https://docs.gl/gl3/glTexCoord">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glTexCoordP1ui(int type, int coords);
+    public void glTexCoordP1ui(@NativeType("GLenum") int type, @NativeType("GLuint") int coords);
 
 }

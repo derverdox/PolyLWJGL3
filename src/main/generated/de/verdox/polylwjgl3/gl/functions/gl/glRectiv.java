@@ -26,13 +26,13 @@ public interface glRectiv {
  *
  * @see <a href="https://docs.gl/gl3/glRect">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glRectiv(IntBuffer v1, IntBuffer v2);
+    public void glRectiv(@NativeType("GLint const *") IntBuffer v1, @NativeType("GLint const *") IntBuffer v2);
 
 /**
  * Array version of: {@link #glRectiv Rectiv}
  *
  * @see <a href="https://docs.gl/gl3/glRect">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glRectiv(int[] v1, int[] v2);
+    public void glRectiv(@NativeType("GLint const *") int[] v1, @NativeType("GLint const *") int[] v2);
 
 }

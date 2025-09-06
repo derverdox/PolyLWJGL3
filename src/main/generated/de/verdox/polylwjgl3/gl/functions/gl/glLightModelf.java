@@ -21,6 +21,6 @@ public interface glLightModelf {
  *
  * @see <a href="https://docs.gl/gl3/glLightModelf">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glLightModelf(int pname, float param);
+    public void glLightModelf(@NativeType("GLenum") int pname, @NativeType("GLfloat") float param);
 
 }

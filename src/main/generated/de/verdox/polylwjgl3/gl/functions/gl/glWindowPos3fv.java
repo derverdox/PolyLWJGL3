@@ -25,13 +25,13 @@ public interface glWindowPos3fv {
  *
  * @see <a href="https://docs.gl/gl3/glWindowPos">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glWindowPos3fv(FloatBuffer p);
+    public void glWindowPos3fv(@NativeType("GLfloat const *") FloatBuffer p);
 
 /**
  * Array version of: {@link #glWindowPos3fv WindowPos3fv}
  *
  * @see <a href="https://docs.gl/gl3/glWindowPos">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glWindowPos3fv(float[] p);
+    public void glWindowPos3fv(@NativeType("GLfloat const *") float[] p);
 
 }

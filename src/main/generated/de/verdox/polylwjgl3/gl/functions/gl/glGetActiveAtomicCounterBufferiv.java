@@ -24,13 +24,13 @@ public interface glGetActiveAtomicCounterBufferiv {
  *
  * @see <a href="https://docs.gl/gl4/glGetActiveAtomicCounterBuffer">Reference Page</a>
  */
-    public void glGetActiveAtomicCounterBufferiv(int program, int bufferIndex, int pname, IntBuffer params);
+    public void glGetActiveAtomicCounterBufferiv(@NativeType("GLuint") int program, @NativeType("GLuint") int bufferIndex, @NativeType("GLenum") int pname, @NativeType("GLint *") IntBuffer params);
 
 /**
  * Array version of: {@link #glGetActiveAtomicCounterBufferiv GetActiveAtomicCounterBufferiv}
  *
  * @see <a href="https://docs.gl/gl4/glGetActiveAtomicCounterBuffer">Reference Page</a>
  */
-    public void glGetActiveAtomicCounterBufferiv(int program, int bufferIndex, int pname, int[] params);
+    public void glGetActiveAtomicCounterBufferiv(@NativeType("GLuint") int program, @NativeType("GLuint") int bufferIndex, @NativeType("GLenum") int pname, @NativeType("GLint *") int[] params);
 
 }

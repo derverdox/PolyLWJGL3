@@ -16,6 +16,7 @@ public interface glGetTexParameterf {
 /**
  * <a href="https://docs.gl/es3/glGetTexParameter">Reference Page</a>
  */
-    public float glGetTexParameterf(int target, int pname);
+@NativeType("void")
+    public float glGetTexParameterf(@NativeType("GLenum") int target, @NativeType("GLenum") int pname);
 
 }

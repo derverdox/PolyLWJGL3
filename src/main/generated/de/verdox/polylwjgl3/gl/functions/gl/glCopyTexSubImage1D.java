@@ -27,6 +27,6 @@ public interface glCopyTexSubImage1D {
  *
  * @see <a href="https://docs.gl/gl4/glCopyTexSubImage1D">Reference Page</a>
  */
-    public void glCopyTexSubImage1D(int target, int level, int xoffset, int x, int y, int width);
+    public void glCopyTexSubImage1D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width);
 
 }

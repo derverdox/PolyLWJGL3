@@ -19,6 +19,6 @@ public interface glUniformBlockBinding {
 /**
  * <a href="https://docs.gl/es3/glUniformBlockBinding">Reference Page</a>
  */
-    public void glUniformBlockBinding(int program, int uniformBlockIndex, int uniformBlockBinding);
+    public void glUniformBlockBinding(@NativeType("GLuint") int program, @NativeType("GLuint") int uniformBlockIndex, @NativeType("GLuint") int uniformBlockBinding);
 
 }

@@ -30,13 +30,13 @@ public interface glGetnPixelMapuiv {
  *
  * @see <a href="https://docs.gl/gl4/glGetPixelMap">Reference Page</a>
  */
-    public void glGetnPixelMapuiv(int map, IntBuffer data);
+    public void glGetnPixelMapuiv(@NativeType("GLenum") int map, @NativeType("GLuint *") IntBuffer data);
 
 /**
  * Array version of: {@link #glGetnPixelMapuiv GetnPixelMapuiv}
  *
  * @see <a href="https://docs.gl/gl4/glGetPixelMap">Reference Page</a>
  */
-    public void glGetnPixelMapuiv(int map, int[] data);
+    public void glGetnPixelMapuiv(@NativeType("GLenum") int map, @NativeType("GLuint *") int[] data);
 
 }

@@ -18,13 +18,13 @@ public interface glGetShaderiv {
 /**
  * <a href="https://docs.gl/es3/glGetShader">Reference Page</a>
  */
-    public void glGetShaderiv(int shader, int pname, IntBuffer params);
+    public void glGetShaderiv(@NativeType("GLuint") int shader, @NativeType("GLenum") int pname, @NativeType("GLint *") IntBuffer params);
 
 /**
  * Array version of: {@link #glGetShaderiv GetShaderiv}
  *
  * @see <a href="https://docs.gl/es3/glGetShader">Reference Page</a>
  */
-    public void glGetShaderiv(int shader, int pname, int[] params);
+    public void glGetShaderiv(@NativeType("GLuint") int shader, @NativeType("GLenum") int pname, @NativeType("GLint *") int[] params);
 
 }

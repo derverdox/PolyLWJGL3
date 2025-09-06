@@ -20,6 +20,6 @@ public interface glVertexP4ui {
  *
  * @see <a href="https://docs.gl/gl3/glVertex">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glVertexP4ui(int type, int value);
+    public void glVertexP4ui(@NativeType("GLenum") int type, @NativeType("GLuint") int value);
 
 }

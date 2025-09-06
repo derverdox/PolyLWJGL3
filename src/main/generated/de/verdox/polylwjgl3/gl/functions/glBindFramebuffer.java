@@ -16,6 +16,6 @@ public interface glBindFramebuffer {
 /**
  * <a href="https://docs.gl/es3/glBindFramebuffer">Reference Page</a>
  */
-    public void glBindFramebuffer(int target, int framebuffer);
+    public void glBindFramebuffer(@NativeType("GLenum") int target, @NativeType("GLuint") int framebuffer);
 
 }

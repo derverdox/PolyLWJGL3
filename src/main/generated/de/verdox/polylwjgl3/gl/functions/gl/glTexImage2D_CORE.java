@@ -29,13 +29,13 @@ public interface glTexImage2D_CORE extends glTexImage2D {
  *
  * @see <a href="https://docs.gl/gl4/glTexImage2D">Reference Page</a>
  */
-    public void glTexImage2D(int target, int level, int internalformat, int width, int height, int border, int format, int type, @Nullable DoubleBuffer pixels);
+    public void glTexImage2D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLint") int border, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") DoubleBuffer pixels);
 
 /**
  * Array version of: {@link #glTexImage2D TexImage2D}
  *
  * @see <a href="https://docs.gl/gl4/glTexImage2D">Reference Page</a>
  */
-    public void glTexImage2D(int target, int level, int internalformat, int width, int height, int border, int format, int type, @Nullable double[] pixels);
+    public void glTexImage2D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLint") int border, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") double[] pixels);
 
 }

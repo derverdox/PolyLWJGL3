@@ -27,13 +27,13 @@ public interface glGetInternalformati64v {
  *
  * @see <a href="https://docs.gl/gl4/glGetInternalformat">Reference Page</a>
  */
-    public void glGetInternalformati64v(int target, int internalformat, int pname, LongBuffer params);
+    public void glGetInternalformati64v(@NativeType("GLenum") int target, @NativeType("GLenum") int internalformat, @NativeType("GLenum") int pname, @NativeType("GLint64 *") LongBuffer params);
 
 /**
  * Array version of: {@link #glGetInternalformati64v GetInternalformati64v}
  *
  * @see <a href="https://docs.gl/gl4/glGetInternalformat">Reference Page</a>
  */
-    public void glGetInternalformati64v(int target, int internalformat, int pname, long[] params);
+    public void glGetInternalformati64v(@NativeType("GLenum") int target, @NativeType("GLenum") int internalformat, @NativeType("GLenum") int pname, @NativeType("GLint64 *") long[] params);
 
 }

@@ -18,6 +18,6 @@ public interface glGetVertexAttribPointerv {
 /**
  * <a href="https://docs.gl/es3/glGetVertexAttribPointerv">Reference Page</a>
  */
-    public void glGetVertexAttribPointerv(int index, int pname, PointerBuffer pointer);
+    public void glGetVertexAttribPointerv(@NativeType("GLuint") int index, @NativeType("GLenum") int pname, @NativeType("void **") PointerBuffer pointer);
 
 }

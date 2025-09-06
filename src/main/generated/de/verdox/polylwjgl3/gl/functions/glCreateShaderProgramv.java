@@ -20,16 +20,19 @@ public interface glCreateShaderProgramv {
 /**
  * <a href="https://docs.gl/es3/glCreateShaderProgramv">Reference Page</a>
  */
-    public int glCreateShaderProgramv(int type, PointerBuffer strings);
+@NativeType("GLuint")
+    public int glCreateShaderProgramv(@NativeType("GLenum") int type, @NativeType("GLchar const * const *") PointerBuffer strings);
 
 /**
  * <a href="https://docs.gl/es3/glCreateShaderProgramv">Reference Page</a>
  */
-    public int glCreateShaderProgramv(int type, CharSequence... strings);
+@NativeType("GLuint")
+    public int glCreateShaderProgramv(@NativeType("GLenum") int type, @NativeType("GLchar const * const *") CharSequence... strings);
 
 /**
  * <a href="https://docs.gl/es3/glCreateShaderProgramv">Reference Page</a>
  */
-    public int glCreateShaderProgramv(int type, CharSequence string);
+@NativeType("GLuint")
+    public int glCreateShaderProgramv(@NativeType("GLenum") int type, @NativeType("GLchar const * const *") CharSequence string);
 
 }

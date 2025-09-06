@@ -25,13 +25,13 @@ public interface glColor4dv {
  *
  * @see <a href="https://docs.gl/gl3/glColor">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glColor4dv(DoubleBuffer v);
+    public void glColor4dv(@NativeType("GLdouble const *") DoubleBuffer v);
 
 /**
  * Array version of: {@link #glColor4dv Color4dv}
  *
  * @see <a href="https://docs.gl/gl3/glColor">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glColor4dv(double[] v);
+    public void glColor4dv(@NativeType("GLdouble const *") double[] v);
 
 }

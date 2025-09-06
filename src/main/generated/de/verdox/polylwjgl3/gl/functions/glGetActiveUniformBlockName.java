@@ -21,23 +21,25 @@ public interface glGetActiveUniformBlockName {
 /**
  * <a href="https://docs.gl/es3/glGetActiveUniformBlockName">Reference Page</a>
  */
-    public void glGetActiveUniformBlockName(int program, int uniformBlockIndex, @Nullable IntBuffer length, ByteBuffer uniformBlockName);
+    public void glGetActiveUniformBlockName(@NativeType("GLuint") int program, @NativeType("GLuint") int uniformBlockIndex, @Nullable @NativeType("GLsizei *") IntBuffer length, @NativeType("GLchar *") ByteBuffer uniformBlockName);
 
 /**
  * <a href="https://docs.gl/es3/glGetActiveUniformBlockName">Reference Page</a>
  */
-    public String glGetActiveUniformBlockName(int program, int uniformBlockIndex, int bufSize);
+@NativeType("void")
+    public String glGetActiveUniformBlockName(@NativeType("GLuint") int program, @NativeType("GLuint") int uniformBlockIndex, @NativeType("GLsizei") int bufSize);
 
 /**
  * <a href="https://docs.gl/es3/glGetActiveUniformBlockName">Reference Page</a>
  */
-    public String glGetActiveUniformBlockName(int program, int uniformBlockIndex);
+@NativeType("void")
+    public String glGetActiveUniformBlockName(@NativeType("GLuint") int program, @NativeType("GLuint") int uniformBlockIndex);
 
 /**
  * Array version of: {@link #glGetActiveUniformBlockName GetActiveUniformBlockName}
  *
  * @see <a href="https://docs.gl/es3/glGetActiveUniformBlockName">Reference Page</a>
  */
-    public void glGetActiveUniformBlockName(int program, int uniformBlockIndex, @Nullable int[] length, ByteBuffer uniformBlockName);
+    public void glGetActiveUniformBlockName(@NativeType("GLuint") int program, @NativeType("GLuint") int uniformBlockIndex, @Nullable @NativeType("GLsizei *") int[] length, @NativeType("GLchar *") ByteBuffer uniformBlockName);
 
 }

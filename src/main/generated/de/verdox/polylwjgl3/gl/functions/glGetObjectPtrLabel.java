@@ -31,7 +31,7 @@ public interface glGetObjectPtrLabel {
  *
  * @see <a href="https://docs.gl/es3/glGetObjectPtrLabel">Reference Page</a>
  */
-    public void glGetObjectPtrLabel(long ptr, @Nullable IntBuffer length, ByteBuffer label);
+    public void glGetObjectPtrLabel(@NativeType("void *") long ptr, @Nullable @NativeType("GLsizei *") IntBuffer length, @NativeType("GLchar *") ByteBuffer label);
 
 /**
  * Retrieves the label of a sync object identified by a pointer.
@@ -41,7 +41,8 @@ public interface glGetObjectPtrLabel {
  *
  * @see <a href="https://docs.gl/es3/glGetObjectPtrLabel">Reference Page</a>
  */
-    public String glGetObjectPtrLabel(long ptr, int bufSize);
+@NativeType("void")
+    public String glGetObjectPtrLabel(@NativeType("void *") long ptr, @NativeType("GLsizei") int bufSize);
 
 /**
  * Retrieves the label of a sync object identified by a pointer.
@@ -50,13 +51,14 @@ public interface glGetObjectPtrLabel {
  *
  * @see <a href="https://docs.gl/es3/glGetObjectPtrLabel">Reference Page</a>
  */
-    public String glGetObjectPtrLabel(long ptr);
+@NativeType("void")
+    public String glGetObjectPtrLabel(@NativeType("void *") long ptr);
 
 /**
  * Array version of: {@link #glGetObjectPtrLabel GetObjectPtrLabel}
  *
  * @see <a href="https://docs.gl/es3/glGetObjectPtrLabel">Reference Page</a>
  */
-    public void glGetObjectPtrLabel(long ptr, @Nullable int[] length, ByteBuffer label);
+    public void glGetObjectPtrLabel(@NativeType("void *") long ptr, @Nullable @NativeType("GLsizei *") int[] length, @NativeType("GLchar *") ByteBuffer label);
 
 }

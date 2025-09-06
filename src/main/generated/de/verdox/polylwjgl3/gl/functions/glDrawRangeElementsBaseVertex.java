@@ -20,26 +20,26 @@ public interface glDrawRangeElementsBaseVertex {
 /**
  * <a href="https://docs.gl/es3/glDrawRangeElementsBaseVertex">Reference Page</a>
  */
-    public void glDrawRangeElementsBaseVertex(int mode, int start, int end, int count, int type, long indices, int basevertex);
+    public void glDrawRangeElementsBaseVertex(@NativeType("GLenum") int mode, @NativeType("GLuint") int start, @NativeType("GLuint") int end, @NativeType("GLsizei") int count, @NativeType("GLenum") int type, @NativeType("void const *") long indices, @NativeType("GLint") int basevertex);
 
 /**
  * <a href="https://docs.gl/es3/glDrawRangeElementsBaseVertex">Reference Page</a>
  */
-    public void glDrawRangeElementsBaseVertex(int mode, int start, int end, int type, ByteBuffer indices, int basevertex);
+    public void glDrawRangeElementsBaseVertex(@NativeType("GLenum") int mode, @NativeType("GLuint") int start, @NativeType("GLuint") int end, @NativeType("GLenum") int type, @NativeType("void const *") ByteBuffer indices, @NativeType("GLint") int basevertex);
 
 /**
  * <a href="https://docs.gl/es3/glDrawRangeElementsBaseVertex">Reference Page</a>
  */
-    public void glDrawRangeElementsBaseVertex(int mode, int start, int end, ByteBuffer indices, int basevertex);
+    public void glDrawRangeElementsBaseVertex(@NativeType("GLenum") int mode, @NativeType("GLuint") int start, @NativeType("GLuint") int end, @NativeType("void const *") ByteBuffer indices, @NativeType("GLint") int basevertex);
 
 /**
  * <a href="https://docs.gl/es3/glDrawRangeElementsBaseVertex">Reference Page</a>
  */
-    public void glDrawRangeElementsBaseVertex(int mode, int start, int end, ShortBuffer indices, int basevertex);
+    public void glDrawRangeElementsBaseVertex(@NativeType("GLenum") int mode, @NativeType("GLuint") int start, @NativeType("GLuint") int end, @NativeType("void const *") ShortBuffer indices, @NativeType("GLint") int basevertex);
 
 /**
  * <a href="https://docs.gl/es3/glDrawRangeElementsBaseVertex">Reference Page</a>
  */
-    public void glDrawRangeElementsBaseVertex(int mode, int start, int end, IntBuffer indices, int basevertex);
+    public void glDrawRangeElementsBaseVertex(@NativeType("GLenum") int mode, @NativeType("GLuint") int start, @NativeType("GLuint") int end, @NativeType("void const *") IntBuffer indices, @NativeType("GLint") int basevertex);
 
 }

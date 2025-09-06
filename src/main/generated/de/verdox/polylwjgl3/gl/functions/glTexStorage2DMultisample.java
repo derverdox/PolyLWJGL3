@@ -18,6 +18,6 @@ public interface glTexStorage2DMultisample {
 /**
  * <a href="https://docs.gl/es3/glTexStorage2DMultisample">Reference Page</a>
  */
-    public void glTexStorage2DMultisample(int target, int samples, int internalformat, int width, int height, boolean fixedsamplelocations);
+    public void glTexStorage2DMultisample(@NativeType("GLenum") int target, @NativeType("GLsizei") int samples, @NativeType("GLenum") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLboolean") boolean fixedsamplelocations);
 
 }

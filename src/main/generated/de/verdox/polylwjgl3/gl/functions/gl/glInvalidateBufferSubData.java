@@ -19,6 +19,6 @@ public interface glInvalidateBufferSubData {
  *
  * @see <a href="https://docs.gl/gl4/glInvalidateBufferSubData">Reference Page</a>
  */
-    public void glInvalidateBufferSubData(int buffer, long offset, long length);
+    public void glInvalidateBufferSubData(@NativeType("GLuint") int buffer, @NativeType("GLintptr") long offset, @NativeType("GLsizeiptr") long length);
 
 }

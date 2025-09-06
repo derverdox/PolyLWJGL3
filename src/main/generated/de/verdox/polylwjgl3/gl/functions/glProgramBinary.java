@@ -21,6 +21,6 @@ public interface glProgramBinary {
 /**
  * <a href="https://docs.gl/es3/glProgramBinary">Reference Page</a>
  */
-    public void glProgramBinary(int program, int binaryFormat, ByteBuffer binary);
+    public void glProgramBinary(@NativeType("GLuint") int program, @NativeType("GLenum") int binaryFormat, @NativeType("void const *") ByteBuffer binary);
 
 }

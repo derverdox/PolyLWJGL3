@@ -23,6 +23,6 @@ public interface glDisableVertexArrayAttrib {
  *
  * @see <a href="https://docs.gl/gl4/glDisableVertexArrayAttrib">Reference Page</a>
  */
-    public void glDisableVertexArrayAttrib(int vaobj, int index);
+    public void glDisableVertexArrayAttrib(@NativeType("GLuint") int vaobj, @NativeType("GLuint") int index);
 
 }

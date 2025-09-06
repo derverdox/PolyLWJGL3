@@ -24,6 +24,6 @@ public interface glNamedFramebufferParameteri {
  *
  * @see <a href="https://docs.gl/gl4/glFramebufferParameteri">Reference Page</a>
  */
-    public void glNamedFramebufferParameteri(int framebuffer, int pname, int param);
+    public void glNamedFramebufferParameteri(@NativeType("GLuint") int framebuffer, @NativeType("GLenum") int pname, @NativeType("GLint") int param);
 
 }

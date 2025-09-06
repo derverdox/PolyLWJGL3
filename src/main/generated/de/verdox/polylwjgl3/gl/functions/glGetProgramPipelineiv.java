@@ -20,13 +20,13 @@ public interface glGetProgramPipelineiv {
 /**
  * <a href="https://docs.gl/es3/glGetProgramPipeline">Reference Page</a>
  */
-    public void glGetProgramPipelineiv(int pipeline, int pname, IntBuffer params);
+    public void glGetProgramPipelineiv(@NativeType("GLuint") int pipeline, @NativeType("GLenum") int pname, @NativeType("GLint *") IntBuffer params);
 
 /**
  * Array version of: {@link #glGetProgramPipelineiv GetProgramPipelineiv}
  *
  * @see <a href="https://docs.gl/es3/glGetProgramPipeline">Reference Page</a>
  */
-    public void glGetProgramPipelineiv(int pipeline, int pname, int[] params);
+    public void glGetProgramPipelineiv(@NativeType("GLuint") int pipeline, @NativeType("GLenum") int pname, @NativeType("GLint *") int[] params);
 
 }

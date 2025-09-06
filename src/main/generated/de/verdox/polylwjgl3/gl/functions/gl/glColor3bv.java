@@ -25,6 +25,6 @@ public interface glColor3bv {
  *
  * @see <a href="https://docs.gl/gl3/glColor">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glColor3bv(ByteBuffer v);
+    public void glColor3bv(@NativeType("GLbyte const *") ByteBuffer v);
 
 }

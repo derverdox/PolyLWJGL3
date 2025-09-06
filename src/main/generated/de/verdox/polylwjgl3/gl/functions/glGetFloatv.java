@@ -18,13 +18,13 @@ public interface glGetFloatv {
 /**
  * <a href="https://docs.gl/es3/glGetFloatv">Reference Page</a>
  */
-    public void glGetFloatv(int pname, FloatBuffer data);
+    public void glGetFloatv(@NativeType("GLenum") int pname, @NativeType("GLfloat *") FloatBuffer data);
 
 /**
  * Array version of: {@link #glGetFloatv GetFloatv}
  *
  * @see <a href="https://docs.gl/es3/glGetFloatv">Reference Page</a>
  */
-    public void glGetFloatv(int pname, float[] data);
+    public void glGetFloatv(@NativeType("GLenum") int pname, @NativeType("GLfloat *") float[] data);
 
 }

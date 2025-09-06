@@ -1,0 +1,38 @@
+/**
+ * OpenGL 4.6 Accessor — Count-driven multi-draw indirect, clamped polygon offset,
+ * and SPIR-V shader specialization.
+ *
+ * <p>Extends {@link GL45Accessor} with GPU-driven draw count variants, improved raster
+ * offset control, and first-class SPIR-V workflows.</p>
+ *
+ * <h2>GPU-Driven Multi-Draw (Count Variants)</h2>
+ * <ul>
+ *   <li>{@code glMultiDrawArraysIndirectCount}, {@code glMultiDrawElementsIndirectCount} —
+ *       Issue many indirect draws where the <em>number of draws</em> is read from a buffer
+ *       on the GPU. Pairs with indirect parameter and draw-command buffers for fully
+ *       GPU-driven batching.</li>
+ * </ul>
+ *
+ * <h2>Rasterization Offset</h2>
+ * <ul>
+ *   <li>{@code glPolygonOffsetClamp} — Like {@code glPolygonOffset}, but applies an additional
+ *       clamp value to the computed depth offset to limit over-/under-bias.</li>
+ * </ul>
+ *
+ * <h2>SPIR-V Specialization</h2>
+ * <ul>
+ *   <li>{@code glSpecializeShader} — Specialize a SPIR-V shader binary (loaded via {@code glShaderBinary})
+ *       by selecting an entry point and providing specialization constants before linking.</li>
+ * </ul>
+ *
+ * <h3>Notes</h3>
+ * <ul>
+ *   <li>For the “Count” draws, the draw count is fetched from the buffer bound to the
+ *       parameter buffer target; ensure correct offsets/limits to avoid overrun.</li>
+ *   <li>Indirect command buffers must match the expected struct layouts; use proper strides
+ *       when issuing multiple commands.</li>
+ *   <li>Clamped polygon offset helps reduce artifacts on extremely large or tiny depth ranges.</li>
+ *   <li>SPIR-V paths enable offline compilation; call {@code glSpecializeShader} after uploading
+ *       the binary and before program linking.</li>
+ * </ul>
+ */

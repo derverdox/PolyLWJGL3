@@ -69,7 +69,7 @@ public interface glBufferStorage {
  *
  * @see <a href="https://docs.gl/gl4/glBufferStorage">Reference Page</a>
  */
-    public void glBufferStorage(int target, long size, int flags);
+    public void glBufferStorage(@NativeType("GLenum") int target, @NativeType("GLsizeiptr") long size, @NativeType("GLbitfield") int flags);
 
 /**
  * Creates the data store of a buffer object.
@@ -123,7 +123,7 @@ public interface glBufferStorage {
  *
  * @see <a href="https://docs.gl/gl4/glBufferStorage">Reference Page</a>
  */
-    public void glBufferStorage(int target, ByteBuffer data, int flags);
+    public void glBufferStorage(@NativeType("GLenum") int target, @NativeType("void const *") ByteBuffer data, @NativeType("GLbitfield") int flags);
 
 /**
  * Creates the data store of a buffer object.
@@ -177,7 +177,7 @@ public interface glBufferStorage {
  *
  * @see <a href="https://docs.gl/gl4/glBufferStorage">Reference Page</a>
  */
-    public void glBufferStorage(int target, ShortBuffer data, int flags);
+    public void glBufferStorage(@NativeType("GLenum") int target, @NativeType("void const *") ShortBuffer data, @NativeType("GLbitfield") int flags);
 
 /**
  * Creates the data store of a buffer object.
@@ -231,7 +231,7 @@ public interface glBufferStorage {
  *
  * @see <a href="https://docs.gl/gl4/glBufferStorage">Reference Page</a>
  */
-    public void glBufferStorage(int target, IntBuffer data, int flags);
+    public void glBufferStorage(@NativeType("GLenum") int target, @NativeType("void const *") IntBuffer data, @NativeType("GLbitfield") int flags);
 
 /**
  * Creates the data store of a buffer object.
@@ -285,7 +285,7 @@ public interface glBufferStorage {
  *
  * @see <a href="https://docs.gl/gl4/glBufferStorage">Reference Page</a>
  */
-    public void glBufferStorage(int target, FloatBuffer data, int flags);
+    public void glBufferStorage(@NativeType("GLenum") int target, @NativeType("void const *") FloatBuffer data, @NativeType("GLbitfield") int flags);
 
 /**
  * Creates the data store of a buffer object.
@@ -339,34 +339,34 @@ public interface glBufferStorage {
  *
  * @see <a href="https://docs.gl/gl4/glBufferStorage">Reference Page</a>
  */
-    public void glBufferStorage(int target, DoubleBuffer data, int flags);
+    public void glBufferStorage(@NativeType("GLenum") int target, @NativeType("void const *") DoubleBuffer data, @NativeType("GLbitfield") int flags);
 
 /**
  * Array version of: {@link #glBufferStorage BufferStorage}
  *
  * @see <a href="https://docs.gl/gl4/glBufferStorage">Reference Page</a>
  */
-    public void glBufferStorage(int target, short[] data, int flags);
+    public void glBufferStorage(@NativeType("GLenum") int target, @NativeType("void const *") short[] data, @NativeType("GLbitfield") int flags);
 
 /**
  * Array version of: {@link #glBufferStorage BufferStorage}
  *
  * @see <a href="https://docs.gl/gl4/glBufferStorage">Reference Page</a>
  */
-    public void glBufferStorage(int target, int[] data, int flags);
+    public void glBufferStorage(@NativeType("GLenum") int target, @NativeType("void const *") int[] data, @NativeType("GLbitfield") int flags);
 
 /**
  * Array version of: {@link #glBufferStorage BufferStorage}
  *
  * @see <a href="https://docs.gl/gl4/glBufferStorage">Reference Page</a>
  */
-    public void glBufferStorage(int target, float[] data, int flags);
+    public void glBufferStorage(@NativeType("GLenum") int target, @NativeType("void const *") float[] data, @NativeType("GLbitfield") int flags);
 
 /**
  * Array version of: {@link #glBufferStorage BufferStorage}
  *
  * @see <a href="https://docs.gl/gl4/glBufferStorage">Reference Page</a>
  */
-    public void glBufferStorage(int target, double[] data, int flags);
+    public void glBufferStorage(@NativeType("GLenum") int target, @NativeType("void const *") double[] data, @NativeType("GLbitfield") int flags);
 
 }

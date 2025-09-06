@@ -16,6 +16,7 @@ public interface glCreateProgram {
 /**
  * <a href="https://docs.gl/es3/glCreateProgram">Reference Page</a>
  */
+@NativeType("GLuint")
     public int glCreateProgram();
 
 }

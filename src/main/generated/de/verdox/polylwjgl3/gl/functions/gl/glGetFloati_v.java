@@ -25,13 +25,13 @@ public interface glGetFloati_v {
  *
  * @see <a href="https://docs.gl/gl4/glGetFloati_v">Reference Page</a>
  */
-    public void glGetFloati_v(int target, int index, FloatBuffer data);
+    public void glGetFloati_v(@NativeType("GLenum") int target, @NativeType("GLuint") int index, @NativeType("GLfloat *") FloatBuffer data);
 
 /**
  * Array version of: {@link #glGetFloati_v GetFloati_v}
  *
  * @see <a href="https://docs.gl/gl4/glGetFloati_v">Reference Page</a>
  */
-    public void glGetFloati_v(int target, int index, float[] data);
+    public void glGetFloati_v(@NativeType("GLenum") int target, @NativeType("GLuint") int index, @NativeType("GLfloat *") float[] data);
 
 }

@@ -18,6 +18,6 @@ public interface glSampleMaski {
 /**
  * <a href="https://docs.gl/es3/glSampleMaski">Reference Page</a>
  */
-    public void glSampleMaski(int maskNumber, int mask);
+    public void glSampleMaski(@NativeType("GLuint") int maskNumber, @NativeType("GLbitfield") int mask);
 
 }

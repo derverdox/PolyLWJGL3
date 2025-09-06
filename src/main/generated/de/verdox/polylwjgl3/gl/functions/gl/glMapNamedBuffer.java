@@ -29,7 +29,8 @@ public interface glMapNamedBuffer {
  * @see <a href="https://docs.gl/gl4/glMapBuffer">Reference Page</a>
  */
 @Nullable
-    public ByteBuffer glMapNamedBuffer(int buffer, int access);
+@NativeType("void *")
+    public ByteBuffer glMapNamedBuffer(@NativeType("GLuint") int buffer, @NativeType("GLenum") int access);
 
 /**
  * DSA version of {@link GL15C#glMapBuffer MapBuffer}.
@@ -40,7 +41,8 @@ public interface glMapNamedBuffer {
  * @see <a href="https://docs.gl/gl4/glMapBuffer">Reference Page</a>
  */
 @Nullable
-    public ByteBuffer glMapNamedBuffer(int buffer, int access, @Nullable ByteBuffer old_buffer);
+@NativeType("void *")
+    public ByteBuffer glMapNamedBuffer(@NativeType("GLuint") int buffer, @NativeType("GLenum") int access, @Nullable ByteBuffer old_buffer);
 
 /**
  * DSA version of {@link GL15C#glMapBuffer MapBuffer}.
@@ -51,6 +53,7 @@ public interface glMapNamedBuffer {
  * @see <a href="https://docs.gl/gl4/glMapBuffer">Reference Page</a>
  */
 @Nullable
-    public ByteBuffer glMapNamedBuffer(int buffer, int access, long length, @Nullable ByteBuffer old_buffer);
+@NativeType("void *")
+    public ByteBuffer glMapNamedBuffer(@NativeType("GLuint") int buffer, @NativeType("GLenum") int access, long length, @Nullable ByteBuffer old_buffer);
 
 }

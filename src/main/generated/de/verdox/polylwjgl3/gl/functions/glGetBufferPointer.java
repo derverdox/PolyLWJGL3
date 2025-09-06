@@ -19,6 +19,7 @@ public interface glGetBufferPointer {
 /**
  * <a href="https://docs.gl/es3/glGetBufferPointerv">Reference Page</a>
  */
-    public long glGetBufferPointer(int target, int pname);
+@NativeType("void")
+    public long glGetBufferPointer(@NativeType("GLenum") int target, @NativeType("GLenum") int pname);
 
 }

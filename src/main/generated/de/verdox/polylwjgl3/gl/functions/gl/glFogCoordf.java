@@ -20,6 +20,6 @@ public interface glFogCoordf {
  *
  * @see <a href="https://docs.gl/gl3/glFogCoordf">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glFogCoordf(float coord);
+    public void glFogCoordf(@NativeType("GLfloat") float coord);
 
 }

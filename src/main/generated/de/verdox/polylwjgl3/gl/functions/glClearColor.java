@@ -16,6 +16,6 @@ public interface glClearColor {
 /**
  * <a href="https://docs.gl/es3/glClearColor">Reference Page</a>
  */
-    public void glClearColor(float red, float green, float blue, float alpha);
+    public void glClearColor(@NativeType("GLfloat") float red, @NativeType("GLfloat") float green, @NativeType("GLfloat") float blue, @NativeType("GLfloat") float alpha);
 
 }

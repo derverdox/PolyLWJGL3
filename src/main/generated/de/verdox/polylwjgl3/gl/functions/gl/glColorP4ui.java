@@ -20,6 +20,6 @@ public interface glColorP4ui {
  *
  * @see <a href="https://docs.gl/gl3/glColor">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glColorP4ui(int type, int color);
+    public void glColorP4ui(@NativeType("GLenum") int type, @NativeType("GLuint") int color);
 
 }

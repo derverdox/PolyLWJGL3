@@ -16,6 +16,6 @@ public interface glDeleteShader {
 /**
  * <a href="https://docs.gl/es3/glDeleteShader">Reference Page</a>
  */
-    public void glDeleteShader(int shader);
+    public void glDeleteShader(@NativeType("GLuint") int shader);
 
 }

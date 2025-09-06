@@ -28,13 +28,13 @@ public interface glGetNamedRenderbufferParameteriv {
  *
  * @see <a href="https://docs.gl/gl4/glGetRenderbufferParameter">Reference Page</a>
  */
-    public void glGetNamedRenderbufferParameteriv(int renderbuffer, int pname, IntBuffer params);
+    public void glGetNamedRenderbufferParameteriv(@NativeType("GLuint") int renderbuffer, @NativeType("GLenum") int pname, @NativeType("GLint *") IntBuffer params);
 
 /**
  * Array version of: {@link #glGetNamedRenderbufferParameteriv GetNamedRenderbufferParameteriv}
  *
  * @see <a href="https://docs.gl/gl4/glGetRenderbufferParameter">Reference Page</a>
  */
-    public void glGetNamedRenderbufferParameteriv(int renderbuffer, int pname, int[] params);
+    public void glGetNamedRenderbufferParameteriv(@NativeType("GLuint") int renderbuffer, @NativeType("GLenum") int pname, @NativeType("GLint *") int[] params);
 
 }

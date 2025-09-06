@@ -18,6 +18,6 @@ public interface glUseProgramStages {
 /**
  * <a href="https://docs.gl/es3/glUseProgramStages">Reference Page</a>
  */
-    public void glUseProgramStages(int pipeline, int stages, int program);
+    public void glUseProgramStages(@NativeType("GLuint") int pipeline, @NativeType("GLbitfield") int stages, @NativeType("GLuint") int program);
 
 }

@@ -27,13 +27,13 @@ public interface glMaterialiv {
  *
  * @see <a href="https://docs.gl/gl3/glMaterial">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glMaterialiv(int face, int pname, IntBuffer params);
+    public void glMaterialiv(@NativeType("GLenum") int face, @NativeType("GLenum") int pname, @NativeType("GLint const *") IntBuffer params);
 
 /**
  * Array version of: {@link #glMaterialiv Materialiv}
  *
  * @see <a href="https://docs.gl/gl3/glMaterial">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glMaterialiv(int face, int pname, int[] params);
+    public void glMaterialiv(@NativeType("GLenum") int face, @NativeType("GLenum") int pname, @NativeType("GLint const *") int[] params);
 
 }

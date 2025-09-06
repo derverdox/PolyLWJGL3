@@ -27,13 +27,13 @@ public interface glGetMaterialiv {
  *
  * @see <a href="https://docs.gl/gl3/glGetMaterial">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glGetMaterialiv(int face, int pname, IntBuffer data);
+    public void glGetMaterialiv(@NativeType("GLenum") int face, @NativeType("GLenum") int pname, @NativeType("GLint *") IntBuffer data);
 
 /**
  * Array version of: {@link #glGetMaterialiv GetMaterialiv}
  *
  * @see <a href="https://docs.gl/gl3/glGetMaterial">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glGetMaterialiv(int face, int pname, int[] data);
+    public void glGetMaterialiv(@NativeType("GLenum") int face, @NativeType("GLenum") int pname, @NativeType("GLint *") int[] data);
 
 }

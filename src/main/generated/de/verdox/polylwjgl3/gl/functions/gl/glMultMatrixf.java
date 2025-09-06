@@ -25,13 +25,13 @@ public interface glMultMatrixf {
  *
  * @see <a href="https://docs.gl/gl3/glMultMatrixf">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glMultMatrixf(FloatBuffer m);
+    public void glMultMatrixf(@NativeType("GLfloat const *") FloatBuffer m);
 
 /**
  * Array version of: {@link #glMultMatrixf MultMatrixf}
  *
  * @see <a href="https://docs.gl/gl3/glMultMatrixf">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glMultMatrixf(float[] m);
+    public void glMultMatrixf(@NativeType("GLfloat const *") float[] m);
 
 }

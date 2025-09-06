@@ -25,7 +25,8 @@ public interface glGetFragDataIndex {
  *
  * @see <a href="https://docs.gl/gl4/glGetFragDataIndex">Reference Page</a>
  */
-    public int glGetFragDataIndex(int program, ByteBuffer name);
+@NativeType("GLint")
+    public int glGetFragDataIndex(@NativeType("GLuint") int program, @NativeType("GLchar const *") ByteBuffer name);
 
 /**
  * Queries the bindings of color indices to user-defined varying out variables.
@@ -35,6 +36,7 @@ public interface glGetFragDataIndex {
  *
  * @see <a href="https://docs.gl/gl4/glGetFragDataIndex">Reference Page</a>
  */
-    public int glGetFragDataIndex(int program, CharSequence name);
+@NativeType("GLint")
+    public int glGetFragDataIndex(@NativeType("GLuint") int program, @NativeType("GLchar const *") CharSequence name);
 
 }

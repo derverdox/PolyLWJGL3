@@ -25,13 +25,13 @@ public interface glVertex3sv {
  *
  * @see <a href="https://docs.gl/gl3/glVertex">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glVertex3sv(ShortBuffer coords);
+    public void glVertex3sv(@NativeType("GLshort const *") ShortBuffer coords);
 
 /**
  * Array version of: {@link #glVertex3sv Vertex3sv}
  *
  * @see <a href="https://docs.gl/gl3/glVertex">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glVertex3sv(short[] coords);
+    public void glVertex3sv(@NativeType("GLshort const *") short[] coords);
 
 }

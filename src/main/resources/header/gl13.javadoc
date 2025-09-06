@@ -1,0 +1,48 @@
+/**
+ * OpenGL 1.3 Accessor — Compressed textures, multitexturing, and transpose matrices.
+ *
+ * <p>Extends {@link GL12Accessor} with new capabilities for texture compression,
+ * multiple texture units, and improved matrix handling.</p>
+ *
+ * <h2>Compressed Textures</h2>
+ * <ul>
+ *   <li>{@code glCompressedTexImage1D / 2D / 3D} —
+ *       Define a 1D, 2D, or 3D texture image using a compressed format (e.g., S3TC/DXTn).</li>
+ *   <li>{@code glCompressedTexSubImage1D / 2D / 3D} —
+ *       Replace a portion of an existing compressed texture image with new compressed data.</li>
+ *   <li>{@code glGetCompressedTexImage} —
+ *       Retrieve compressed texture image data from GPU memory back to client memory.</li>
+ * </ul>
+ *
+ * <h2>Multitexturing</h2>
+ * <ul>
+ *   <li>{@code glActiveTexture} — Selects the active texture unit for subsequent texture state calls.</li>
+ *   <li>{@code glClientActiveTexture} — Selects the client texture unit for vertex array specification.</li>
+ *   <li>{@code glMultiTexCoord1/2/3/4*} — Directly supply texture coordinates for a specified texture unit
+ *       (supports all scalar types: float, double, int, short, etc. and vector variants).</li>
+ * </ul>
+ *
+ * <h2>Matrix Operations</h2>
+ * <ul>
+ *   <li>{@code glLoadTransposeMatrixf / glLoadTransposeMatrixd} —
+ *       Load a row-major matrix (transposed) directly into the current matrix stack.</li>
+ *   <li>{@code glMultTransposeMatrixf / glMultTransposeMatrixd} —
+ *       Multiply the current matrix with a transposed (row-major) matrix.</li>
+ * </ul>
+ *
+ * <h2>Antialiasing Control</h2>
+ * <ul>
+ *   <li>{@code glSampleCoverage} — Define multisample coverage parameters,
+ *       controlling how samples are weighted for antialiasing.</li>
+ * </ul>
+ *
+ * <h3>Notes</h3>
+ * <ul>
+ *   <li>Compressed textures reduce memory bandwidth and storage requirements;
+ *       formats are implementation-dependent but can be queried via {@code glGet}.</li>
+ *   <li>Multitexture coordinates allow combining multiple textures in a single draw call,
+ *       enabling effects such as light mapping and detail texturing.</li>
+ *   <li>Transpose matrix functions simplify integration with libraries that store matrices
+ *       in row-major order (e.g., DirectX, certain math libraries).</li>
+ * </ul>
+ */

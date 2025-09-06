@@ -21,23 +21,25 @@ public interface glGetTransformFeedbackVarying {
 /**
  * <a href="https://docs.gl/es3/glGetTransformFeedbackVarying">Reference Page</a>
  */
-    public void glGetTransformFeedbackVarying(int program, int index, @Nullable IntBuffer length, IntBuffer size, IntBuffer type, ByteBuffer name);
+    public void glGetTransformFeedbackVarying(@NativeType("GLuint") int program, @NativeType("GLuint") int index, @Nullable @NativeType("GLsizei *") IntBuffer length, @NativeType("GLsizei *") IntBuffer size, @NativeType("GLenum *") IntBuffer type, @NativeType("GLchar *") ByteBuffer name);
 
 /**
  * <a href="https://docs.gl/es3/glGetTransformFeedbackVarying">Reference Page</a>
  */
-    public String glGetTransformFeedbackVarying(int program, int index, int bufSize, IntBuffer size, IntBuffer type);
+@NativeType("void")
+    public String glGetTransformFeedbackVarying(@NativeType("GLuint") int program, @NativeType("GLuint") int index, @NativeType("GLsizei") int bufSize, @NativeType("GLsizei *") IntBuffer size, @NativeType("GLenum *") IntBuffer type);
 
 /**
  * <a href="https://docs.gl/es3/glGetTransformFeedbackVarying">Reference Page</a>
  */
-    public String glGetTransformFeedbackVarying(int program, int index, IntBuffer size, IntBuffer type);
+@NativeType("void")
+    public String glGetTransformFeedbackVarying(@NativeType("GLuint") int program, @NativeType("GLuint") int index, @NativeType("GLsizei *") IntBuffer size, @NativeType("GLenum *") IntBuffer type);
 
 /**
  * Array version of: {@link #glGetTransformFeedbackVarying GetTransformFeedbackVarying}
  *
  * @see <a href="https://docs.gl/es3/glGetTransformFeedbackVarying">Reference Page</a>
  */
-    public void glGetTransformFeedbackVarying(int program, int index, @Nullable int[] length, int[] size, int[] type, ByteBuffer name);
+    public void glGetTransformFeedbackVarying(@NativeType("GLuint") int program, @NativeType("GLuint") int index, @Nullable @NativeType("GLsizei *") int[] length, @NativeType("GLsizei *") int[] size, @NativeType("GLenum *") int[] type, @NativeType("GLchar *") ByteBuffer name);
 
 }

@@ -21,6 +21,6 @@ public interface glDeleteSync {
 /**
  * <a href="https://docs.gl/es3/glDeleteSync">Reference Page</a>
  */
-    public void glDeleteSync(long sync);
+    public void glDeleteSync(@NativeType("GLsync") long sync);
 
 }

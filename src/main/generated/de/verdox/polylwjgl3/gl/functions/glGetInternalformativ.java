@@ -21,13 +21,13 @@ public interface glGetInternalformativ {
 /**
  * <a href="https://docs.gl/es3/glGetInternalformat">Reference Page</a>
  */
-    public void glGetInternalformativ(int target, int internalformat, int pname, IntBuffer params);
+    public void glGetInternalformativ(@NativeType("GLenum") int target, @NativeType("GLenum") int internalformat, @NativeType("GLenum") int pname, @NativeType("GLint *") IntBuffer params);
 
 /**
  * Array version of: {@link #glGetInternalformativ GetInternalformativ}
  *
  * @see <a href="https://docs.gl/es3/glGetInternalformat">Reference Page</a>
  */
-    public void glGetInternalformativ(int target, int internalformat, int pname, int[] params);
+    public void glGetInternalformativ(@NativeType("GLenum") int target, @NativeType("GLenum") int internalformat, @NativeType("GLenum") int pname, @NativeType("GLint *") int[] params);
 
 }

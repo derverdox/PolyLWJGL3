@@ -25,13 +25,13 @@ public interface glWindowPos2dv {
  *
  * @see <a href="https://docs.gl/gl3/glWindowPos">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glWindowPos2dv(DoubleBuffer p);
+    public void glWindowPos2dv(@NativeType("GLdouble const *") DoubleBuffer p);
 
 /**
  * Array version of: {@link #glWindowPos2dv WindowPos2dv}
  *
  * @see <a href="https://docs.gl/gl3/glWindowPos">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glWindowPos2dv(double[] p);
+    public void glWindowPos2dv(@NativeType("GLdouble const *") double[] p);
 
 }

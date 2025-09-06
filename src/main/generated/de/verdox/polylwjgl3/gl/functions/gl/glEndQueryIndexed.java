@@ -18,6 +18,6 @@ public interface glEndQueryIndexed {
  *
  * @see <a href="https://docs.gl/gl4/glEndQueryIndexed">Reference Page</a>
  */
-    public void glEndQueryIndexed(int target, int index);
+    public void glEndQueryIndexed(@NativeType("GLenum") int target, @NativeType("GLuint") int index);
 
 }

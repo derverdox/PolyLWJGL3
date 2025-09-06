@@ -20,6 +20,6 @@ public interface glDrawArraysInstancedBaseInstance {
  *
  * @see <a href="https://docs.gl/gl4/glDrawArraysInstancedBaseInstance">Reference Page</a>
  */
-    public void glDrawArraysInstancedBaseInstance(int mode, int first, int count, int primcount, int baseinstance);
+    public void glDrawArraysInstancedBaseInstance(@NativeType("GLenum") int mode, @NativeType("GLint") int first, @NativeType("GLsizei") int count, @NativeType("GLsizei") int primcount, @NativeType("GLuint") int baseinstance);
 
 }

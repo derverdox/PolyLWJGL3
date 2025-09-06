@@ -24,6 +24,6 @@ public interface glInvalidateTexSubImage {
  *
  * @see <a href="https://docs.gl/gl4/glInvalidateTexSubImage">Reference Page</a>
  */
-    public void glInvalidateTexSubImage(int texture, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth);
+    public void glInvalidateTexSubImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int yoffset, @NativeType("GLint") int zoffset, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLsizei") int depth);
 
 }

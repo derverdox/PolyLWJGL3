@@ -20,11 +20,12 @@ public interface glGenProgramPipelines {
 /**
  * <a href="https://docs.gl/es3/glGenProgramPipelines">Reference Page</a>
  */
-    public void glGenProgramPipelines(IntBuffer pipelines);
+    public void glGenProgramPipelines(@NativeType("GLuint *") IntBuffer pipelines);
 
 /**
  * <a href="https://docs.gl/es3/glGenProgramPipelines">Reference Page</a>
  */
+@NativeType("void")
     public int glGenProgramPipelines();
 
 /**
@@ -32,6 +33,6 @@ public interface glGenProgramPipelines {
  *
  * @see <a href="https://docs.gl/es3/glGenProgramPipelines">Reference Page</a>
  */
-    public void glGenProgramPipelines(int[] pipelines);
+    public void glGenProgramPipelines(@NativeType("GLuint *") int[] pipelines);
 
 }

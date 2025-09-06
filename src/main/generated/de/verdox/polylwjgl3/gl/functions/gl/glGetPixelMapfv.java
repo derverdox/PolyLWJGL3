@@ -26,7 +26,7 @@ public interface glGetPixelMapfv {
  *
  * @see <a href="https://docs.gl/gl3/glGetPixelMap">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glGetPixelMapfv(int map, FloatBuffer data);
+    public void glGetPixelMapfv(@NativeType("GLenum") int map, @NativeType("GLfloat *") FloatBuffer data);
 
 /**
  * Returns all float values in the pixel map {@code map} in {@code data}.
@@ -36,13 +36,13 @@ public interface glGetPixelMapfv {
  *
  * @see <a href="https://docs.gl/gl3/glGetPixelMap">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glGetPixelMapfv(int map, long data);
+    public void glGetPixelMapfv(@NativeType("GLenum") int map, @NativeType("GLfloat *") long data);
 
 /**
  * Array version of: {@link #glGetPixelMapfv GetPixelMapfv}
  *
  * @see <a href="https://docs.gl/gl3/glGetPixelMap">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glGetPixelMapfv(int map, float[] data);
+    public void glGetPixelMapfv(@NativeType("GLenum") int map, @NativeType("GLfloat *") float[] data);
 
 }

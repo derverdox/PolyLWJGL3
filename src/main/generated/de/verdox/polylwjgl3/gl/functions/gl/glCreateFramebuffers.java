@@ -29,13 +29,14 @@ public interface glCreateFramebuffers {
  *
  * @see <a href="https://docs.gl/gl4/glCreateFramebuffers">Reference Page</a>
  */
-    public void glCreateFramebuffers(IntBuffer framebuffers);
+    public void glCreateFramebuffers(@NativeType("GLuint *") IntBuffer framebuffers);
 
 /**
  * Returns {@code n} previously unused framebuffer names in {@code framebuffers}, each representing a new framebuffer object.
  *
  * @see <a href="https://docs.gl/gl4/glCreateFramebuffers">Reference Page</a>
  */
+@NativeType("void")
     public int glCreateFramebuffers();
 
 /**
@@ -43,6 +44,6 @@ public interface glCreateFramebuffers {
  *
  * @see <a href="https://docs.gl/gl4/glCreateFramebuffers">Reference Page</a>
  */
-    public void glCreateFramebuffers(int[] framebuffers);
+    public void glCreateFramebuffers(@NativeType("GLuint *") int[] framebuffers);
 
 }

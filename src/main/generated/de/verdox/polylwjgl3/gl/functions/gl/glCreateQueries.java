@@ -30,7 +30,7 @@ public interface glCreateQueries {
  *
  * @see <a href="https://docs.gl/gl4/glCreateQueries">Reference Page</a>
  */
-    public void glCreateQueries(int target, IntBuffer ids);
+    public void glCreateQueries(@NativeType("GLenum") int target, @NativeType("GLuint *") IntBuffer ids);
 
 /**
  * Returns {@code n} previously unused query object names in {@code ids}, each representing a new query object with the specified {@code target}.
@@ -39,13 +39,14 @@ public interface glCreateQueries {
  *
  * @see <a href="https://docs.gl/gl4/glCreateQueries">Reference Page</a>
  */
-    public int glCreateQueries(int target);
+@NativeType("void")
+    public int glCreateQueries(@NativeType("GLenum") int target);
 
 /**
  * Array version of: {@link #glCreateQueries CreateQueries}
  *
  * @see <a href="https://docs.gl/gl4/glCreateQueries">Reference Page</a>
  */
-    public void glCreateQueries(int target, int[] ids);
+    public void glCreateQueries(@NativeType("GLenum") int target, @NativeType("GLuint *") int[] ids);
 
 }

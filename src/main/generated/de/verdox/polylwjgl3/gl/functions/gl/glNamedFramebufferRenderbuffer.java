@@ -25,6 +25,6 @@ public interface glNamedFramebufferRenderbuffer {
  *
  * @see <a href="https://docs.gl/gl4/glFramebufferRenderbuffer">Reference Page</a>
  */
-    public void glNamedFramebufferRenderbuffer(int framebuffer, int attachment, int renderbuffertarget, int renderbuffer);
+    public void glNamedFramebufferRenderbuffer(@NativeType("GLuint") int framebuffer, @NativeType("GLenum") int attachment, @NativeType("GLenum") int renderbuffertarget, @NativeType("GLuint") int renderbuffer);
 
 }

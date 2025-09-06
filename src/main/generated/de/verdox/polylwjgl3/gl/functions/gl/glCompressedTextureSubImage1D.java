@@ -35,7 +35,7 @@ public interface glCompressedTextureSubImage1D {
  *
  * @see <a href="https://docs.gl/gl4/glCompressedTextureSubImage1D">Reference Page</a>
  */
-    public void glCompressedTextureSubImage1D(int texture, int level, int xoffset, int width, int format, int imageSize, long data);
+    public void glCompressedTextureSubImage1D(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLsizei") int width, @NativeType("GLenum") int format, @NativeType("GLsizei") int imageSize, @NativeType("void const *") long data);
 
 /**
  * DSA version of {@link GL13C#glCompressedTexSubImage1D CompressedTexSubImage1D}.
@@ -49,6 +49,6 @@ public interface glCompressedTextureSubImage1D {
  *
  * @see <a href="https://docs.gl/gl4/glCompressedTextureSubImage1D">Reference Page</a>
  */
-    public void glCompressedTextureSubImage1D(int texture, int level, int xoffset, int width, int format, ByteBuffer data);
+    public void glCompressedTextureSubImage1D(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLsizei") int width, @NativeType("GLenum") int format, @NativeType("void const *") ByteBuffer data);
 
 }

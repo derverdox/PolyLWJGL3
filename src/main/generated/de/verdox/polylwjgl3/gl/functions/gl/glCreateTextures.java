@@ -30,7 +30,7 @@ public interface glCreateTextures {
  *
  * @see <a href="https://docs.gl/gl4/glCreateTextures">Reference Page</a>
  */
-    public void glCreateTextures(int target, IntBuffer textures);
+    public void glCreateTextures(@NativeType("GLenum") int target, @NativeType("GLuint *") IntBuffer textures);
 
 /**
  * Returns {@code n} previously unused texture names in {@code textures}, each representing a new texture object.
@@ -39,13 +39,14 @@ public interface glCreateTextures {
  *
  * @see <a href="https://docs.gl/gl4/glCreateTextures">Reference Page</a>
  */
-    public int glCreateTextures(int target);
+@NativeType("void")
+    public int glCreateTextures(@NativeType("GLenum") int target);
 
 /**
  * Array version of: {@link #glCreateTextures CreateTextures}
  *
  * @see <a href="https://docs.gl/gl4/glCreateTextures">Reference Page</a>
  */
-    public void glCreateTextures(int target, int[] textures);
+    public void glCreateTextures(@NativeType("GLenum") int target, @NativeType("GLuint *") int[] textures);
 
 }

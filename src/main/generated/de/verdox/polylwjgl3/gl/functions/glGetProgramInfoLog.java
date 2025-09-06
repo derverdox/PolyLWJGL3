@@ -18,23 +18,25 @@ public interface glGetProgramInfoLog {
 /**
  * <a href="https://docs.gl/es3/glGetProgramInfoLog">Reference Page</a>
  */
-    public void glGetProgramInfoLog(int program, @Nullable IntBuffer length, ByteBuffer infoLog);
+    public void glGetProgramInfoLog(@NativeType("GLuint") int program, @Nullable @NativeType("GLsizei *") IntBuffer length, @NativeType("GLchar *") ByteBuffer infoLog);
 
 /**
  * <a href="https://docs.gl/es3/glGetProgramInfoLog">Reference Page</a>
  */
-    public String glGetProgramInfoLog(int program, int bufSize);
+@NativeType("void")
+    public String glGetProgramInfoLog(@NativeType("GLuint") int program, @NativeType("GLsizei") int bufSize);
 
 /**
  * <a href="https://docs.gl/es3/glGetProgramInfoLog">Reference Page</a>
  */
-    public String glGetProgramInfoLog(int program);
+@NativeType("void")
+    public String glGetProgramInfoLog(@NativeType("GLuint") int program);
 
 /**
  * Array version of: {@link #glGetProgramInfoLog GetProgramInfoLog}
  *
  * @see <a href="https://docs.gl/es3/glGetProgramInfoLog">Reference Page</a>
  */
-    public void glGetProgramInfoLog(int program, @Nullable int[] length, ByteBuffer infoLog);
+    public void glGetProgramInfoLog(@NativeType("GLuint") int program, @Nullable @NativeType("GLsizei *") int[] length, @NativeType("GLchar *") ByteBuffer infoLog);
 
 }

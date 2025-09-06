@@ -16,6 +16,7 @@ public interface glGetFramebufferAttachmentParameteri {
 /**
  * <a href="https://docs.gl/es3/glGetFramebufferAttachmentParameter">Reference Page</a>
  */
-    public int glGetFramebufferAttachmentParameteri(int target, int attachment, int pname);
+@NativeType("void")
+    public int glGetFramebufferAttachmentParameteri(@NativeType("GLenum") int target, @NativeType("GLenum") int attachment, @NativeType("GLenum") int pname);
 
 }

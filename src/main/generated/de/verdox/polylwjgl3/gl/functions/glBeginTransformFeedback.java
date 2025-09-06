@@ -19,6 +19,6 @@ public interface glBeginTransformFeedback {
 /**
  * <a href="https://docs.gl/es3/glBeginTransformFeedback">Reference Page</a>
  */
-    public void glBeginTransformFeedback(int primitiveMode);
+    public void glBeginTransformFeedback(@NativeType("GLenum") int primitiveMode);
 
 }

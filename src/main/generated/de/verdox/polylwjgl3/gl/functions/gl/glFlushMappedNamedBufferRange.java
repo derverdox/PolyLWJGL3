@@ -24,6 +24,6 @@ public interface glFlushMappedNamedBufferRange {
  *
  * @see <a href="https://docs.gl/gl4/glFlushMappedBufferRange">Reference Page</a>
  */
-    public void glFlushMappedNamedBufferRange(int buffer, long offset, long length);
+    public void glFlushMappedNamedBufferRange(@NativeType("GLuint") int buffer, @NativeType("GLintptr") long offset, @NativeType("GLsizeiptr") long length);
 
 }

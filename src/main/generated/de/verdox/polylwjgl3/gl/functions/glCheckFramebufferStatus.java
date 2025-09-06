@@ -16,6 +16,7 @@ public interface glCheckFramebufferStatus {
 /**
  * <a href="https://docs.gl/es3/glCheckFramebufferStatus">Reference Page</a>
  */
-    public int glCheckFramebufferStatus(int target);
+@NativeType("GLenum")
+    public int glCheckFramebufferStatus(@NativeType("GLenum") int target);
 
 }

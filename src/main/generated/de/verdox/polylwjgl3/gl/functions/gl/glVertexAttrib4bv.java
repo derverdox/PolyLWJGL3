@@ -24,6 +24,6 @@ public interface glVertexAttrib4bv {
  *
  * @see <a href="https://docs.gl/gl4/glVertexAttrib">Reference Page</a>
  */
-    public void glVertexAttrib4bv(int index, ByteBuffer v);
+    public void glVertexAttrib4bv(@NativeType("GLuint") int index, @NativeType("GLbyte const *") ByteBuffer v);
 
 }

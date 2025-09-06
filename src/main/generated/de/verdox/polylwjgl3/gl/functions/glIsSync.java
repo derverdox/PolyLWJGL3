@@ -21,6 +21,7 @@ public interface glIsSync {
 /**
  * <a href="https://docs.gl/es3/glIsSync">Reference Page</a>
  */
-    public boolean glIsSync(long sync);
+@NativeType("GLboolean")
+    public boolean glIsSync(@NativeType("GLsync") long sync);
 
 }

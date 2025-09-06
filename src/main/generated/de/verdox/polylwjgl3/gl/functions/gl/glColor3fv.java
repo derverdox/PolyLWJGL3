@@ -25,13 +25,13 @@ public interface glColor3fv {
  *
  * @see <a href="https://docs.gl/gl3/glColor">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glColor3fv(FloatBuffer v);
+    public void glColor3fv(@NativeType("GLfloat const *") FloatBuffer v);
 
 /**
  * Array version of: {@link #glColor3fv Color3fv}
  *
  * @see <a href="https://docs.gl/gl3/glColor">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glColor3fv(float[] v);
+    public void glColor3fv(@NativeType("GLfloat const *") float[] v);
 
 }

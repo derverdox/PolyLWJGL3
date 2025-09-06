@@ -19,6 +19,7 @@ public interface glGetSamplerParameterf {
 /**
  * <a href="https://docs.gl/es3/glGetSamplerParameter">Reference Page</a>
  */
-    public float glGetSamplerParameterf(int sampler, int pname);
+@NativeType("void")
+    public float glGetSamplerParameterf(@NativeType("GLuint") int sampler, @NativeType("GLenum") int pname);
 
 }

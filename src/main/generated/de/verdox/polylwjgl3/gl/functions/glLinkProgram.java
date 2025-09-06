@@ -16,6 +16,6 @@ public interface glLinkProgram {
 /**
  * <a href="https://docs.gl/es3/glLinkProgram">Reference Page</a>
  */
-    public void glLinkProgram(int program);
+    public void glLinkProgram(@NativeType("GLuint") int program);
 
 }

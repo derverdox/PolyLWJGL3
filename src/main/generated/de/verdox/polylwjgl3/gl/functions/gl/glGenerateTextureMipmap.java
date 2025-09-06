@@ -22,6 +22,6 @@ public interface glGenerateTextureMipmap {
  *
  * @see <a href="https://docs.gl/gl4/glGenerateTextureMipmap">Reference Page</a>
  */
-    public void glGenerateTextureMipmap(int texture);
+    public void glGenerateTextureMipmap(@NativeType("GLuint") int texture);
 
 }

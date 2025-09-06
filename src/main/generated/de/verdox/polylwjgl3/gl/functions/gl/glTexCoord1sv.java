@@ -25,13 +25,13 @@ public interface glTexCoord1sv {
  *
  * @see <a href="https://docs.gl/gl3/glTexCoord">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glTexCoord1sv(ShortBuffer v);
+    public void glTexCoord1sv(@NativeType("GLshort const *") ShortBuffer v);
 
 /**
  * Array version of: {@link #glTexCoord1sv TexCoord1sv}
  *
  * @see <a href="https://docs.gl/gl3/glTexCoord">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glTexCoord1sv(short[] v);
+    public void glTexCoord1sv(@NativeType("GLshort const *") short[] v);
 
 }

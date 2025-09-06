@@ -13,11 +13,11 @@ import org.lwjgl.system.MemoryUtil.*;
 
 public class GLES20AccessorImpl implements GLES20Accessor {
 
-    @Override public void glActiveTexture(int texture) {
+    @Override public void glActiveTexture(@NativeType("GLenum") int texture) {
         org.lwjgl.opengles.GLES20.glActiveTexture(texture);
     }
 
-    @Override public void glAttachShader(int program, int shader) {
+    @Override public void glAttachShader(@NativeType("GLuint") int program, @NativeType("GLuint") int shader) {
         org.lwjgl.opengles.GLES20.glAttachShader(program, shader);
     }
 
@@ -25,47 +25,47 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglBindAttribLocation(program, index, name);
     }
 
-    @Override public void glBindAttribLocation(int program, int index, ByteBuffer name) {
+    @Override public void glBindAttribLocation(@NativeType("GLuint") int program, @NativeType("GLuint") int index, @NativeType("GLchar const *") ByteBuffer name) {
         org.lwjgl.opengles.GLES20.glBindAttribLocation(program, index, name);
     }
 
-    @Override public void glBindAttribLocation(int program, int index, CharSequence name) {
+    @Override public void glBindAttribLocation(@NativeType("GLuint") int program, @NativeType("GLuint") int index, @NativeType("GLchar const *") CharSequence name) {
         org.lwjgl.opengles.GLES20.glBindAttribLocation(program, index, name);
     }
 
-    @Override public void glBindBuffer(int target, int buffer) {
+    @Override public void glBindBuffer(@NativeType("GLenum") int target, @NativeType("GLuint") int buffer) {
         org.lwjgl.opengles.GLES20.glBindBuffer(target, buffer);
     }
 
-    @Override public void glBindFramebuffer(int target, int framebuffer) {
+    @Override public void glBindFramebuffer(@NativeType("GLenum") int target, @NativeType("GLuint") int framebuffer) {
         org.lwjgl.opengles.GLES20.glBindFramebuffer(target, framebuffer);
     }
 
-    @Override public void glBindRenderbuffer(int target, int renderbuffer) {
+    @Override public void glBindRenderbuffer(@NativeType("GLenum") int target, @NativeType("GLuint") int renderbuffer) {
         org.lwjgl.opengles.GLES20.glBindRenderbuffer(target, renderbuffer);
     }
 
-    @Override public void glBindTexture(int target, int texture) {
+    @Override public void glBindTexture(@NativeType("GLenum") int target, @NativeType("GLuint") int texture) {
         org.lwjgl.opengles.GLES20.glBindTexture(target, texture);
     }
 
-    @Override public void glBlendColor(float red, float green, float blue, float alpha) {
+    @Override public void glBlendColor(@NativeType("GLfloat") float red, @NativeType("GLfloat") float green, @NativeType("GLfloat") float blue, @NativeType("GLfloat") float alpha) {
         org.lwjgl.opengles.GLES20.glBlendColor(red, green, blue, alpha);
     }
 
-    @Override public void glBlendEquation(int mode) {
+    @Override public void glBlendEquation(@NativeType("GLenum") int mode) {
         org.lwjgl.opengles.GLES20.glBlendEquation(mode);
     }
 
-    @Override public void glBlendEquationSeparate(int modeRGB, int modeAlpha) {
+    @Override public void glBlendEquationSeparate(@NativeType("GLenum") int modeRGB, @NativeType("GLenum") int modeAlpha) {
         org.lwjgl.opengles.GLES20.glBlendEquationSeparate(modeRGB, modeAlpha);
     }
 
-    @Override public void glBlendFunc(int sfactor, int dfactor) {
+    @Override public void glBlendFunc(@NativeType("GLenum") int sfactor, @NativeType("GLenum") int dfactor) {
         org.lwjgl.opengles.GLES20.glBlendFunc(sfactor, dfactor);
     }
 
-    @Override public void glBlendFuncSeparate(int sfactorRGB, int dfactorRGB, int sfactorAlpha, int dfactorAlpha) {
+    @Override public void glBlendFuncSeparate(@NativeType("GLenum") int sfactorRGB, @NativeType("GLenum") int dfactorRGB, @NativeType("GLenum") int sfactorAlpha, @NativeType("GLenum") int dfactorAlpha) {
         org.lwjgl.opengles.GLES20.glBlendFuncSeparate(sfactorRGB, dfactorRGB, sfactorAlpha, dfactorAlpha);
     }
 
@@ -73,35 +73,35 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglBufferData(target, size, data, usage);
     }
 
-    @Override public void glBufferData(int target, long size, int usage) {
+    @Override public void glBufferData(@NativeType("GLenum") int target, @NativeType("GLsizeiptr") long size, @NativeType("GLenum") int usage) {
         org.lwjgl.opengles.GLES20.glBufferData(target, size, usage);
     }
 
-    @Override public void glBufferData(int target, ByteBuffer data, int usage) {
+    @Override public void glBufferData(@NativeType("GLenum") int target, @NativeType("void const *") ByteBuffer data, @NativeType("GLenum") int usage) {
         org.lwjgl.opengles.GLES20.glBufferData(target, data, usage);
     }
 
-    @Override public void glBufferData(int target, ShortBuffer data, int usage) {
+    @Override public void glBufferData(@NativeType("GLenum") int target, @NativeType("void const *") ShortBuffer data, @NativeType("GLenum") int usage) {
         org.lwjgl.opengles.GLES20.glBufferData(target, data, usage);
     }
 
-    @Override public void glBufferData(int target, IntBuffer data, int usage) {
+    @Override public void glBufferData(@NativeType("GLenum") int target, @NativeType("void const *") IntBuffer data, @NativeType("GLenum") int usage) {
         org.lwjgl.opengles.GLES20.glBufferData(target, data, usage);
     }
 
-    @Override public void glBufferData(int target, FloatBuffer data, int usage) {
+    @Override public void glBufferData(@NativeType("GLenum") int target, @NativeType("void const *") FloatBuffer data, @NativeType("GLenum") int usage) {
         org.lwjgl.opengles.GLES20.glBufferData(target, data, usage);
     }
 
-    @Override public void glBufferData(int target, short[] data, int usage) {
+    @Override public void glBufferData(@NativeType("GLenum") int target, @NativeType("void const *") short[] data, @NativeType("GLenum") int usage) {
         org.lwjgl.opengles.GLES20.glBufferData(target, data, usage);
     }
 
-    @Override public void glBufferData(int target, int[] data, int usage) {
+    @Override public void glBufferData(@NativeType("GLenum") int target, @NativeType("void const *") int[] data, @NativeType("GLenum") int usage) {
         org.lwjgl.opengles.GLES20.glBufferData(target, data, usage);
     }
 
-    @Override public void glBufferData(int target, float[] data, int usage) {
+    @Override public void glBufferData(@NativeType("GLenum") int target, @NativeType("void const *") float[] data, @NativeType("GLenum") int usage) {
         org.lwjgl.opengles.GLES20.glBufferData(target, data, usage);
     }
 
@@ -109,59 +109,60 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglBufferSubData(target, offset, size, data);
     }
 
-    @Override public void glBufferSubData(int target, long offset, ByteBuffer data) {
+    @Override public void glBufferSubData(@NativeType("GLenum") int target, @NativeType("GLintptr") long offset, @NativeType("void const *") ByteBuffer data) {
         org.lwjgl.opengles.GLES20.glBufferSubData(target, offset, data);
     }
 
-    @Override public void glBufferSubData(int target, long offset, ShortBuffer data) {
+    @Override public void glBufferSubData(@NativeType("GLenum") int target, @NativeType("GLintptr") long offset, @NativeType("void const *") ShortBuffer data) {
         org.lwjgl.opengles.GLES20.glBufferSubData(target, offset, data);
     }
 
-    @Override public void glBufferSubData(int target, long offset, IntBuffer data) {
+    @Override public void glBufferSubData(@NativeType("GLenum") int target, @NativeType("GLintptr") long offset, @NativeType("void const *") IntBuffer data) {
         org.lwjgl.opengles.GLES20.glBufferSubData(target, offset, data);
     }
 
-    @Override public void glBufferSubData(int target, long offset, FloatBuffer data) {
+    @Override public void glBufferSubData(@NativeType("GLenum") int target, @NativeType("GLintptr") long offset, @NativeType("void const *") FloatBuffer data) {
         org.lwjgl.opengles.GLES20.glBufferSubData(target, offset, data);
     }
 
-    @Override public void glBufferSubData(int target, long offset, short[] data) {
+    @Override public void glBufferSubData(@NativeType("GLenum") int target, @NativeType("GLintptr") long offset, @NativeType("void const *") short[] data) {
         org.lwjgl.opengles.GLES20.glBufferSubData(target, offset, data);
     }
 
-    @Override public void glBufferSubData(int target, long offset, int[] data) {
+    @Override public void glBufferSubData(@NativeType("GLenum") int target, @NativeType("GLintptr") long offset, @NativeType("void const *") int[] data) {
         org.lwjgl.opengles.GLES20.glBufferSubData(target, offset, data);
     }
 
-    @Override public void glBufferSubData(int target, long offset, float[] data) {
+    @Override public void glBufferSubData(@NativeType("GLenum") int target, @NativeType("GLintptr") long offset, @NativeType("void const *") float[] data) {
         org.lwjgl.opengles.GLES20.glBufferSubData(target, offset, data);
     }
 
-    @Override public int glCheckFramebufferStatus(int target) {
+@NativeType("GLenum")
+    @Override public int glCheckFramebufferStatus(@NativeType("GLenum") int target) {
         return org.lwjgl.opengles.GLES20.glCheckFramebufferStatus(target);
     }
 
-    @Override public void glClear(int mask) {
+    @Override public void glClear(@NativeType("GLbitfield") int mask) {
         org.lwjgl.opengles.GLES20.glClear(mask);
     }
 
-    @Override public void glClearColor(float red, float green, float blue, float alpha) {
+    @Override public void glClearColor(@NativeType("GLfloat") float red, @NativeType("GLfloat") float green, @NativeType("GLfloat") float blue, @NativeType("GLfloat") float alpha) {
         org.lwjgl.opengles.GLES20.glClearColor(red, green, blue, alpha);
     }
 
-    @Override public void glClearDepthf(float d) {
+    @Override public void glClearDepthf(@NativeType("GLfloat") float d) {
         org.lwjgl.opengles.GLES20.glClearDepthf(d);
     }
 
-    @Override public void glClearStencil(int s) {
+    @Override public void glClearStencil(@NativeType("GLint") int s) {
         org.lwjgl.opengles.GLES20.glClearStencil(s);
     }
 
-    @Override public void glColorMask(boolean red, boolean green, boolean blue, boolean alpha) {
+    @Override public void glColorMask(@NativeType("GLboolean") boolean red, @NativeType("GLboolean") boolean green, @NativeType("GLboolean") boolean blue, @NativeType("GLboolean") boolean alpha) {
         org.lwjgl.opengles.GLES20.glColorMask(red, green, blue, alpha);
     }
 
-    @Override public void glCompileShader(int shader) {
+    @Override public void glCompileShader(@NativeType("GLuint") int shader) {
         org.lwjgl.opengles.GLES20.glCompileShader(shader);
     }
 
@@ -169,11 +170,11 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglCompressedTexImage2D(target, level, internalformat, width, height, border, imageSize, data);
     }
 
-    @Override public void glCompressedTexImage2D(int target, int level, int internalformat, int width, int height, int border, int imageSize, long data) {
+    @Override public void glCompressedTexImage2D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLenum") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLint") int border, @NativeType("GLsizei") int imageSize, @NativeType("void const *") long data) {
         org.lwjgl.opengles.GLES20.glCompressedTexImage2D(target, level, internalformat, width, height, border, imageSize, data);
     }
 
-    @Override public void glCompressedTexImage2D(int target, int level, int internalformat, int width, int height, int border, @Nullable ByteBuffer data) {
+    @Override public void glCompressedTexImage2D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLenum") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLint") int border, @Nullable @NativeType("void const *") ByteBuffer data) {
         org.lwjgl.opengles.GLES20.glCompressedTexImage2D(target, level, internalformat, width, height, border, data);
     }
 
@@ -181,31 +182,33 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglCompressedTexSubImage2D(target, level, xoffset, yoffset, width, height, format, imageSize, data);
     }
 
-    @Override public void glCompressedTexSubImage2D(int target, int level, int xoffset, int yoffset, int width, int height, int format, int imageSize, long data) {
+    @Override public void glCompressedTexSubImage2D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int yoffset, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLsizei") int imageSize, @NativeType("void const *") long data) {
         org.lwjgl.opengles.GLES20.glCompressedTexSubImage2D(target, level, xoffset, yoffset, width, height, format, imageSize, data);
     }
 
-    @Override public void glCompressedTexSubImage2D(int target, int level, int xoffset, int yoffset, int width, int height, int format, ByteBuffer data) {
+    @Override public void glCompressedTexSubImage2D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int yoffset, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("void const *") ByteBuffer data) {
         org.lwjgl.opengles.GLES20.glCompressedTexSubImage2D(target, level, xoffset, yoffset, width, height, format, data);
     }
 
-    @Override public void glCopyTexImage2D(int target, int level, int internalformat, int x, int y, int width, int height, int border) {
+    @Override public void glCopyTexImage2D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLenum") int internalformat, @NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLint") int border) {
         org.lwjgl.opengles.GLES20.glCopyTexImage2D(target, level, internalformat, x, y, width, height, border);
     }
 
-    @Override public void glCopyTexSubImage2D(int target, int level, int xoffset, int yoffset, int x, int y, int width, int height) {
+    @Override public void glCopyTexSubImage2D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int yoffset, @NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height) {
         org.lwjgl.opengles.GLES20.glCopyTexSubImage2D(target, level, xoffset, yoffset, x, y, width, height);
     }
 
+@NativeType("GLuint")
     @Override public int glCreateProgram() {
         return org.lwjgl.opengles.GLES20.glCreateProgram();
     }
 
-    @Override public int glCreateShader(int type) {
+@NativeType("GLuint")
+    @Override public int glCreateShader(@NativeType("GLenum") int type) {
         return org.lwjgl.opengles.GLES20.glCreateShader(type);
     }
 
-    @Override public void glCullFace(int mode) {
+    @Override public void glCullFace(@NativeType("GLenum") int mode) {
         org.lwjgl.opengles.GLES20.glCullFace(mode);
     }
 
@@ -213,15 +216,15 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglDeleteBuffers(n, buffers);
     }
 
-    @Override public void glDeleteBuffers(IntBuffer buffers) {
+    @Override public void glDeleteBuffers(@NativeType("GLuint const *") IntBuffer buffers) {
         org.lwjgl.opengles.GLES20.glDeleteBuffers(buffers);
     }
 
-    @Override public void glDeleteBuffers(int buffer) {
+    @Override public void glDeleteBuffers(@NativeType("GLuint const *") int buffer) {
         org.lwjgl.opengles.GLES20.glDeleteBuffers(buffer);
     }
 
-    @Override public void glDeleteBuffers(int[] buffers) {
+    @Override public void glDeleteBuffers(@NativeType("GLuint const *") int[] buffers) {
         org.lwjgl.opengles.GLES20.glDeleteBuffers(buffers);
     }
 
@@ -229,19 +232,19 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglDeleteFramebuffers(n, framebuffers);
     }
 
-    @Override public void glDeleteFramebuffers(IntBuffer framebuffers) {
+    @Override public void glDeleteFramebuffers(@NativeType("GLuint const *") IntBuffer framebuffers) {
         org.lwjgl.opengles.GLES20.glDeleteFramebuffers(framebuffers);
     }
 
-    @Override public void glDeleteFramebuffers(int framebuffer) {
+    @Override public void glDeleteFramebuffers(@NativeType("GLuint const *") int framebuffer) {
         org.lwjgl.opengles.GLES20.glDeleteFramebuffers(framebuffer);
     }
 
-    @Override public void glDeleteFramebuffers(int[] framebuffers) {
+    @Override public void glDeleteFramebuffers(@NativeType("GLuint const *") int[] framebuffers) {
         org.lwjgl.opengles.GLES20.glDeleteFramebuffers(framebuffers);
     }
 
-    @Override public void glDeleteProgram(int program) {
+    @Override public void glDeleteProgram(@NativeType("GLuint") int program) {
         org.lwjgl.opengles.GLES20.glDeleteProgram(program);
     }
 
@@ -249,19 +252,19 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglDeleteRenderbuffers(n, renderbuffers);
     }
 
-    @Override public void glDeleteRenderbuffers(IntBuffer renderbuffers) {
+    @Override public void glDeleteRenderbuffers(@NativeType("GLuint const *") IntBuffer renderbuffers) {
         org.lwjgl.opengles.GLES20.glDeleteRenderbuffers(renderbuffers);
     }
 
-    @Override public void glDeleteRenderbuffers(int renderbuffer) {
+    @Override public void glDeleteRenderbuffers(@NativeType("GLuint const *") int renderbuffer) {
         org.lwjgl.opengles.GLES20.glDeleteRenderbuffers(renderbuffer);
     }
 
-    @Override public void glDeleteRenderbuffers(int[] renderbuffers) {
+    @Override public void glDeleteRenderbuffers(@NativeType("GLuint const *") int[] renderbuffers) {
         org.lwjgl.opengles.GLES20.glDeleteRenderbuffers(renderbuffers);
     }
 
-    @Override public void glDeleteShader(int shader) {
+    @Override public void glDeleteShader(@NativeType("GLuint") int shader) {
         org.lwjgl.opengles.GLES20.glDeleteShader(shader);
     }
 
@@ -269,43 +272,43 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglDeleteTextures(n, textures);
     }
 
-    @Override public void glDeleteTextures(IntBuffer textures) {
+    @Override public void glDeleteTextures(@NativeType("GLuint const *") IntBuffer textures) {
         org.lwjgl.opengles.GLES20.glDeleteTextures(textures);
     }
 
-    @Override public void glDeleteTextures(int texture) {
+    @Override public void glDeleteTextures(@NativeType("GLuint const *") int texture) {
         org.lwjgl.opengles.GLES20.glDeleteTextures(texture);
     }
 
-    @Override public void glDeleteTextures(int[] textures) {
+    @Override public void glDeleteTextures(@NativeType("GLuint const *") int[] textures) {
         org.lwjgl.opengles.GLES20.glDeleteTextures(textures);
     }
 
-    @Override public void glDepthFunc(int func) {
+    @Override public void glDepthFunc(@NativeType("GLenum") int func) {
         org.lwjgl.opengles.GLES20.glDepthFunc(func);
     }
 
-    @Override public void glDepthMask(boolean flag) {
+    @Override public void glDepthMask(@NativeType("GLboolean") boolean flag) {
         org.lwjgl.opengles.GLES20.glDepthMask(flag);
     }
 
-    @Override public void glDepthRangef(float n, float f) {
+    @Override public void glDepthRangef(@NativeType("GLfloat") float n, @NativeType("GLfloat") float f) {
         org.lwjgl.opengles.GLES20.glDepthRangef(n, f);
     }
 
-    @Override public void glDetachShader(int program, int shader) {
+    @Override public void glDetachShader(@NativeType("GLuint") int program, @NativeType("GLuint") int shader) {
         org.lwjgl.opengles.GLES20.glDetachShader(program, shader);
     }
 
-    @Override public void glDisable(int cap) {
+    @Override public void glDisable(@NativeType("GLenum") int cap) {
         org.lwjgl.opengles.GLES20.glDisable(cap);
     }
 
-    @Override public void glDisableVertexAttribArray(int index) {
+    @Override public void glDisableVertexAttribArray(@NativeType("GLuint") int index) {
         org.lwjgl.opengles.GLES20.glDisableVertexAttribArray(index);
     }
 
-    @Override public void glDrawArrays(int mode, int first, int count) {
+    @Override public void glDrawArrays(@NativeType("GLenum") int mode, @NativeType("GLint") int first, @NativeType("GLsizei") int count) {
         org.lwjgl.opengles.GLES20.glDrawArrays(mode, first, count);
     }
 
@@ -313,31 +316,31 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglDrawElements(mode, count, type, indices);
     }
 
-    @Override public void glDrawElements(int mode, int count, int type, long indices) {
+    @Override public void glDrawElements(@NativeType("GLenum") int mode, @NativeType("GLsizei") int count, @NativeType("GLenum") int type, @NativeType("void const *") long indices) {
         org.lwjgl.opengles.GLES20.glDrawElements(mode, count, type, indices);
     }
 
-    @Override public void glDrawElements(int mode, int type, ByteBuffer indices) {
+    @Override public void glDrawElements(@NativeType("GLenum") int mode, @NativeType("GLenum") int type, @NativeType("void const *") ByteBuffer indices) {
         org.lwjgl.opengles.GLES20.glDrawElements(mode, type, indices);
     }
 
-    @Override public void glDrawElements(int mode, ByteBuffer indices) {
+    @Override public void glDrawElements(@NativeType("GLenum") int mode, @NativeType("void const *") ByteBuffer indices) {
         org.lwjgl.opengles.GLES20.glDrawElements(mode, indices);
     }
 
-    @Override public void glDrawElements(int mode, ShortBuffer indices) {
+    @Override public void glDrawElements(@NativeType("GLenum") int mode, @NativeType("void const *") ShortBuffer indices) {
         org.lwjgl.opengles.GLES20.glDrawElements(mode, indices);
     }
 
-    @Override public void glDrawElements(int mode, IntBuffer indices) {
+    @Override public void glDrawElements(@NativeType("GLenum") int mode, @NativeType("void const *") IntBuffer indices) {
         org.lwjgl.opengles.GLES20.glDrawElements(mode, indices);
     }
 
-    @Override public void glEnable(int cap) {
+    @Override public void glEnable(@NativeType("GLenum") int cap) {
         org.lwjgl.opengles.GLES20.glEnable(cap);
     }
 
-    @Override public void glEnableVertexAttribArray(int index) {
+    @Override public void glEnableVertexAttribArray(@NativeType("GLuint") int index) {
         org.lwjgl.opengles.GLES20.glEnableVertexAttribArray(index);
     }
 
@@ -349,15 +352,15 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.glFlush();
     }
 
-    @Override public void glFramebufferRenderbuffer(int target, int attachment, int renderbuffertarget, int renderbuffer) {
+    @Override public void glFramebufferRenderbuffer(@NativeType("GLenum") int target, @NativeType("GLenum") int attachment, @NativeType("GLenum") int renderbuffertarget, @NativeType("GLuint") int renderbuffer) {
         org.lwjgl.opengles.GLES20.glFramebufferRenderbuffer(target, attachment, renderbuffertarget, renderbuffer);
     }
 
-    @Override public void glFramebufferTexture2D(int target, int attachment, int textarget, int texture, int level) {
+    @Override public void glFramebufferTexture2D(@NativeType("GLenum") int target, @NativeType("GLenum") int attachment, @NativeType("GLenum") int textarget, @NativeType("GLuint") int texture, @NativeType("GLint") int level) {
         org.lwjgl.opengles.GLES20.glFramebufferTexture2D(target, attachment, textarget, texture, level);
     }
 
-    @Override public void glFrontFace(int mode) {
+    @Override public void glFrontFace(@NativeType("GLenum") int mode) {
         org.lwjgl.opengles.GLES20.glFrontFace(mode);
     }
 
@@ -365,19 +368,20 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglGenBuffers(n, buffers);
     }
 
-    @Override public void glGenBuffers(IntBuffer buffers) {
+    @Override public void glGenBuffers(@NativeType("GLuint *") IntBuffer buffers) {
         org.lwjgl.opengles.GLES20.glGenBuffers(buffers);
     }
 
+@NativeType("void")
     @Override public int glGenBuffers() {
         return org.lwjgl.opengles.GLES20.glGenBuffers();
     }
 
-    @Override public void glGenBuffers(int[] buffers) {
+    @Override public void glGenBuffers(@NativeType("GLuint *") int[] buffers) {
         org.lwjgl.opengles.GLES20.glGenBuffers(buffers);
     }
 
-    @Override public void glGenerateMipmap(int target) {
+    @Override public void glGenerateMipmap(@NativeType("GLenum") int target) {
         org.lwjgl.opengles.GLES20.glGenerateMipmap(target);
     }
 
@@ -385,15 +389,16 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglGenFramebuffers(n, framebuffers);
     }
 
-    @Override public void glGenFramebuffers(IntBuffer framebuffers) {
+    @Override public void glGenFramebuffers(@NativeType("GLuint *") IntBuffer framebuffers) {
         org.lwjgl.opengles.GLES20.glGenFramebuffers(framebuffers);
     }
 
+@NativeType("void")
     @Override public int glGenFramebuffers() {
         return org.lwjgl.opengles.GLES20.glGenFramebuffers();
     }
 
-    @Override public void glGenFramebuffers(int[] framebuffers) {
+    @Override public void glGenFramebuffers(@NativeType("GLuint *") int[] framebuffers) {
         org.lwjgl.opengles.GLES20.glGenFramebuffers(framebuffers);
     }
 
@@ -401,15 +406,16 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglGenRenderbuffers(n, renderbuffers);
     }
 
-    @Override public void glGenRenderbuffers(IntBuffer renderbuffers) {
+    @Override public void glGenRenderbuffers(@NativeType("GLuint *") IntBuffer renderbuffers) {
         org.lwjgl.opengles.GLES20.glGenRenderbuffers(renderbuffers);
     }
 
+@NativeType("void")
     @Override public int glGenRenderbuffers() {
         return org.lwjgl.opengles.GLES20.glGenRenderbuffers();
     }
 
-    @Override public void glGenRenderbuffers(int[] renderbuffers) {
+    @Override public void glGenRenderbuffers(@NativeType("GLuint *") int[] renderbuffers) {
         org.lwjgl.opengles.GLES20.glGenRenderbuffers(renderbuffers);
     }
 
@@ -417,15 +423,16 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglGenTextures(n, textures);
     }
 
-    @Override public void glGenTextures(IntBuffer textures) {
+    @Override public void glGenTextures(@NativeType("GLuint *") IntBuffer textures) {
         org.lwjgl.opengles.GLES20.glGenTextures(textures);
     }
 
+@NativeType("void")
     @Override public int glGenTextures() {
         return org.lwjgl.opengles.GLES20.glGenTextures();
     }
 
-    @Override public void glGenTextures(int[] textures) {
+    @Override public void glGenTextures(@NativeType("GLuint *") int[] textures) {
         org.lwjgl.opengles.GLES20.glGenTextures(textures);
     }
 
@@ -433,19 +440,21 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglGetActiveAttrib(program, index, bufSize, length, size, type, name);
     }
 
-    @Override public void glGetActiveAttrib(int program, int index, @Nullable IntBuffer length, IntBuffer size, IntBuffer type, ByteBuffer name) {
+    @Override public void glGetActiveAttrib(@NativeType("GLuint") int program, @NativeType("GLuint") int index, @Nullable @NativeType("GLsizei *") IntBuffer length, @NativeType("GLint *") IntBuffer size, @NativeType("GLenum *") IntBuffer type, @NativeType("GLchar *") ByteBuffer name) {
         org.lwjgl.opengles.GLES20.glGetActiveAttrib(program, index, length, size, type, name);
     }
 
-    @Override public String glGetActiveAttrib(int program, int index, int bufSize, IntBuffer size, IntBuffer type) {
+@NativeType("void")
+    @Override public String glGetActiveAttrib(@NativeType("GLuint") int program, @NativeType("GLuint") int index, @NativeType("GLsizei") int bufSize, @NativeType("GLint *") IntBuffer size, @NativeType("GLenum *") IntBuffer type) {
         return org.lwjgl.opengles.GLES20.glGetActiveAttrib(program, index, bufSize, size, type);
     }
 
-    @Override public String glGetActiveAttrib(int program, int index, IntBuffer size, IntBuffer type) {
+@NativeType("void")
+    @Override public String glGetActiveAttrib(@NativeType("GLuint") int program, @NativeType("GLuint") int index, @NativeType("GLint *") IntBuffer size, @NativeType("GLenum *") IntBuffer type) {
         return org.lwjgl.opengles.GLES20.glGetActiveAttrib(program, index, size, type);
     }
 
-    @Override public void glGetActiveAttrib(int program, int index, @Nullable int[] length, int[] size, int[] type, ByteBuffer name) {
+    @Override public void glGetActiveAttrib(@NativeType("GLuint") int program, @NativeType("GLuint") int index, @Nullable @NativeType("GLsizei *") int[] length, @NativeType("GLint *") int[] size, @NativeType("GLenum *") int[] type, @NativeType("GLchar *") ByteBuffer name) {
         org.lwjgl.opengles.GLES20.glGetActiveAttrib(program, index, length, size, type, name);
     }
 
@@ -453,19 +462,21 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglGetActiveUniform(program, index, bufSize, length, size, type, name);
     }
 
-    @Override public void glGetActiveUniform(int program, int index, @Nullable IntBuffer length, IntBuffer size, IntBuffer type, ByteBuffer name) {
+    @Override public void glGetActiveUniform(@NativeType("GLuint") int program, @NativeType("GLuint") int index, @Nullable @NativeType("GLsizei *") IntBuffer length, @NativeType("GLint *") IntBuffer size, @NativeType("GLenum *") IntBuffer type, @NativeType("GLchar *") ByteBuffer name) {
         org.lwjgl.opengles.GLES20.glGetActiveUniform(program, index, length, size, type, name);
     }
 
-    @Override public String glGetActiveUniform(int program, int index, int bufSize, IntBuffer size, IntBuffer type) {
+@NativeType("void")
+    @Override public String glGetActiveUniform(@NativeType("GLuint") int program, @NativeType("GLuint") int index, @NativeType("GLsizei") int bufSize, @NativeType("GLint *") IntBuffer size, @NativeType("GLenum *") IntBuffer type) {
         return org.lwjgl.opengles.GLES20.glGetActiveUniform(program, index, bufSize, size, type);
     }
 
-    @Override public String glGetActiveUniform(int program, int index, IntBuffer size, IntBuffer type) {
+@NativeType("void")
+    @Override public String glGetActiveUniform(@NativeType("GLuint") int program, @NativeType("GLuint") int index, @NativeType("GLint *") IntBuffer size, @NativeType("GLenum *") IntBuffer type) {
         return org.lwjgl.opengles.GLES20.glGetActiveUniform(program, index, size, type);
     }
 
-    @Override public void glGetActiveUniform(int program, int index, @Nullable int[] length, int[] size, int[] type, ByteBuffer name) {
+    @Override public void glGetActiveUniform(@NativeType("GLuint") int program, @NativeType("GLuint") int index, @Nullable @NativeType("GLsizei *") int[] length, @NativeType("GLint *") int[] size, @NativeType("GLenum *") int[] type, @NativeType("GLchar *") ByteBuffer name) {
         org.lwjgl.opengles.GLES20.glGetActiveUniform(program, index, length, size, type, name);
     }
 
@@ -473,11 +484,11 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglGetAttachedShaders(program, maxCount, count, shaders);
     }
 
-    @Override public void glGetAttachedShaders(int program, @Nullable IntBuffer count, IntBuffer shaders) {
+    @Override public void glGetAttachedShaders(@NativeType("GLuint") int program, @Nullable @NativeType("GLsizei *") IntBuffer count, @NativeType("GLuint *") IntBuffer shaders) {
         org.lwjgl.opengles.GLES20.glGetAttachedShaders(program, count, shaders);
     }
 
-    @Override public void glGetAttachedShaders(int program, @Nullable int[] count, int[] shaders) {
+    @Override public void glGetAttachedShaders(@NativeType("GLuint") int program, @Nullable @NativeType("GLsizei *") int[] count, @NativeType("GLuint *") int[] shaders) {
         org.lwjgl.opengles.GLES20.glGetAttachedShaders(program, count, shaders);
     }
 
@@ -485,11 +496,13 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         return org.lwjgl.opengles.GLES20.nglGetAttribLocation(program, name);
     }
 
-    @Override public int glGetAttribLocation(int program, ByteBuffer name) {
+@NativeType("GLint")
+    @Override public int glGetAttribLocation(@NativeType("GLuint") int program, @NativeType("GLchar const *") ByteBuffer name) {
         return org.lwjgl.opengles.GLES20.glGetAttribLocation(program, name);
     }
 
-    @Override public int glGetAttribLocation(int program, CharSequence name) {
+@NativeType("GLint")
+    @Override public int glGetAttribLocation(@NativeType("GLuint") int program, @NativeType("GLchar const *") CharSequence name) {
         return org.lwjgl.opengles.GLES20.glGetAttribLocation(program, name);
     }
 
@@ -497,11 +510,12 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglGetBooleanv(pname, data);
     }
 
-    @Override public void glGetBooleanv(int pname, ByteBuffer data) {
+    @Override public void glGetBooleanv(@NativeType("GLenum") int pname, @NativeType("GLboolean *") ByteBuffer data) {
         org.lwjgl.opengles.GLES20.glGetBooleanv(pname, data);
     }
 
-    @Override public boolean glGetBoolean(int pname) {
+@NativeType("void")
+    @Override public boolean glGetBoolean(@NativeType("GLenum") int pname) {
         return org.lwjgl.opengles.GLES20.glGetBoolean(pname);
     }
 
@@ -509,18 +523,20 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglGetBufferParameteriv(target, pname, params);
     }
 
-    @Override public void glGetBufferParameteriv(int target, int pname, IntBuffer params) {
+    @Override public void glGetBufferParameteriv(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLint *") IntBuffer params) {
         org.lwjgl.opengles.GLES20.glGetBufferParameteriv(target, pname, params);
     }
 
-    @Override public void glGetBufferParameteriv(int target, int pname, int[] params) {
+    @Override public void glGetBufferParameteriv(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLint *") int[] params) {
         org.lwjgl.opengles.GLES20.glGetBufferParameteriv(target, pname, params);
     }
 
-    @Override public int glGetBufferParameteri(int target, int pname) {
+@NativeType("void")
+    @Override public int glGetBufferParameteri(@NativeType("GLenum") int target, @NativeType("GLenum") int pname) {
         return org.lwjgl.opengles.GLES20.glGetBufferParameteri(target, pname);
     }
 
+@NativeType("GLenum")
     @Override public int glGetError() {
         return org.lwjgl.opengles.GLES20.glGetError();
     }
@@ -529,15 +545,16 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglGetFloatv(pname, data);
     }
 
-    @Override public void glGetFloatv(int pname, FloatBuffer data) {
+    @Override public void glGetFloatv(@NativeType("GLenum") int pname, @NativeType("GLfloat *") FloatBuffer data) {
         org.lwjgl.opengles.GLES20.glGetFloatv(pname, data);
     }
 
-    @Override public void glGetFloatv(int pname, float[] data) {
+    @Override public void glGetFloatv(@NativeType("GLenum") int pname, @NativeType("GLfloat *") float[] data) {
         org.lwjgl.opengles.GLES20.glGetFloatv(pname, data);
     }
 
-    @Override public float glGetFloat(int pname) {
+@NativeType("void")
+    @Override public float glGetFloat(@NativeType("GLenum") int pname) {
         return org.lwjgl.opengles.GLES20.glGetFloat(pname);
     }
 
@@ -545,15 +562,16 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglGetFramebufferAttachmentParameteriv(target, attachment, pname, params);
     }
 
-    @Override public void glGetFramebufferAttachmentParameteriv(int target, int attachment, int pname, IntBuffer params) {
+    @Override public void glGetFramebufferAttachmentParameteriv(@NativeType("GLenum") int target, @NativeType("GLenum") int attachment, @NativeType("GLenum") int pname, @NativeType("GLint *") IntBuffer params) {
         org.lwjgl.opengles.GLES20.glGetFramebufferAttachmentParameteriv(target, attachment, pname, params);
     }
 
-    @Override public void glGetFramebufferAttachmentParameteriv(int target, int attachment, int pname, int[] params) {
+    @Override public void glGetFramebufferAttachmentParameteriv(@NativeType("GLenum") int target, @NativeType("GLenum") int attachment, @NativeType("GLenum") int pname, @NativeType("GLint *") int[] params) {
         org.lwjgl.opengles.GLES20.glGetFramebufferAttachmentParameteriv(target, attachment, pname, params);
     }
 
-    @Override public int glGetFramebufferAttachmentParameteri(int target, int attachment, int pname) {
+@NativeType("void")
+    @Override public int glGetFramebufferAttachmentParameteri(@NativeType("GLenum") int target, @NativeType("GLenum") int attachment, @NativeType("GLenum") int pname) {
         return org.lwjgl.opengles.GLES20.glGetFramebufferAttachmentParameteri(target, attachment, pname);
     }
 
@@ -561,15 +579,16 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglGetIntegerv(pname, data);
     }
 
-    @Override public void glGetIntegerv(int pname, IntBuffer data) {
+    @Override public void glGetIntegerv(@NativeType("GLenum") int pname, @NativeType("GLint *") IntBuffer data) {
         org.lwjgl.opengles.GLES20.glGetIntegerv(pname, data);
     }
 
-    @Override public void glGetIntegerv(int pname, int[] data) {
+    @Override public void glGetIntegerv(@NativeType("GLenum") int pname, @NativeType("GLint *") int[] data) {
         org.lwjgl.opengles.GLES20.glGetIntegerv(pname, data);
     }
 
-    @Override public int glGetInteger(int pname) {
+@NativeType("void")
+    @Override public int glGetInteger(@NativeType("GLenum") int pname) {
         return org.lwjgl.opengles.GLES20.glGetInteger(pname);
     }
 
@@ -577,15 +596,16 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglGetProgramiv(program, pname, params);
     }
 
-    @Override public void glGetProgramiv(int program, int pname, IntBuffer params) {
+    @Override public void glGetProgramiv(@NativeType("GLuint") int program, @NativeType("GLenum") int pname, @NativeType("GLint *") IntBuffer params) {
         org.lwjgl.opengles.GLES20.glGetProgramiv(program, pname, params);
     }
 
-    @Override public void glGetProgramiv(int program, int pname, int[] params) {
+    @Override public void glGetProgramiv(@NativeType("GLuint") int program, @NativeType("GLenum") int pname, @NativeType("GLint *") int[] params) {
         org.lwjgl.opengles.GLES20.glGetProgramiv(program, pname, params);
     }
 
-    @Override public int glGetProgrami(int program, int pname) {
+@NativeType("void")
+    @Override public int glGetProgrami(@NativeType("GLuint") int program, @NativeType("GLenum") int pname) {
         return org.lwjgl.opengles.GLES20.glGetProgrami(program, pname);
     }
 
@@ -593,19 +613,21 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglGetProgramInfoLog(program, bufSize, length, infoLog);
     }
 
-    @Override public void glGetProgramInfoLog(int program, @Nullable IntBuffer length, ByteBuffer infoLog) {
+    @Override public void glGetProgramInfoLog(@NativeType("GLuint") int program, @Nullable @NativeType("GLsizei *") IntBuffer length, @NativeType("GLchar *") ByteBuffer infoLog) {
         org.lwjgl.opengles.GLES20.glGetProgramInfoLog(program, length, infoLog);
     }
 
-    @Override public String glGetProgramInfoLog(int program, int bufSize) {
+@NativeType("void")
+    @Override public String glGetProgramInfoLog(@NativeType("GLuint") int program, @NativeType("GLsizei") int bufSize) {
         return org.lwjgl.opengles.GLES20.glGetProgramInfoLog(program, bufSize);
     }
 
-    @Override public String glGetProgramInfoLog(int program) {
+@NativeType("void")
+    @Override public String glGetProgramInfoLog(@NativeType("GLuint") int program) {
         return org.lwjgl.opengles.GLES20.glGetProgramInfoLog(program);
     }
 
-    @Override public void glGetProgramInfoLog(int program, @Nullable int[] length, ByteBuffer infoLog) {
+    @Override public void glGetProgramInfoLog(@NativeType("GLuint") int program, @Nullable @NativeType("GLsizei *") int[] length, @NativeType("GLchar *") ByteBuffer infoLog) {
         org.lwjgl.opengles.GLES20.glGetProgramInfoLog(program, length, infoLog);
     }
 
@@ -613,15 +635,16 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglGetRenderbufferParameteriv(target, pname, params);
     }
 
-    @Override public void glGetRenderbufferParameteriv(int target, int pname, IntBuffer params) {
+    @Override public void glGetRenderbufferParameteriv(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLint *") IntBuffer params) {
         org.lwjgl.opengles.GLES20.glGetRenderbufferParameteriv(target, pname, params);
     }
 
-    @Override public void glGetRenderbufferParameteriv(int target, int pname, int[] params) {
+    @Override public void glGetRenderbufferParameteriv(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLint *") int[] params) {
         org.lwjgl.opengles.GLES20.glGetRenderbufferParameteriv(target, pname, params);
     }
 
-    @Override public int glGetRenderbufferParameteri(int target, int pname) {
+@NativeType("void")
+    @Override public int glGetRenderbufferParameteri(@NativeType("GLenum") int target, @NativeType("GLenum") int pname) {
         return org.lwjgl.opengles.GLES20.glGetRenderbufferParameteri(target, pname);
     }
 
@@ -629,15 +652,16 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglGetShaderiv(shader, pname, params);
     }
 
-    @Override public void glGetShaderiv(int shader, int pname, IntBuffer params) {
+    @Override public void glGetShaderiv(@NativeType("GLuint") int shader, @NativeType("GLenum") int pname, @NativeType("GLint *") IntBuffer params) {
         org.lwjgl.opengles.GLES20.glGetShaderiv(shader, pname, params);
     }
 
-    @Override public void glGetShaderiv(int shader, int pname, int[] params) {
+    @Override public void glGetShaderiv(@NativeType("GLuint") int shader, @NativeType("GLenum") int pname, @NativeType("GLint *") int[] params) {
         org.lwjgl.opengles.GLES20.glGetShaderiv(shader, pname, params);
     }
 
-    @Override public int glGetShaderi(int shader, int pname) {
+@NativeType("void")
+    @Override public int glGetShaderi(@NativeType("GLuint") int shader, @NativeType("GLenum") int pname) {
         return org.lwjgl.opengles.GLES20.glGetShaderi(shader, pname);
     }
 
@@ -645,19 +669,21 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglGetShaderInfoLog(shader, bufSize, length, infoLog);
     }
 
-    @Override public void glGetShaderInfoLog(int shader, @Nullable IntBuffer length, ByteBuffer infoLog) {
+    @Override public void glGetShaderInfoLog(@NativeType("GLuint") int shader, @Nullable @NativeType("GLsizei *") IntBuffer length, @NativeType("GLchar *") ByteBuffer infoLog) {
         org.lwjgl.opengles.GLES20.glGetShaderInfoLog(shader, length, infoLog);
     }
 
-    @Override public String glGetShaderInfoLog(int shader, int bufSize) {
+@NativeType("void")
+    @Override public String glGetShaderInfoLog(@NativeType("GLuint") int shader, @NativeType("GLsizei") int bufSize) {
         return org.lwjgl.opengles.GLES20.glGetShaderInfoLog(shader, bufSize);
     }
 
-    @Override public String glGetShaderInfoLog(int shader) {
+@NativeType("void")
+    @Override public String glGetShaderInfoLog(@NativeType("GLuint") int shader) {
         return org.lwjgl.opengles.GLES20.glGetShaderInfoLog(shader);
     }
 
-    @Override public void glGetShaderInfoLog(int shader, @Nullable int[] length, ByteBuffer infoLog) {
+    @Override public void glGetShaderInfoLog(@NativeType("GLuint") int shader, @Nullable @NativeType("GLsizei *") int[] length, @NativeType("GLchar *") ByteBuffer infoLog) {
         org.lwjgl.opengles.GLES20.glGetShaderInfoLog(shader, length, infoLog);
     }
 
@@ -665,11 +691,11 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglGetShaderPrecisionFormat(shadertype, precisiontype, range, precision);
     }
 
-    @Override public void glGetShaderPrecisionFormat(int shadertype, int precisiontype, IntBuffer range, IntBuffer precision) {
+    @Override public void glGetShaderPrecisionFormat(@NativeType("GLenum") int shadertype, @NativeType("GLenum") int precisiontype, @NativeType("GLint *") IntBuffer range, @NativeType("GLint *") IntBuffer precision) {
         org.lwjgl.opengles.GLES20.glGetShaderPrecisionFormat(shadertype, precisiontype, range, precision);
     }
 
-    @Override public void glGetShaderPrecisionFormat(int shadertype, int precisiontype, int[] range, int[] precision) {
+    @Override public void glGetShaderPrecisionFormat(@NativeType("GLenum") int shadertype, @NativeType("GLenum") int precisiontype, @NativeType("GLint *") int[] range, @NativeType("GLint *") int[] precision) {
         org.lwjgl.opengles.GLES20.glGetShaderPrecisionFormat(shadertype, precisiontype, range, precision);
     }
 
@@ -677,19 +703,21 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglGetShaderSource(shader, bufSize, length, source);
     }
 
-    @Override public void glGetShaderSource(int shader, @Nullable IntBuffer length, ByteBuffer source) {
+    @Override public void glGetShaderSource(@NativeType("GLuint") int shader, @Nullable @NativeType("GLsizei *") IntBuffer length, @NativeType("GLchar *") ByteBuffer source) {
         org.lwjgl.opengles.GLES20.glGetShaderSource(shader, length, source);
     }
 
-    @Override public String glGetShaderSource(int shader, int bufSize) {
+@NativeType("void")
+    @Override public String glGetShaderSource(@NativeType("GLuint") int shader, @NativeType("GLsizei") int bufSize) {
         return org.lwjgl.opengles.GLES20.glGetShaderSource(shader, bufSize);
     }
 
-    @Override public String glGetShaderSource(int shader) {
+@NativeType("void")
+    @Override public String glGetShaderSource(@NativeType("GLuint") int shader) {
         return org.lwjgl.opengles.GLES20.glGetShaderSource(shader);
     }
 
-    @Override public void glGetShaderSource(int shader, @Nullable int[] length, ByteBuffer source) {
+    @Override public void glGetShaderSource(@NativeType("GLuint") int shader, @Nullable @NativeType("GLsizei *") int[] length, @NativeType("GLchar *") ByteBuffer source) {
         org.lwjgl.opengles.GLES20.glGetShaderSource(shader, length, source);
     }
 
@@ -698,7 +726,8 @@ public class GLES20AccessorImpl implements GLES20Accessor {
     }
 
 @Nullable
-    @Override public String glGetString(int name) {
+@NativeType("GLubyte const *")
+    @Override public String glGetString(@NativeType("GLenum") int name) {
         return org.lwjgl.opengles.GLES20.glGetString(name);
     }
 
@@ -706,15 +735,16 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglGetTexParameterfv(target, pname, params);
     }
 
-    @Override public void glGetTexParameterfv(int target, int pname, FloatBuffer params) {
+    @Override public void glGetTexParameterfv(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLfloat *") FloatBuffer params) {
         org.lwjgl.opengles.GLES20.glGetTexParameterfv(target, pname, params);
     }
 
-    @Override public void glGetTexParameterfv(int target, int pname, float[] params) {
+    @Override public void glGetTexParameterfv(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLfloat *") float[] params) {
         org.lwjgl.opengles.GLES20.glGetTexParameterfv(target, pname, params);
     }
 
-    @Override public float glGetTexParameterf(int target, int pname) {
+@NativeType("void")
+    @Override public float glGetTexParameterf(@NativeType("GLenum") int target, @NativeType("GLenum") int pname) {
         return org.lwjgl.opengles.GLES20.glGetTexParameterf(target, pname);
     }
 
@@ -722,15 +752,16 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglGetTexParameteriv(target, pname, params);
     }
 
-    @Override public void glGetTexParameteriv(int target, int pname, IntBuffer params) {
+    @Override public void glGetTexParameteriv(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLint *") IntBuffer params) {
         org.lwjgl.opengles.GLES20.glGetTexParameteriv(target, pname, params);
     }
 
-    @Override public void glGetTexParameteriv(int target, int pname, int[] params) {
+    @Override public void glGetTexParameteriv(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLint *") int[] params) {
         org.lwjgl.opengles.GLES20.glGetTexParameteriv(target, pname, params);
     }
 
-    @Override public int glGetTexParameteri(int target, int pname) {
+@NativeType("void")
+    @Override public int glGetTexParameteri(@NativeType("GLenum") int target, @NativeType("GLenum") int pname) {
         return org.lwjgl.opengles.GLES20.glGetTexParameteri(target, pname);
     }
 
@@ -738,15 +769,16 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglGetUniformfv(program, location, params);
     }
 
-    @Override public void glGetUniformfv(int program, int location, FloatBuffer params) {
+    @Override public void glGetUniformfv(@NativeType("GLuint") int program, @NativeType("GLint") int location, @NativeType("GLfloat *") FloatBuffer params) {
         org.lwjgl.opengles.GLES20.glGetUniformfv(program, location, params);
     }
 
-    @Override public void glGetUniformfv(int program, int location, float[] params) {
+    @Override public void glGetUniformfv(@NativeType("GLuint") int program, @NativeType("GLint") int location, @NativeType("GLfloat *") float[] params) {
         org.lwjgl.opengles.GLES20.glGetUniformfv(program, location, params);
     }
 
-    @Override public float glGetUniformf(int program, int location) {
+@NativeType("void")
+    @Override public float glGetUniformf(@NativeType("GLuint") int program, @NativeType("GLint") int location) {
         return org.lwjgl.opengles.GLES20.glGetUniformf(program, location);
     }
 
@@ -754,15 +786,16 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglGetUniformiv(program, location, params);
     }
 
-    @Override public void glGetUniformiv(int program, int location, IntBuffer params) {
+    @Override public void glGetUniformiv(@NativeType("GLuint") int program, @NativeType("GLint") int location, @NativeType("GLint *") IntBuffer params) {
         org.lwjgl.opengles.GLES20.glGetUniformiv(program, location, params);
     }
 
-    @Override public void glGetUniformiv(int program, int location, int[] params) {
+    @Override public void glGetUniformiv(@NativeType("GLuint") int program, @NativeType("GLint") int location, @NativeType("GLint *") int[] params) {
         org.lwjgl.opengles.GLES20.glGetUniformiv(program, location, params);
     }
 
-    @Override public int glGetUniformi(int program, int location) {
+@NativeType("void")
+    @Override public int glGetUniformi(@NativeType("GLuint") int program, @NativeType("GLint") int location) {
         return org.lwjgl.opengles.GLES20.glGetUniformi(program, location);
     }
 
@@ -770,11 +803,13 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         return org.lwjgl.opengles.GLES20.nglGetUniformLocation(program, name);
     }
 
-    @Override public int glGetUniformLocation(int program, ByteBuffer name) {
+@NativeType("GLint")
+    @Override public int glGetUniformLocation(@NativeType("GLuint") int program, @NativeType("GLchar const *") ByteBuffer name) {
         return org.lwjgl.opengles.GLES20.glGetUniformLocation(program, name);
     }
 
-    @Override public int glGetUniformLocation(int program, CharSequence name) {
+@NativeType("GLint")
+    @Override public int glGetUniformLocation(@NativeType("GLuint") int program, @NativeType("GLchar const *") CharSequence name) {
         return org.lwjgl.opengles.GLES20.glGetUniformLocation(program, name);
     }
 
@@ -782,11 +817,11 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglGetVertexAttribfv(index, pname, params);
     }
 
-    @Override public void glGetVertexAttribfv(int index, int pname, FloatBuffer params) {
+    @Override public void glGetVertexAttribfv(@NativeType("GLuint") int index, @NativeType("GLenum") int pname, @NativeType("GLfloat *") FloatBuffer params) {
         org.lwjgl.opengles.GLES20.glGetVertexAttribfv(index, pname, params);
     }
 
-    @Override public void glGetVertexAttribfv(int index, int pname, float[] params) {
+    @Override public void glGetVertexAttribfv(@NativeType("GLuint") int index, @NativeType("GLenum") int pname, @NativeType("GLfloat *") float[] params) {
         org.lwjgl.opengles.GLES20.glGetVertexAttribfv(index, pname, params);
     }
 
@@ -794,11 +829,11 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglGetVertexAttribiv(index, pname, params);
     }
 
-    @Override public void glGetVertexAttribiv(int index, int pname, IntBuffer params) {
+    @Override public void glGetVertexAttribiv(@NativeType("GLuint") int index, @NativeType("GLenum") int pname, @NativeType("GLint *") IntBuffer params) {
         org.lwjgl.opengles.GLES20.glGetVertexAttribiv(index, pname, params);
     }
 
-    @Override public void glGetVertexAttribiv(int index, int pname, int[] params) {
+    @Override public void glGetVertexAttribiv(@NativeType("GLuint") int index, @NativeType("GLenum") int pname, @NativeType("GLint *") int[] params) {
         org.lwjgl.opengles.GLES20.glGetVertexAttribiv(index, pname, params);
     }
 
@@ -806,59 +841,67 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglGetVertexAttribPointerv(index, pname, pointer);
     }
 
-    @Override public void glGetVertexAttribPointerv(int index, int pname, PointerBuffer pointer) {
+    @Override public void glGetVertexAttribPointerv(@NativeType("GLuint") int index, @NativeType("GLenum") int pname, @NativeType("void **") PointerBuffer pointer) {
         org.lwjgl.opengles.GLES20.glGetVertexAttribPointerv(index, pname, pointer);
     }
 
-    @Override public long glGetVertexAttribPointer(int index, int pname) {
+@NativeType("void")
+    @Override public long glGetVertexAttribPointer(@NativeType("GLuint") int index, @NativeType("GLenum") int pname) {
         return org.lwjgl.opengles.GLES20.glGetVertexAttribPointer(index, pname);
     }
 
-    @Override public void glHint(int target, int mode) {
+    @Override public void glHint(@NativeType("GLenum") int target, @NativeType("GLenum") int mode) {
         org.lwjgl.opengles.GLES20.glHint(target, mode);
     }
 
-    @Override public boolean glIsBuffer(int buffer) {
+@NativeType("GLboolean")
+    @Override public boolean glIsBuffer(@NativeType("GLuint") int buffer) {
         return org.lwjgl.opengles.GLES20.glIsBuffer(buffer);
     }
 
-    @Override public boolean glIsEnabled(int cap) {
+@NativeType("GLboolean")
+    @Override public boolean glIsEnabled(@NativeType("GLenum") int cap) {
         return org.lwjgl.opengles.GLES20.glIsEnabled(cap);
     }
 
-    @Override public boolean glIsFramebuffer(int framebuffer) {
+@NativeType("GLboolean")
+    @Override public boolean glIsFramebuffer(@NativeType("GLuint") int framebuffer) {
         return org.lwjgl.opengles.GLES20.glIsFramebuffer(framebuffer);
     }
 
-    @Override public boolean glIsProgram(int program) {
+@NativeType("GLboolean")
+    @Override public boolean glIsProgram(@NativeType("GLuint") int program) {
         return org.lwjgl.opengles.GLES20.glIsProgram(program);
     }
 
-    @Override public boolean glIsRenderbuffer(int renderbuffer) {
+@NativeType("GLboolean")
+    @Override public boolean glIsRenderbuffer(@NativeType("GLuint") int renderbuffer) {
         return org.lwjgl.opengles.GLES20.glIsRenderbuffer(renderbuffer);
     }
 
-    @Override public boolean glIsShader(int shader) {
+@NativeType("GLboolean")
+    @Override public boolean glIsShader(@NativeType("GLuint") int shader) {
         return org.lwjgl.opengles.GLES20.glIsShader(shader);
     }
 
-    @Override public boolean glIsTexture(int texture) {
+@NativeType("GLboolean")
+    @Override public boolean glIsTexture(@NativeType("GLuint") int texture) {
         return org.lwjgl.opengles.GLES20.glIsTexture(texture);
     }
 
-    @Override public void glLineWidth(float width) {
+    @Override public void glLineWidth(@NativeType("GLfloat") float width) {
         org.lwjgl.opengles.GLES20.glLineWidth(width);
     }
 
-    @Override public void glLinkProgram(int program) {
+    @Override public void glLinkProgram(@NativeType("GLuint") int program) {
         org.lwjgl.opengles.GLES20.glLinkProgram(program);
     }
 
-    @Override public void glPixelStorei(int pname, int param) {
+    @Override public void glPixelStorei(@NativeType("GLenum") int pname, @NativeType("GLint") int param) {
         org.lwjgl.opengles.GLES20.glPixelStorei(pname, param);
     }
 
-    @Override public void glPolygonOffset(float factor, float units) {
+    @Override public void glPolygonOffset(@NativeType("GLfloat") float factor, @NativeType("GLfloat") float units) {
         org.lwjgl.opengles.GLES20.glPolygonOffset(factor, units);
     }
 
@@ -866,35 +909,35 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglReadPixels(x, y, width, height, format, type, pixels);
     }
 
-    @Override public void glReadPixels(int x, int y, int width, int height, int format, int type, ByteBuffer pixels) {
+    @Override public void glReadPixels(@NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") ByteBuffer pixels) {
         org.lwjgl.opengles.GLES20.glReadPixels(x, y, width, height, format, type, pixels);
     }
 
-    @Override public void glReadPixels(int x, int y, int width, int height, int format, int type, long pixels) {
+    @Override public void glReadPixels(@NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") long pixels) {
         org.lwjgl.opengles.GLES20.glReadPixels(x, y, width, height, format, type, pixels);
     }
 
-    @Override public void glReadPixels(int x, int y, int width, int height, int format, int type, ShortBuffer pixels) {
+    @Override public void glReadPixels(@NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") ShortBuffer pixels) {
         org.lwjgl.opengles.GLES20.glReadPixels(x, y, width, height, format, type, pixels);
     }
 
-    @Override public void glReadPixels(int x, int y, int width, int height, int format, int type, IntBuffer pixels) {
+    @Override public void glReadPixels(@NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") IntBuffer pixels) {
         org.lwjgl.opengles.GLES20.glReadPixels(x, y, width, height, format, type, pixels);
     }
 
-    @Override public void glReadPixels(int x, int y, int width, int height, int format, int type, FloatBuffer pixels) {
+    @Override public void glReadPixels(@NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") FloatBuffer pixels) {
         org.lwjgl.opengles.GLES20.glReadPixels(x, y, width, height, format, type, pixels);
     }
 
-    @Override public void glReadPixels(int x, int y, int width, int height, int format, int type, short[] pixels) {
+    @Override public void glReadPixels(@NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") short[] pixels) {
         org.lwjgl.opengles.GLES20.glReadPixels(x, y, width, height, format, type, pixels);
     }
 
-    @Override public void glReadPixels(int x, int y, int width, int height, int format, int type, int[] pixels) {
+    @Override public void glReadPixels(@NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") int[] pixels) {
         org.lwjgl.opengles.GLES20.glReadPixels(x, y, width, height, format, type, pixels);
     }
 
-    @Override public void glReadPixels(int x, int y, int width, int height, int format, int type, float[] pixels) {
+    @Override public void glReadPixels(@NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") float[] pixels) {
         org.lwjgl.opengles.GLES20.glReadPixels(x, y, width, height, format, type, pixels);
     }
 
@@ -902,15 +945,15 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.glReleaseShaderCompiler();
     }
 
-    @Override public void glRenderbufferStorage(int target, int internalformat, int width, int height) {
+    @Override public void glRenderbufferStorage(@NativeType("GLenum") int target, @NativeType("GLenum") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height) {
         org.lwjgl.opengles.GLES20.glRenderbufferStorage(target, internalformat, width, height);
     }
 
-    @Override public void glSampleCoverage(float value, boolean invert) {
+    @Override public void glSampleCoverage(@NativeType("GLfloat") float value, @NativeType("GLboolean") boolean invert) {
         org.lwjgl.opengles.GLES20.glSampleCoverage(value, invert);
     }
 
-    @Override public void glScissor(int x, int y, int width, int height) {
+    @Override public void glScissor(@NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height) {
         org.lwjgl.opengles.GLES20.glScissor(x, y, width, height);
     }
 
@@ -918,11 +961,11 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglShaderBinary(count, shaders, binaryformat, binary, length);
     }
 
-    @Override public void glShaderBinary(IntBuffer shaders, int binaryformat, ByteBuffer binary) {
+    @Override public void glShaderBinary(@NativeType("GLuint const *") IntBuffer shaders, @NativeType("GLenum") int binaryformat, @NativeType("void const *") ByteBuffer binary) {
         org.lwjgl.opengles.GLES20.glShaderBinary(shaders, binaryformat, binary);
     }
 
-    @Override public void glShaderBinary(int[] shaders, int binaryformat, ByteBuffer binary) {
+    @Override public void glShaderBinary(@NativeType("GLuint const *") int[] shaders, @NativeType("GLenum") int binaryformat, @NativeType("void const *") ByteBuffer binary) {
         org.lwjgl.opengles.GLES20.glShaderBinary(shaders, binaryformat, binary);
     }
 
@@ -930,43 +973,43 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglShaderSource(shader, count, string, length);
     }
 
-    @Override public void glShaderSource(int shader, PointerBuffer string, @Nullable IntBuffer length) {
+    @Override public void glShaderSource(@NativeType("GLuint") int shader, @NativeType("GLchar const * const *") PointerBuffer string, @Nullable @NativeType("GLint const *") IntBuffer length) {
         org.lwjgl.opengles.GLES20.glShaderSource(shader, string, length);
     }
 
-    @Override public void glShaderSource(int shader, CharSequence... string) {
+    @Override public void glShaderSource(@NativeType("GLuint") int shader, @NativeType("GLchar const * const *") CharSequence... string) {
         org.lwjgl.opengles.GLES20.glShaderSource(shader, string);
     }
 
-    @Override public void glShaderSource(int shader, CharSequence string) {
+    @Override public void glShaderSource(@NativeType("GLuint") int shader, @NativeType("GLchar const * const *") CharSequence string) {
         org.lwjgl.opengles.GLES20.glShaderSource(shader, string);
     }
 
-    @Override public void glShaderSource(int shader, PointerBuffer string, @Nullable int[] length) {
+    @Override public void glShaderSource(@NativeType("GLuint") int shader, @NativeType("GLchar const * const *") PointerBuffer string, @Nullable @NativeType("GLint const *") int[] length) {
         org.lwjgl.opengles.GLES20.glShaderSource(shader, string, length);
     }
 
-    @Override public void glStencilFunc(int func, int ref, int mask) {
+    @Override public void glStencilFunc(@NativeType("GLenum") int func, @NativeType("GLint") int ref, @NativeType("GLuint") int mask) {
         org.lwjgl.opengles.GLES20.glStencilFunc(func, ref, mask);
     }
 
-    @Override public void glStencilFuncSeparate(int face, int func, int ref, int mask) {
+    @Override public void glStencilFuncSeparate(@NativeType("GLenum") int face, @NativeType("GLenum") int func, @NativeType("GLint") int ref, @NativeType("GLuint") int mask) {
         org.lwjgl.opengles.GLES20.glStencilFuncSeparate(face, func, ref, mask);
     }
 
-    @Override public void glStencilMask(int mask) {
+    @Override public void glStencilMask(@NativeType("GLuint") int mask) {
         org.lwjgl.opengles.GLES20.glStencilMask(mask);
     }
 
-    @Override public void glStencilMaskSeparate(int face, int mask) {
+    @Override public void glStencilMaskSeparate(@NativeType("GLenum") int face, @NativeType("GLuint") int mask) {
         org.lwjgl.opengles.GLES20.glStencilMaskSeparate(face, mask);
     }
 
-    @Override public void glStencilOp(int fail, int zfail, int zpass) {
+    @Override public void glStencilOp(@NativeType("GLenum") int fail, @NativeType("GLenum") int zfail, @NativeType("GLenum") int zpass) {
         org.lwjgl.opengles.GLES20.glStencilOp(fail, zfail, zpass);
     }
 
-    @Override public void glStencilOpSeparate(int face, int sfail, int dpfail, int dppass) {
+    @Override public void glStencilOpSeparate(@NativeType("GLenum") int face, @NativeType("GLenum") int sfail, @NativeType("GLenum") int dpfail, @NativeType("GLenum") int dppass) {
         org.lwjgl.opengles.GLES20.glStencilOpSeparate(face, sfail, dpfail, dppass);
     }
 
@@ -974,39 +1017,39 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglTexImage2D(target, level, internalformat, width, height, border, format, type, pixels);
     }
 
-    @Override public void glTexImage2D(int target, int level, int internalformat, int width, int height, int border, int format, int type, @Nullable ByteBuffer pixels) {
+    @Override public void glTexImage2D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLint") int border, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") ByteBuffer pixels) {
         org.lwjgl.opengles.GLES20.glTexImage2D(target, level, internalformat, width, height, border, format, type, pixels);
     }
 
-    @Override public void glTexImage2D(int target, int level, int internalformat, int width, int height, int border, int format, int type, long pixels) {
+    @Override public void glTexImage2D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLint") int border, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void const *") long pixels) {
         org.lwjgl.opengles.GLES20.glTexImage2D(target, level, internalformat, width, height, border, format, type, pixels);
     }
 
-    @Override public void glTexImage2D(int target, int level, int internalformat, int width, int height, int border, int format, int type, @Nullable ShortBuffer pixels) {
+    @Override public void glTexImage2D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLint") int border, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") ShortBuffer pixels) {
         org.lwjgl.opengles.GLES20.glTexImage2D(target, level, internalformat, width, height, border, format, type, pixels);
     }
 
-    @Override public void glTexImage2D(int target, int level, int internalformat, int width, int height, int border, int format, int type, @Nullable IntBuffer pixels) {
+    @Override public void glTexImage2D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLint") int border, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") IntBuffer pixels) {
         org.lwjgl.opengles.GLES20.glTexImage2D(target, level, internalformat, width, height, border, format, type, pixels);
     }
 
-    @Override public void glTexImage2D(int target, int level, int internalformat, int width, int height, int border, int format, int type, @Nullable FloatBuffer pixels) {
+    @Override public void glTexImage2D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLint") int border, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") FloatBuffer pixels) {
         org.lwjgl.opengles.GLES20.glTexImage2D(target, level, internalformat, width, height, border, format, type, pixels);
     }
 
-    @Override public void glTexImage2D(int target, int level, int internalformat, int width, int height, int border, int format, int type, @Nullable short[] pixels) {
+    @Override public void glTexImage2D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLint") int border, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") short[] pixels) {
         org.lwjgl.opengles.GLES20.glTexImage2D(target, level, internalformat, width, height, border, format, type, pixels);
     }
 
-    @Override public void glTexImage2D(int target, int level, int internalformat, int width, int height, int border, int format, int type, @Nullable int[] pixels) {
+    @Override public void glTexImage2D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLint") int border, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") int[] pixels) {
         org.lwjgl.opengles.GLES20.glTexImage2D(target, level, internalformat, width, height, border, format, type, pixels);
     }
 
-    @Override public void glTexImage2D(int target, int level, int internalformat, int width, int height, int border, int format, int type, @Nullable float[] pixels) {
+    @Override public void glTexImage2D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLint") int border, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") float[] pixels) {
         org.lwjgl.opengles.GLES20.glTexImage2D(target, level, internalformat, width, height, border, format, type, pixels);
     }
 
-    @Override public void glTexParameterf(int target, int pname, float param) {
+    @Override public void glTexParameterf(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLfloat") float param) {
         org.lwjgl.opengles.GLES20.glTexParameterf(target, pname, param);
     }
 
@@ -1014,15 +1057,15 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglTexParameterfv(target, pname, params);
     }
 
-    @Override public void glTexParameterfv(int target, int pname, FloatBuffer params) {
+    @Override public void glTexParameterfv(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLfloat const *") FloatBuffer params) {
         org.lwjgl.opengles.GLES20.glTexParameterfv(target, pname, params);
     }
 
-    @Override public void glTexParameterfv(int target, int pname, float[] params) {
+    @Override public void glTexParameterfv(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLfloat const *") float[] params) {
         org.lwjgl.opengles.GLES20.glTexParameterfv(target, pname, params);
     }
 
-    @Override public void glTexParameteri(int target, int pname, int param) {
+    @Override public void glTexParameteri(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLint") int param) {
         org.lwjgl.opengles.GLES20.glTexParameteri(target, pname, param);
     }
 
@@ -1030,11 +1073,11 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglTexParameteriv(target, pname, params);
     }
 
-    @Override public void glTexParameteriv(int target, int pname, IntBuffer params) {
+    @Override public void glTexParameteriv(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLint const *") IntBuffer params) {
         org.lwjgl.opengles.GLES20.glTexParameteriv(target, pname, params);
     }
 
-    @Override public void glTexParameteriv(int target, int pname, int[] params) {
+    @Override public void glTexParameteriv(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLint const *") int[] params) {
         org.lwjgl.opengles.GLES20.glTexParameteriv(target, pname, params);
     }
 
@@ -1042,39 +1085,39 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglTexSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixels);
     }
 
-    @Override public void glTexSubImage2D(int target, int level, int xoffset, int yoffset, int width, int height, int format, int type, ByteBuffer pixels) {
+    @Override public void glTexSubImage2D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int yoffset, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void const *") ByteBuffer pixels) {
         org.lwjgl.opengles.GLES20.glTexSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixels);
     }
 
-    @Override public void glTexSubImage2D(int target, int level, int xoffset, int yoffset, int width, int height, int format, int type, long pixels) {
+    @Override public void glTexSubImage2D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int yoffset, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void const *") long pixels) {
         org.lwjgl.opengles.GLES20.glTexSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixels);
     }
 
-    @Override public void glTexSubImage2D(int target, int level, int xoffset, int yoffset, int width, int height, int format, int type, ShortBuffer pixels) {
+    @Override public void glTexSubImage2D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int yoffset, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void const *") ShortBuffer pixels) {
         org.lwjgl.opengles.GLES20.glTexSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixels);
     }
 
-    @Override public void glTexSubImage2D(int target, int level, int xoffset, int yoffset, int width, int height, int format, int type, IntBuffer pixels) {
+    @Override public void glTexSubImage2D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int yoffset, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void const *") IntBuffer pixels) {
         org.lwjgl.opengles.GLES20.glTexSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixels);
     }
 
-    @Override public void glTexSubImage2D(int target, int level, int xoffset, int yoffset, int width, int height, int format, int type, FloatBuffer pixels) {
+    @Override public void glTexSubImage2D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int yoffset, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void const *") FloatBuffer pixels) {
         org.lwjgl.opengles.GLES20.glTexSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixels);
     }
 
-    @Override public void glTexSubImage2D(int target, int level, int xoffset, int yoffset, int width, int height, int format, int type, short[] pixels) {
+    @Override public void glTexSubImage2D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int yoffset, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void const *") short[] pixels) {
         org.lwjgl.opengles.GLES20.glTexSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixels);
     }
 
-    @Override public void glTexSubImage2D(int target, int level, int xoffset, int yoffset, int width, int height, int format, int type, int[] pixels) {
+    @Override public void glTexSubImage2D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int yoffset, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void const *") int[] pixels) {
         org.lwjgl.opengles.GLES20.glTexSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixels);
     }
 
-    @Override public void glTexSubImage2D(int target, int level, int xoffset, int yoffset, int width, int height, int format, int type, float[] pixels) {
+    @Override public void glTexSubImage2D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int yoffset, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void const *") float[] pixels) {
         org.lwjgl.opengles.GLES20.glTexSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixels);
     }
 
-    @Override public void glUniform1f(int location, float v0) {
+    @Override public void glUniform1f(@NativeType("GLint") int location, @NativeType("GLfloat") float v0) {
         org.lwjgl.opengles.GLES20.glUniform1f(location, v0);
     }
 
@@ -1082,15 +1125,15 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglUniform1fv(location, count, value);
     }
 
-    @Override public void glUniform1fv(int location, FloatBuffer value) {
+    @Override public void glUniform1fv(@NativeType("GLint") int location, @NativeType("GLfloat const *") FloatBuffer value) {
         org.lwjgl.opengles.GLES20.glUniform1fv(location, value);
     }
 
-    @Override public void glUniform1fv(int location, float[] value) {
+    @Override public void glUniform1fv(@NativeType("GLint") int location, @NativeType("GLfloat const *") float[] value) {
         org.lwjgl.opengles.GLES20.glUniform1fv(location, value);
     }
 
-    @Override public void glUniform1i(int location, int v0) {
+    @Override public void glUniform1i(@NativeType("GLint") int location, @NativeType("GLint") int v0) {
         org.lwjgl.opengles.GLES20.glUniform1i(location, v0);
     }
 
@@ -1098,15 +1141,15 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglUniform1iv(location, count, value);
     }
 
-    @Override public void glUniform1iv(int location, IntBuffer value) {
+    @Override public void glUniform1iv(@NativeType("GLint") int location, @NativeType("GLint const *") IntBuffer value) {
         org.lwjgl.opengles.GLES20.glUniform1iv(location, value);
     }
 
-    @Override public void glUniform1iv(int location, int[] value) {
+    @Override public void glUniform1iv(@NativeType("GLint") int location, @NativeType("GLint const *") int[] value) {
         org.lwjgl.opengles.GLES20.glUniform1iv(location, value);
     }
 
-    @Override public void glUniform2f(int location, float v0, float v1) {
+    @Override public void glUniform2f(@NativeType("GLint") int location, @NativeType("GLfloat") float v0, @NativeType("GLfloat") float v1) {
         org.lwjgl.opengles.GLES20.glUniform2f(location, v0, v1);
     }
 
@@ -1114,15 +1157,15 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglUniform2fv(location, count, value);
     }
 
-    @Override public void glUniform2fv(int location, FloatBuffer value) {
+    @Override public void glUniform2fv(@NativeType("GLint") int location, @NativeType("GLfloat const *") FloatBuffer value) {
         org.lwjgl.opengles.GLES20.glUniform2fv(location, value);
     }
 
-    @Override public void glUniform2fv(int location, float[] value) {
+    @Override public void glUniform2fv(@NativeType("GLint") int location, @NativeType("GLfloat const *") float[] value) {
         org.lwjgl.opengles.GLES20.glUniform2fv(location, value);
     }
 
-    @Override public void glUniform2i(int location, int v0, int v1) {
+    @Override public void glUniform2i(@NativeType("GLint") int location, @NativeType("GLint") int v0, @NativeType("GLint") int v1) {
         org.lwjgl.opengles.GLES20.glUniform2i(location, v0, v1);
     }
 
@@ -1130,15 +1173,15 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglUniform2iv(location, count, value);
     }
 
-    @Override public void glUniform2iv(int location, IntBuffer value) {
+    @Override public void glUniform2iv(@NativeType("GLint") int location, @NativeType("GLint const *") IntBuffer value) {
         org.lwjgl.opengles.GLES20.glUniform2iv(location, value);
     }
 
-    @Override public void glUniform2iv(int location, int[] value) {
+    @Override public void glUniform2iv(@NativeType("GLint") int location, @NativeType("GLint const *") int[] value) {
         org.lwjgl.opengles.GLES20.glUniform2iv(location, value);
     }
 
-    @Override public void glUniform3f(int location, float v0, float v1, float v2) {
+    @Override public void glUniform3f(@NativeType("GLint") int location, @NativeType("GLfloat") float v0, @NativeType("GLfloat") float v1, @NativeType("GLfloat") float v2) {
         org.lwjgl.opengles.GLES20.glUniform3f(location, v0, v1, v2);
     }
 
@@ -1146,15 +1189,15 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglUniform3fv(location, count, value);
     }
 
-    @Override public void glUniform3fv(int location, FloatBuffer value) {
+    @Override public void glUniform3fv(@NativeType("GLint") int location, @NativeType("GLfloat const *") FloatBuffer value) {
         org.lwjgl.opengles.GLES20.glUniform3fv(location, value);
     }
 
-    @Override public void glUniform3fv(int location, float[] value) {
+    @Override public void glUniform3fv(@NativeType("GLint") int location, @NativeType("GLfloat const *") float[] value) {
         org.lwjgl.opengles.GLES20.glUniform3fv(location, value);
     }
 
-    @Override public void glUniform3i(int location, int v0, int v1, int v2) {
+    @Override public void glUniform3i(@NativeType("GLint") int location, @NativeType("GLint") int v0, @NativeType("GLint") int v1, @NativeType("GLint") int v2) {
         org.lwjgl.opengles.GLES20.glUniform3i(location, v0, v1, v2);
     }
 
@@ -1162,15 +1205,15 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglUniform3iv(location, count, value);
     }
 
-    @Override public void glUniform3iv(int location, IntBuffer value) {
+    @Override public void glUniform3iv(@NativeType("GLint") int location, @NativeType("GLint const *") IntBuffer value) {
         org.lwjgl.opengles.GLES20.glUniform3iv(location, value);
     }
 
-    @Override public void glUniform3iv(int location, int[] value) {
+    @Override public void glUniform3iv(@NativeType("GLint") int location, @NativeType("GLint const *") int[] value) {
         org.lwjgl.opengles.GLES20.glUniform3iv(location, value);
     }
 
-    @Override public void glUniform4f(int location, float v0, float v1, float v2, float v3) {
+    @Override public void glUniform4f(@NativeType("GLint") int location, @NativeType("GLfloat") float v0, @NativeType("GLfloat") float v1, @NativeType("GLfloat") float v2, @NativeType("GLfloat") float v3) {
         org.lwjgl.opengles.GLES20.glUniform4f(location, v0, v1, v2, v3);
     }
 
@@ -1178,15 +1221,15 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglUniform4fv(location, count, value);
     }
 
-    @Override public void glUniform4fv(int location, FloatBuffer value) {
+    @Override public void glUniform4fv(@NativeType("GLint") int location, @NativeType("GLfloat const *") FloatBuffer value) {
         org.lwjgl.opengles.GLES20.glUniform4fv(location, value);
     }
 
-    @Override public void glUniform4fv(int location, float[] value) {
+    @Override public void glUniform4fv(@NativeType("GLint") int location, @NativeType("GLfloat const *") float[] value) {
         org.lwjgl.opengles.GLES20.glUniform4fv(location, value);
     }
 
-    @Override public void glUniform4i(int location, int v0, int v1, int v2, int v3) {
+    @Override public void glUniform4i(@NativeType("GLint") int location, @NativeType("GLint") int v0, @NativeType("GLint") int v1, @NativeType("GLint") int v2, @NativeType("GLint") int v3) {
         org.lwjgl.opengles.GLES20.glUniform4i(location, v0, v1, v2, v3);
     }
 
@@ -1194,11 +1237,11 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglUniform4iv(location, count, value);
     }
 
-    @Override public void glUniform4iv(int location, IntBuffer value) {
+    @Override public void glUniform4iv(@NativeType("GLint") int location, @NativeType("GLint const *") IntBuffer value) {
         org.lwjgl.opengles.GLES20.glUniform4iv(location, value);
     }
 
-    @Override public void glUniform4iv(int location, int[] value) {
+    @Override public void glUniform4iv(@NativeType("GLint") int location, @NativeType("GLint const *") int[] value) {
         org.lwjgl.opengles.GLES20.glUniform4iv(location, value);
     }
 
@@ -1206,11 +1249,11 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglUniformMatrix2fv(location, count, transpose, value);
     }
 
-    @Override public void glUniformMatrix2fv(int location, boolean transpose, FloatBuffer value) {
+    @Override public void glUniformMatrix2fv(@NativeType("GLint") int location, @NativeType("GLboolean") boolean transpose, @NativeType("GLfloat const *") FloatBuffer value) {
         org.lwjgl.opengles.GLES20.glUniformMatrix2fv(location, transpose, value);
     }
 
-    @Override public void glUniformMatrix2fv(int location, boolean transpose, float[] value) {
+    @Override public void glUniformMatrix2fv(@NativeType("GLint") int location, @NativeType("GLboolean") boolean transpose, @NativeType("GLfloat const *") float[] value) {
         org.lwjgl.opengles.GLES20.glUniformMatrix2fv(location, transpose, value);
     }
 
@@ -1218,11 +1261,11 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglUniformMatrix3fv(location, count, transpose, value);
     }
 
-    @Override public void glUniformMatrix3fv(int location, boolean transpose, FloatBuffer value) {
+    @Override public void glUniformMatrix3fv(@NativeType("GLint") int location, @NativeType("GLboolean") boolean transpose, @NativeType("GLfloat const *") FloatBuffer value) {
         org.lwjgl.opengles.GLES20.glUniformMatrix3fv(location, transpose, value);
     }
 
-    @Override public void glUniformMatrix3fv(int location, boolean transpose, float[] value) {
+    @Override public void glUniformMatrix3fv(@NativeType("GLint") int location, @NativeType("GLboolean") boolean transpose, @NativeType("GLfloat const *") float[] value) {
         org.lwjgl.opengles.GLES20.glUniformMatrix3fv(location, transpose, value);
     }
 
@@ -1230,23 +1273,23 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglUniformMatrix4fv(location, count, transpose, value);
     }
 
-    @Override public void glUniformMatrix4fv(int location, boolean transpose, FloatBuffer value) {
+    @Override public void glUniformMatrix4fv(@NativeType("GLint") int location, @NativeType("GLboolean") boolean transpose, @NativeType("GLfloat const *") FloatBuffer value) {
         org.lwjgl.opengles.GLES20.glUniformMatrix4fv(location, transpose, value);
     }
 
-    @Override public void glUniformMatrix4fv(int location, boolean transpose, float[] value) {
+    @Override public void glUniformMatrix4fv(@NativeType("GLint") int location, @NativeType("GLboolean") boolean transpose, @NativeType("GLfloat const *") float[] value) {
         org.lwjgl.opengles.GLES20.glUniformMatrix4fv(location, transpose, value);
     }
 
-    @Override public void glUseProgram(int program) {
+    @Override public void glUseProgram(@NativeType("GLuint") int program) {
         org.lwjgl.opengles.GLES20.glUseProgram(program);
     }
 
-    @Override public void glValidateProgram(int program) {
+    @Override public void glValidateProgram(@NativeType("GLuint") int program) {
         org.lwjgl.opengles.GLES20.glValidateProgram(program);
     }
 
-    @Override public void glVertexAttrib1f(int index, float x) {
+    @Override public void glVertexAttrib1f(@NativeType("GLuint") int index, @NativeType("GLfloat") float x) {
         org.lwjgl.opengles.GLES20.glVertexAttrib1f(index, x);
     }
 
@@ -1254,15 +1297,15 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglVertexAttrib1fv(index, v);
     }
 
-    @Override public void glVertexAttrib1fv(int index, FloatBuffer v) {
+    @Override public void glVertexAttrib1fv(@NativeType("GLuint") int index, @NativeType("GLfloat const *") FloatBuffer v) {
         org.lwjgl.opengles.GLES20.glVertexAttrib1fv(index, v);
     }
 
-    @Override public void glVertexAttrib1fv(int index, float[] v) {
+    @Override public void glVertexAttrib1fv(@NativeType("GLuint") int index, @NativeType("GLfloat const *") float[] v) {
         org.lwjgl.opengles.GLES20.glVertexAttrib1fv(index, v);
     }
 
-    @Override public void glVertexAttrib2f(int index, float x, float y) {
+    @Override public void glVertexAttrib2f(@NativeType("GLuint") int index, @NativeType("GLfloat") float x, @NativeType("GLfloat") float y) {
         org.lwjgl.opengles.GLES20.glVertexAttrib2f(index, x, y);
     }
 
@@ -1270,15 +1313,15 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglVertexAttrib2fv(index, v);
     }
 
-    @Override public void glVertexAttrib2fv(int index, FloatBuffer v) {
+    @Override public void glVertexAttrib2fv(@NativeType("GLuint") int index, @NativeType("GLfloat const *") FloatBuffer v) {
         org.lwjgl.opengles.GLES20.glVertexAttrib2fv(index, v);
     }
 
-    @Override public void glVertexAttrib2fv(int index, float[] v) {
+    @Override public void glVertexAttrib2fv(@NativeType("GLuint") int index, @NativeType("GLfloat const *") float[] v) {
         org.lwjgl.opengles.GLES20.glVertexAttrib2fv(index, v);
     }
 
-    @Override public void glVertexAttrib3f(int index, float x, float y, float z) {
+    @Override public void glVertexAttrib3f(@NativeType("GLuint") int index, @NativeType("GLfloat") float x, @NativeType("GLfloat") float y, @NativeType("GLfloat") float z) {
         org.lwjgl.opengles.GLES20.glVertexAttrib3f(index, x, y, z);
     }
 
@@ -1286,15 +1329,15 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglVertexAttrib3fv(index, v);
     }
 
-    @Override public void glVertexAttrib3fv(int index, FloatBuffer v) {
+    @Override public void glVertexAttrib3fv(@NativeType("GLuint") int index, @NativeType("GLfloat const *") FloatBuffer v) {
         org.lwjgl.opengles.GLES20.glVertexAttrib3fv(index, v);
     }
 
-    @Override public void glVertexAttrib3fv(int index, float[] v) {
+    @Override public void glVertexAttrib3fv(@NativeType("GLuint") int index, @NativeType("GLfloat const *") float[] v) {
         org.lwjgl.opengles.GLES20.glVertexAttrib3fv(index, v);
     }
 
-    @Override public void glVertexAttrib4f(int index, float x, float y, float z, float w) {
+    @Override public void glVertexAttrib4f(@NativeType("GLuint") int index, @NativeType("GLfloat") float x, @NativeType("GLfloat") float y, @NativeType("GLfloat") float z, @NativeType("GLfloat") float w) {
         org.lwjgl.opengles.GLES20.glVertexAttrib4f(index, x, y, z, w);
     }
 
@@ -1302,11 +1345,11 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglVertexAttrib4fv(index, v);
     }
 
-    @Override public void glVertexAttrib4fv(int index, FloatBuffer v) {
+    @Override public void glVertexAttrib4fv(@NativeType("GLuint") int index, @NativeType("GLfloat const *") FloatBuffer v) {
         org.lwjgl.opengles.GLES20.glVertexAttrib4fv(index, v);
     }
 
-    @Override public void glVertexAttrib4fv(int index, float[] v) {
+    @Override public void glVertexAttrib4fv(@NativeType("GLuint") int index, @NativeType("GLfloat const *") float[] v) {
         org.lwjgl.opengles.GLES20.glVertexAttrib4fv(index, v);
     }
 
@@ -1314,27 +1357,27 @@ public class GLES20AccessorImpl implements GLES20Accessor {
         org.lwjgl.opengles.GLES20.nglVertexAttribPointer(index, size, type, normalized, stride, pointer);
     }
 
-    @Override public void glVertexAttribPointer(int index, int size, int type, boolean normalized, int stride, ByteBuffer pointer) {
+    @Override public void glVertexAttribPointer(@NativeType("GLuint") int index, @NativeType("GLint") int size, @NativeType("GLenum") int type, @NativeType("GLboolean") boolean normalized, @NativeType("GLsizei") int stride, @NativeType("void const *") ByteBuffer pointer) {
         org.lwjgl.opengles.GLES20.glVertexAttribPointer(index, size, type, normalized, stride, pointer);
     }
 
-    @Override public void glVertexAttribPointer(int index, int size, int type, boolean normalized, int stride, long pointer) {
+    @Override public void glVertexAttribPointer(@NativeType("GLuint") int index, @NativeType("GLint") int size, @NativeType("GLenum") int type, @NativeType("GLboolean") boolean normalized, @NativeType("GLsizei") int stride, @NativeType("void const *") long pointer) {
         org.lwjgl.opengles.GLES20.glVertexAttribPointer(index, size, type, normalized, stride, pointer);
     }
 
-    @Override public void glVertexAttribPointer(int index, int size, int type, boolean normalized, int stride, ShortBuffer pointer) {
+    @Override public void glVertexAttribPointer(@NativeType("GLuint") int index, @NativeType("GLint") int size, @NativeType("GLenum") int type, @NativeType("GLboolean") boolean normalized, @NativeType("GLsizei") int stride, @NativeType("void const *") ShortBuffer pointer) {
         org.lwjgl.opengles.GLES20.glVertexAttribPointer(index, size, type, normalized, stride, pointer);
     }
 
-    @Override public void glVertexAttribPointer(int index, int size, int type, boolean normalized, int stride, IntBuffer pointer) {
+    @Override public void glVertexAttribPointer(@NativeType("GLuint") int index, @NativeType("GLint") int size, @NativeType("GLenum") int type, @NativeType("GLboolean") boolean normalized, @NativeType("GLsizei") int stride, @NativeType("void const *") IntBuffer pointer) {
         org.lwjgl.opengles.GLES20.glVertexAttribPointer(index, size, type, normalized, stride, pointer);
     }
 
-    @Override public void glVertexAttribPointer(int index, int size, int type, boolean normalized, int stride, FloatBuffer pointer) {
+    @Override public void glVertexAttribPointer(@NativeType("GLuint") int index, @NativeType("GLint") int size, @NativeType("GLenum") int type, @NativeType("GLboolean") boolean normalized, @NativeType("GLsizei") int stride, @NativeType("void const *") FloatBuffer pointer) {
         org.lwjgl.opengles.GLES20.glVertexAttribPointer(index, size, type, normalized, stride, pointer);
     }
 
-    @Override public void glViewport(int x, int y, int width, int height) {
+    @Override public void glViewport(@NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height) {
         org.lwjgl.opengles.GLES20.glViewport(x, y, width, height);
     }
 

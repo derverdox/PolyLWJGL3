@@ -18,23 +18,25 @@ public interface glGetShaderInfoLog {
 /**
  * <a href="https://docs.gl/es3/glGetShaderInfoLog">Reference Page</a>
  */
-    public void glGetShaderInfoLog(int shader, @Nullable IntBuffer length, ByteBuffer infoLog);
+    public void glGetShaderInfoLog(@NativeType("GLuint") int shader, @Nullable @NativeType("GLsizei *") IntBuffer length, @NativeType("GLchar *") ByteBuffer infoLog);
 
 /**
  * <a href="https://docs.gl/es3/glGetShaderInfoLog">Reference Page</a>
  */
-    public String glGetShaderInfoLog(int shader, int bufSize);
+@NativeType("void")
+    public String glGetShaderInfoLog(@NativeType("GLuint") int shader, @NativeType("GLsizei") int bufSize);
 
 /**
  * <a href="https://docs.gl/es3/glGetShaderInfoLog">Reference Page</a>
  */
-    public String glGetShaderInfoLog(int shader);
+@NativeType("void")
+    public String glGetShaderInfoLog(@NativeType("GLuint") int shader);
 
 /**
  * Array version of: {@link #glGetShaderInfoLog GetShaderInfoLog}
  *
  * @see <a href="https://docs.gl/es3/glGetShaderInfoLog">Reference Page</a>
  */
-    public void glGetShaderInfoLog(int shader, @Nullable int[] length, ByteBuffer infoLog);
+    public void glGetShaderInfoLog(@NativeType("GLuint") int shader, @Nullable @NativeType("GLsizei *") int[] length, @NativeType("GLchar *") ByteBuffer infoLog);
 
 }

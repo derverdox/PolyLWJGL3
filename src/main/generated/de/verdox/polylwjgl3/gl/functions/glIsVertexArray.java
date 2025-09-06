@@ -19,6 +19,7 @@ public interface glIsVertexArray {
 /**
  * <a href="https://docs.gl/es3/glIsVertexArray">Reference Page</a>
  */
-    public boolean glIsVertexArray(int array);
+@NativeType("GLboolean")
+    public boolean glIsVertexArray(@NativeType("GLuint") int array);
 
 }

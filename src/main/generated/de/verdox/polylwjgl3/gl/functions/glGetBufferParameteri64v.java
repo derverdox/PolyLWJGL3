@@ -21,13 +21,13 @@ public interface glGetBufferParameteri64v {
 /**
  * <a href="https://docs.gl/es3/glGetBufferParameter">Reference Page</a>
  */
-    public void glGetBufferParameteri64v(int target, int pname, LongBuffer params);
+    public void glGetBufferParameteri64v(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLint64 *") LongBuffer params);
 
 /**
  * Array version of: {@link #glGetBufferParameteri64v GetBufferParameteri64v}
  *
  * @see <a href="https://docs.gl/es3/glGetBufferParameter">Reference Page</a>
  */
-    public void glGetBufferParameteri64v(int target, int pname, long[] params);
+    public void glGetBufferParameteri64v(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLint64 *") long[] params);
 
 }

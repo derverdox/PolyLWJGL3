@@ -22,12 +22,14 @@ public interface glMapBufferRange {
  * <a href="https://docs.gl/es3/glMapBufferRange">Reference Page</a>
  */
 @Nullable
-    public ByteBuffer glMapBufferRange(int target, long offset, long length, int access);
+@NativeType("void *")
+    public ByteBuffer glMapBufferRange(@NativeType("GLenum") int target, @NativeType("GLintptr") long offset, @NativeType("GLsizeiptr") long length, @NativeType("GLbitfield") int access);
 
 /**
  * <a href="https://docs.gl/es3/glMapBufferRange">Reference Page</a>
  */
 @Nullable
-    public ByteBuffer glMapBufferRange(int target, long offset, long length, int access, @Nullable ByteBuffer old_buffer);
+@NativeType("void *")
+    public ByteBuffer glMapBufferRange(@NativeType("GLenum") int target, @NativeType("GLintptr") long offset, @NativeType("GLsizeiptr") long length, @NativeType("GLbitfield") int access, @Nullable ByteBuffer old_buffer);
 
 }

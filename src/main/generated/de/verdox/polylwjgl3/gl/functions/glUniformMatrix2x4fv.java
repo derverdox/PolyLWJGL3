@@ -21,13 +21,13 @@ public interface glUniformMatrix2x4fv {
 /**
  * <a href="https://docs.gl/es3/glUniform">Reference Page</a>
  */
-    public void glUniformMatrix2x4fv(int location, boolean transpose, FloatBuffer value);
+    public void glUniformMatrix2x4fv(@NativeType("GLint") int location, @NativeType("GLboolean") boolean transpose, @NativeType("GLfloat const *") FloatBuffer value);
 
 /**
  * Array version of: {@link #glUniformMatrix2x4fv UniformMatrix2x4fv}
  *
  * @see <a href="https://docs.gl/es3/glUniform">Reference Page</a>
  */
-    public void glUniformMatrix2x4fv(int location, boolean transpose, float[] value);
+    public void glUniformMatrix2x4fv(@NativeType("GLint") int location, @NativeType("GLboolean") boolean transpose, @NativeType("GLfloat const *") float[] value);
 
 }

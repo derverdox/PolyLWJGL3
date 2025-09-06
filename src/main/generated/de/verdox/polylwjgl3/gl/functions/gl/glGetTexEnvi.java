@@ -21,6 +21,7 @@ public interface glGetTexEnvi {
  *
  * @see <a href="https://docs.gl/gl3/glGetTexEnv">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public int glGetTexEnvi(int env, int pname);
+@NativeType("void")
+    public int glGetTexEnvi(@NativeType("GLenum") int env, @NativeType("GLenum") int pname);
 
 }

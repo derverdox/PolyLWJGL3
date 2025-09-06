@@ -30,7 +30,7 @@ public interface glDrawElementsInstancedBaseVertexBaseInstance {
  *
  * @see <a href="https://docs.gl/gl4/glDrawElementsInstancedBaseVertexBaseInstance">Reference Page</a>
  */
-    public void glDrawElementsInstancedBaseVertexBaseInstance(int mode, int count, int type, long indices, int primcount, int basevertex, int baseinstance);
+    public void glDrawElementsInstancedBaseVertexBaseInstance(@NativeType("GLenum") int mode, @NativeType("GLsizei") int count, @NativeType("GLenum") int type, @NativeType("void const *") long indices, @NativeType("GLsizei") int primcount, @NativeType("GLint") int basevertex, @NativeType("GLuint") int baseinstance);
 
 /**
  * Renders multiple instances of a set of primitives from array data with a per-element offset.
@@ -44,7 +44,7 @@ public interface glDrawElementsInstancedBaseVertexBaseInstance {
  *
  * @see <a href="https://docs.gl/gl4/glDrawElementsInstancedBaseVertexBaseInstance">Reference Page</a>
  */
-    public void glDrawElementsInstancedBaseVertexBaseInstance(int mode, int type, ByteBuffer indices, int primcount, int basevertex, int baseinstance);
+    public void glDrawElementsInstancedBaseVertexBaseInstance(@NativeType("GLenum") int mode, @NativeType("GLenum") int type, @NativeType("void const *") ByteBuffer indices, @NativeType("GLsizei") int primcount, @NativeType("GLint") int basevertex, @NativeType("GLuint") int baseinstance);
 
 /**
  * Renders multiple instances of a set of primitives from array data with a per-element offset.
@@ -57,7 +57,7 @@ public interface glDrawElementsInstancedBaseVertexBaseInstance {
  *
  * @see <a href="https://docs.gl/gl4/glDrawElementsInstancedBaseVertexBaseInstance">Reference Page</a>
  */
-    public void glDrawElementsInstancedBaseVertexBaseInstance(int mode, ByteBuffer indices, int primcount, int basevertex, int baseinstance);
+    public void glDrawElementsInstancedBaseVertexBaseInstance(@NativeType("GLenum") int mode, @NativeType("void const *") ByteBuffer indices, @NativeType("GLsizei") int primcount, @NativeType("GLint") int basevertex, @NativeType("GLuint") int baseinstance);
 
 /**
  * Renders multiple instances of a set of primitives from array data with a per-element offset.
@@ -70,7 +70,7 @@ public interface glDrawElementsInstancedBaseVertexBaseInstance {
  *
  * @see <a href="https://docs.gl/gl4/glDrawElementsInstancedBaseVertexBaseInstance">Reference Page</a>
  */
-    public void glDrawElementsInstancedBaseVertexBaseInstance(int mode, ShortBuffer indices, int primcount, int basevertex, int baseinstance);
+    public void glDrawElementsInstancedBaseVertexBaseInstance(@NativeType("GLenum") int mode, @NativeType("void const *") ShortBuffer indices, @NativeType("GLsizei") int primcount, @NativeType("GLint") int basevertex, @NativeType("GLuint") int baseinstance);
 
 /**
  * Renders multiple instances of a set of primitives from array data with a per-element offset.
@@ -83,6 +83,6 @@ public interface glDrawElementsInstancedBaseVertexBaseInstance {
  *
  * @see <a href="https://docs.gl/gl4/glDrawElementsInstancedBaseVertexBaseInstance">Reference Page</a>
  */
-    public void glDrawElementsInstancedBaseVertexBaseInstance(int mode, IntBuffer indices, int primcount, int basevertex, int baseinstance);
+    public void glDrawElementsInstancedBaseVertexBaseInstance(@NativeType("GLenum") int mode, @NativeType("void const *") IntBuffer indices, @NativeType("GLsizei") int primcount, @NativeType("GLint") int basevertex, @NativeType("GLuint") int baseinstance);
 
 }

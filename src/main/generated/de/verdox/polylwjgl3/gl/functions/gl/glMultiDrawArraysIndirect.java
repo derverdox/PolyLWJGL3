@@ -47,7 +47,7 @@ public interface glMultiDrawArraysIndirect {
  *
  * @see <a href="https://docs.gl/gl4/glMultiDrawArraysIndirect">Reference Page</a>
  */
-    public void glMultiDrawArraysIndirect(int mode, ByteBuffer indirect, int drawcount, int stride);
+    public void glMultiDrawArraysIndirect(@NativeType("GLenum") int mode, @NativeType("void const *") ByteBuffer indirect, @NativeType("GLsizei") int drawcount, @NativeType("GLsizei") int stride);
 
 /**
  * Renders multiple sets of primitives from array data, taking parameters from memory.
@@ -81,7 +81,7 @@ public interface glMultiDrawArraysIndirect {
  *
  * @see <a href="https://docs.gl/gl4/glMultiDrawArraysIndirect">Reference Page</a>
  */
-    public void glMultiDrawArraysIndirect(int mode, long indirect, int drawcount, int stride);
+    public void glMultiDrawArraysIndirect(@NativeType("GLenum") int mode, @NativeType("void const *") long indirect, @NativeType("GLsizei") int drawcount, @NativeType("GLsizei") int stride);
 
 /**
  * Renders multiple sets of primitives from array data, taking parameters from memory.
@@ -115,13 +115,13 @@ public interface glMultiDrawArraysIndirect {
  *
  * @see <a href="https://docs.gl/gl4/glMultiDrawArraysIndirect">Reference Page</a>
  */
-    public void glMultiDrawArraysIndirect(int mode, IntBuffer indirect, int drawcount, int stride);
+    public void glMultiDrawArraysIndirect(@NativeType("GLenum") int mode, @NativeType("void const *") IntBuffer indirect, @NativeType("GLsizei") int drawcount, @NativeType("GLsizei") int stride);
 
 /**
  * Array version of: {@link #glMultiDrawArraysIndirect MultiDrawArraysIndirect}
  *
  * @see <a href="https://docs.gl/gl4/glMultiDrawArraysIndirect">Reference Page</a>
  */
-    public void glMultiDrawArraysIndirect(int mode, int[] indirect, int drawcount, int stride);
+    public void glMultiDrawArraysIndirect(@NativeType("GLenum") int mode, @NativeType("void const *") int[] indirect, @NativeType("GLsizei") int drawcount, @NativeType("GLsizei") int stride);
 
 }

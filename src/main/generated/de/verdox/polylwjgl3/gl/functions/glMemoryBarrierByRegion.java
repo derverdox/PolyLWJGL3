@@ -18,6 +18,6 @@ public interface glMemoryBarrierByRegion {
 /**
  * <a href="https://docs.gl/es3/glMemoryBarrierByRegion">Reference Page</a>
  */
-    public void glMemoryBarrierByRegion(int barriers);
+    public void glMemoryBarrierByRegion(@NativeType("GLbitfield") int barriers);
 
 }

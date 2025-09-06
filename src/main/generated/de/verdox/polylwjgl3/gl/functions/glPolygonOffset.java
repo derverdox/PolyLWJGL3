@@ -16,6 +16,6 @@ public interface glPolygonOffset {
 /**
  * <a href="https://docs.gl/es3/glPolygonOffset">Reference Page</a>
  */
-    public void glPolygonOffset(float factor, float units);
+    public void glPolygonOffset(@NativeType("GLfloat") float factor, @NativeType("GLfloat") float units);
 
 }

@@ -16,6 +16,6 @@ public interface glFramebufferRenderbuffer {
 /**
  * <a href="https://docs.gl/es3/glFramebufferRenderbuffer">Reference Page</a>
  */
-    public void glFramebufferRenderbuffer(int target, int attachment, int renderbuffertarget, int renderbuffer);
+    public void glFramebufferRenderbuffer(@NativeType("GLenum") int target, @NativeType("GLenum") int attachment, @NativeType("GLenum") int renderbuffertarget, @NativeType("GLuint") int renderbuffer);
 
 }

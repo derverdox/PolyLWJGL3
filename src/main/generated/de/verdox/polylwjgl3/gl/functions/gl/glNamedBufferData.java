@@ -30,7 +30,7 @@ public interface glNamedBufferData {
  *
  * @see <a href="https://docs.gl/gl4/glBufferData">Reference Page</a>
  */
-    public void glNamedBufferData(int buffer, long size, int usage);
+    public void glNamedBufferData(@NativeType("GLuint") int buffer, @NativeType("GLsizeiptr") long size, @NativeType("GLenum") int usage);
 
 /**
  * DSA version of {@link GL15C#glBufferData BufferData}.
@@ -40,7 +40,7 @@ public interface glNamedBufferData {
  *
  * @see <a href="https://docs.gl/gl4/glBufferData">Reference Page</a>
  */
-    public void glNamedBufferData(int buffer, ByteBuffer data, int usage);
+    public void glNamedBufferData(@NativeType("GLuint") int buffer, @NativeType("void const *") ByteBuffer data, @NativeType("GLenum") int usage);
 
 /**
  * DSA version of {@link GL15C#glBufferData BufferData}.
@@ -50,7 +50,7 @@ public interface glNamedBufferData {
  *
  * @see <a href="https://docs.gl/gl4/glBufferData">Reference Page</a>
  */
-    public void glNamedBufferData(int buffer, ShortBuffer data, int usage);
+    public void glNamedBufferData(@NativeType("GLuint") int buffer, @NativeType("void const *") ShortBuffer data, @NativeType("GLenum") int usage);
 
 /**
  * DSA version of {@link GL15C#glBufferData BufferData}.
@@ -60,7 +60,7 @@ public interface glNamedBufferData {
  *
  * @see <a href="https://docs.gl/gl4/glBufferData">Reference Page</a>
  */
-    public void glNamedBufferData(int buffer, IntBuffer data, int usage);
+    public void glNamedBufferData(@NativeType("GLuint") int buffer, @NativeType("void const *") IntBuffer data, @NativeType("GLenum") int usage);
 
 /**
  * DSA version of {@link GL15C#glBufferData BufferData}.
@@ -70,7 +70,7 @@ public interface glNamedBufferData {
  *
  * @see <a href="https://docs.gl/gl4/glBufferData">Reference Page</a>
  */
-    public void glNamedBufferData(int buffer, LongBuffer data, int usage);
+    public void glNamedBufferData(@NativeType("GLuint") int buffer, @NativeType("void const *") LongBuffer data, @NativeType("GLenum") int usage);
 
 /**
  * DSA version of {@link GL15C#glBufferData BufferData}.
@@ -80,7 +80,7 @@ public interface glNamedBufferData {
  *
  * @see <a href="https://docs.gl/gl4/glBufferData">Reference Page</a>
  */
-    public void glNamedBufferData(int buffer, FloatBuffer data, int usage);
+    public void glNamedBufferData(@NativeType("GLuint") int buffer, @NativeType("void const *") FloatBuffer data, @NativeType("GLenum") int usage);
 
 /**
  * DSA version of {@link GL15C#glBufferData BufferData}.
@@ -90,41 +90,41 @@ public interface glNamedBufferData {
  *
  * @see <a href="https://docs.gl/gl4/glBufferData">Reference Page</a>
  */
-    public void glNamedBufferData(int buffer, DoubleBuffer data, int usage);
+    public void glNamedBufferData(@NativeType("GLuint") int buffer, @NativeType("void const *") DoubleBuffer data, @NativeType("GLenum") int usage);
 
 /**
  * Array version of: {@link #glNamedBufferData NamedBufferData}
  *
  * @see <a href="https://docs.gl/gl4/glBufferData">Reference Page</a>
  */
-    public void glNamedBufferData(int buffer, short[] data, int usage);
+    public void glNamedBufferData(@NativeType("GLuint") int buffer, @NativeType("void const *") short[] data, @NativeType("GLenum") int usage);
 
 /**
  * Array version of: {@link #glNamedBufferData NamedBufferData}
  *
  * @see <a href="https://docs.gl/gl4/glBufferData">Reference Page</a>
  */
-    public void glNamedBufferData(int buffer, int[] data, int usage);
+    public void glNamedBufferData(@NativeType("GLuint") int buffer, @NativeType("void const *") int[] data, @NativeType("GLenum") int usage);
 
 /**
  * Array version of: {@link #glNamedBufferData NamedBufferData}
  *
  * @see <a href="https://docs.gl/gl4/glBufferData">Reference Page</a>
  */
-    public void glNamedBufferData(int buffer, long[] data, int usage);
+    public void glNamedBufferData(@NativeType("GLuint") int buffer, @NativeType("void const *") long[] data, @NativeType("GLenum") int usage);
 
 /**
  * Array version of: {@link #glNamedBufferData NamedBufferData}
  *
  * @see <a href="https://docs.gl/gl4/glBufferData">Reference Page</a>
  */
-    public void glNamedBufferData(int buffer, float[] data, int usage);
+    public void glNamedBufferData(@NativeType("GLuint") int buffer, @NativeType("void const *") float[] data, @NativeType("GLenum") int usage);
 
 /**
  * Array version of: {@link #glNamedBufferData NamedBufferData}
  *
  * @see <a href="https://docs.gl/gl4/glBufferData">Reference Page</a>
  */
-    public void glNamedBufferData(int buffer, double[] data, int usage);
+    public void glNamedBufferData(@NativeType("GLuint") int buffer, @NativeType("void const *") double[] data, @NativeType("GLenum") int usage);
 
 }

@@ -25,13 +25,13 @@ public interface glColor3sv {
  *
  * @see <a href="https://docs.gl/gl3/glColor">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glColor3sv(ShortBuffer v);
+    public void glColor3sv(@NativeType("GLshort const *") ShortBuffer v);
 
 /**
  * Array version of: {@link #glColor3sv Color3sv}
  *
  * @see <a href="https://docs.gl/gl3/glColor">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glColor3sv(short[] v);
+    public void glColor3sv(@NativeType("GLshort const *") short[] v);
 
 }

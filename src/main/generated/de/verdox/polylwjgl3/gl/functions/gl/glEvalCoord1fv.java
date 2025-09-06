@@ -25,13 +25,13 @@ public interface glEvalCoord1fv {
  *
  * @see <a href="https://docs.gl/gl3/glEvalCoord">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glEvalCoord1fv(FloatBuffer u);
+    public void glEvalCoord1fv(@NativeType("GLfloat const *") FloatBuffer u);
 
 /**
  * Array version of: {@link #glEvalCoord1fv EvalCoord1fv}
  *
  * @see <a href="https://docs.gl/gl3/glEvalCoord">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glEvalCoord1fv(float[] u);
+    public void glEvalCoord1fv(@NativeType("GLfloat const *") float[] u);
 
 }

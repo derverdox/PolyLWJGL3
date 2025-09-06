@@ -30,13 +30,13 @@ public interface glTexSubImage2D_CORE extends glTexSubImage2D {
  *
  * @see <a href="https://docs.gl/gl4/glTexSubImage2D">Reference Page</a>
  */
-    public void glTexSubImage2D(int target, int level, int xoffset, int yoffset, int width, int height, int format, int type, DoubleBuffer pixels);
+    public void glTexSubImage2D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int yoffset, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void const *") DoubleBuffer pixels);
 
 /**
  * Array version of: {@link #glTexSubImage2D TexSubImage2D}
  *
  * @see <a href="https://docs.gl/gl4/glTexSubImage2D">Reference Page</a>
  */
-    public void glTexSubImage2D(int target, int level, int xoffset, int yoffset, int width, int height, int format, int type, double[] pixels);
+    public void glTexSubImage2D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int yoffset, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void const *") double[] pixels);
 
 }

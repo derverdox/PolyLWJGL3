@@ -22,6 +22,6 @@ public interface glIndexMask {
  *
  * @see <a href="https://docs.gl/gl3/glIndexMask">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glIndexMask(int mask);
+    public void glIndexMask(@NativeType("GLuint") int mask);
 
 }

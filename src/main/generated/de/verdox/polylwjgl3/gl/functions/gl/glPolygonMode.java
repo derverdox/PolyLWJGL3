@@ -25,6 +25,6 @@ public interface glPolygonMode {
  *
  * @see <a href="https://docs.gl/gl4/glPolygonMode">Reference Page</a>
  */
-    public void glPolygonMode(int face, int mode);
+    public void glPolygonMode(@NativeType("GLenum") int face, @NativeType("GLenum") int mode);
 
 }

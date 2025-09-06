@@ -26,6 +26,6 @@ public interface glNamedFramebufferTextureLayer {
  *
  * @see <a href="https://docs.gl/gl4/glFramebufferTextureLayer">Reference Page</a>
  */
-    public void glNamedFramebufferTextureLayer(int framebuffer, int attachment, int texture, int level, int layer);
+    public void glNamedFramebufferTextureLayer(@NativeType("GLuint") int framebuffer, @NativeType("GLenum") int attachment, @NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLint") int layer);
 
 }

@@ -27,7 +27,7 @@ public interface glGetCompressedTexImage {
  *
  * @see <a href="https://docs.gl/gl4/glGetCompressedTexImage">Reference Page</a>
  */
-    public void glGetCompressedTexImage(int target, int level, ByteBuffer pixels);
+    public void glGetCompressedTexImage(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("void *") ByteBuffer pixels);
 
 /**
  * Returns a compressed texture image.
@@ -38,6 +38,6 @@ public interface glGetCompressedTexImage {
  *
  * @see <a href="https://docs.gl/gl4/glGetCompressedTexImage">Reference Page</a>
  */
-    public void glGetCompressedTexImage(int target, int level, long pixels);
+    public void glGetCompressedTexImage(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("void *") long pixels);
 
 }

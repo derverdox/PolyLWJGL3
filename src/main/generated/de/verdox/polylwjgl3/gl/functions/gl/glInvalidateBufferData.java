@@ -17,6 +17,6 @@ public interface glInvalidateBufferData {
  *
  * @see <a href="https://docs.gl/gl4/glInvalidateBufferData">Reference Page</a>
  */
-    public void glInvalidateBufferData(int buffer);
+    public void glInvalidateBufferData(@NativeType("GLuint") int buffer);
 
 }

@@ -26,13 +26,13 @@ public interface glFogfv {
  *
  * @see <a href="https://docs.gl/gl3/glFog">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glFogfv(int pname, FloatBuffer params);
+    public void glFogfv(@NativeType("GLenum") int pname, @NativeType("GLfloat const *") FloatBuffer params);
 
 /**
  * Array version of: {@link #glFogfv Fogfv}
  *
  * @see <a href="https://docs.gl/gl3/glFog">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glFogfv(int pname, float[] params);
+    public void glFogfv(@NativeType("GLenum") int pname, @NativeType("GLfloat const *") float[] params);
 
 }

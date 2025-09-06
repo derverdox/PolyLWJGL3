@@ -25,13 +25,13 @@ public interface glTexCoordP3uiv {
  *
  * @see <a href="https://docs.gl/gl3/glTexCoord">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glTexCoordP3uiv(int type, IntBuffer coords);
+    public void glTexCoordP3uiv(@NativeType("GLenum") int type, @NativeType("GLuint const *") IntBuffer coords);
 
 /**
  * Array version of: {@link #glTexCoordP3uiv TexCoordP3uiv}
  *
  * @see <a href="https://docs.gl/gl3/glTexCoord">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glTexCoordP3uiv(int type, int[] coords);
+    public void glTexCoordP3uiv(@NativeType("GLenum") int type, @NativeType("GLuint const *") int[] coords);
 
 }

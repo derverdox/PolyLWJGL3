@@ -16,6 +16,7 @@ public interface glGetError {
 /**
  * <a href="https://docs.gl/es3/glGetError">Reference Page</a>
  */
+@NativeType("GLenum")
     public int glGetError();
 
 }

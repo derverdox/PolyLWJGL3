@@ -19,6 +19,6 @@ public interface glShaderStorageBlockBinding {
  *
  * @see <a href="https://docs.gl/gl4/glShaderStorageBlockBinding">Reference Page</a>
  */
-    public void glShaderStorageBlockBinding(int program, int storageBlockIndex, int storageBlockBinding);
+    public void glShaderStorageBlockBinding(@NativeType("GLuint") int program, @NativeType("GLuint") int storageBlockIndex, @NativeType("GLuint") int storageBlockBinding);
 
 }

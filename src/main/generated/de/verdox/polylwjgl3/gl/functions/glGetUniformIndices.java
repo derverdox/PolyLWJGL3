@@ -21,13 +21,13 @@ public interface glGetUniformIndices {
 /**
  * <a href="https://docs.gl/es3/glGetUniformIndices">Reference Page</a>
  */
-    public void glGetUniformIndices(int program, PointerBuffer uniformNames, IntBuffer uniformIndices);
+    public void glGetUniformIndices(@NativeType("GLuint") int program, @NativeType("GLchar const * const *") PointerBuffer uniformNames, @NativeType("GLuint *") IntBuffer uniformIndices);
 
 /**
  * Array version of: {@link #glGetUniformIndices GetUniformIndices}
  *
  * @see <a href="https://docs.gl/es3/glGetUniformIndices">Reference Page</a>
  */
-    public void glGetUniformIndices(int program, PointerBuffer uniformNames, int[] uniformIndices);
+    public void glGetUniformIndices(@NativeType("GLuint") int program, @NativeType("GLchar const * const *") PointerBuffer uniformNames, @NativeType("GLuint *") int[] uniformIndices);
 
 }

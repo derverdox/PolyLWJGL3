@@ -16,6 +16,6 @@ public interface glClearDepthf {
 /**
  * <a href="https://docs.gl/es3/glClearDepthf">Reference Page</a>
  */
-    public void glClearDepthf(float d);
+    public void glClearDepthf(@NativeType("GLfloat") float d);
 
 }

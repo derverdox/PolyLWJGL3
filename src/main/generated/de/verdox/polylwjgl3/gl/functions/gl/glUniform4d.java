@@ -21,6 +21,6 @@ public interface glUniform4d {
  *
  * @see <a href="https://docs.gl/gl4/glUniform">Reference Page</a>
  */
-    public void glUniform4d(int location, double x, double y, double z, double w);
+    public void glUniform4d(@NativeType("GLint") int location, @NativeType("GLdouble") double x, @NativeType("GLdouble") double y, @NativeType("GLdouble") double z, @NativeType("GLdouble") double w);
 
 }

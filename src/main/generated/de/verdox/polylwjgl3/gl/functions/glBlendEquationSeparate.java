@@ -16,6 +16,6 @@ public interface glBlendEquationSeparate {
 /**
  * <a href="https://docs.gl/es3/glBlendEquationSeparate">Reference Page</a>
  */
-    public void glBlendEquationSeparate(int modeRGB, int modeAlpha);
+    public void glBlendEquationSeparate(@NativeType("GLenum") int modeRGB, @NativeType("GLenum") int modeAlpha);
 
 }

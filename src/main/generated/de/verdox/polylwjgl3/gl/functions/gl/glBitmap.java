@@ -32,7 +32,7 @@ public interface glBitmap {
  *
  * @see <a href="https://docs.gl/gl3/glBitmap">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glBitmap(int w, int h, float xOrig, float yOrig, float xInc, float yInc, @Nullable ByteBuffer data);
+    public void glBitmap(@NativeType("GLsizei") int w, @NativeType("GLsizei") int h, @NativeType("GLfloat") float xOrig, @NativeType("GLfloat") float yOrig, @NativeType("GLfloat") float xInc, @NativeType("GLfloat") float yInc, @Nullable @NativeType("GLubyte const *") ByteBuffer data);
 
 /**
  * Sents a bitmap to the GL. Bitmaps are rectangles of zeros and ones specifying a particular pattern of fragments to be produced. Each of these fragments
@@ -48,6 +48,6 @@ public interface glBitmap {
  *
  * @see <a href="https://docs.gl/gl3/glBitmap">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glBitmap(int w, int h, float xOrig, float yOrig, float xInc, float yInc, long data);
+    public void glBitmap(@NativeType("GLsizei") int w, @NativeType("GLsizei") int h, @NativeType("GLfloat") float xOrig, @NativeType("GLfloat") float yOrig, @NativeType("GLfloat") float xInc, @NativeType("GLfloat") float yInc, @NativeType("GLubyte const *") long data);
 
 }

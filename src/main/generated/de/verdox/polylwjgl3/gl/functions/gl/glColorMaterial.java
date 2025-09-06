@@ -23,6 +23,6 @@ public interface glColorMaterial {
  *
  * @see <a href="https://docs.gl/gl3/glColorMaterial">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glColorMaterial(int face, int mode);
+    public void glColorMaterial(@NativeType("GLenum") int face, @NativeType("GLenum") int mode);
 
 }

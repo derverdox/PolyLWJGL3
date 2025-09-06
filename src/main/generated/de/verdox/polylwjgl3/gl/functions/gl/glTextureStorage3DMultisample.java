@@ -29,6 +29,6 @@ public interface glTextureStorage3DMultisample {
  *
  * @see <a href="https://docs.gl/gl4/glTextureStorage3DMultisample">Reference Page</a>
  */
-    public void glTextureStorage3DMultisample(int texture, int samples, int internalformat, int width, int height, int depth, boolean fixedsamplelocations);
+    public void glTextureStorage3DMultisample(@NativeType("GLuint") int texture, @NativeType("GLsizei") int samples, @NativeType("GLenum") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLsizei") int depth, @NativeType("GLboolean") boolean fixedsamplelocations);
 
 }

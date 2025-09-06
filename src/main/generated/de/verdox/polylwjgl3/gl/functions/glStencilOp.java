@@ -16,6 +16,6 @@ public interface glStencilOp {
 /**
  * <a href="https://docs.gl/es3/glStencilOp">Reference Page</a>
  */
-    public void glStencilOp(int fail, int zfail, int zpass);
+    public void glStencilOp(@NativeType("GLenum") int fail, @NativeType("GLenum") int zfail, @NativeType("GLenum") int zpass);
 
 }

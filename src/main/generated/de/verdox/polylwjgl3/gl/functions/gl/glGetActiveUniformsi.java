@@ -19,6 +19,7 @@ public interface glGetActiveUniformsi {
  *
  * @see <a href="https://docs.gl/gl4/glGetActiveUniforms">Reference Page</a>
  */
-    public int glGetActiveUniformsi(int program, int uniformIndex, int pname);
+@NativeType("void")
+    public int glGetActiveUniformsi(@NativeType("GLuint") int program, @NativeType("GLuint const *") int uniformIndex, @NativeType("GLenum") int pname);
 
 }

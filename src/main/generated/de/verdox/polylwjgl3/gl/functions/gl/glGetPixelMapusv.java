@@ -26,7 +26,7 @@ public interface glGetPixelMapusv {
  *
  * @see <a href="https://docs.gl/gl3/glGetPixelMap">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glGetPixelMapusv(int map, ShortBuffer data);
+    public void glGetPixelMapusv(@NativeType("GLenum") int map, @NativeType("GLushort *") ShortBuffer data);
 
 /**
  * Unsigned short version of {@link #glGetPixelMapfv GetPixelMapfv}.
@@ -36,13 +36,13 @@ public interface glGetPixelMapusv {
  *
  * @see <a href="https://docs.gl/gl3/glGetPixelMap">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glGetPixelMapusv(int map, long data);
+    public void glGetPixelMapusv(@NativeType("GLenum") int map, @NativeType("GLushort *") long data);
 
 /**
  * Array version of: {@link #glGetPixelMapusv GetPixelMapusv}
  *
  * @see <a href="https://docs.gl/gl3/glGetPixelMap">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glGetPixelMapusv(int map, short[] data);
+    public void glGetPixelMapusv(@NativeType("GLenum") int map, @NativeType("GLushort *") short[] data);
 
 }

@@ -66,7 +66,7 @@ public interface glNamedBufferStorage {
  *
  * @see <a href="https://docs.gl/gl4/glBufferStorage">Reference Page</a>
  */
-    public void glNamedBufferStorage(int buffer, long size, int flags);
+    public void glNamedBufferStorage(@NativeType("GLuint") int buffer, @NativeType("GLsizeiptr") long size, @NativeType("GLbitfield") int flags);
 
 /**
  * DSA version of {@link GL44C#glBufferStorage BufferStorage}.
@@ -113,7 +113,7 @@ public interface glNamedBufferStorage {
  *
  * @see <a href="https://docs.gl/gl4/glBufferStorage">Reference Page</a>
  */
-    public void glNamedBufferStorage(int buffer, ByteBuffer data, int flags);
+    public void glNamedBufferStorage(@NativeType("GLuint") int buffer, @NativeType("void const *") ByteBuffer data, @NativeType("GLbitfield") int flags);
 
 /**
  * DSA version of {@link GL44C#glBufferStorage BufferStorage}.
@@ -160,7 +160,7 @@ public interface glNamedBufferStorage {
  *
  * @see <a href="https://docs.gl/gl4/glBufferStorage">Reference Page</a>
  */
-    public void glNamedBufferStorage(int buffer, ShortBuffer data, int flags);
+    public void glNamedBufferStorage(@NativeType("GLuint") int buffer, @NativeType("void const *") ShortBuffer data, @NativeType("GLbitfield") int flags);
 
 /**
  * DSA version of {@link GL44C#glBufferStorage BufferStorage}.
@@ -207,7 +207,7 @@ public interface glNamedBufferStorage {
  *
  * @see <a href="https://docs.gl/gl4/glBufferStorage">Reference Page</a>
  */
-    public void glNamedBufferStorage(int buffer, IntBuffer data, int flags);
+    public void glNamedBufferStorage(@NativeType("GLuint") int buffer, @NativeType("void const *") IntBuffer data, @NativeType("GLbitfield") int flags);
 
 /**
  * DSA version of {@link GL44C#glBufferStorage BufferStorage}.
@@ -254,7 +254,7 @@ public interface glNamedBufferStorage {
  *
  * @see <a href="https://docs.gl/gl4/glBufferStorage">Reference Page</a>
  */
-    public void glNamedBufferStorage(int buffer, FloatBuffer data, int flags);
+    public void glNamedBufferStorage(@NativeType("GLuint") int buffer, @NativeType("void const *") FloatBuffer data, @NativeType("GLbitfield") int flags);
 
 /**
  * DSA version of {@link GL44C#glBufferStorage BufferStorage}.
@@ -301,34 +301,34 @@ public interface glNamedBufferStorage {
  *
  * @see <a href="https://docs.gl/gl4/glBufferStorage">Reference Page</a>
  */
-    public void glNamedBufferStorage(int buffer, DoubleBuffer data, int flags);
+    public void glNamedBufferStorage(@NativeType("GLuint") int buffer, @NativeType("void const *") DoubleBuffer data, @NativeType("GLbitfield") int flags);
 
 /**
  * Array version of: {@link #glNamedBufferStorage NamedBufferStorage}
  *
  * @see <a href="https://docs.gl/gl4/glBufferStorage">Reference Page</a>
  */
-    public void glNamedBufferStorage(int buffer, short[] data, int flags);
+    public void glNamedBufferStorage(@NativeType("GLuint") int buffer, @NativeType("void const *") short[] data, @NativeType("GLbitfield") int flags);
 
 /**
  * Array version of: {@link #glNamedBufferStorage NamedBufferStorage}
  *
  * @see <a href="https://docs.gl/gl4/glBufferStorage">Reference Page</a>
  */
-    public void glNamedBufferStorage(int buffer, int[] data, int flags);
+    public void glNamedBufferStorage(@NativeType("GLuint") int buffer, @NativeType("void const *") int[] data, @NativeType("GLbitfield") int flags);
 
 /**
  * Array version of: {@link #glNamedBufferStorage NamedBufferStorage}
  *
  * @see <a href="https://docs.gl/gl4/glBufferStorage">Reference Page</a>
  */
-    public void glNamedBufferStorage(int buffer, float[] data, int flags);
+    public void glNamedBufferStorage(@NativeType("GLuint") int buffer, @NativeType("void const *") float[] data, @NativeType("GLbitfield") int flags);
 
 /**
  * Array version of: {@link #glNamedBufferStorage NamedBufferStorage}
  *
  * @see <a href="https://docs.gl/gl4/glBufferStorage">Reference Page</a>
  */
-    public void glNamedBufferStorage(int buffer, double[] data, int flags);
+    public void glNamedBufferStorage(@NativeType("GLuint") int buffer, @NativeType("void const *") double[] data, @NativeType("GLbitfield") int flags);
 
 }

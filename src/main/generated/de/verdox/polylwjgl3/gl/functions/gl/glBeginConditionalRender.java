@@ -19,6 +19,6 @@ public interface glBeginConditionalRender {
  *
  * @see <a href="https://docs.gl/gl4/glBeginConditionalRender">Reference Page</a>
  */
-    public void glBeginConditionalRender(int id, int mode);
+    public void glBeginConditionalRender(@NativeType("GLuint") int id, @NativeType("GLenum") int mode);
 
 }

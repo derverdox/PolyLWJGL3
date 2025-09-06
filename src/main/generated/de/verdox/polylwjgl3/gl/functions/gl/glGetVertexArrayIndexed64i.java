@@ -24,6 +24,7 @@ public interface glGetVertexArrayIndexed64i {
  *
  * @see <a href="https://docs.gl/gl4/glGetVertexArrayIndexed">Reference Page</a>
  */
-    public long glGetVertexArrayIndexed64i(int vaobj, int index, int pname);
+@NativeType("void")
+    public long glGetVertexArrayIndexed64i(@NativeType("GLuint") int vaobj, @NativeType("GLuint") int index, @NativeType("GLenum") int pname);
 
 }

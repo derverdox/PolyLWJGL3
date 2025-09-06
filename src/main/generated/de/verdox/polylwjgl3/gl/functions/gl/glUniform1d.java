@@ -18,6 +18,6 @@ public interface glUniform1d {
  *
  * @see <a href="https://docs.gl/gl4/glUniform">Reference Page</a>
  */
-    public void glUniform1d(int location, double x);
+    public void glUniform1d(@NativeType("GLint") int location, @NativeType("GLdouble") double x);
 
 }

@@ -18,6 +18,6 @@ public interface glVertexAttribBinding {
 /**
  * <a href="https://docs.gl/es3/glVertexAttribBinding">Reference Page</a>
  */
-    public void glVertexAttribBinding(int attribindex, int bindingindex);
+    public void glVertexAttribBinding(@NativeType("GLuint") int attribindex, @NativeType("GLuint") int bindingindex);
 
 }

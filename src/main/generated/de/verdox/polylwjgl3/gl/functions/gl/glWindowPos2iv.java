@@ -25,13 +25,13 @@ public interface glWindowPos2iv {
  *
  * @see <a href="https://docs.gl/gl3/glWindowPos">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glWindowPos2iv(IntBuffer p);
+    public void glWindowPos2iv(@NativeType("GLint const *") IntBuffer p);
 
 /**
  * Array version of: {@link #glWindowPos2iv WindowPos2iv}
  *
  * @see <a href="https://docs.gl/gl3/glWindowPos">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glWindowPos2iv(int[] p);
+    public void glWindowPos2iv(@NativeType("GLint const *") int[] p);
 
 }

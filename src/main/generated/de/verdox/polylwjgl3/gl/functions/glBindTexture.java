@@ -16,6 +16,6 @@ public interface glBindTexture {
 /**
  * <a href="https://docs.gl/es3/glBindTexture">Reference Page</a>
  */
-    public void glBindTexture(int target, int texture);
+    public void glBindTexture(@NativeType("GLenum") int target, @NativeType("GLuint") int texture);
 
 }

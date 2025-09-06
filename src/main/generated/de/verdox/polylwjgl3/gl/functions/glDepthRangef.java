@@ -16,6 +16,6 @@ public interface glDepthRangef {
 /**
  * <a href="https://docs.gl/es3/glDepthRangef">Reference Page</a>
  */
-    public void glDepthRangef(float n, float f);
+    public void glDepthRangef(@NativeType("GLfloat") float n, @NativeType("GLfloat") float f);
 
 }

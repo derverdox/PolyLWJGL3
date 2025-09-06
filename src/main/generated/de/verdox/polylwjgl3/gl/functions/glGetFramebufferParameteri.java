@@ -18,6 +18,7 @@ public interface glGetFramebufferParameteri {
 /**
  * <a href="https://docs.gl/es3/glGetFramebufferParameter">Reference Page</a>
  */
-    public int glGetFramebufferParameteri(int target, int pname);
+@NativeType("void")
+    public int glGetFramebufferParameteri(@NativeType("GLenum") int target, @NativeType("GLenum") int pname);
 
 }

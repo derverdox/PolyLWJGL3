@@ -28,7 +28,7 @@ public interface glGetActiveSubroutineUniformName {
  *
  * @see <a href="https://docs.gl/gl4/glGetActiveSubroutineUniformName">Reference Page</a>
  */
-    public void glGetActiveSubroutineUniformName(int program, int shadertype, int index, @Nullable IntBuffer length, ByteBuffer name);
+    public void glGetActiveSubroutineUniformName(@NativeType("GLuint") int program, @NativeType("GLenum") int shadertype, @NativeType("GLuint") int index, @Nullable @NativeType("GLsizei *") IntBuffer length, @NativeType("GLchar *") ByteBuffer name);
 
 /**
  * Queries the name of an active shader subroutine uniform.
@@ -40,7 +40,8 @@ public interface glGetActiveSubroutineUniformName {
  *
  * @see <a href="https://docs.gl/gl4/glGetActiveSubroutineUniformName">Reference Page</a>
  */
-    public String glGetActiveSubroutineUniformName(int program, int shadertype, int index, int bufsize);
+@NativeType("void")
+    public String glGetActiveSubroutineUniformName(@NativeType("GLuint") int program, @NativeType("GLenum") int shadertype, @NativeType("GLuint") int index, @NativeType("GLsizei") int bufsize);
 
 /**
  * Queries the name of an active shader subroutine uniform.
@@ -51,13 +52,14 @@ public interface glGetActiveSubroutineUniformName {
  *
  * @see <a href="https://docs.gl/gl4/glGetActiveSubroutineUniformName">Reference Page</a>
  */
-    public String glGetActiveSubroutineUniformName(int program, int shadertype, int index);
+@NativeType("void")
+    public String glGetActiveSubroutineUniformName(@NativeType("GLuint") int program, @NativeType("GLenum") int shadertype, @NativeType("GLuint") int index);
 
 /**
  * Array version of: {@link #glGetActiveSubroutineUniformName GetActiveSubroutineUniformName}
  *
  * @see <a href="https://docs.gl/gl4/glGetActiveSubroutineUniformName">Reference Page</a>
  */
-    public void glGetActiveSubroutineUniformName(int program, int shadertype, int index, @Nullable int[] length, ByteBuffer name);
+    public void glGetActiveSubroutineUniformName(@NativeType("GLuint") int program, @NativeType("GLenum") int shadertype, @NativeType("GLuint") int index, @Nullable @NativeType("GLsizei *") int[] length, @NativeType("GLchar *") ByteBuffer name);
 
 }

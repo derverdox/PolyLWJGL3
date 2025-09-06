@@ -16,6 +16,6 @@ public interface glStencilOpSeparate {
 /**
  * <a href="https://docs.gl/es3/glStencilOpSeparate">Reference Page</a>
  */
-    public void glStencilOpSeparate(int face, int sfail, int dpfail, int dppass);
+    public void glStencilOpSeparate(@NativeType("GLenum") int face, @NativeType("GLenum") int sfail, @NativeType("GLenum") int dpfail, @NativeType("GLenum") int dppass);
 
 }

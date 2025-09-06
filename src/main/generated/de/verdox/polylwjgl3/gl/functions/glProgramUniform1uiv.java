@@ -20,13 +20,13 @@ public interface glProgramUniform1uiv {
 /**
  * <a href="https://docs.gl/es3/glProgramUniform">Reference Page</a>
  */
-    public void glProgramUniform1uiv(int program, int location, IntBuffer value);
+    public void glProgramUniform1uiv(@NativeType("GLuint") int program, @NativeType("GLint") int location, @NativeType("GLuint const *") IntBuffer value);
 
 /**
  * Array version of: {@link #glProgramUniform1uiv ProgramUniform1uiv}
  *
  * @see <a href="https://docs.gl/es3/glProgramUniform">Reference Page</a>
  */
-    public void glProgramUniform1uiv(int program, int location, int[] value);
+    public void glProgramUniform1uiv(@NativeType("GLuint") int program, @NativeType("GLint") int location, @NativeType("GLuint const *") int[] value);
 
 }

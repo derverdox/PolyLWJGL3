@@ -25,13 +25,13 @@ public interface glVertex3iv {
  *
  * @see <a href="https://docs.gl/gl3/glVertex">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glVertex3iv(IntBuffer coords);
+    public void glVertex3iv(@NativeType("GLint const *") IntBuffer coords);
 
 /**
  * Array version of: {@link #glVertex3iv Vertex3iv}
  *
  * @see <a href="https://docs.gl/gl3/glVertex">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glVertex3iv(int[] coords);
+    public void glVertex3iv(@NativeType("GLint const *") int[] coords);
 
 }

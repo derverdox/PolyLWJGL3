@@ -32,7 +32,7 @@ public interface glGetCompressedTextureImage {
  *
  * @see <a href="https://docs.gl/gl4/glGetCompressedTextureImage">Reference Page</a>
  */
-    public void glGetCompressedTextureImage(int texture, int level, int bufSize, long pixels);
+    public void glGetCompressedTextureImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLsizei") int bufSize, @NativeType("void *") long pixels);
 
 /**
  * DSA version of {@link GL13C#glGetCompressedTexImage GetCompressedTexImage}.
@@ -43,6 +43,6 @@ public interface glGetCompressedTextureImage {
  *
  * @see <a href="https://docs.gl/gl4/glGetCompressedTextureImage">Reference Page</a>
  */
-    public void glGetCompressedTextureImage(int texture, int level, ByteBuffer pixels);
+    public void glGetCompressedTextureImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("void *") ByteBuffer pixels);
 
 }

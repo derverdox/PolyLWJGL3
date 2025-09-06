@@ -16,6 +16,7 @@ public interface glGetProgrami {
 /**
  * <a href="https://docs.gl/es3/glGetProgram">Reference Page</a>
  */
-    public int glGetProgrami(int program, int pname);
+@NativeType("void")
+    public int glGetProgrami(@NativeType("GLuint") int program, @NativeType("GLenum") int pname);
 
 }

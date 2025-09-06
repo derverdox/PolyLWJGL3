@@ -18,11 +18,11 @@ public interface glBindAttribLocation {
 /**
  * <a href="https://docs.gl/es3/glBindAttribLocation">Reference Page</a>
  */
-    public void glBindAttribLocation(int program, int index, ByteBuffer name);
+    public void glBindAttribLocation(@NativeType("GLuint") int program, @NativeType("GLuint") int index, @NativeType("GLchar const *") ByteBuffer name);
 
 /**
  * <a href="https://docs.gl/es3/glBindAttribLocation">Reference Page</a>
  */
-    public void glBindAttribLocation(int program, int index, CharSequence name);
+    public void glBindAttribLocation(@NativeType("GLuint") int program, @NativeType("GLuint") int index, @NativeType("GLchar const *") CharSequence name);
 
 }

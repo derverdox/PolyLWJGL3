@@ -25,13 +25,13 @@ public interface glSecondaryColorP3uiv {
  *
  * @see <a href="https://docs.gl/gl3/glSecondaryColor">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glSecondaryColorP3uiv(int type, IntBuffer color);
+    public void glSecondaryColorP3uiv(@NativeType("GLenum") int type, @NativeType("GLuint const *") IntBuffer color);
 
 /**
  * Array version of: {@link #glSecondaryColorP3uiv SecondaryColorP3uiv}
  *
  * @see <a href="https://docs.gl/gl3/glSecondaryColor">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glSecondaryColorP3uiv(int type, int[] color);
+    public void glSecondaryColorP3uiv(@NativeType("GLenum") int type, @NativeType("GLuint const *") int[] color);
 
 }

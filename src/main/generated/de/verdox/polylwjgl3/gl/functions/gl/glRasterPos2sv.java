@@ -25,13 +25,13 @@ public interface glRasterPos2sv {
  *
  * @see <a href="https://docs.gl/gl3/glRasterPos">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glRasterPos2sv(ShortBuffer coords);
+    public void glRasterPos2sv(@NativeType("GLshort const *") ShortBuffer coords);
 
 /**
  * Array version of: {@link #glRasterPos2sv RasterPos2sv}
  *
  * @see <a href="https://docs.gl/gl3/glRasterPos">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glRasterPos2sv(short[] coords);
+    public void glRasterPos2sv(@NativeType("GLshort const *") short[] coords);
 
 }

@@ -19,6 +19,7 @@ public interface glGetActiveUniformBlocki {
 /**
  * <a href="https://docs.gl/es3/glGetActiveUniformBlock">Reference Page</a>
  */
-    public int glGetActiveUniformBlocki(int program, int uniformBlockIndex, int pname);
+@NativeType("void")
+    public int glGetActiveUniformBlocki(@NativeType("GLuint") int program, @NativeType("GLuint") int uniformBlockIndex, @NativeType("GLenum") int pname);
 
 }

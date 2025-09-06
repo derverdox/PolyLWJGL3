@@ -16,6 +16,6 @@ public interface glCompileShader {
 /**
  * <a href="https://docs.gl/es3/glCompileShader">Reference Page</a>
  */
-    public void glCompileShader(int shader);
+    public void glCompileShader(@NativeType("GLuint") int shader);
 
 }

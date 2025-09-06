@@ -22,6 +22,6 @@ public interface glDeleteLists {
  *
  * @see <a href="https://docs.gl/gl3/glDeleteLists">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glDeleteLists(int list, int range);
+    public void glDeleteLists(@NativeType("GLuint") int list, @NativeType("GLsizei") int range);
 
 }

@@ -18,18 +18,18 @@ public interface glDeleteBuffers {
 /**
  * <a href="https://docs.gl/es3/glDeleteBuffers">Reference Page</a>
  */
-    public void glDeleteBuffers(IntBuffer buffers);
+    public void glDeleteBuffers(@NativeType("GLuint const *") IntBuffer buffers);
 
 /**
  * <a href="https://docs.gl/es3/glDeleteBuffers">Reference Page</a>
  */
-    public void glDeleteBuffers(int buffer);
+    public void glDeleteBuffers(@NativeType("GLuint const *") int buffer);
 
 /**
  * Array version of: {@link #glDeleteBuffers DeleteBuffers}
  *
  * @see <a href="https://docs.gl/es3/glDeleteBuffers">Reference Page</a>
  */
-    public void glDeleteBuffers(int[] buffers);
+    public void glDeleteBuffers(@NativeType("GLuint const *") int[] buffers);
 
 }

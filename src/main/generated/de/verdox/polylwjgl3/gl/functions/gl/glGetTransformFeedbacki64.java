@@ -24,6 +24,7 @@ public interface glGetTransformFeedbacki64 {
  *
  * @see <a href="https://docs.gl/gl4/glGetTransformFeedbacki64_v">Reference Page</a>
  */
-    public long glGetTransformFeedbacki64(int xfb, int pname, int index);
+@NativeType("void")
+    public long glGetTransformFeedbacki64(@NativeType("GLuint") int xfb, @NativeType("GLenum") int pname, @NativeType("GLuint") int index);
 
 }

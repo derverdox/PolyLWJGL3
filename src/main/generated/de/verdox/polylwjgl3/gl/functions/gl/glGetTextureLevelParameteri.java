@@ -24,6 +24,7 @@ public interface glGetTextureLevelParameteri {
  *
  * @see <a href="https://docs.gl/gl4/glGetTextureLevelParameter">Reference Page</a>
  */
-    public int glGetTextureLevelParameteri(int texture, int level, int pname);
+@NativeType("void")
+    public int glGetTextureLevelParameteri(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLenum") int pname);
 
 }

@@ -29,13 +29,14 @@ public interface glCreateRenderbuffers {
  *
  * @see <a href="https://docs.gl/gl4/glCreateRenderbuffers">Reference Page</a>
  */
-    public void glCreateRenderbuffers(IntBuffer renderbuffers);
+    public void glCreateRenderbuffers(@NativeType("GLuint *") IntBuffer renderbuffers);
 
 /**
  * Returns {@code n} previously unused renderbuffer names in {@code renderbuffers}, each representing a new renderbuffer object.
  *
  * @see <a href="https://docs.gl/gl4/glCreateRenderbuffers">Reference Page</a>
  */
+@NativeType("void")
     public int glCreateRenderbuffers();
 
 /**
@@ -43,6 +44,6 @@ public interface glCreateRenderbuffers {
  *
  * @see <a href="https://docs.gl/gl4/glCreateRenderbuffers">Reference Page</a>
  */
-    public void glCreateRenderbuffers(int[] renderbuffers);
+    public void glCreateRenderbuffers(@NativeType("GLuint *") int[] renderbuffers);
 
 }

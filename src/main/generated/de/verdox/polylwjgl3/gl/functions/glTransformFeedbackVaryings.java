@@ -21,16 +21,16 @@ public interface glTransformFeedbackVaryings {
 /**
  * <a href="https://docs.gl/es3/glTransformFeedbackVaryings">Reference Page</a>
  */
-    public void glTransformFeedbackVaryings(int program, PointerBuffer varyings, int bufferMode);
+    public void glTransformFeedbackVaryings(@NativeType("GLuint") int program, @NativeType("GLchar const * const *") PointerBuffer varyings, @NativeType("GLenum") int bufferMode);
 
 /**
  * <a href="https://docs.gl/es3/glTransformFeedbackVaryings">Reference Page</a>
  */
-    public void glTransformFeedbackVaryings(int program, CharSequence[] varyings, int bufferMode);
+    public void glTransformFeedbackVaryings(@NativeType("GLuint") int program, @NativeType("GLchar const * const *") CharSequence[] varyings, @NativeType("GLenum") int bufferMode);
 
 /**
  * <a href="https://docs.gl/es3/glTransformFeedbackVaryings">Reference Page</a>
  */
-    public void glTransformFeedbackVaryings(int program, CharSequence varying, int bufferMode);
+    public void glTransformFeedbackVaryings(@NativeType("GLuint") int program, @NativeType("GLchar const * const *") CharSequence varying, @NativeType("GLenum") int bufferMode);
 
 }

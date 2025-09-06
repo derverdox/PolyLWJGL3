@@ -20,6 +20,6 @@ public interface glIndexi {
  *
  * @see <a href="https://docs.gl/gl3/glIndexi">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glIndexi(int index);
+    public void glIndexi(@NativeType("GLint") int index);
 
 }

@@ -18,6 +18,7 @@ public interface glIsEnabledi {
 /**
  * <a href="https://docs.gl/es3/glIsEnabledi">Reference Page</a>
  */
-    public boolean glIsEnabledi(int target, int index);
+@NativeType("GLboolean")
+    public boolean glIsEnabledi(@NativeType("GLenum") int target, @NativeType("GLuint") int index);
 
 }

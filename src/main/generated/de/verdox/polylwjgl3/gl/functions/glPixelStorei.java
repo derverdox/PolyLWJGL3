@@ -16,6 +16,6 @@ public interface glPixelStorei {
 /**
  * <a href="https://docs.gl/es3/glPixelStorei">Reference Page</a>
  */
-    public void glPixelStorei(int pname, int param);
+    public void glPixelStorei(@NativeType("GLenum") int pname, @NativeType("GLint") int param);
 
 }

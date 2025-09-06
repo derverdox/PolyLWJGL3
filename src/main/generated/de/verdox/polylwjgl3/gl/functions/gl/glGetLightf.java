@@ -21,6 +21,7 @@ public interface glGetLightf {
  *
  * @see <a href="https://docs.gl/gl3/glGetLight">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public float glGetLightf(int light, int pname);
+@NativeType("void")
+    public float glGetLightf(@NativeType("GLenum") int light, @NativeType("GLenum") int pname);
 
 }

@@ -19,6 +19,6 @@ public interface glClearBufferfi {
 /**
  * <a href="https://docs.gl/es3/glClearBufferfi">Reference Page</a>
  */
-    public void glClearBufferfi(int buffer, int drawbuffer, float depth, int stencil);
+    public void glClearBufferfi(@NativeType("GLenum") int buffer, @NativeType("GLint") int drawbuffer, @NativeType("GLfloat") float depth, @NativeType("GLint") int stencil);
 
 }

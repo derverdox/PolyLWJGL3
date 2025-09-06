@@ -33,7 +33,7 @@ public interface glGetnConvolutionFilter {
  *
  * @see <a href="https://docs.gl/gl4/glGetnConvolutionFilter">Reference Page</a>
  */
-    public void glGetnConvolutionFilter(int target, int format, int type, int bufSize, long image);
+    public void glGetnConvolutionFilter(@NativeType("GLenum") int target, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("GLsizei") int bufSize, @NativeType("void *") long image);
 
 /**
  * Robust version of {@link ARBImaging#glGetConvolutionFilter GetConvolutionFilter}
@@ -45,6 +45,6 @@ public interface glGetnConvolutionFilter {
  *
  * @see <a href="https://docs.gl/gl4/glGetnConvolutionFilter">Reference Page</a>
  */
-    public void glGetnConvolutionFilter(int target, int format, int type, ByteBuffer image);
+    public void glGetnConvolutionFilter(@NativeType("GLenum") int target, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") ByteBuffer image);
 
 }

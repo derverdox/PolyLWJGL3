@@ -21,13 +21,13 @@ public interface glGetActiveUniformBlockiv {
 /**
  * <a href="https://docs.gl/es3/glGetActiveUniformBlock">Reference Page</a>
  */
-    public void glGetActiveUniformBlockiv(int program, int uniformBlockIndex, int pname, IntBuffer params);
+    public void glGetActiveUniformBlockiv(@NativeType("GLuint") int program, @NativeType("GLuint") int uniformBlockIndex, @NativeType("GLenum") int pname, @NativeType("GLint *") IntBuffer params);
 
 /**
  * Array version of: {@link #glGetActiveUniformBlockiv GetActiveUniformBlockiv}
  *
  * @see <a href="https://docs.gl/es3/glGetActiveUniformBlock">Reference Page</a>
  */
-    public void glGetActiveUniformBlockiv(int program, int uniformBlockIndex, int pname, int[] params);
+    public void glGetActiveUniformBlockiv(@NativeType("GLuint") int program, @NativeType("GLuint") int uniformBlockIndex, @NativeType("GLenum") int pname, @NativeType("GLint *") int[] params);
 
 }

@@ -18,47 +18,47 @@ public interface glReadPixels {
 /**
  * <a href="https://docs.gl/es3/glReadPixels">Reference Page</a>
  */
-    public void glReadPixels(int x, int y, int width, int height, int format, int type, ByteBuffer pixels);
+    public void glReadPixels(@NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") ByteBuffer pixels);
 
 /**
  * <a href="https://docs.gl/es3/glReadPixels">Reference Page</a>
  */
-    public void glReadPixels(int x, int y, int width, int height, int format, int type, long pixels);
+    public void glReadPixels(@NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") long pixels);
 
 /**
  * <a href="https://docs.gl/es3/glReadPixels">Reference Page</a>
  */
-    public void glReadPixels(int x, int y, int width, int height, int format, int type, ShortBuffer pixels);
+    public void glReadPixels(@NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") ShortBuffer pixels);
 
 /**
  * <a href="https://docs.gl/es3/glReadPixels">Reference Page</a>
  */
-    public void glReadPixels(int x, int y, int width, int height, int format, int type, IntBuffer pixels);
+    public void glReadPixels(@NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") IntBuffer pixels);
 
 /**
  * <a href="https://docs.gl/es3/glReadPixels">Reference Page</a>
  */
-    public void glReadPixels(int x, int y, int width, int height, int format, int type, FloatBuffer pixels);
+    public void glReadPixels(@NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") FloatBuffer pixels);
 
 /**
  * Array version of: {@link #glReadPixels ReadPixels}
  *
  * @see <a href="https://docs.gl/es3/glReadPixels">Reference Page</a>
  */
-    public void glReadPixels(int x, int y, int width, int height, int format, int type, short[] pixels);
+    public void glReadPixels(@NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") short[] pixels);
 
 /**
  * Array version of: {@link #glReadPixels ReadPixels}
  *
  * @see <a href="https://docs.gl/es3/glReadPixels">Reference Page</a>
  */
-    public void glReadPixels(int x, int y, int width, int height, int format, int type, int[] pixels);
+    public void glReadPixels(@NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") int[] pixels);
 
 /**
  * Array version of: {@link #glReadPixels ReadPixels}
  *
  * @see <a href="https://docs.gl/es3/glReadPixels">Reference Page</a>
  */
-    public void glReadPixels(int x, int y, int width, int height, int format, int type, float[] pixels);
+    public void glReadPixels(@NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") float[] pixels);
 
 }

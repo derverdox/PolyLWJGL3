@@ -16,6 +16,7 @@ public interface glGetShaderi {
 /**
  * <a href="https://docs.gl/es3/glGetShader">Reference Page</a>
  */
-    public int glGetShaderi(int shader, int pname);
+@NativeType("void")
+    public int glGetShaderi(@NativeType("GLuint") int shader, @NativeType("GLenum") int pname);
 
 }

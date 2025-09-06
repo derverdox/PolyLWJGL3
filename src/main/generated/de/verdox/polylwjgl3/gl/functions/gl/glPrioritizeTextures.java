@@ -29,13 +29,13 @@ public interface glPrioritizeTextures {
  *
  * @see <a href="https://docs.gl/gl3/glPrioritizeTextures">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glPrioritizeTextures(IntBuffer textures, FloatBuffer priorities);
+    public void glPrioritizeTextures(@NativeType("GLuint const *") IntBuffer textures, @NativeType("GLfloat const *") FloatBuffer priorities);
 
 /**
  * Array version of: {@link #glPrioritizeTextures PrioritizeTextures}
  *
  * @see <a href="https://docs.gl/gl3/glPrioritizeTextures">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glPrioritizeTextures(int[] textures, float[] priorities);
+    public void glPrioritizeTextures(@NativeType("GLuint const *") int[] textures, @NativeType("GLfloat const *") float[] priorities);
 
 }

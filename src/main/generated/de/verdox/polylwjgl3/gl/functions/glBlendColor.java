@@ -16,6 +16,6 @@ public interface glBlendColor {
 /**
  * <a href="https://docs.gl/es3/glBlendColor">Reference Page</a>
  */
-    public void glBlendColor(float red, float green, float blue, float alpha);
+    public void glBlendColor(@NativeType("GLfloat") float red, @NativeType("GLfloat") float green, @NativeType("GLfloat") float blue, @NativeType("GLfloat") float alpha);
 
 }

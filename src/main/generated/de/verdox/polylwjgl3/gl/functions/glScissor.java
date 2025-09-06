@@ -16,6 +16,6 @@ public interface glScissor {
 /**
  * <a href="https://docs.gl/es3/glScissor">Reference Page</a>
  */
-    public void glScissor(int x, int y, int width, int height);
+    public void glScissor(@NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height);
 
 }

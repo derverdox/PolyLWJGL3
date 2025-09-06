@@ -23,6 +23,6 @@ public interface glClearAccum {
  *
  * @see <a href="https://docs.gl/gl3/glClearAccum">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glClearAccum(float red, float green, float blue, float alpha);
+    public void glClearAccum(@NativeType("GLfloat") float red, @NativeType("GLfloat") float green, @NativeType("GLfloat") float blue, @NativeType("GLfloat") float alpha);
 
 }

@@ -21,11 +21,12 @@ public interface glGenVertexArrays {
 /**
  * <a href="https://docs.gl/es3/glGenVertexArrays">Reference Page</a>
  */
-    public void glGenVertexArrays(IntBuffer arrays);
+    public void glGenVertexArrays(@NativeType("GLuint *") IntBuffer arrays);
 
 /**
  * <a href="https://docs.gl/es3/glGenVertexArrays">Reference Page</a>
  */
+@NativeType("void")
     public int glGenVertexArrays();
 
 /**
@@ -33,6 +34,6 @@ public interface glGenVertexArrays {
  *
  * @see <a href="https://docs.gl/es3/glGenVertexArrays">Reference Page</a>
  */
-    public void glGenVertexArrays(int[] arrays);
+    public void glGenVertexArrays(@NativeType("GLuint *") int[] arrays);
 
 }

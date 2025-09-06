@@ -15,31 +15,31 @@ public class GL43AccessorImpl extends GL42AccessorImpl implements GL43Accessor {
         org.lwjgl.opengl.GL43.nglClearBufferData(target, internalformat, format, type, data);
     }
 
-    @Override public void glClearBufferData(int target, int internalformat, int format, int type, @Nullable ByteBuffer data) {
+    @Override public void glClearBufferData(@NativeType("GLenum") int target, @NativeType("GLenum") int internalformat, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") ByteBuffer data) {
         org.lwjgl.opengl.GL43.glClearBufferData(target, internalformat, format, type, data);
     }
 
-    @Override public void glClearBufferData(int target, int internalformat, int format, int type, @Nullable ShortBuffer data) {
+    @Override public void glClearBufferData(@NativeType("GLenum") int target, @NativeType("GLenum") int internalformat, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") ShortBuffer data) {
         org.lwjgl.opengl.GL43.glClearBufferData(target, internalformat, format, type, data);
     }
 
-    @Override public void glClearBufferData(int target, int internalformat, int format, int type, @Nullable IntBuffer data) {
+    @Override public void glClearBufferData(@NativeType("GLenum") int target, @NativeType("GLenum") int internalformat, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") IntBuffer data) {
         org.lwjgl.opengl.GL43.glClearBufferData(target, internalformat, format, type, data);
     }
 
-    @Override public void glClearBufferData(int target, int internalformat, int format, int type, @Nullable FloatBuffer data) {
+    @Override public void glClearBufferData(@NativeType("GLenum") int target, @NativeType("GLenum") int internalformat, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") FloatBuffer data) {
         org.lwjgl.opengl.GL43.glClearBufferData(target, internalformat, format, type, data);
     }
 
-    @Override public void glClearBufferData(int target, int internalformat, int format, int type, @Nullable short[] data) {
+    @Override public void glClearBufferData(@NativeType("GLenum") int target, @NativeType("GLenum") int internalformat, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") short[] data) {
         org.lwjgl.opengl.GL43.glClearBufferData(target, internalformat, format, type, data);
     }
 
-    @Override public void glClearBufferData(int target, int internalformat, int format, int type, @Nullable int[] data) {
+    @Override public void glClearBufferData(@NativeType("GLenum") int target, @NativeType("GLenum") int internalformat, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") int[] data) {
         org.lwjgl.opengl.GL43.glClearBufferData(target, internalformat, format, type, data);
     }
 
-    @Override public void glClearBufferData(int target, int internalformat, int format, int type, @Nullable float[] data) {
+    @Override public void glClearBufferData(@NativeType("GLenum") int target, @NativeType("GLenum") int internalformat, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") float[] data) {
         org.lwjgl.opengl.GL43.glClearBufferData(target, internalformat, format, type, data);
     }
 
@@ -47,43 +47,43 @@ public class GL43AccessorImpl extends GL42AccessorImpl implements GL43Accessor {
         org.lwjgl.opengl.GL43.nglClearBufferSubData(target, internalformat, offset, size, format, type, data);
     }
 
-    @Override public void glClearBufferSubData(int target, int internalformat, long offset, long size, int format, int type, @Nullable ByteBuffer data) {
+    @Override public void glClearBufferSubData(@NativeType("GLenum") int target, @NativeType("GLenum") int internalformat, @NativeType("GLintptr") long offset, @NativeType("GLsizeiptr") long size, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") ByteBuffer data) {
         org.lwjgl.opengl.GL43.glClearBufferSubData(target, internalformat, offset, size, format, type, data);
     }
 
-    @Override public void glClearBufferSubData(int target, int internalformat, long offset, long size, int format, int type, @Nullable ShortBuffer data) {
+    @Override public void glClearBufferSubData(@NativeType("GLenum") int target, @NativeType("GLenum") int internalformat, @NativeType("GLintptr") long offset, @NativeType("GLsizeiptr") long size, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") ShortBuffer data) {
         org.lwjgl.opengl.GL43.glClearBufferSubData(target, internalformat, offset, size, format, type, data);
     }
 
-    @Override public void glClearBufferSubData(int target, int internalformat, long offset, long size, int format, int type, @Nullable IntBuffer data) {
+    @Override public void glClearBufferSubData(@NativeType("GLenum") int target, @NativeType("GLenum") int internalformat, @NativeType("GLintptr") long offset, @NativeType("GLsizeiptr") long size, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") IntBuffer data) {
         org.lwjgl.opengl.GL43.glClearBufferSubData(target, internalformat, offset, size, format, type, data);
     }
 
-    @Override public void glClearBufferSubData(int target, int internalformat, long offset, long size, int format, int type, @Nullable FloatBuffer data) {
+    @Override public void glClearBufferSubData(@NativeType("GLenum") int target, @NativeType("GLenum") int internalformat, @NativeType("GLintptr") long offset, @NativeType("GLsizeiptr") long size, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") FloatBuffer data) {
         org.lwjgl.opengl.GL43.glClearBufferSubData(target, internalformat, offset, size, format, type, data);
     }
 
-    @Override public void glClearBufferSubData(int target, int internalformat, long offset, long size, int format, int type, @Nullable short[] data) {
+    @Override public void glClearBufferSubData(@NativeType("GLenum") int target, @NativeType("GLenum") int internalformat, @NativeType("GLintptr") long offset, @NativeType("GLsizeiptr") long size, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") short[] data) {
         org.lwjgl.opengl.GL43.glClearBufferSubData(target, internalformat, offset, size, format, type, data);
     }
 
-    @Override public void glClearBufferSubData(int target, int internalformat, long offset, long size, int format, int type, @Nullable int[] data) {
+    @Override public void glClearBufferSubData(@NativeType("GLenum") int target, @NativeType("GLenum") int internalformat, @NativeType("GLintptr") long offset, @NativeType("GLsizeiptr") long size, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") int[] data) {
         org.lwjgl.opengl.GL43.glClearBufferSubData(target, internalformat, offset, size, format, type, data);
     }
 
-    @Override public void glClearBufferSubData(int target, int internalformat, long offset, long size, int format, int type, @Nullable float[] data) {
+    @Override public void glClearBufferSubData(@NativeType("GLenum") int target, @NativeType("GLenum") int internalformat, @NativeType("GLintptr") long offset, @NativeType("GLsizeiptr") long size, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") float[] data) {
         org.lwjgl.opengl.GL43.glClearBufferSubData(target, internalformat, offset, size, format, type, data);
     }
 
-    @Override public void glDispatchCompute(int num_groups_x, int num_groups_y, int num_groups_z) {
+    @Override public void glDispatchCompute(@NativeType("GLuint") int num_groups_x, @NativeType("GLuint") int num_groups_y, @NativeType("GLuint") int num_groups_z) {
         org.lwjgl.opengl.GL43.glDispatchCompute(num_groups_x, num_groups_y, num_groups_z);
     }
 
-    @Override public void glDispatchComputeIndirect(long indirect) {
+    @Override public void glDispatchComputeIndirect(@NativeType("GLintptr") long indirect) {
         org.lwjgl.opengl.GL43.glDispatchComputeIndirect(indirect);
     }
 
-    @Override public void glCopyImageSubData(int srcName, int srcTarget, int srcLevel, int srcX, int srcY, int srcZ, int dstName, int dstTarget, int dstLevel, int dstX, int dstY, int dstZ, int srcWidth, int srcHeight, int srcDepth) {
+    @Override public void glCopyImageSubData(@NativeType("GLuint") int srcName, @NativeType("GLenum") int srcTarget, @NativeType("GLint") int srcLevel, @NativeType("GLint") int srcX, @NativeType("GLint") int srcY, @NativeType("GLint") int srcZ, @NativeType("GLuint") int dstName, @NativeType("GLenum") int dstTarget, @NativeType("GLint") int dstLevel, @NativeType("GLint") int dstX, @NativeType("GLint") int dstY, @NativeType("GLint") int dstZ, @NativeType("GLsizei") int srcWidth, @NativeType("GLsizei") int srcHeight, @NativeType("GLsizei") int srcDepth) {
         org.lwjgl.opengl.GL43.glCopyImageSubData(srcName, srcTarget, srcLevel, srcX, srcY, srcZ, dstName, dstTarget, dstLevel, dstX, dstY, dstZ, srcWidth, srcHeight, srcDepth);
     }
 
@@ -91,15 +91,15 @@ public class GL43AccessorImpl extends GL42AccessorImpl implements GL43Accessor {
         org.lwjgl.opengl.GL43.nglDebugMessageControl(source, type, severity, count, ids, enabled);
     }
 
-    @Override public void glDebugMessageControl(int source, int type, int severity, @Nullable IntBuffer ids, boolean enabled) {
+    @Override public void glDebugMessageControl(@NativeType("GLenum") int source, @NativeType("GLenum") int type, @NativeType("GLenum") int severity, @Nullable @NativeType("GLuint const *") IntBuffer ids, @NativeType("GLboolean") boolean enabled) {
         org.lwjgl.opengl.GL43.glDebugMessageControl(source, type, severity, ids, enabled);
     }
 
-    @Override public void glDebugMessageControl(int source, int type, int severity, int id, boolean enabled) {
+    @Override public void glDebugMessageControl(@NativeType("GLenum") int source, @NativeType("GLenum") int type, @NativeType("GLenum") int severity, @NativeType("GLuint const *") int id, @NativeType("GLboolean") boolean enabled) {
         org.lwjgl.opengl.GL43.glDebugMessageControl(source, type, severity, id, enabled);
     }
 
-    @Override public void glDebugMessageControl(int source, int type, int severity, @Nullable int[] ids, boolean enabled) {
+    @Override public void glDebugMessageControl(@NativeType("GLenum") int source, @NativeType("GLenum") int type, @NativeType("GLenum") int severity, @Nullable @NativeType("GLuint const *") int[] ids, @NativeType("GLboolean") boolean enabled) {
         org.lwjgl.opengl.GL43.glDebugMessageControl(source, type, severity, ids, enabled);
     }
 
@@ -107,11 +107,11 @@ public class GL43AccessorImpl extends GL42AccessorImpl implements GL43Accessor {
         org.lwjgl.opengl.GL43.nglDebugMessageInsert(source, type, id, severity, length, message);
     }
 
-    @Override public void glDebugMessageInsert(int source, int type, int id, int severity, ByteBuffer message) {
+    @Override public void glDebugMessageInsert(@NativeType("GLenum") int source, @NativeType("GLenum") int type, @NativeType("GLuint") int id, @NativeType("GLenum") int severity, @NativeType("GLchar const *") ByteBuffer message) {
         org.lwjgl.opengl.GL43.glDebugMessageInsert(source, type, id, severity, message);
     }
 
-    @Override public void glDebugMessageInsert(int source, int type, int id, int severity, CharSequence message) {
+    @Override public void glDebugMessageInsert(@NativeType("GLenum") int source, @NativeType("GLenum") int type, @NativeType("GLuint") int id, @NativeType("GLenum") int severity, @NativeType("GLchar const *") CharSequence message) {
         org.lwjgl.opengl.GL43.glDebugMessageInsert(source, type, id, severity, message);
     }
 
@@ -119,7 +119,7 @@ public class GL43AccessorImpl extends GL42AccessorImpl implements GL43Accessor {
         org.lwjgl.opengl.GL43.nglDebugMessageCallback(callback, userParam);
     }
 
-    @Override public void glDebugMessageCallback(@Nullable GLDebugMessageCallbackI callback, long userParam) {
+    @Override public void glDebugMessageCallback(@Nullable @NativeType("GLDEBUGPROC") GLDebugMessageCallbackI callback, @NativeType("void const *") long userParam) {
         org.lwjgl.opengl.GL43.glDebugMessageCallback(callback, userParam);
     }
 
@@ -127,11 +127,13 @@ public class GL43AccessorImpl extends GL42AccessorImpl implements GL43Accessor {
         return org.lwjgl.opengl.GL43.nglGetDebugMessageLog(count, bufsize, sources, types, ids, severities, lengths, messageLog);
     }
 
-    @Override public int glGetDebugMessageLog(int count, @Nullable IntBuffer sources, @Nullable IntBuffer types, @Nullable IntBuffer ids, @Nullable IntBuffer severities, @Nullable IntBuffer lengths, @Nullable ByteBuffer messageLog) {
+@NativeType("GLuint")
+    @Override public int glGetDebugMessageLog(@NativeType("GLuint") int count, @Nullable @NativeType("GLenum *") IntBuffer sources, @Nullable @NativeType("GLenum *") IntBuffer types, @Nullable @NativeType("GLuint *") IntBuffer ids, @Nullable @NativeType("GLenum *") IntBuffer severities, @Nullable @NativeType("GLsizei *") IntBuffer lengths, @Nullable @NativeType("GLchar *") ByteBuffer messageLog) {
         return org.lwjgl.opengl.GL43.glGetDebugMessageLog(count, sources, types, ids, severities, lengths, messageLog);
     }
 
-    @Override public int glGetDebugMessageLog(int count, @Nullable int[] sources, @Nullable int[] types, @Nullable int[] ids, @Nullable int[] severities, @Nullable int[] lengths, @Nullable ByteBuffer messageLog) {
+@NativeType("GLuint")
+    @Override public int glGetDebugMessageLog(@NativeType("GLuint") int count, @Nullable @NativeType("GLenum *") int[] sources, @Nullable @NativeType("GLenum *") int[] types, @Nullable @NativeType("GLuint *") int[] ids, @Nullable @NativeType("GLenum *") int[] severities, @Nullable @NativeType("GLsizei *") int[] lengths, @Nullable @NativeType("GLchar *") ByteBuffer messageLog) {
         return org.lwjgl.opengl.GL43.glGetDebugMessageLog(count, sources, types, ids, severities, lengths, messageLog);
     }
 
@@ -139,11 +141,11 @@ public class GL43AccessorImpl extends GL42AccessorImpl implements GL43Accessor {
         org.lwjgl.opengl.GL43.nglPushDebugGroup(source, id, length, message);
     }
 
-    @Override public void glPushDebugGroup(int source, int id, ByteBuffer message) {
+    @Override public void glPushDebugGroup(@NativeType("GLenum") int source, @NativeType("GLuint") int id, @NativeType("GLchar const *") ByteBuffer message) {
         org.lwjgl.opengl.GL43.glPushDebugGroup(source, id, message);
     }
 
-    @Override public void glPushDebugGroup(int source, int id, CharSequence message) {
+    @Override public void glPushDebugGroup(@NativeType("GLenum") int source, @NativeType("GLuint") int id, @NativeType("GLchar const *") CharSequence message) {
         org.lwjgl.opengl.GL43.glPushDebugGroup(source, id, message);
     }
 
@@ -155,11 +157,11 @@ public class GL43AccessorImpl extends GL42AccessorImpl implements GL43Accessor {
         org.lwjgl.opengl.GL43.nglObjectLabel(identifier, name, length, label);
     }
 
-    @Override public void glObjectLabel(int identifier, int name, ByteBuffer label) {
+    @Override public void glObjectLabel(@NativeType("GLenum") int identifier, @NativeType("GLuint") int name, @NativeType("GLchar const *") ByteBuffer label) {
         org.lwjgl.opengl.GL43.glObjectLabel(identifier, name, label);
     }
 
-    @Override public void glObjectLabel(int identifier, int name, CharSequence label) {
+    @Override public void glObjectLabel(@NativeType("GLenum") int identifier, @NativeType("GLuint") int name, @NativeType("GLchar const *") CharSequence label) {
         org.lwjgl.opengl.GL43.glObjectLabel(identifier, name, label);
     }
 
@@ -167,19 +169,21 @@ public class GL43AccessorImpl extends GL42AccessorImpl implements GL43Accessor {
         org.lwjgl.opengl.GL43.nglGetObjectLabel(identifier, name, bufSize, length, label);
     }
 
-    @Override public void glGetObjectLabel(int identifier, int name, @Nullable IntBuffer length, ByteBuffer label) {
+    @Override public void glGetObjectLabel(@NativeType("GLenum") int identifier, @NativeType("GLuint") int name, @Nullable @NativeType("GLsizei *") IntBuffer length, @NativeType("GLchar *") ByteBuffer label) {
         org.lwjgl.opengl.GL43.glGetObjectLabel(identifier, name, length, label);
     }
 
-    @Override public String glGetObjectLabel(int identifier, int name, int bufSize) {
+@NativeType("void")
+    @Override public String glGetObjectLabel(@NativeType("GLenum") int identifier, @NativeType("GLuint") int name, @NativeType("GLsizei") int bufSize) {
         return org.lwjgl.opengl.GL43.glGetObjectLabel(identifier, name, bufSize);
     }
 
-    @Override public String glGetObjectLabel(int identifier, int name) {
+@NativeType("void")
+    @Override public String glGetObjectLabel(@NativeType("GLenum") int identifier, @NativeType("GLuint") int name) {
         return org.lwjgl.opengl.GL43.glGetObjectLabel(identifier, name);
     }
 
-    @Override public void glGetObjectLabel(int identifier, int name, @Nullable int[] length, ByteBuffer label) {
+    @Override public void glGetObjectLabel(@NativeType("GLenum") int identifier, @NativeType("GLuint") int name, @Nullable @NativeType("GLsizei *") int[] length, @NativeType("GLchar *") ByteBuffer label) {
         org.lwjgl.opengl.GL43.glGetObjectLabel(identifier, name, length, label);
     }
 
@@ -187,11 +191,11 @@ public class GL43AccessorImpl extends GL42AccessorImpl implements GL43Accessor {
         org.lwjgl.opengl.GL43.nglObjectPtrLabel(ptr, length, label);
     }
 
-    @Override public void glObjectPtrLabel(long ptr, ByteBuffer label) {
+    @Override public void glObjectPtrLabel(@NativeType("void *") long ptr, @NativeType("GLchar const *") ByteBuffer label) {
         org.lwjgl.opengl.GL43.glObjectPtrLabel(ptr, label);
     }
 
-    @Override public void glObjectPtrLabel(long ptr, CharSequence label) {
+    @Override public void glObjectPtrLabel(@NativeType("void *") long ptr, @NativeType("GLchar const *") CharSequence label) {
         org.lwjgl.opengl.GL43.glObjectPtrLabel(ptr, label);
     }
 
@@ -199,23 +203,25 @@ public class GL43AccessorImpl extends GL42AccessorImpl implements GL43Accessor {
         org.lwjgl.opengl.GL43.nglGetObjectPtrLabel(ptr, bufSize, length, label);
     }
 
-    @Override public void glGetObjectPtrLabel(long ptr, @Nullable IntBuffer length, ByteBuffer label) {
+    @Override public void glGetObjectPtrLabel(@NativeType("void *") long ptr, @Nullable @NativeType("GLsizei *") IntBuffer length, @NativeType("GLchar *") ByteBuffer label) {
         org.lwjgl.opengl.GL43.glGetObjectPtrLabel(ptr, length, label);
     }
 
-    @Override public String glGetObjectPtrLabel(long ptr, int bufSize) {
+@NativeType("void")
+    @Override public String glGetObjectPtrLabel(@NativeType("void *") long ptr, @NativeType("GLsizei") int bufSize) {
         return org.lwjgl.opengl.GL43.glGetObjectPtrLabel(ptr, bufSize);
     }
 
-    @Override public String glGetObjectPtrLabel(long ptr) {
+@NativeType("void")
+    @Override public String glGetObjectPtrLabel(@NativeType("void *") long ptr) {
         return org.lwjgl.opengl.GL43.glGetObjectPtrLabel(ptr);
     }
 
-    @Override public void glGetObjectPtrLabel(long ptr, @Nullable int[] length, ByteBuffer label) {
+    @Override public void glGetObjectPtrLabel(@NativeType("void *") long ptr, @Nullable @NativeType("GLsizei *") int[] length, @NativeType("GLchar *") ByteBuffer label) {
         org.lwjgl.opengl.GL43.glGetObjectPtrLabel(ptr, length, label);
     }
 
-    @Override public void glFramebufferParameteri(int target, int pname, int param) {
+    @Override public void glFramebufferParameteri(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLint") int param) {
         org.lwjgl.opengl.GL43.glFramebufferParameteri(target, pname, param);
     }
 
@@ -223,15 +229,16 @@ public class GL43AccessorImpl extends GL42AccessorImpl implements GL43Accessor {
         org.lwjgl.opengl.GL43.nglGetFramebufferParameteriv(target, pname, params);
     }
 
-    @Override public void glGetFramebufferParameteriv(int target, int pname, IntBuffer params) {
+    @Override public void glGetFramebufferParameteriv(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLint *") IntBuffer params) {
         org.lwjgl.opengl.GL43.glGetFramebufferParameteriv(target, pname, params);
     }
 
-    @Override public void glGetFramebufferParameteriv(int target, int pname, int[] params) {
+    @Override public void glGetFramebufferParameteriv(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLint *") int[] params) {
         org.lwjgl.opengl.GL43.glGetFramebufferParameteriv(target, pname, params);
     }
 
-    @Override public int glGetFramebufferParameteri(int target, int pname) {
+@NativeType("void")
+    @Override public int glGetFramebufferParameteri(@NativeType("GLenum") int target, @NativeType("GLenum") int pname) {
         return org.lwjgl.opengl.GL43.glGetFramebufferParameteri(target, pname);
     }
 
@@ -239,31 +246,32 @@ public class GL43AccessorImpl extends GL42AccessorImpl implements GL43Accessor {
         org.lwjgl.opengl.GL43.nglGetInternalformati64v(target, internalformat, pname, bufSize, params);
     }
 
-    @Override public void glGetInternalformati64v(int target, int internalformat, int pname, LongBuffer params) {
+    @Override public void glGetInternalformati64v(@NativeType("GLenum") int target, @NativeType("GLenum") int internalformat, @NativeType("GLenum") int pname, @NativeType("GLint64 *") LongBuffer params) {
         org.lwjgl.opengl.GL43.glGetInternalformati64v(target, internalformat, pname, params);
     }
 
-    @Override public void glGetInternalformati64v(int target, int internalformat, int pname, long[] params) {
+    @Override public void glGetInternalformati64v(@NativeType("GLenum") int target, @NativeType("GLenum") int internalformat, @NativeType("GLenum") int pname, @NativeType("GLint64 *") long[] params) {
         org.lwjgl.opengl.GL43.glGetInternalformati64v(target, internalformat, pname, params);
     }
 
-    @Override public long glGetInternalformati64(int target, int internalformat, int pname) {
+@NativeType("void")
+    @Override public long glGetInternalformati64(@NativeType("GLenum") int target, @NativeType("GLenum") int internalformat, @NativeType("GLenum") int pname) {
         return org.lwjgl.opengl.GL43.glGetInternalformati64(target, internalformat, pname);
     }
 
-    @Override public void glInvalidateTexSubImage(int texture, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth) {
+    @Override public void glInvalidateTexSubImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int yoffset, @NativeType("GLint") int zoffset, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLsizei") int depth) {
         org.lwjgl.opengl.GL43.glInvalidateTexSubImage(texture, level, xoffset, yoffset, zoffset, width, height, depth);
     }
 
-    @Override public void glInvalidateTexImage(int texture, int level) {
+    @Override public void glInvalidateTexImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level) {
         org.lwjgl.opengl.GL43.glInvalidateTexImage(texture, level);
     }
 
-    @Override public void glInvalidateBufferSubData(int buffer, long offset, long length) {
+    @Override public void glInvalidateBufferSubData(@NativeType("GLuint") int buffer, @NativeType("GLintptr") long offset, @NativeType("GLsizeiptr") long length) {
         org.lwjgl.opengl.GL43.glInvalidateBufferSubData(buffer, offset, length);
     }
 
-    @Override public void glInvalidateBufferData(int buffer) {
+    @Override public void glInvalidateBufferData(@NativeType("GLuint") int buffer) {
         org.lwjgl.opengl.GL43.glInvalidateBufferData(buffer);
     }
 
@@ -271,15 +279,15 @@ public class GL43AccessorImpl extends GL42AccessorImpl implements GL43Accessor {
         org.lwjgl.opengl.GL43.nglInvalidateFramebuffer(target, numAttachments, attachments);
     }
 
-    @Override public void glInvalidateFramebuffer(int target, IntBuffer attachments) {
+    @Override public void glInvalidateFramebuffer(@NativeType("GLenum") int target, @NativeType("GLenum const *") IntBuffer attachments) {
         org.lwjgl.opengl.GL43.glInvalidateFramebuffer(target, attachments);
     }
 
-    @Override public void glInvalidateFramebuffer(int target, int attachment) {
+    @Override public void glInvalidateFramebuffer(@NativeType("GLenum") int target, @NativeType("GLenum const *") int attachment) {
         org.lwjgl.opengl.GL43.glInvalidateFramebuffer(target, attachment);
     }
 
-    @Override public void glInvalidateFramebuffer(int target, int[] attachments) {
+    @Override public void glInvalidateFramebuffer(@NativeType("GLenum") int target, @NativeType("GLenum const *") int[] attachments) {
         org.lwjgl.opengl.GL43.glInvalidateFramebuffer(target, attachments);
     }
 
@@ -287,15 +295,15 @@ public class GL43AccessorImpl extends GL42AccessorImpl implements GL43Accessor {
         org.lwjgl.opengl.GL43.nglInvalidateSubFramebuffer(target, numAttachments, attachments, x, y, width, height);
     }
 
-    @Override public void glInvalidateSubFramebuffer(int target, IntBuffer attachments, int x, int y, int width, int height) {
+    @Override public void glInvalidateSubFramebuffer(@NativeType("GLenum") int target, @NativeType("GLenum const *") IntBuffer attachments, @NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height) {
         org.lwjgl.opengl.GL43.glInvalidateSubFramebuffer(target, attachments, x, y, width, height);
     }
 
-    @Override public void glInvalidateSubFramebuffer(int target, int attachment, int x, int y, int width, int height) {
+    @Override public void glInvalidateSubFramebuffer(@NativeType("GLenum") int target, @NativeType("GLenum const *") int attachment, @NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height) {
         org.lwjgl.opengl.GL43.glInvalidateSubFramebuffer(target, attachment, x, y, width, height);
     }
 
-    @Override public void glInvalidateSubFramebuffer(int target, int[] attachments, int x, int y, int width, int height) {
+    @Override public void glInvalidateSubFramebuffer(@NativeType("GLenum") int target, @NativeType("GLenum const *") int[] attachments, @NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height) {
         org.lwjgl.opengl.GL43.glInvalidateSubFramebuffer(target, attachments, x, y, width, height);
     }
 
@@ -303,19 +311,19 @@ public class GL43AccessorImpl extends GL42AccessorImpl implements GL43Accessor {
         org.lwjgl.opengl.GL43.nglMultiDrawArraysIndirect(mode, indirect, drawcount, stride);
     }
 
-    @Override public void glMultiDrawArraysIndirect(int mode, ByteBuffer indirect, int drawcount, int stride) {
+    @Override public void glMultiDrawArraysIndirect(@NativeType("GLenum") int mode, @NativeType("void const *") ByteBuffer indirect, @NativeType("GLsizei") int drawcount, @NativeType("GLsizei") int stride) {
         org.lwjgl.opengl.GL43.glMultiDrawArraysIndirect(mode, indirect, drawcount, stride);
     }
 
-    @Override public void glMultiDrawArraysIndirect(int mode, long indirect, int drawcount, int stride) {
+    @Override public void glMultiDrawArraysIndirect(@NativeType("GLenum") int mode, @NativeType("void const *") long indirect, @NativeType("GLsizei") int drawcount, @NativeType("GLsizei") int stride) {
         org.lwjgl.opengl.GL43.glMultiDrawArraysIndirect(mode, indirect, drawcount, stride);
     }
 
-    @Override public void glMultiDrawArraysIndirect(int mode, IntBuffer indirect, int drawcount, int stride) {
+    @Override public void glMultiDrawArraysIndirect(@NativeType("GLenum") int mode, @NativeType("void const *") IntBuffer indirect, @NativeType("GLsizei") int drawcount, @NativeType("GLsizei") int stride) {
         org.lwjgl.opengl.GL43.glMultiDrawArraysIndirect(mode, indirect, drawcount, stride);
     }
 
-    @Override public void glMultiDrawArraysIndirect(int mode, int[] indirect, int drawcount, int stride) {
+    @Override public void glMultiDrawArraysIndirect(@NativeType("GLenum") int mode, @NativeType("void const *") int[] indirect, @NativeType("GLsizei") int drawcount, @NativeType("GLsizei") int stride) {
         org.lwjgl.opengl.GL43.glMultiDrawArraysIndirect(mode, indirect, drawcount, stride);
     }
 
@@ -323,19 +331,19 @@ public class GL43AccessorImpl extends GL42AccessorImpl implements GL43Accessor {
         org.lwjgl.opengl.GL43.nglMultiDrawElementsIndirect(mode, type, indirect, drawcount, stride);
     }
 
-    @Override public void glMultiDrawElementsIndirect(int mode, int type, ByteBuffer indirect, int drawcount, int stride) {
+    @Override public void glMultiDrawElementsIndirect(@NativeType("GLenum") int mode, @NativeType("GLenum") int type, @NativeType("void const *") ByteBuffer indirect, @NativeType("GLsizei") int drawcount, @NativeType("GLsizei") int stride) {
         org.lwjgl.opengl.GL43.glMultiDrawElementsIndirect(mode, type, indirect, drawcount, stride);
     }
 
-    @Override public void glMultiDrawElementsIndirect(int mode, int type, long indirect, int drawcount, int stride) {
+    @Override public void glMultiDrawElementsIndirect(@NativeType("GLenum") int mode, @NativeType("GLenum") int type, @NativeType("void const *") long indirect, @NativeType("GLsizei") int drawcount, @NativeType("GLsizei") int stride) {
         org.lwjgl.opengl.GL43.glMultiDrawElementsIndirect(mode, type, indirect, drawcount, stride);
     }
 
-    @Override public void glMultiDrawElementsIndirect(int mode, int type, IntBuffer indirect, int drawcount, int stride) {
+    @Override public void glMultiDrawElementsIndirect(@NativeType("GLenum") int mode, @NativeType("GLenum") int type, @NativeType("void const *") IntBuffer indirect, @NativeType("GLsizei") int drawcount, @NativeType("GLsizei") int stride) {
         org.lwjgl.opengl.GL43.glMultiDrawElementsIndirect(mode, type, indirect, drawcount, stride);
     }
 
-    @Override public void glMultiDrawElementsIndirect(int mode, int type, int[] indirect, int drawcount, int stride) {
+    @Override public void glMultiDrawElementsIndirect(@NativeType("GLenum") int mode, @NativeType("GLenum") int type, @NativeType("void const *") int[] indirect, @NativeType("GLsizei") int drawcount, @NativeType("GLsizei") int stride) {
         org.lwjgl.opengl.GL43.glMultiDrawElementsIndirect(mode, type, indirect, drawcount, stride);
     }
 
@@ -343,15 +351,16 @@ public class GL43AccessorImpl extends GL42AccessorImpl implements GL43Accessor {
         org.lwjgl.opengl.GL43.nglGetProgramInterfaceiv(program, programInterface, pname, params);
     }
 
-    @Override public void glGetProgramInterfaceiv(int program, int programInterface, int pname, IntBuffer params) {
+    @Override public void glGetProgramInterfaceiv(@NativeType("GLuint") int program, @NativeType("GLenum") int programInterface, @NativeType("GLenum") int pname, @NativeType("GLint *") IntBuffer params) {
         org.lwjgl.opengl.GL43.glGetProgramInterfaceiv(program, programInterface, pname, params);
     }
 
-    @Override public void glGetProgramInterfaceiv(int program, int programInterface, int pname, int[] params) {
+    @Override public void glGetProgramInterfaceiv(@NativeType("GLuint") int program, @NativeType("GLenum") int programInterface, @NativeType("GLenum") int pname, @NativeType("GLint *") int[] params) {
         org.lwjgl.opengl.GL43.glGetProgramInterfaceiv(program, programInterface, pname, params);
     }
 
-    @Override public int glGetProgramInterfacei(int program, int programInterface, int pname) {
+@NativeType("void")
+    @Override public int glGetProgramInterfacei(@NativeType("GLuint") int program, @NativeType("GLenum") int programInterface, @NativeType("GLenum") int pname) {
         return org.lwjgl.opengl.GL43.glGetProgramInterfacei(program, programInterface, pname);
     }
 
@@ -359,11 +368,13 @@ public class GL43AccessorImpl extends GL42AccessorImpl implements GL43Accessor {
         return org.lwjgl.opengl.GL43.nglGetProgramResourceIndex(program, programInterface, name);
     }
 
-    @Override public int glGetProgramResourceIndex(int program, int programInterface, ByteBuffer name) {
+@NativeType("GLuint")
+    @Override public int glGetProgramResourceIndex(@NativeType("GLuint") int program, @NativeType("GLenum") int programInterface, @NativeType("GLchar const *") ByteBuffer name) {
         return org.lwjgl.opengl.GL43.glGetProgramResourceIndex(program, programInterface, name);
     }
 
-    @Override public int glGetProgramResourceIndex(int program, int programInterface, CharSequence name) {
+@NativeType("GLuint")
+    @Override public int glGetProgramResourceIndex(@NativeType("GLuint") int program, @NativeType("GLenum") int programInterface, @NativeType("GLchar const *") CharSequence name) {
         return org.lwjgl.opengl.GL43.glGetProgramResourceIndex(program, programInterface, name);
     }
 
@@ -371,19 +382,21 @@ public class GL43AccessorImpl extends GL42AccessorImpl implements GL43Accessor {
         org.lwjgl.opengl.GL43.nglGetProgramResourceName(program, programInterface, index, bufSize, length, name);
     }
 
-    @Override public void glGetProgramResourceName(int program, int programInterface, int index, @Nullable IntBuffer length, ByteBuffer name) {
+    @Override public void glGetProgramResourceName(@NativeType("GLuint") int program, @NativeType("GLenum") int programInterface, @NativeType("GLuint") int index, @Nullable @NativeType("GLsizei *") IntBuffer length, @NativeType("GLchar *") ByteBuffer name) {
         org.lwjgl.opengl.GL43.glGetProgramResourceName(program, programInterface, index, length, name);
     }
 
-    @Override public String glGetProgramResourceName(int program, int programInterface, int index, int bufSize) {
+@NativeType("void")
+    @Override public String glGetProgramResourceName(@NativeType("GLuint") int program, @NativeType("GLenum") int programInterface, @NativeType("GLuint") int index, @NativeType("GLsizei") int bufSize) {
         return org.lwjgl.opengl.GL43.glGetProgramResourceName(program, programInterface, index, bufSize);
     }
 
-    @Override public String glGetProgramResourceName(int program, int programInterface, int index) {
+@NativeType("void")
+    @Override public String glGetProgramResourceName(@NativeType("GLuint") int program, @NativeType("GLenum") int programInterface, @NativeType("GLuint") int index) {
         return org.lwjgl.opengl.GL43.glGetProgramResourceName(program, programInterface, index);
     }
 
-    @Override public void glGetProgramResourceName(int program, int programInterface, int index, @Nullable int[] length, ByteBuffer name) {
+    @Override public void glGetProgramResourceName(@NativeType("GLuint") int program, @NativeType("GLenum") int programInterface, @NativeType("GLuint") int index, @Nullable @NativeType("GLsizei *") int[] length, @NativeType("GLchar *") ByteBuffer name) {
         org.lwjgl.opengl.GL43.glGetProgramResourceName(program, programInterface, index, length, name);
     }
 
@@ -391,11 +404,11 @@ public class GL43AccessorImpl extends GL42AccessorImpl implements GL43Accessor {
         org.lwjgl.opengl.GL43.nglGetProgramResourceiv(program, programInterface, index, propCount, props, bufSize, length, params);
     }
 
-    @Override public void glGetProgramResourceiv(int program, int programInterface, int index, IntBuffer props, @Nullable IntBuffer length, IntBuffer params) {
+    @Override public void glGetProgramResourceiv(@NativeType("GLuint") int program, @NativeType("GLenum") int programInterface, @NativeType("GLuint") int index, @NativeType("GLenum const *") IntBuffer props, @Nullable @NativeType("GLsizei *") IntBuffer length, @NativeType("GLint *") IntBuffer params) {
         org.lwjgl.opengl.GL43.glGetProgramResourceiv(program, programInterface, index, props, length, params);
     }
 
-    @Override public void glGetProgramResourceiv(int program, int programInterface, int index, int[] props, @Nullable int[] length, int[] params) {
+    @Override public void glGetProgramResourceiv(@NativeType("GLuint") int program, @NativeType("GLenum") int programInterface, @NativeType("GLuint") int index, @NativeType("GLenum const *") int[] props, @Nullable @NativeType("GLsizei *") int[] length, @NativeType("GLint *") int[] params) {
         org.lwjgl.opengl.GL43.glGetProgramResourceiv(program, programInterface, index, props, length, params);
     }
 
@@ -403,11 +416,13 @@ public class GL43AccessorImpl extends GL42AccessorImpl implements GL43Accessor {
         return org.lwjgl.opengl.GL43.nglGetProgramResourceLocation(program, programInterface, name);
     }
 
-    @Override public int glGetProgramResourceLocation(int program, int programInterface, ByteBuffer name) {
+@NativeType("GLint")
+    @Override public int glGetProgramResourceLocation(@NativeType("GLuint") int program, @NativeType("GLenum") int programInterface, @NativeType("GLchar const *") ByteBuffer name) {
         return org.lwjgl.opengl.GL43.glGetProgramResourceLocation(program, programInterface, name);
     }
 
-    @Override public int glGetProgramResourceLocation(int program, int programInterface, CharSequence name) {
+@NativeType("GLint")
+    @Override public int glGetProgramResourceLocation(@NativeType("GLuint") int program, @NativeType("GLenum") int programInterface, @NativeType("GLchar const *") CharSequence name) {
         return org.lwjgl.opengl.GL43.glGetProgramResourceLocation(program, programInterface, name);
     }
 
@@ -415,55 +430,57 @@ public class GL43AccessorImpl extends GL42AccessorImpl implements GL43Accessor {
         return org.lwjgl.opengl.GL43.nglGetProgramResourceLocationIndex(program, programInterface, name);
     }
 
-    @Override public int glGetProgramResourceLocationIndex(int program, int programInterface, ByteBuffer name) {
+@NativeType("GLint")
+    @Override public int glGetProgramResourceLocationIndex(@NativeType("GLuint") int program, @NativeType("GLenum") int programInterface, @NativeType("GLchar const *") ByteBuffer name) {
         return org.lwjgl.opengl.GL43.glGetProgramResourceLocationIndex(program, programInterface, name);
     }
 
-    @Override public int glGetProgramResourceLocationIndex(int program, int programInterface, CharSequence name) {
+@NativeType("GLint")
+    @Override public int glGetProgramResourceLocationIndex(@NativeType("GLuint") int program, @NativeType("GLenum") int programInterface, @NativeType("GLchar const *") CharSequence name) {
         return org.lwjgl.opengl.GL43.glGetProgramResourceLocationIndex(program, programInterface, name);
     }
 
-    @Override public void glShaderStorageBlockBinding(int program, int storageBlockIndex, int storageBlockBinding) {
+    @Override public void glShaderStorageBlockBinding(@NativeType("GLuint") int program, @NativeType("GLuint") int storageBlockIndex, @NativeType("GLuint") int storageBlockBinding) {
         org.lwjgl.opengl.GL43.glShaderStorageBlockBinding(program, storageBlockIndex, storageBlockBinding);
     }
 
-    @Override public void glTexBufferRange(int target, int internalformat, int buffer, long offset, long size) {
+    @Override public void glTexBufferRange(@NativeType("GLenum") int target, @NativeType("GLenum") int internalformat, @NativeType("GLuint") int buffer, @NativeType("GLintptr") long offset, @NativeType("GLsizeiptr") long size) {
         org.lwjgl.opengl.GL43.glTexBufferRange(target, internalformat, buffer, offset, size);
     }
 
-    @Override public void glTexStorage2DMultisample(int target, int samples, int internalformat, int width, int height, boolean fixedsamplelocations) {
+    @Override public void glTexStorage2DMultisample(@NativeType("GLenum") int target, @NativeType("GLsizei") int samples, @NativeType("GLenum") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLboolean") boolean fixedsamplelocations) {
         org.lwjgl.opengl.GL43.glTexStorage2DMultisample(target, samples, internalformat, width, height, fixedsamplelocations);
     }
 
-    @Override public void glTexStorage3DMultisample(int target, int samples, int internalformat, int width, int height, int depth, boolean fixedsamplelocations) {
+    @Override public void glTexStorage3DMultisample(@NativeType("GLenum") int target, @NativeType("GLsizei") int samples, @NativeType("GLenum") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLsizei") int depth, @NativeType("GLboolean") boolean fixedsamplelocations) {
         org.lwjgl.opengl.GL43.glTexStorage3DMultisample(target, samples, internalformat, width, height, depth, fixedsamplelocations);
     }
 
-    @Override public void glTextureView(int texture, int target, int origtexture, int internalformat, int minlevel, int numlevels, int minlayer, int numlayers) {
+    @Override public void glTextureView(@NativeType("GLuint") int texture, @NativeType("GLenum") int target, @NativeType("GLuint") int origtexture, @NativeType("GLenum") int internalformat, @NativeType("GLuint") int minlevel, @NativeType("GLuint") int numlevels, @NativeType("GLuint") int minlayer, @NativeType("GLuint") int numlayers) {
         org.lwjgl.opengl.GL43.glTextureView(texture, target, origtexture, internalformat, minlevel, numlevels, minlayer, numlayers);
     }
 
-    @Override public void glBindVertexBuffer(int bindingindex, int buffer, long offset, int stride) {
+    @Override public void glBindVertexBuffer(@NativeType("GLuint") int bindingindex, @NativeType("GLuint") int buffer, @NativeType("GLintptr") long offset, @NativeType("GLsizei") int stride) {
         org.lwjgl.opengl.GL43.glBindVertexBuffer(bindingindex, buffer, offset, stride);
     }
 
-    @Override public void glVertexAttribFormat(int attribindex, int size, int type, boolean normalized, int relativeoffset) {
+    @Override public void glVertexAttribFormat(@NativeType("GLuint") int attribindex, @NativeType("GLint") int size, @NativeType("GLenum") int type, @NativeType("GLboolean") boolean normalized, @NativeType("GLuint") int relativeoffset) {
         org.lwjgl.opengl.GL43.glVertexAttribFormat(attribindex, size, type, normalized, relativeoffset);
     }
 
-    @Override public void glVertexAttribIFormat(int attribindex, int size, int type, int relativeoffset) {
+    @Override public void glVertexAttribIFormat(@NativeType("GLuint") int attribindex, @NativeType("GLint") int size, @NativeType("GLenum") int type, @NativeType("GLuint") int relativeoffset) {
         org.lwjgl.opengl.GL43.glVertexAttribIFormat(attribindex, size, type, relativeoffset);
     }
 
-    @Override public void glVertexAttribLFormat(int attribindex, int size, int type, int relativeoffset) {
+    @Override public void glVertexAttribLFormat(@NativeType("GLuint") int attribindex, @NativeType("GLint") int size, @NativeType("GLenum") int type, @NativeType("GLuint") int relativeoffset) {
         org.lwjgl.opengl.GL43.glVertexAttribLFormat(attribindex, size, type, relativeoffset);
     }
 
-    @Override public void glVertexAttribBinding(int attribindex, int bindingindex) {
+    @Override public void glVertexAttribBinding(@NativeType("GLuint") int attribindex, @NativeType("GLuint") int bindingindex) {
         org.lwjgl.opengl.GL43.glVertexAttribBinding(attribindex, bindingindex);
     }
 
-    @Override public void glVertexBindingDivisor(int bindingindex, int divisor) {
+    @Override public void glVertexBindingDivisor(@NativeType("GLuint") int bindingindex, @NativeType("GLuint") int divisor) {
         org.lwjgl.opengl.GL43.glVertexBindingDivisor(bindingindex, divisor);
     }
 

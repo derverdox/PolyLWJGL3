@@ -1,0 +1,113 @@
+/**
+ * OpenGL 4.5 Accessor — Direct State Access (DSA) everywhere, clip control, query-buffer reads,
+ * robustness “Getn*” queries, regional barriers, and assorted modern quality-of-life APIs.
+ *
+ * <p>Extends {@link GL44Accessor}. OpenGL 4.5 completes the DSA transition: most objects can be
+ * created, configured, and queried without temporary binding, reducing state churn and CPU overhead.</p>
+ *
+ * <h2>Rasterization & Synchronization Tweaks</h2>
+ * <ul>
+ *   <li>{@code glClipControl} — Choose clip-space origin (lower/upper-left) and depth mode (0..1 or −1..1).</li>
+ *   <li>{@code glMemoryBarrierByRegion} — A finer-grained memory barrier affecting only overlapping pixels/tiles.</li>
+ *   <li>{@code glTextureBarrier} — Enforce ordering for texture read-after-write hazards within a frame.</li>
+ * </ul>
+ *
+ * <h2>Transform Feedback (DSA)</h2>
+ * <ul>
+ *   <li>{@code glCreateTransformFeedbacks} — Create TF objects without binding.</li>
+ *   <li>{@code glTransformFeedbackBufferBase}, {@code glTransformFeedbackBufferRange} —
+ *       Bind buffers (whole or ranged) to TF binding points.</li>
+ *   <li>{@code glGetTransformFeedbackiv}, {@code glGetTransformFeedbacki},
+ *       {@code glGetTransformFeedbacki_v}, {@code glGetTransformFeedbacki64_v}, {@code glGetTransformFeedbacki64} —
+ *       Query TF object state.</li>
+ * </ul>
+ *
+ * <h2>Buffers (DSA)</h2>
+ * <ul>
+ *   <li>{@code glCreateBuffers} — Create buffer names with storage unbound.</li>
+ *   <li>{@code glNamedBufferStorage}, {@code glNamedBufferData}, {@code glNamedBufferSubData} —
+ *       Allocate/resize/update buffer contents without binding.</li>
+ *   <li>{@code glCopyNamedBufferSubData} — GPU-side copies between named buffers.</li>
+ *   <li>{@code glClearNamedBufferData}, {@code glClearNamedBufferSubData} — Fast clears on named buffers.</li>
+ *   <li>{@code glMapNamedBuffer}, {@code glMapNamedBufferRange}, {@code glUnmapNamedBuffer},
+ *       {@code glFlushMappedNamedBufferRange} — Map and flush named buffers.</li>
+ *   <li>{@code glGetNamedBufferParameteriv}/{@code i64v}, {@code glGetNamedBufferPointerv},
+ *       {@code glGetNamedBufferSubData} — Query and read back named buffer state/data.</li>
+ * </ul>
+ *
+ * <h2>Framebuffers & Renderbuffers (DSA)</h2>
+ * <ul>
+ *   <li>{@code glCreateFramebuffers}, {@code glCreateRenderbuffers} — Create without binding.</li>
+ *   <li>{@code glNamedFramebufferTexture}, {@code glNamedFramebufferTextureLayer},
+ *       {@code glNamedFramebufferRenderbuffer} — Attach resources to FBOs directly.</li>
+ *   <li>{@code glNamedFramebufferParameteri}, {@code glNamedFramebufferDrawBuffer(s)},
+ *       {@code glNamedFramebufferReadBuffer} — Configure FBO parameters and buffers.</li>
+ *   <li>{@code glInvalidateNamedFramebufferData}, {@code glInvalidateNamedFramebufferSubData} — Hint discard regions.</li>
+ *   <li>{@code glClearNamedFramebufferiv/uiv/fv/fi} — Typed clears on named FBOs.</li>
+ *   <li>{@code glBlitNamedFramebuffer} — Blit between named FBOs; resolves, copies, scales.</li>
+ *   <li>{@code glCheckNamedFramebufferStatus} — Completeness check without binding.</li>
+ *   <li>{@code glGetNamedFramebufferParameteriv}/{@code i}, {@code glGetNamedFramebufferAttachmentParameteriv}/{@code i} — Query FBO/attachment state.</li>
+ *   <li>{@code glNamedRenderbufferStorage}, {@code glNamedRenderbufferStorageMultisample} — Allocate RBO storage.</li>
+ *   <li>{@code glGetNamedRenderbufferParameteriv}/{@code i} — Query RBO parameters.</li>
+ * </ul>
+ *
+ * <h2>Textures & Samplers (DSA)</h2>
+ * <ul>
+ *   <li>{@code glCreateTextures} — Allocate texture names with a target baked in.</li>
+ *   <li>{@code glTextureStorage1D/2D/3D}, {@code glTextureStorage2DMultisample/3DMultisample} —
+ *       Immutable storage for named textures.</li>
+ *   <li>{@code glTextureSubImage1D/2D/3D}, {@code glCompressedTextureSubImage1D/2D/3D},
+ *       {@code glCopyTextureSubImage1D/2D/3D} — Update/copy sub-regions of named textures.</li>
+ *   <li>{@code glTextureBuffer}, {@code glTextureBufferRange} — Bind (range of) buffer as a texel buffer.</li>
+ *   <li>{@code glTextureParameterf/i/...}, {@code glTextureParameterIiv/Iuiv} — Set parameters on named textures.</li>
+ *   <li>{@code glGenerateTextureMipmap} — Generate mipmaps without binding.</li>
+ *   <li>{@code glBindTextureUnit} — Bind a texture to a texture unit in one call.</li>
+ *   <li>{@code glGetTextureImage}, {@code glGetCompressedTextureImage} — Read full images from named textures.</li>
+ *   <li>{@code glGetTextureSubImage}, {@code glGetCompressedTextureSubImage} — Read sub-rectangles from named textures.</li>
+ *   <li>{@code glGetTextureLevelParameter*f/i}, {@code glGetTextureParameter*f/i/Iiv/Iuiv} — Query texture parameters.</li>
+ *   <li>{@code glCreateSamplers} — Create sampler objects without binding.</li>
+ * </ul>
+ *
+ * <h2>Vertex Arrays (DSA)</h2>
+ * <ul>
+ *   <li>{@code glCreateVertexArrays} — Create VAOs without binding.</li>
+ *   <li>{@code glVertexArrayVertexBuffer(s)} — Attach one or many vertex buffers with offsets/strides to a VAO.</li>
+ *   <li>{@code glVertexArrayElementBuffer} — Attach an element/index buffer to a VAO.</li>
+ *   <li>{@code glVertexArrayAttribFormat/IFormat/LFormat}, {@code glVertexArrayAttribBinding} —
+ *       Describe attribute formats and route them to buffer bindings.</li>
+ *   <li>{@code glEnableVertexArrayAttrib}, {@code glDisableVertexArrayAttrib} — Toggle attributes on a VAO.</li>
+ *   <li>{@code glVertexArrayBindingDivisor} — Per-binding instancing divisor.</li>
+ *   <li>{@code glGetVertexArrayiv/i}, {@code glGetVertexArrayIndexediv/indexedi/indexed64iv/indexed64i} — Query VAO state.</li>
+ * </ul>
+ *
+ * <h2>Program Pipelines, Samplers, and Queries (creation helpers)</h2>
+ * <ul>
+ *   <li>{@code glCreateProgramPipelines} — Create pipeline objects directly.</li>
+ *   <li>{@code glCreateQueries} — Allocate query objects for a target.</li>
+ *   <li>{@code glCreateSamplers} — See Textures & Samplers.</li>
+ * </ul>
+ *
+ * <h2>Query Results to Buffers</h2>
+ * <ul>
+ *   <li>{@code glGetQueryBufferObjectiv/uiv/i64v/ui64v} — Write query results directly into a buffer object.</li>
+ * </ul>
+ *
+ * <h2>Robustness & Diagnostics</h2>
+ * <ul>
+ *   <li>{@code glGetGraphicsResetStatus} — Detect GPU reset/robustness events.</li>
+ *   <li>{@code glGetn*} family — Size-limited “safe” getters for legacy states and pixel/texture/map reads:
+ *       {@code glGetnMap*}, {@code glGetnPixelMap*}, {@code glGetnPolygonStipple}, {@code glGetnTexImage},
+ *       {@code glReadnPixels}, {@code glGetnColorTable}, {@code glGetnConvolutionFilter},
+ *       {@code glGetnSeparableFilter}, {@code glGetnHistogram}, {@code glGetnMinmax},
+ *       {@code glGetnCompressedTexImage}, {@code glGetnUniform*} (float/double/int/uint and CORE variants).</li>
+ * </ul>
+ *
+ * <h3>Notes</h3>
+ * <ul>
+ *   <li>DSA (“named*” and “Create*”) avoids bind-to-edit; it’s generally preferred for clarity and performance.</li>
+ *   <li>Use {@code glGetGraphicsResetStatus} and the {@code glGetn*} APIs to build robust applications that survive GPU resets
+ *       and avoid buffer overruns on reads.</li>
+ *   <li>Query-to-buffer reads integrate naturally with indirect/multi-draw and GPU-driven pipelines.</li>
+ *   <li>{@code glClipControl} helps match coordinate conventions across APIs (e.g., Vulkan/D3D vs. GL).</li>
+ * </ul>
+ */

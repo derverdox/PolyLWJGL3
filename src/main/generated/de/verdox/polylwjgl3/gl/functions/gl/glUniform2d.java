@@ -19,6 +19,6 @@ public interface glUniform2d {
  *
  * @see <a href="https://docs.gl/gl4/glUniform">Reference Page</a>
  */
-    public void glUniform2d(int location, double x, double y);
+    public void glUniform2d(@NativeType("GLint") int location, @NativeType("GLdouble") double x, @NativeType("GLdouble") double y);
 
 }

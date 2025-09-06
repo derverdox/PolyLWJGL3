@@ -20,6 +20,6 @@ public interface glIndexub {
  *
  * @see <a href="https://docs.gl/gl3/glIndexub">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glIndexub(byte index);
+    public void glIndexub(@NativeType("GLubyte") byte index);
 
 }

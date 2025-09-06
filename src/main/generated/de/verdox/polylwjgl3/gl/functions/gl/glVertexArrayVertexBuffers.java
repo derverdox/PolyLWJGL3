@@ -33,13 +33,13 @@ public interface glVertexArrayVertexBuffers {
  *
  * @see <a href="https://docs.gl/gl4/glVertexArrayVertexBuffers">Reference Page</a>
  */
-    public void glVertexArrayVertexBuffers(int vaobj, int first, @Nullable IntBuffer buffers, @Nullable PointerBuffer offsets, @Nullable IntBuffer strides);
+    public void glVertexArrayVertexBuffers(@NativeType("GLuint") int vaobj, @NativeType("GLuint") int first, @Nullable @NativeType("GLuint const *") IntBuffer buffers, @Nullable @NativeType("GLintptr const *") PointerBuffer offsets, @Nullable @NativeType("GLsizei const *") IntBuffer strides);
 
 /**
  * Array version of: {@link #glVertexArrayVertexBuffers VertexArrayVertexBuffers}
  *
  * @see <a href="https://docs.gl/gl4/glVertexArrayVertexBuffers">Reference Page</a>
  */
-    public void glVertexArrayVertexBuffers(int vaobj, int first, @Nullable int[] buffers, @Nullable PointerBuffer offsets, @Nullable int[] strides);
+    public void glVertexArrayVertexBuffers(@NativeType("GLuint") int vaobj, @NativeType("GLuint") int first, @Nullable @NativeType("GLuint const *") int[] buffers, @Nullable @NativeType("GLintptr const *") PointerBuffer offsets, @Nullable @NativeType("GLsizei const *") int[] strides);
 
 }

@@ -19,6 +19,7 @@ public interface glUnmapBuffer {
 /**
  * <a href="https://docs.gl/es3/glUnmapBuffer">Reference Page</a>
  */
-    public boolean glUnmapBuffer(int target);
+@NativeType("GLboolean")
+    public boolean glUnmapBuffer(@NativeType("GLenum") int target);
 
 }

@@ -16,6 +16,6 @@ public interface glClear {
 /**
  * <a href="https://docs.gl/es3/glClear">Reference Page</a>
  */
-    public void glClear(int mask);
+    public void glClear(@NativeType("GLbitfield") int mask);
 
 }

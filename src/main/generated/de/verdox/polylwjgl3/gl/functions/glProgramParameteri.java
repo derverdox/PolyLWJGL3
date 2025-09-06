@@ -19,6 +19,6 @@ public interface glProgramParameteri {
 /**
  * <a href="https://docs.gl/es3/glProgramParameteri">Reference Page</a>
  */
-    public void glProgramParameteri(int program, int pname, int value);
+    public void glProgramParameteri(@NativeType("GLuint") int program, @NativeType("GLenum") int pname, @NativeType("GLint") int value);
 
 }

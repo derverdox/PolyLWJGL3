@@ -27,13 +27,13 @@ public interface glMaterialfv {
  *
  * @see <a href="https://docs.gl/gl3/glMaterial">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glMaterialfv(int face, int pname, FloatBuffer params);
+    public void glMaterialfv(@NativeType("GLenum") int face, @NativeType("GLenum") int pname, @NativeType("GLfloat const *") FloatBuffer params);
 
 /**
  * Array version of: {@link #glMaterialfv Materialfv}
  *
  * @see <a href="https://docs.gl/gl3/glMaterial">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glMaterialfv(int face, int pname, float[] params);
+    public void glMaterialfv(@NativeType("GLenum") int face, @NativeType("GLenum") int pname, @NativeType("GLfloat const *") float[] params);
 
 }

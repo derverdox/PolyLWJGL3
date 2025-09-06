@@ -18,6 +18,7 @@ public interface glGetTexLevelParameteri {
 /**
  * <a href="https://docs.gl/es3/glGetTexLevelParameter">Reference Page</a>
  */
-    public int glGetTexLevelParameteri(int target, int level, int pname);
+@NativeType("void")
+    public int glGetTexLevelParameteri(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLenum") int pname);
 
 }

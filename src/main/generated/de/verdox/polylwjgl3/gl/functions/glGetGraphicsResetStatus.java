@@ -52,6 +52,7 @@ public interface glGetGraphicsResetStatus {
  *
  * @see <a href="https://docs.gl/es3/glGetGraphicsResetStatus">Reference Page</a>
  */
+@NativeType("GLenum")
     public int glGetGraphicsResetStatus();
 
 }

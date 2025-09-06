@@ -25,6 +25,6 @@ public interface glTexImage2DMultisample {
  *
  * @see <a href="https://docs.gl/gl4/glTexImage2DMultisample">Reference Page</a>
  */
-    public void glTexImage2DMultisample(int target, int samples, int internalformat, int width, int height, boolean fixedsamplelocations);
+    public void glTexImage2DMultisample(@NativeType("GLenum") int target, @NativeType("GLsizei") int samples, @NativeType("GLint") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLboolean") boolean fixedsamplelocations);
 
 }

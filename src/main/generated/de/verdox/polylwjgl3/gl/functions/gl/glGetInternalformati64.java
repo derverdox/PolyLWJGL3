@@ -19,6 +19,7 @@ public interface glGetInternalformati64 {
  *
  * @see <a href="https://docs.gl/gl4/glGetInternalformat">Reference Page</a>
  */
-    public long glGetInternalformati64(int target, int internalformat, int pname);
+@NativeType("void")
+    public long glGetInternalformati64(@NativeType("GLenum") int target, @NativeType("GLenum") int internalformat, @NativeType("GLenum") int pname);
 
 }

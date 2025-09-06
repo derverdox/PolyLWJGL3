@@ -25,13 +25,13 @@ public interface glGetnUniformiv_CORE extends glGetnUniformiv {
  *
  * @see <a href="https://docs.gl/gl4/glGetUniform">Reference Page</a>
  */
-    public void glGetnUniformiv(int program, int location, IntBuffer params);
+    public void glGetnUniformiv(@NativeType("GLuint") int program, @NativeType("GLint") int location, @NativeType("GLint *") IntBuffer params);
 
 /**
  * Array version of: {@link #glGetnUniformiv GetnUniformiv}
  *
  * @see <a href="https://docs.gl/gl4/glGetUniform">Reference Page</a>
  */
-    public void glGetnUniformiv(int program, int location, int[] params);
+    public void glGetnUniformiv(@NativeType("GLuint") int program, @NativeType("GLint") int location, @NativeType("GLint *") int[] params);
 
 }

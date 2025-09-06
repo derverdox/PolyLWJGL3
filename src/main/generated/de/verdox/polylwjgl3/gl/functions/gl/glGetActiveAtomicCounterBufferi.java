@@ -18,6 +18,7 @@ public interface glGetActiveAtomicCounterBufferi {
  *
  * @see <a href="https://docs.gl/gl4/glGetActiveAtomicCounterBuffer">Reference Page</a>
  */
-    public int glGetActiveAtomicCounterBufferi(int program, int bufferIndex, int pname);
+@NativeType("void")
+    public int glGetActiveAtomicCounterBufferi(@NativeType("GLuint") int program, @NativeType("GLuint") int bufferIndex, @NativeType("GLenum") int pname);
 
 }

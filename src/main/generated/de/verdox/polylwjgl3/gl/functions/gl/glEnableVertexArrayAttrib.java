@@ -23,6 +23,6 @@ public interface glEnableVertexArrayAttrib {
  *
  * @see <a href="https://docs.gl/gl4/glEnableVertexArrayAttrib">Reference Page</a>
  */
-    public void glEnableVertexArrayAttrib(int vaobj, int index);
+    public void glEnableVertexArrayAttrib(@NativeType("GLuint") int vaobj, @NativeType("GLuint") int index);
 
 }

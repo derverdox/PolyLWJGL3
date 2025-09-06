@@ -19,6 +19,7 @@ public interface glGetQueryi {
 /**
  * <a href="https://docs.gl/es3/glGetQuery">Reference Page</a>
  */
-    public int glGetQueryi(int target, int pname);
+@NativeType("void")
+    public int glGetQueryi(@NativeType("GLenum") int target, @NativeType("GLenum") int pname);
 
 }

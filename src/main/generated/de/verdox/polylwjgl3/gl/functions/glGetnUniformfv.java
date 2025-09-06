@@ -31,13 +31,13 @@ public interface glGetnUniformfv {
  *
  * @see <a href="https://docs.gl/es3/glGetUniform">Reference Page</a>
  */
-    public void glGetnUniformfv(int program, int location, FloatBuffer params);
+    public void glGetnUniformfv(@NativeType("GLuint") int program, @NativeType("GLint") int location, @NativeType("GLfloat *") FloatBuffer params);
 
 /**
  * Array version of: {@link #glGetnUniformfv GetnUniformfv}
  *
  * @see <a href="https://docs.gl/es3/glGetUniform">Reference Page</a>
  */
-    public void glGetnUniformfv(int program, int location, float[] params);
+    public void glGetnUniformfv(@NativeType("GLuint") int program, @NativeType("GLint") int location, @NativeType("GLfloat *") float[] params);
 
 }

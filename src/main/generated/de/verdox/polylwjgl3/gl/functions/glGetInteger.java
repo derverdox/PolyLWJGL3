@@ -16,6 +16,7 @@ public interface glGetInteger {
 /**
  * <a href="https://docs.gl/es3/glGetIntegerv">Reference Page</a>
  */
-    public int glGetInteger(int pname);
+@NativeType("void")
+    public int glGetInteger(@NativeType("GLenum") int pname);
 
 }

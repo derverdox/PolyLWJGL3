@@ -24,6 +24,6 @@ public interface glVertexArrayBindingDivisor {
  *
  * @see <a href="https://docs.gl/gl4/glVertexArrayBindingDivisor">Reference Page</a>
  */
-    public void glVertexArrayBindingDivisor(int vaobj, int bindingindex, int divisor);
+    public void glVertexArrayBindingDivisor(@NativeType("GLuint") int vaobj, @NativeType("GLuint") int bindingindex, @NativeType("GLuint") int divisor);
 
 }

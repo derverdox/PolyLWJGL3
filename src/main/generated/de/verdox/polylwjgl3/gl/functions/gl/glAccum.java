@@ -22,6 +22,6 @@ public interface glAccum {
  *
  * @see <a href="https://docs.gl/gl3/glAccum">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glAccum(int op, float value);
+    public void glAccum(@NativeType("GLenum") int op, @NativeType("GLfloat") float value);
 
 }

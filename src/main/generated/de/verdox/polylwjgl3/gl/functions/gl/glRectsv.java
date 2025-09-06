@@ -26,13 +26,13 @@ public interface glRectsv {
  *
  * @see <a href="https://docs.gl/gl3/glRect">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glRectsv(ShortBuffer v1, ShortBuffer v2);
+    public void glRectsv(@NativeType("GLshort const *") ShortBuffer v1, @NativeType("GLshort const *") ShortBuffer v2);
 
 /**
  * Array version of: {@link #glRectsv Rectsv}
  *
  * @see <a href="https://docs.gl/gl3/glRect">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glRectsv(short[] v1, short[] v2);
+    public void glRectsv(@NativeType("GLshort const *") short[] v1, @NativeType("GLshort const *") short[] v2);
 
 }

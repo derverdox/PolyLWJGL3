@@ -12,6 +12,7 @@ import com.github.javaparser.ast.expr.AnnotationExpr;
 import com.github.javaparser.ast.body.Parameter;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.*;
 import java.util.*;
@@ -23,13 +24,19 @@ public final class GlWrapperAstGen {
 
     private GlWrapperAstGen() {}
 
-    /** key: canonical (gl...) method name (Rückgabetyp NICHT berücksichtigt) */
+    /** Resource patterns to probe on the classpath and (as fallback) filesystem */
+    private static final String[] ACCESSOR_HEADER_RESOURCE_PATTERNS = new String[] {
+            "/header/%s.javadoc",
+            "/header/%s.javdoc" // tolerate minor typo
+    };
+
+    /** key: canonical (gl...) method name (return type NOT part of key) */
     private record FnKey(String canonicalName) {}
 
     private static final String JB_NULLABLE_FQN = "org.jetbrains.annotations.Nullable";
     private static final String JB_NOTNULL_FQN  = "org.jetbrains.annotations.NotNull";
 
-    /** kleine Struktur für FnIface-Referenz */
+    /** small structs */
     private record FnIfaceRef(String pkg, String simpleName) {}
     private record WriteResult(String pkgUsed, String simpleNameUsed) {}
 
@@ -38,7 +45,7 @@ public final class GlWrapperAstGen {
     public enum Flavor { GL_CORE, GLES }
 
     /* ------------------------------------------------------------------------------------------------
-       BATCH-API: Alle Spezifikationen zuerst prescannen (Schnittmengen bilden), dann generieren
+       BATCH-API
        ------------------------------------------------------------------------------------------------ */
 
     public static record Spec(
@@ -60,7 +67,7 @@ public final class GlWrapperAstGen {
         if (specs == null || specs.isEmpty()) return;
         if (fnOutDir == null) fnOutDir = outDir;
 
-        // ---------- 1) PRESCAN: Signaturen je Funktion & Flavor einsammeln ----------
+        // 1) prescan
         Map<String, Map<Flavor, List<MethodSig>>> sigsByFnAndFlavor = new LinkedHashMap<>();
 
         for (Spec s : specs) {
@@ -94,17 +101,16 @@ public final class GlWrapperAstGen {
                         s.fnPackageName, baseImports, ifaceName,
                         new FnKey(canonicalName),
                         e.getValue(),
-                        null // Base erbt nicht
+                        null
                 );
                 List<MethodSig> sigs = parseInterfaceMethods(tmp);
-
                 sigsByFnAndFlavor
                         .computeIfAbsent(canonicalName, k -> new EnumMap<>(Flavor.class))
                         .put(s.flavor, sigs);
             }
         }
 
-        // ---------- 2) GENERIEREN: pro Spec Dateien schreiben ----------
+        // 2) generate files per spec
         for (Spec s : specs) {
             String src = Files.readString(s.inputFile, StandardCharsets.UTF_8);
             CompilationUnit cu = StaticJavaParser.parse(src);
@@ -127,7 +133,6 @@ public final class GlWrapperAstGen {
             }
             baseImports.add("import org.jetbrains.annotations.*;");
 
-            // Methoden aus diesem Spec (für Impl-Generierung)
             List<MethodDeclaration> methods = cu.findAll(MethodDeclaration.class).stream()
                     .filter(m -> m.getNameAsString().matches("(?:n?gl)\\w+"))
                     .filter(m -> m.getModifiers().stream().anyMatch(md -> md.getKeyword() == Modifier.Keyword.PUBLIC))
@@ -154,43 +159,51 @@ public final class GlWrapperAstGen {
                 Set<MethodSig> coreOnly = new LinkedHashSet<>(coreSigs); coreOnly.removeAll(common);
                 Set<MethodSig> esOnly   = new LinkedHashSet<>(esSigs);   esOnly.removeAll(common);
 
+                // special-case debug callback: typed variant stays flavor-only; base keeps only unsafe long version
+                if ("glDebugMessageCallback".equals(canonical)) {
+                    Set<MethodSig> typedInCommon = common.stream()
+                            .filter(GlWrapperAstGen::isTypedDebugCallbackSig)
+                            .collect(Collectors.toCollection(LinkedHashSet::new));
+                    if (!typedInCommon.isEmpty()) {
+                        common.removeAll(typedInCommon);
+                        for (MethodSig ms : typedInCommon) {
+                            if (coreSigs.contains(ms)) coreOnly.add(ms);
+                            if (esSigs.contains(ms))   esOnly.add(ms);
+                        }
+                    }
+                }
+
                 boolean onlyCore = !coreOnly.isEmpty() && esSigs.isEmpty() && common.isEmpty();
                 boolean onlyES   = !esOnly.isEmpty()  && coreSigs.isEmpty() && common.isEmpty();
 
                 if (onlyCore) {
-                    // Nur CORE existiert → KEIN Parent, KEIN Suffix. Interface im Unterpaket ".gl".
                     String subpkg = s.fnPackageName + ".gl";
-                    String name   = baseName; // kein Suffix
+                    String name   = baseName;
                     String code   = buildFunctionInterface(
                             subpkg, baseImports, name,
                             new FnKey(canonical),
                             filterOverloadsBySignatures(e.getValue(), coreOnly, baseImports),
-                            null // kein extends
+                            null
                     );
                     writeJavaFile(s.tag, fnOutDir, subpkg, "", name, code, WriteKind.API_SIG_ONLY);
                     fnIfaceRefs.add(new FnIfaceRef(subpkg, name));
-                    // keinen Base-Typ schreiben
                     continue;
                 }
                 if (onlyES) {
-                    // Nur GLES existiert → KEIN Parent, KEIN Suffix. Interface im Unterpaket ".gles".
                     String subpkg = s.fnPackageName + ".gles";
-                    String name   = baseName; // kein Suffix
+                    String name   = baseName;
                     String code   = buildFunctionInterface(
                             subpkg, baseImports, name,
                             new FnKey(canonical),
                             filterOverloadsBySignatures(e.getValue(), esOnly, baseImports),
-                            null // kein extends
+                            null
                     );
                     writeJavaFile(s.tag, fnOutDir, subpkg, "", name, code, WriteKind.API_SIG_ONLY);
                     fnIfaceRefs.add(new FnIfaceRef(subpkg, name));
-                    // keinen Base-Typ schreiben
                     continue;
                 }
 
-                // Standardfall (beide Flavors existieren oder Schnittmenge nicht leer):
-                // Base (ggf. leer) + Flavor-only mit Suffix & extends Base
-                // Base immer schreiben
+                // base
                 String baseCode = buildFunctionInterface(
                         s.fnPackageName, baseImports, baseName,
                         new FnKey(canonical),
@@ -200,6 +213,7 @@ public final class GlWrapperAstGen {
                 writeJavaFile(s.tag, fnOutDir, s.fnPackageName, "", baseName, baseCode, WriteKind.API_SIG_ONLY);
                 fnIfaceRefs.add(new FnIfaceRef(s.fnPackageName, baseName));
 
+                // flavor-only children
                 if (s.flavor == Flavor.GL_CORE && !coreOnly.isEmpty()) {
                     String subpkg = s.fnPackageName + ".gl";
                     String name   = baseName + "_CORE";
@@ -207,7 +221,7 @@ public final class GlWrapperAstGen {
                             subpkg, baseImports, name,
                             new FnKey(canonical),
                             filterOverloadsBySignatures(e.getValue(), coreOnly, baseImports),
-                            baseFqn // extends Base (FQN sorgt für Import)
+                            baseFqn
                     );
                     writeJavaFile(s.tag, fnOutDir, subpkg, "", name, code, WriteKind.API_SIG_ONLY);
                     fnIfaceRefs.add(new FnIfaceRef(subpkg, name));
@@ -240,7 +254,7 @@ public final class GlWrapperAstGen {
     }
 
     /* ------------------------------------------------------------------------------------------------
-       (Alt) Einzel-Lauf API – unverändert (die „nur ein Flavor“-Optimierung ist hier nicht sicher)
+       Single-run (keine Schnittmengenoptimierung)
        ------------------------------------------------------------------------------------------------ */
 
     public static void generate(
@@ -334,7 +348,7 @@ public final class GlWrapperAstGen {
                         null
                 );
                 writeJavaFile(
-                        GLVersionTag, fnOutDir, fnPackageName, "",  // altPkg leer => Overwrite
+                        GLVersionTag, fnOutDir, fnPackageName, "",
                         baseName, fnCodeBase, WriteKind.API_SIG_ONLY
                 );
                 fnIfaceRefs.add(new FnIfaceRef(fnPackageName, baseName));
@@ -345,13 +359,26 @@ public final class GlWrapperAstGen {
             Set<MethodSig> baseOnly  = new LinkedHashSet<>(baseSigs); baseOnly.removeAll(common);
             Set<MethodSig> thisOnly  = new LinkedHashSet<>(thisSigs); thisOnly.removeAll(common);
 
+            if ("glDebugMessageCallback".equals(fnKey.canonicalName())) {
+                Set<MethodSig> typedInCommon = common.stream()
+                        .filter(GlWrapperAstGen::isTypedDebugCallbackSig)
+                        .collect(Collectors.toCollection(LinkedHashSet::new));
+                if (!typedInCommon.isEmpty()) {
+                    common.removeAll(typedInCommon);
+                    for (MethodSig ms : typedInCommon) {
+                        if (thisSigs.contains(ms)) thisOnly.add(ms);
+                        if (baseSigs.contains(ms)) baseOnly.add(ms);
+                    }
+                }
+            }
+
             String fnCodeBase = buildFunctionInterface(
                     fnPackageName, baseImports, baseName, fnKey,
                     filterOverloadsBySignatures(allOverloads, common, baseImports),
                     null
             );
             writeJavaFile(
-                    GLVersionTag, fnOutDir, fnPackageName, "",  // altPkg leer => Overwrite
+                    GLVersionTag, fnOutDir, fnPackageName, "",
                     baseName, fnCodeBase, WriteKind.API_SIG_ONLY
             );
             fnIfaceRefs.add(new FnIfaceRef(fnPackageName, baseName));
@@ -365,7 +392,7 @@ public final class GlWrapperAstGen {
                         baseFqn
                 );
                 writeJavaFile(
-                        GLVersionTag, fnOutDir, subpkgThis, "",  // kein Relocate
+                        GLVersionTag, fnOutDir, subpkgThis, "",
                         nameThis, codeThis, WriteKind.API_SIG_ONLY
                 );
                 fnIfaceRefs.add(new FnIfaceRef(subpkgThis, nameThis));
@@ -381,21 +408,21 @@ public final class GlWrapperAstGen {
                         baseFqn
                 );
                 writeJavaFile(
-                        GLVersionTag, fnOutDir, subpkgOther, "",  // kein Relocate
+                        GLVersionTag, fnOutDir, subpkgOther, "",
                         nameOther, codeOther, WriteKind.API_SIG_ONLY
                 );
             }
         }
 
         String apiIfaceCode = buildApiInterface(apiPkg, baseImports, apiInterfaceName, fnIfaceRefs, baseApiSimple);
-        writeJavaFile(GLVersionTag, outDir, apiPkg, fnPackageNameAlternative, apiInterfaceName, WriteKind.API_SIG_ONLY == WriteKind.API_SIG_ONLY ? apiIfaceCode : apiIfaceCode, WriteKind.API_SIG_ONLY);
+        writeJavaFile(GLVersionTag, outDir, apiPkg, fnPackageNameAlternative, apiInterfaceName, apiIfaceCode, WriteKind.API_SIG_ONLY);
 
         String implCode = buildImpl(apiPkg, baseImports, apiInterfaceName, implName, groups, delegateClassFqn, baseImplSimple);
         writeJavaFile(GLVersionTag, outDir, apiPkg, fnPackageNameAlternative, implName, implCode, WriteKind.IMPL_FULL_TEXT);
     }
 
     /* ------------------------------------------------------------------------------------------------
-       Funktions-Interface Builder (mit FQN-extends → korrekter Import der Base)
+       Function interface builder
        ------------------------------------------------------------------------------------------------ */
 
     private static String buildFunctionInterface(
@@ -404,7 +431,7 @@ public final class GlWrapperAstGen {
             String ifaceName,
             FnKey key,
             List<MethodDeclaration> overloads,
-            String extendsBaseFqn // vollqualifizierter Name oder null
+            String extendsBaseFqn
     ) {
         StringBuilder sb = new StringBuilder(16_384);
         if (pkg != null && !pkg.isBlank()) sb.append("package ").append(pkg).append(";\n\n");
@@ -445,7 +472,7 @@ public final class GlWrapperAstGen {
     }
 
     /* ------------------------------------------------------------------------------------------------
-       API-Interface Builder
+       API interface builder (injects external Javadoc header)
        ------------------------------------------------------------------------------------------------ */
 
     private static String buildApiInterface(String pkg, Set<String> baseImports, String apiInterfaceName,
@@ -460,6 +487,12 @@ public final class GlWrapperAstGen {
         for (String imp : imports) sb.append(imp).append('\n');
         if (!imports.isEmpty()) sb.append('\n');
 
+        // try to load an external Javadoc from resources (/header/<name>.javadoc|.javdoc)
+        String externalHeader = loadAccessorJavadocFromResources(apiInterfaceName);
+        if (externalHeader != null && !externalHeader.isBlank()) {
+            sb.append(externalHeader).append('\n');
+        }
+
         sb.append("public interface ").append(apiInterfaceName);
         List<String> extendsList = new ArrayList<>();
         if (baseApiSimple != null) extendsList.add(baseApiSimple);
@@ -473,7 +506,7 @@ public final class GlWrapperAstGen {
     }
 
     /* ------------------------------------------------------------------------------------------------
-       Impl-Klasse
+       Impl
        ------------------------------------------------------------------------------------------------ */
 
     private static String buildImpl(String pkg, Set<String> imports, String apiInterfaceName, String implName,
@@ -522,7 +555,74 @@ public final class GlWrapperAstGen {
        Helpers
        ------------------------------------------------------------------------------------------------ */
 
-    /** Normalisiert 'nglXYZ' → 'glXYZ' */
+    /** Load external Javadoc for accessor from classpath resources under /header/*. */
+    private static String loadAccessorJavadocFromResources(String accessorSimpleName) {
+        if (accessorSimpleName == null || accessorSimpleName.isBlank()) return null;
+
+        // name candidates: GL11Accessor, GL11, gl11
+        List<String> nameCandidates = new ArrayList<>();
+        nameCandidates.add(accessorSimpleName);
+
+        if (accessorSimpleName.endsWith("Accessor") && accessorSimpleName.length() > "Accessor".length()) {
+            String base = accessorSimpleName.substring(0, accessorSimpleName.length() - "Accessor".length());
+            nameCandidates.add(base);
+            nameCandidates.add(base.toLowerCase(Locale.ROOT));
+        } else {
+            nameCandidates.add(accessorSimpleName.toLowerCase(Locale.ROOT));
+        }
+
+        // 1) classpath lookup
+        for (String n : nameCandidates) {
+            for (String pattern : ACCESSOR_HEADER_RESOURCE_PATTERNS) {
+                String resPath = String.format(pattern, n);
+                try (InputStream is = GlWrapperAstGen.class.getResourceAsStream(resPath)) {
+                    if (is != null) {
+                        String raw = new String(is.readAllBytes(), StandardCharsets.UTF_8).trim();
+                        if (raw.isEmpty()) return null;
+                        if (raw.startsWith("/**")) return raw;
+                        return wrapAsJavadoc(raw);
+                    }
+                } catch (IOException ignored) {}
+            }
+        }
+
+        // 2) filesystem fallback (useful when running from sources without resources on classpath)
+        Path resourcesRoot = Paths.get("src/main/resources");
+        for (String n : nameCandidates) {
+            for (String pattern : ACCESSOR_HEADER_RESOURCE_PATTERNS) {
+                String rel = String.format(pattern, n);
+                // pattern starts with "/header/..." → strip leading slash for resolve
+                if (rel.startsWith("/")) rel = rel.substring(1);
+                Path file = resourcesRoot.resolve(rel);
+                try {
+                    if (Files.exists(file)) {
+                        String raw = Files.readString(file, StandardCharsets.UTF_8).trim();
+                        if (raw.isEmpty()) return null;
+                        if (raw.startsWith("/**")) return raw;
+                        return wrapAsJavadoc(raw);
+                    }
+                } catch (IOException ignored) {}
+            }
+        }
+
+        return null;
+    }
+
+    /** Wrap plain text into a valid Javadoc block. */
+    private static String wrapAsJavadoc(String text) {
+        String normalized = text.replace("\r\n", "\n");
+        StringBuilder sb = new StringBuilder(normalized.length() + 64);
+        sb.append("/**\n");
+        for (String line : normalized.split("\n", -1)) {
+            sb.append(" * ");
+            sb.append(line.replace("*/", "*&#47;"));
+            sb.append('\n');
+        }
+        sb.append(" */");
+        return sb.toString();
+    }
+
+    /** Normalize 'nglXYZ' → 'glXYZ' */
     private static String canonicalizeName(String name) {
         if (name != null && name.startsWith("ngl") && name.length() > 3) {
             return "gl" + name.substring(3);
@@ -544,9 +644,9 @@ public final class GlWrapperAstGen {
         for (AnnotationExpr a : anns) {
             String simple = a.getName().getIdentifier();
 
-            if ("NativeType".equals(simple)) {
+/*            if ("NativeType".equals(simple)) {
                 continue;
-            }
+            }*/
             if ("Nullable".equals(simple)) {
                 importSink.add("import " + JB_NULLABLE_FQN + ";");
                 out.add("@Nullable");
@@ -577,11 +677,11 @@ public final class GlWrapperAstGen {
         return anns.isEmpty() ? "" : (String.join("\n", anns) + "\n");
     }
 
-    // ---- Signaturen (Annotationen, Javadocs, Param-Namen ignorieren); FQN-Vergleich ----
+    // ---- signature model ----
     private static final class MethodSig {
         final String name;
-        final String returnType;       // bereinigt + möglichst FQN
-        final List<String> paramTypes; // dito
+        final String returnType;
+        final List<String> paramTypes;
         MethodSig(String name, String returnType, List<String> paramTypes) {
             this.name = name;
             this.returnType = returnType;
@@ -599,11 +699,11 @@ public final class GlWrapperAstGen {
 
     private static String cleanType(String t) {
         String s = t;
-        s = s.replaceAll("/\\*.*?\\*/", "");                 // block comments
-        s = s.replaceAll("@\\w+(\\([^)]*\\))?\\s*", "");     // annotations
-        s = s.replaceAll("<[^>]*>", "");                     // generics
-        s = s.replace(" ...", "[]").replace("...", "[]");   // varargs -> array
-        s = s.replaceAll("\\s+", " ").trim();               // whitespace
+        s = s.replaceAll("/\\*.*?\\*/", "");
+        s = s.replaceAll("@\\w+(\\([^)]*\\))?\\s*", "");
+        s = s.replaceAll("<[^>]*>", "");
+        s = s.replace(" ...", "[]").replace("...", "[]");
+        s = s.replaceAll("\\s+", " ").trim();
         return s;
     }
 
@@ -620,8 +720,8 @@ public final class GlWrapperAstGen {
         for (String line : importLines) {
             String trim = line.trim();
             if (!trim.startsWith("import ")) continue;
-            String fqn = trim.substring("import ".length(), trim.length() - 1).trim(); // remove trailing ';'
-            if (fqn.endsWith(".*")) continue; // Wildcards nicht auflösen
+            String fqn = trim.substring("import ".length(), trim.length() - 1).trim();
+            if (fqn.endsWith(".*")) continue;
             int lastDot = fqn.lastIndexOf('.');
             if (lastDot > 0) {
                 String simple = fqn.substring(lastDot + 1);
@@ -640,9 +740,9 @@ public final class GlWrapperAstGen {
         }
 
         if (isPrimitiveOrArrayPrimitive(base)) {
-            // primitive bleiben wie sie sind
+            // keep
         } else if (base.contains(".")) {
-            // schon FQN
+            // already FQN
         } else {
             String fqn = importMap.get(base);
             if (fqn != null) base = fqn;
@@ -666,7 +766,7 @@ public final class GlWrapperAstGen {
 
         List<MethodSig> out = new ArrayList<>();
         cu.findAll(MethodDeclaration.class).forEach(m -> {
-            if (m.getBody().isPresent()) return; // nur Signaturen (Interfaces)
+            if (m.getBody().isPresent()) return;
             String name = canonicalizeName(m.getNameAsString());
             String ret  = resolveWithImports(cleanType(m.getType().toString()), importMap);
             List<String> params = m.getParameters().stream()
@@ -711,13 +811,6 @@ public final class GlWrapperAstGen {
 
     private static final Path LOG_FILE = Path.of("generated", "log.txt");
 
-    /**
-     * Schreibt eine .java-Datei in outDir/<pkg>/<simpleName>.java.
-     * - API_SIG_ONLY: Signaturvergleich (Javadocs/Annotations/Param-Namen egal). Bei Differenzen:
-     *     * wenn altPkg leer/null → **overwrite in place**
-     *     * sonst → Relocate in altPkg (SimpleName + GLVersionTag)
-     * - IMPL_FULL_TEXT: Volltextvergleich, bei Differenzen wird überschrieben.
-     */
     private static WriteResult writeJavaFile(
             String GLVersionTag,
             Path outDir,
@@ -786,7 +879,6 @@ public final class GlWrapperAstGen {
         return new WriteResult(pkg, simpleName);
     }
 
-    /** package-Deklaration auf newPkg setzen */
     private static String setPackageDeclaration(String source, String newPkg) {
         String src = source.replace("\r\n", "\n");
         String newDecl = (newPkg == null || newPkg.isBlank()) ? "" : "package " + newPkg + ";\n\n";
@@ -798,7 +890,6 @@ public final class GlWrapperAstGen {
         return newDecl + src;
     }
 
-    /** ins Logfile schreiben */
     private static void appendToLog(String text) {
         try {
             Files.createDirectories(LOG_FILE.getParent());
@@ -810,8 +901,6 @@ public final class GlWrapperAstGen {
             );
         } catch (IOException ignored) {}
     }
-
-    /* ===== Flavor-Helfer ===== */
 
     private static String flavorSubpkg(Flavor flavor) {
         return (flavor == Flavor.GLES) ? "gles" : "gl";
@@ -825,11 +914,10 @@ public final class GlWrapperAstGen {
         return f == Flavor.GLES ? Flavor.GL_CORE : Flavor.GLES;
     }
 
-    /** true, wenn die Signatur das getypte Debug-Callback-Interface benutzt (egal aus welchem Paket). */
+    /** true if signature uses typed debug callback interface (any package). */
     private static boolean isTypedDebugCallbackSig(MethodSig ms) {
-        if (!"glDebugMessageCallback".equals(ms.name)) return false; // MethodSig.name ist bereits kanonisiert
+        if (!"glDebugMessageCallback".equals(ms.name)) return false;
         for (String p : ms.paramTypes) {
-            // FQN oder Simple-Name am Ende – beide Fälle abdecken
             if (p.endsWith(".GLDebugMessageCallbackI") || p.equals("GLDebugMessageCallbackI")) {
                 return true;
             }

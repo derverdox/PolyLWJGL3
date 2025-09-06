@@ -16,6 +16,6 @@ public interface glDrawArrays {
 /**
  * <a href="https://docs.gl/es3/glDrawArrays">Reference Page</a>
  */
-    public void glDrawArrays(int mode, int first, int count);
+    public void glDrawArrays(@NativeType("GLenum") int mode, @NativeType("GLint") int first, @NativeType("GLsizei") int count);
 
 }

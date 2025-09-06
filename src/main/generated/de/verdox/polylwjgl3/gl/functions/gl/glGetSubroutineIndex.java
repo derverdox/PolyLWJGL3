@@ -24,7 +24,8 @@ public interface glGetSubroutineIndex {
  *
  * @see <a href="https://docs.gl/gl4/glGetSubroutineIndex">Reference Page</a>
  */
-    public int glGetSubroutineIndex(int program, int shadertype, ByteBuffer name);
+@NativeType("GLuint")
+    public int glGetSubroutineIndex(@NativeType("GLuint") int program, @NativeType("GLenum") int shadertype, @NativeType("GLchar const *") ByteBuffer name);
 
 /**
  * Retrieves the index of a subroutine function of a given shader stage within a program.
@@ -35,6 +36,7 @@ public interface glGetSubroutineIndex {
  *
  * @see <a href="https://docs.gl/gl4/glGetSubroutineIndex">Reference Page</a>
  */
-    public int glGetSubroutineIndex(int program, int shadertype, CharSequence name);
+@NativeType("GLuint")
+    public int glGetSubroutineIndex(@NativeType("GLuint") int program, @NativeType("GLenum") int shadertype, @NativeType("GLchar const *") CharSequence name);
 
 }

@@ -19,6 +19,6 @@ public interface glDrawTransformFeedbackStreamInstanced {
  *
  * @see <a href="https://docs.gl/gl4/glDrawTransformFeedbackStreamInstanced">Reference Page</a>
  */
-    public void glDrawTransformFeedbackStreamInstanced(int mode, int id, int stream, int primcount);
+    public void glDrawTransformFeedbackStreamInstanced(@NativeType("GLenum") int mode, @NativeType("GLuint") int id, @NativeType("GLuint") int stream, @NativeType("GLsizei") int primcount);
 
 }

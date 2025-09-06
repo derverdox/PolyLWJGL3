@@ -34,7 +34,7 @@ public interface glInvalidateNamedFramebufferSubData {
  *
  * @see <a href="https://docs.gl/gl4/glInvalidateFramebufferSubData">Reference Page</a>
  */
-    public void glInvalidateNamedFramebufferSubData(int framebuffer, IntBuffer attachments, int x, int y, int width, int height);
+    public void glInvalidateNamedFramebufferSubData(@NativeType("GLuint") int framebuffer, @NativeType("GLenum const *") IntBuffer attachments, @NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height);
 
 /**
  * DSA version of {@link GL43C#glInvalidateSubFramebuffer InvalidateSubFramebuffer}.
@@ -47,13 +47,13 @@ public interface glInvalidateNamedFramebufferSubData {
  *
  * @see <a href="https://docs.gl/gl4/glInvalidateFramebufferSubData">Reference Page</a>
  */
-    public void glInvalidateNamedFramebufferSubData(int framebuffer, int attachment, int x, int y, int width, int height);
+    public void glInvalidateNamedFramebufferSubData(@NativeType("GLuint") int framebuffer, @NativeType("GLenum const *") int attachment, @NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height);
 
 /**
  * Array version of: {@link #glInvalidateNamedFramebufferSubData InvalidateNamedFramebufferSubData}
  *
  * @see <a href="https://docs.gl/gl4/glInvalidateFramebufferSubData">Reference Page</a>
  */
-    public void glInvalidateNamedFramebufferSubData(int framebuffer, int[] attachments, int x, int y, int width, int height);
+    public void glInvalidateNamedFramebufferSubData(@NativeType("GLuint") int framebuffer, @NativeType("GLenum const *") int[] attachments, @NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height);
 
 }

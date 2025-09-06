@@ -18,6 +18,6 @@ public interface glVertexAttribFormat {
 /**
  * <a href="https://docs.gl/es3/glVertexAttribFormat">Reference Page</a>
  */
-    public void glVertexAttribFormat(int attribindex, int size, int type, boolean normalized, int relativeoffset);
+    public void glVertexAttribFormat(@NativeType("GLuint") int attribindex, @NativeType("GLint") int size, @NativeType("GLenum") int type, @NativeType("GLboolean") boolean normalized, @NativeType("GLuint") int relativeoffset);
 
 }

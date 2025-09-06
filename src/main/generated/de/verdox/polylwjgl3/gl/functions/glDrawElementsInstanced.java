@@ -21,26 +21,26 @@ public interface glDrawElementsInstanced {
 /**
  * <a href="https://docs.gl/es3/glDrawElementsInstanced">Reference Page</a>
  */
-    public void glDrawElementsInstanced(int mode, int count, int type, long indices, int instancecount);
+    public void glDrawElementsInstanced(@NativeType("GLenum") int mode, @NativeType("GLsizei") int count, @NativeType("GLenum") int type, @NativeType("void const *") long indices, @NativeType("GLsizei") int instancecount);
 
 /**
  * <a href="https://docs.gl/es3/glDrawElementsInstanced">Reference Page</a>
  */
-    public void glDrawElementsInstanced(int mode, int type, ByteBuffer indices, int instancecount);
+    public void glDrawElementsInstanced(@NativeType("GLenum") int mode, @NativeType("GLenum") int type, @NativeType("void const *") ByteBuffer indices, @NativeType("GLsizei") int instancecount);
 
 /**
  * <a href="https://docs.gl/es3/glDrawElementsInstanced">Reference Page</a>
  */
-    public void glDrawElementsInstanced(int mode, ByteBuffer indices, int instancecount);
+    public void glDrawElementsInstanced(@NativeType("GLenum") int mode, @NativeType("void const *") ByteBuffer indices, @NativeType("GLsizei") int instancecount);
 
 /**
  * <a href="https://docs.gl/es3/glDrawElementsInstanced">Reference Page</a>
  */
-    public void glDrawElementsInstanced(int mode, ShortBuffer indices, int instancecount);
+    public void glDrawElementsInstanced(@NativeType("GLenum") int mode, @NativeType("void const *") ShortBuffer indices, @NativeType("GLsizei") int instancecount);
 
 /**
  * <a href="https://docs.gl/es3/glDrawElementsInstanced">Reference Page</a>
  */
-    public void glDrawElementsInstanced(int mode, IntBuffer indices, int instancecount);
+    public void glDrawElementsInstanced(@NativeType("GLenum") int mode, @NativeType("void const *") IntBuffer indices, @NativeType("GLsizei") int instancecount);
 
 }

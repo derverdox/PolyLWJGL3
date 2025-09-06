@@ -26,6 +26,6 @@ public interface glTextureStorage2D {
  *
  * @see <a href="https://docs.gl/gl4/glTextureStorage2D">Reference Page</a>
  */
-    public void glTextureStorage2D(int texture, int levels, int internalformat, int width, int height);
+    public void glTextureStorage2D(@NativeType("GLuint") int texture, @NativeType("GLsizei") int levels, @NativeType("GLenum") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height);
 
 }

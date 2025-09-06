@@ -24,13 +24,13 @@ public interface glViewportIndexedfv {
  *
  * @see <a href="https://docs.gl/gl4/glViewportIndexed">Reference Page</a>
  */
-    public void glViewportIndexedfv(int index, FloatBuffer v);
+    public void glViewportIndexedfv(@NativeType("GLuint") int index, @NativeType("GLfloat const *") FloatBuffer v);
 
 /**
  * Array version of: {@link #glViewportIndexedfv ViewportIndexedfv}
  *
  * @see <a href="https://docs.gl/gl4/glViewportIndexed">Reference Page</a>
  */
-    public void glViewportIndexedfv(int index, float[] v);
+    public void glViewportIndexedfv(@NativeType("GLuint") int index, @NativeType("GLfloat const *") float[] v);
 
 }

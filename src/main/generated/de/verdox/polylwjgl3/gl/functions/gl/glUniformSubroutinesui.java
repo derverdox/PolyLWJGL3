@@ -17,6 +17,6 @@ public interface glUniformSubroutinesui {
  *
  * @see <a href="https://docs.gl/gl4/glUniformSubroutines">Reference Page</a>
  */
-    public void glUniformSubroutinesui(int shadertype, int index);
+    public void glUniformSubroutinesui(@NativeType("GLenum") int shadertype, @NativeType("GLuint const *") int index);
 
 }

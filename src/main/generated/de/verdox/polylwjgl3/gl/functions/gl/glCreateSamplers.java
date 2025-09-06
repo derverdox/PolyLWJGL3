@@ -29,13 +29,14 @@ public interface glCreateSamplers {
  *
  * @see <a href="https://docs.gl/gl4/glCreateSamplers">Reference Page</a>
  */
-    public void glCreateSamplers(IntBuffer samplers);
+    public void glCreateSamplers(@NativeType("GLuint *") IntBuffer samplers);
 
 /**
  * Returns {@code n} previously unused sampler names in {@code samplers}, each representing a new sampler object.
  *
  * @see <a href="https://docs.gl/gl4/glCreateSamplers">Reference Page</a>
  */
+@NativeType("void")
     public int glCreateSamplers();
 
 /**
@@ -43,6 +44,6 @@ public interface glCreateSamplers {
  *
  * @see <a href="https://docs.gl/gl4/glCreateSamplers">Reference Page</a>
  */
-    public void glCreateSamplers(int[] samplers);
+    public void glCreateSamplers(@NativeType("GLuint *") int[] samplers);
 
 }

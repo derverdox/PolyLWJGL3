@@ -16,6 +16,7 @@ public interface glIsProgram {
 /**
  * <a href="https://docs.gl/es3/glIsProgram">Reference Page</a>
  */
-    public boolean glIsProgram(int program);
+@NativeType("GLboolean")
+    public boolean glIsProgram(@NativeType("GLuint") int program);
 
 }

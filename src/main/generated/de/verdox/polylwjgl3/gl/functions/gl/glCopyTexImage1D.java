@@ -30,6 +30,6 @@ public interface glCopyTexImage1D {
  *
  * @see <a href="https://docs.gl/gl4/glCopyTexImage1D">Reference Page</a>
  */
-    public void glCopyTexImage1D(int target, int level, int internalFormat, int x, int y, int width, int border);
+    public void glCopyTexImage1D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLenum") int internalFormat, @NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLint") int border);
 
 }

@@ -35,7 +35,7 @@ public interface glGetnMinmax {
  *
  * @see <a href="https://docs.gl/gl4/glGetnMinmax">Reference Page</a>
  */
-    public void glGetnMinmax(int target, boolean reset, int format, int type, int bufSize, long values);
+    public void glGetnMinmax(@NativeType("GLenum") int target, @NativeType("GLboolean") boolean reset, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("GLsizei") int bufSize, @NativeType("void *") long values);
 
 /**
  * Robust version of {@link ARBImaging#glGetMinmax GetMinmax}
@@ -49,6 +49,6 @@ public interface glGetnMinmax {
  *
  * @see <a href="https://docs.gl/gl4/glGetnMinmax">Reference Page</a>
  */
-    public void glGetnMinmax(int target, boolean reset, int format, int type, ByteBuffer values);
+    public void glGetnMinmax(@NativeType("GLenum") int target, @NativeType("GLboolean") boolean reset, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") ByteBuffer values);
 
 }

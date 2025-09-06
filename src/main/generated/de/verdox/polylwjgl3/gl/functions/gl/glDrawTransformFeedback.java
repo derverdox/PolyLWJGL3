@@ -18,6 +18,6 @@ public interface glDrawTransformFeedback {
  *
  * @see <a href="https://docs.gl/gl4/glDrawTransformFeedback">Reference Page</a>
  */
-    public void glDrawTransformFeedback(int mode, int id);
+    public void glDrawTransformFeedback(@NativeType("GLenum") int mode, @NativeType("GLuint") int id);
 
 }

@@ -33,7 +33,7 @@ public interface glCompressedTexImage1D {
  *
  * @see <a href="https://docs.gl/gl4/glCompressedTexImage1D">Reference Page</a>
  */
-    public void glCompressedTexImage1D(int target, int level, int internalformat, int width, int border, int imageSize, long data);
+    public void glCompressedTexImage1D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLenum") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLint") int border, @NativeType("GLsizei") int imageSize, @NativeType("void const *") long data);
 
 /**
  * Specifies a one-dimensional texture image in a compressed format.
@@ -47,6 +47,6 @@ public interface glCompressedTexImage1D {
  *
  * @see <a href="https://docs.gl/gl4/glCompressedTexImage1D">Reference Page</a>
  */
-    public void glCompressedTexImage1D(int target, int level, int internalformat, int width, int border, @Nullable ByteBuffer data);
+    public void glCompressedTexImage1D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLenum") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLint") int border, @Nullable @NativeType("void const *") ByteBuffer data);
 
 }

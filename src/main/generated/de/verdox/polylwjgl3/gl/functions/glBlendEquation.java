@@ -16,6 +16,6 @@ public interface glBlendEquation {
 /**
  * <a href="https://docs.gl/es3/glBlendEquation">Reference Page</a>
  */
-    public void glBlendEquation(int mode);
+    public void glBlendEquation(@NativeType("GLenum") int mode);
 
 }

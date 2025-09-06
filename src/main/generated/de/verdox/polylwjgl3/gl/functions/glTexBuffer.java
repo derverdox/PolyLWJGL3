@@ -18,6 +18,6 @@ public interface glTexBuffer {
 /**
  * <a href="https://docs.gl/es3/glTexBuffer">Reference Page</a>
  */
-    public void glTexBuffer(int target, int internalformat, int buffer);
+    public void glTexBuffer(@NativeType("GLenum") int target, @NativeType("GLenum") int internalformat, @NativeType("GLuint") int buffer);
 
 }

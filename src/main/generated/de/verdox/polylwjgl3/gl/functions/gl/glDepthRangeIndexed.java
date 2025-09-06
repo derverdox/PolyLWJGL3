@@ -20,6 +20,6 @@ public interface glDepthRangeIndexed {
  *
  * @see <a href="https://docs.gl/gl4/glDepthRangeIndexed">Reference Page</a>
  */
-    public void glDepthRangeIndexed(int index, double zNear, double zFar);
+    public void glDepthRangeIndexed(@NativeType("GLuint") int index, @NativeType("GLdouble") double zNear, @NativeType("GLdouble") double zFar);
 
 }

@@ -24,13 +24,13 @@ public interface glVertexAttribI2uiv {
  *
  * @see <a href="https://docs.gl/gl4/glVertexAttrib">Reference Page</a>
  */
-    public void glVertexAttribI2uiv(int index, IntBuffer v);
+    public void glVertexAttribI2uiv(@NativeType("GLuint") int index, @NativeType("GLuint const *") IntBuffer v);
 
 /**
  * Array version of: {@link #glVertexAttribI2uiv VertexAttribI2uiv}
  *
  * @see <a href="https://docs.gl/gl4/glVertexAttrib">Reference Page</a>
  */
-    public void glVertexAttribI2uiv(int index, int[] v);
+    public void glVertexAttribI2uiv(@NativeType("GLuint") int index, @NativeType("GLuint const *") int[] v);
 
 }

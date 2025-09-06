@@ -18,6 +18,6 @@ public interface glBindVertexBuffer {
 /**
  * <a href="https://docs.gl/es3/glBindVertexBuffer">Reference Page</a>
  */
-    public void glBindVertexBuffer(int bindingindex, int buffer, long offset, int stride);
+    public void glBindVertexBuffer(@NativeType("GLuint") int bindingindex, @NativeType("GLuint") int buffer, @NativeType("GLintptr") long offset, @NativeType("GLsizei") int stride);
 
 }

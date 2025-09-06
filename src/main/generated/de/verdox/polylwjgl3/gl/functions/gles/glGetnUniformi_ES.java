@@ -24,6 +24,7 @@ public interface glGetnUniformi_ES extends glGetnUniformi {
  *
  * @see <a href="https://docs.gl/es3/glGetUniform">Reference Page</a>
  */
-    public float glGetnUniformi(int program, int location);
+@NativeType("void")
+    public float glGetnUniformi(@NativeType("GLuint") int program, @NativeType("GLint") int location);
 
 }

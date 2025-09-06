@@ -14,19 +14,19 @@ public class GL46AccessorImpl extends GL45AccessorImpl implements GL46Accessor {
         org.lwjgl.opengl.GL46.nglMultiDrawArraysIndirectCount(mode, indirect, drawcount, maxdrawcount, stride);
     }
 
-    @Override public void glMultiDrawArraysIndirectCount(int mode, ByteBuffer indirect, long drawcount, int maxdrawcount, int stride) {
+    @Override public void glMultiDrawArraysIndirectCount(@NativeType("GLenum") int mode, @NativeType("void const *") ByteBuffer indirect, @NativeType("GLintptr") long drawcount, @NativeType("GLsizei") int maxdrawcount, @NativeType("GLsizei") int stride) {
         org.lwjgl.opengl.GL46.glMultiDrawArraysIndirectCount(mode, indirect, drawcount, maxdrawcount, stride);
     }
 
-    @Override public void glMultiDrawArraysIndirectCount(int mode, long indirect, long drawcount, int maxdrawcount, int stride) {
+    @Override public void glMultiDrawArraysIndirectCount(@NativeType("GLenum") int mode, @NativeType("void const *") long indirect, @NativeType("GLintptr") long drawcount, @NativeType("GLsizei") int maxdrawcount, @NativeType("GLsizei") int stride) {
         org.lwjgl.opengl.GL46.glMultiDrawArraysIndirectCount(mode, indirect, drawcount, maxdrawcount, stride);
     }
 
-    @Override public void glMultiDrawArraysIndirectCount(int mode, IntBuffer indirect, long drawcount, int maxdrawcount, int stride) {
+    @Override public void glMultiDrawArraysIndirectCount(@NativeType("GLenum") int mode, @NativeType("void const *") IntBuffer indirect, @NativeType("GLintptr") long drawcount, @NativeType("GLsizei") int maxdrawcount, @NativeType("GLsizei") int stride) {
         org.lwjgl.opengl.GL46.glMultiDrawArraysIndirectCount(mode, indirect, drawcount, maxdrawcount, stride);
     }
 
-    @Override public void glMultiDrawArraysIndirectCount(int mode, int[] indirect, long drawcount, int maxdrawcount, int stride) {
+    @Override public void glMultiDrawArraysIndirectCount(@NativeType("GLenum") int mode, @NativeType("void const *") int[] indirect, @NativeType("GLintptr") long drawcount, @NativeType("GLsizei") int maxdrawcount, @NativeType("GLsizei") int stride) {
         org.lwjgl.opengl.GL46.glMultiDrawArraysIndirectCount(mode, indirect, drawcount, maxdrawcount, stride);
     }
 
@@ -34,23 +34,23 @@ public class GL46AccessorImpl extends GL45AccessorImpl implements GL46Accessor {
         org.lwjgl.opengl.GL46.nglMultiDrawElementsIndirectCount(mode, type, indirect, drawcount, maxdrawcount, stride);
     }
 
-    @Override public void glMultiDrawElementsIndirectCount(int mode, int type, ByteBuffer indirect, long drawcount, int maxdrawcount, int stride) {
+    @Override public void glMultiDrawElementsIndirectCount(@NativeType("GLenum") int mode, @NativeType("GLenum") int type, @NativeType("void const *") ByteBuffer indirect, @NativeType("GLintptr") long drawcount, @NativeType("GLsizei") int maxdrawcount, @NativeType("GLsizei") int stride) {
         org.lwjgl.opengl.GL46.glMultiDrawElementsIndirectCount(mode, type, indirect, drawcount, maxdrawcount, stride);
     }
 
-    @Override public void glMultiDrawElementsIndirectCount(int mode, int type, long indirect, long drawcount, int maxdrawcount, int stride) {
+    @Override public void glMultiDrawElementsIndirectCount(@NativeType("GLenum") int mode, @NativeType("GLenum") int type, @NativeType("void const *") long indirect, @NativeType("GLintptr") long drawcount, @NativeType("GLsizei") int maxdrawcount, @NativeType("GLsizei") int stride) {
         org.lwjgl.opengl.GL46.glMultiDrawElementsIndirectCount(mode, type, indirect, drawcount, maxdrawcount, stride);
     }
 
-    @Override public void glMultiDrawElementsIndirectCount(int mode, int type, IntBuffer indirect, long drawcount, int maxdrawcount, int stride) {
+    @Override public void glMultiDrawElementsIndirectCount(@NativeType("GLenum") int mode, @NativeType("GLenum") int type, @NativeType("void const *") IntBuffer indirect, @NativeType("GLintptr") long drawcount, @NativeType("GLsizei") int maxdrawcount, @NativeType("GLsizei") int stride) {
         org.lwjgl.opengl.GL46.glMultiDrawElementsIndirectCount(mode, type, indirect, drawcount, maxdrawcount, stride);
     }
 
-    @Override public void glMultiDrawElementsIndirectCount(int mode, int type, int[] indirect, long drawcount, int maxdrawcount, int stride) {
+    @Override public void glMultiDrawElementsIndirectCount(@NativeType("GLenum") int mode, @NativeType("GLenum") int type, @NativeType("void const *") int[] indirect, @NativeType("GLintptr") long drawcount, @NativeType("GLsizei") int maxdrawcount, @NativeType("GLsizei") int stride) {
         org.lwjgl.opengl.GL46.glMultiDrawElementsIndirectCount(mode, type, indirect, drawcount, maxdrawcount, stride);
     }
 
-    @Override public void glPolygonOffsetClamp(float factor, float units, float clamp) {
+    @Override public void glPolygonOffsetClamp(@NativeType("GLfloat") float factor, @NativeType("GLfloat") float units, @NativeType("GLfloat") float clamp) {
         org.lwjgl.opengl.GL46.glPolygonOffsetClamp(factor, units, clamp);
     }
 
@@ -58,19 +58,19 @@ public class GL46AccessorImpl extends GL45AccessorImpl implements GL46Accessor {
         org.lwjgl.opengl.GL46.nglSpecializeShader(shader, pEntryPoint, numSpecializationConstants, pConstantIndex, pConstantValue);
     }
 
-    @Override public void glSpecializeShader(int shader, ByteBuffer pEntryPoint, @Nullable IntBuffer pConstantIndex, @Nullable IntBuffer pConstantValue) {
+    @Override public void glSpecializeShader(@NativeType("GLuint") int shader, @NativeType("GLchar const *") ByteBuffer pEntryPoint, @Nullable @NativeType("GLuint const *") IntBuffer pConstantIndex, @Nullable @NativeType("GLuint const *") IntBuffer pConstantValue) {
         org.lwjgl.opengl.GL46.glSpecializeShader(shader, pEntryPoint, pConstantIndex, pConstantValue);
     }
 
-    @Override public void glSpecializeShader(int shader, CharSequence pEntryPoint, @Nullable IntBuffer pConstantIndex, @Nullable IntBuffer pConstantValue) {
+    @Override public void glSpecializeShader(@NativeType("GLuint") int shader, @NativeType("GLchar const *") CharSequence pEntryPoint, @Nullable @NativeType("GLuint const *") IntBuffer pConstantIndex, @Nullable @NativeType("GLuint const *") IntBuffer pConstantValue) {
         org.lwjgl.opengl.GL46.glSpecializeShader(shader, pEntryPoint, pConstantIndex, pConstantValue);
     }
 
-    @Override public void glSpecializeShader(int shader, ByteBuffer pEntryPoint, @Nullable int[] pConstantIndex, @Nullable int[] pConstantValue) {
+    @Override public void glSpecializeShader(@NativeType("GLuint") int shader, @NativeType("GLchar const *") ByteBuffer pEntryPoint, @Nullable @NativeType("GLuint const *") int[] pConstantIndex, @Nullable @NativeType("GLuint const *") int[] pConstantValue) {
         org.lwjgl.opengl.GL46.glSpecializeShader(shader, pEntryPoint, pConstantIndex, pConstantValue);
     }
 
-    @Override public void glSpecializeShader(int shader, CharSequence pEntryPoint, @Nullable int[] pConstantIndex, @Nullable int[] pConstantValue) {
+    @Override public void glSpecializeShader(@NativeType("GLuint") int shader, @NativeType("GLchar const *") CharSequence pEntryPoint, @Nullable @NativeType("GLuint const *") int[] pConstantIndex, @Nullable @NativeType("GLuint const *") int[] pConstantValue) {
         org.lwjgl.opengl.GL46.glSpecializeShader(shader, pEntryPoint, pConstantIndex, pConstantValue);
     }
 

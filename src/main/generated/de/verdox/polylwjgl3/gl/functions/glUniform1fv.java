@@ -18,13 +18,13 @@ public interface glUniform1fv {
 /**
  * <a href="https://docs.gl/es3/glUniform">Reference Page</a>
  */
-    public void glUniform1fv(int location, FloatBuffer value);
+    public void glUniform1fv(@NativeType("GLint") int location, @NativeType("GLfloat const *") FloatBuffer value);
 
 /**
  * Array version of: {@link #glUniform1fv Uniform1fv}
  *
  * @see <a href="https://docs.gl/es3/glUniform">Reference Page</a>
  */
-    public void glUniform1fv(int location, float[] value);
+    public void glUniform1fv(@NativeType("GLint") int location, @NativeType("GLfloat const *") float[] value);
 
 }

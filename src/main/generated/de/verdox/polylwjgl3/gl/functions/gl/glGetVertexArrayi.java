@@ -23,6 +23,7 @@ public interface glGetVertexArrayi {
  *
  * @see <a href="https://docs.gl/gl4/glGetVertexArray">Reference Page</a>
  */
-    public int glGetVertexArrayi(int vaobj, int pname);
+@NativeType("void")
+    public int glGetVertexArrayi(@NativeType("GLuint") int vaobj, @NativeType("GLenum") int pname);
 
 }

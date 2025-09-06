@@ -30,13 +30,13 @@ public interface glGetnPixelMapfv {
  *
  * @see <a href="https://docs.gl/gl4/glGetPixelMap">Reference Page</a>
  */
-    public void glGetnPixelMapfv(int map, FloatBuffer data);
+    public void glGetnPixelMapfv(@NativeType("GLenum") int map, @NativeType("GLfloat *") FloatBuffer data);
 
 /**
  * Array version of: {@link #glGetnPixelMapfv GetnPixelMapfv}
  *
  * @see <a href="https://docs.gl/gl4/glGetPixelMap">Reference Page</a>
  */
-    public void glGetnPixelMapfv(int map, float[] data);
+    public void glGetnPixelMapfv(@NativeType("GLenum") int map, @NativeType("GLfloat *") float[] data);
 
 }

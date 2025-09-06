@@ -25,13 +25,13 @@ public interface glGetVertexAttribLdv {
  *
  * @see <a href="https://docs.gl/gl4/glGetVertexAttrib">Reference Page</a>
  */
-    public void glGetVertexAttribLdv(int index, int pname, DoubleBuffer params);
+    public void glGetVertexAttribLdv(@NativeType("GLuint") int index, @NativeType("GLenum") int pname, @NativeType("GLdouble *") DoubleBuffer params);
 
 /**
  * Array version of: {@link #glGetVertexAttribLdv GetVertexAttribLdv}
  *
  * @see <a href="https://docs.gl/gl4/glGetVertexAttrib">Reference Page</a>
  */
-    public void glGetVertexAttribLdv(int index, int pname, double[] params);
+    public void glGetVertexAttribLdv(@NativeType("GLuint") int index, @NativeType("GLenum") int pname, @NativeType("GLdouble *") double[] params);
 
 }

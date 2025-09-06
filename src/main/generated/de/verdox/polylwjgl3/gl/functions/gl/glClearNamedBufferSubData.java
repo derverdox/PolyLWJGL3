@@ -35,7 +35,7 @@ public interface glClearNamedBufferSubData {
  *
  * @see <a href="https://docs.gl/gl4/glClearBufferSubData">Reference Page</a>
  */
-    public void glClearNamedBufferSubData(int buffer, int internalformat, long offset, long size, int format, int type, @Nullable ByteBuffer data);
+    public void glClearNamedBufferSubData(@NativeType("GLuint") int buffer, @NativeType("GLenum") int internalformat, @NativeType("GLintptr") long offset, @NativeType("GLsizeiptr") long size, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") ByteBuffer data);
 
 /**
  * DSA version of {@link GL43C#glClearBufferSubData ClearBufferSubData}.
@@ -52,7 +52,7 @@ public interface glClearNamedBufferSubData {
  *
  * @see <a href="https://docs.gl/gl4/glClearBufferSubData">Reference Page</a>
  */
-    public void glClearNamedBufferSubData(int buffer, int internalformat, long offset, long size, int format, int type, @Nullable ShortBuffer data);
+    public void glClearNamedBufferSubData(@NativeType("GLuint") int buffer, @NativeType("GLenum") int internalformat, @NativeType("GLintptr") long offset, @NativeType("GLsizeiptr") long size, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") ShortBuffer data);
 
 /**
  * DSA version of {@link GL43C#glClearBufferSubData ClearBufferSubData}.
@@ -69,7 +69,7 @@ public interface glClearNamedBufferSubData {
  *
  * @see <a href="https://docs.gl/gl4/glClearBufferSubData">Reference Page</a>
  */
-    public void glClearNamedBufferSubData(int buffer, int internalformat, long offset, long size, int format, int type, @Nullable IntBuffer data);
+    public void glClearNamedBufferSubData(@NativeType("GLuint") int buffer, @NativeType("GLenum") int internalformat, @NativeType("GLintptr") long offset, @NativeType("GLsizeiptr") long size, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") IntBuffer data);
 
 /**
  * DSA version of {@link GL43C#glClearBufferSubData ClearBufferSubData}.
@@ -86,27 +86,27 @@ public interface glClearNamedBufferSubData {
  *
  * @see <a href="https://docs.gl/gl4/glClearBufferSubData">Reference Page</a>
  */
-    public void glClearNamedBufferSubData(int buffer, int internalformat, long offset, long size, int format, int type, @Nullable FloatBuffer data);
+    public void glClearNamedBufferSubData(@NativeType("GLuint") int buffer, @NativeType("GLenum") int internalformat, @NativeType("GLintptr") long offset, @NativeType("GLsizeiptr") long size, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") FloatBuffer data);
 
 /**
  * Array version of: {@link #glClearNamedBufferSubData ClearNamedBufferSubData}
  *
  * @see <a href="https://docs.gl/gl4/glClearBufferSubData">Reference Page</a>
  */
-    public void glClearNamedBufferSubData(int buffer, int internalformat, long offset, long size, int format, int type, @Nullable short[] data);
+    public void glClearNamedBufferSubData(@NativeType("GLuint") int buffer, @NativeType("GLenum") int internalformat, @NativeType("GLintptr") long offset, @NativeType("GLsizeiptr") long size, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") short[] data);
 
 /**
  * Array version of: {@link #glClearNamedBufferSubData ClearNamedBufferSubData}
  *
  * @see <a href="https://docs.gl/gl4/glClearBufferSubData">Reference Page</a>
  */
-    public void glClearNamedBufferSubData(int buffer, int internalformat, long offset, long size, int format, int type, @Nullable int[] data);
+    public void glClearNamedBufferSubData(@NativeType("GLuint") int buffer, @NativeType("GLenum") int internalformat, @NativeType("GLintptr") long offset, @NativeType("GLsizeiptr") long size, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") int[] data);
 
 /**
  * Array version of: {@link #glClearNamedBufferSubData ClearNamedBufferSubData}
  *
  * @see <a href="https://docs.gl/gl4/glClearBufferSubData">Reference Page</a>
  */
-    public void glClearNamedBufferSubData(int buffer, int internalformat, long offset, long size, int format, int type, @Nullable float[] data);
+    public void glClearNamedBufferSubData(@NativeType("GLuint") int buffer, @NativeType("GLenum") int internalformat, @NativeType("GLintptr") long offset, @NativeType("GLsizeiptr") long size, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") float[] data);
 
 }

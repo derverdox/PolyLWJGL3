@@ -19,6 +19,7 @@ public interface glIsSampler {
 /**
  * <a href="https://docs.gl/es3/glIsSampler">Reference Page</a>
  */
-    public boolean glIsSampler(int sampler);
+@NativeType("GLboolean")
+    public boolean glIsSampler(@NativeType("GLuint") int sampler);
 
 }

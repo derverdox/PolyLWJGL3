@@ -21,6 +21,7 @@ public interface glGetTexGenf {
  *
  * @see <a href="https://docs.gl/gl3/glGetTexGen">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public float glGetTexGenf(int coord, int pname);
+@NativeType("void")
+    public float glGetTexGenf(@NativeType("GLenum") int coord, @NativeType("GLenum") int pname);
 
 }

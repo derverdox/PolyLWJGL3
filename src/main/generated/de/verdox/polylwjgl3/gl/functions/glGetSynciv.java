@@ -21,13 +21,13 @@ public interface glGetSynciv {
 /**
  * <a href="https://docs.gl/es3/glGetSync">Reference Page</a>
  */
-    public void glGetSynciv(long sync, int pname, @Nullable IntBuffer length, IntBuffer values);
+    public void glGetSynciv(@NativeType("GLsync") long sync, @NativeType("GLenum") int pname, @Nullable @NativeType("GLsizei *") IntBuffer length, @NativeType("GLint *") IntBuffer values);
 
 /**
  * Array version of: {@link #glGetSynciv GetSynciv}
  *
  * @see <a href="https://docs.gl/es3/glGetSync">Reference Page</a>
  */
-    public void glGetSynciv(long sync, int pname, @Nullable int[] length, int[] values);
+    public void glGetSynciv(@NativeType("GLsync") long sync, @NativeType("GLenum") int pname, @Nullable @NativeType("GLsizei *") int[] length, @NativeType("GLint *") int[] values);
 
 }

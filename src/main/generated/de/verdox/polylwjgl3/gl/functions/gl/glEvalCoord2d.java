@@ -21,6 +21,6 @@ public interface glEvalCoord2d {
  *
  * @see <a href="https://docs.gl/gl3/glEvalCoord">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glEvalCoord2d(double u, double v);
+    public void glEvalCoord2d(@NativeType("GLdouble") double u, @NativeType("GLdouble") double v);
 
 }

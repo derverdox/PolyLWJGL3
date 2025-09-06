@@ -19,6 +19,7 @@ public interface glGetVertexAttribIui {
 /**
  * <a href="https://docs.gl/es3/glGetVertexAttrib">Reference Page</a>
  */
-    public int glGetVertexAttribIui(int index, int pname);
+@NativeType("void")
+    public int glGetVertexAttribIui(@NativeType("GLuint") int index, @NativeType("GLenum") int pname);
 
 }

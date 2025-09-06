@@ -16,6 +16,6 @@ public interface glUniform2f {
 /**
  * <a href="https://docs.gl/es3/glUniform">Reference Page</a>
  */
-    public void glUniform2f(int location, float v0, float v1);
+    public void glUniform2f(@NativeType("GLint") int location, @NativeType("GLfloat") float v0, @NativeType("GLfloat") float v1);
 
 }

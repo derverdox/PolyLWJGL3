@@ -16,6 +16,7 @@ public interface glGetBoolean {
 /**
  * <a href="https://docs.gl/es3/glGetBooleanv">Reference Page</a>
  */
-    public boolean glGetBoolean(int pname);
+@NativeType("void")
+    public boolean glGetBoolean(@NativeType("GLenum") int pname);
 
 }

@@ -16,6 +16,6 @@ public interface glClearStencil {
 /**
  * <a href="https://docs.gl/es3/glClearStencil">Reference Page</a>
  */
-    public void glClearStencil(int s);
+    public void glClearStencil(@NativeType("GLint") int s);
 
 }

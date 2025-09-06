@@ -23,13 +23,13 @@ public interface glPatchParameterfv {
  *
  * @see <a href="https://docs.gl/gl4/glPatchParameter">Reference Page</a>
  */
-    public void glPatchParameterfv(int pname, FloatBuffer values);
+    public void glPatchParameterfv(@NativeType("GLenum") int pname, @NativeType("GLfloat const *") FloatBuffer values);
 
 /**
  * Array version of: {@link #glPatchParameterfv PatchParameterfv}
  *
  * @see <a href="https://docs.gl/gl4/glPatchParameter">Reference Page</a>
  */
-    public void glPatchParameterfv(int pname, float[] values);
+    public void glPatchParameterfv(@NativeType("GLenum") int pname, @NativeType("GLfloat const *") float[] values);
 
 }

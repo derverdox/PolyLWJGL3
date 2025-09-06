@@ -18,23 +18,25 @@ public interface glGetActiveUniform {
 /**
  * <a href="https://docs.gl/es3/glGetActiveUniform">Reference Page</a>
  */
-    public void glGetActiveUniform(int program, int index, @Nullable IntBuffer length, IntBuffer size, IntBuffer type, ByteBuffer name);
+    public void glGetActiveUniform(@NativeType("GLuint") int program, @NativeType("GLuint") int index, @Nullable @NativeType("GLsizei *") IntBuffer length, @NativeType("GLint *") IntBuffer size, @NativeType("GLenum *") IntBuffer type, @NativeType("GLchar *") ByteBuffer name);
 
 /**
  * <a href="https://docs.gl/es3/glGetActiveUniform">Reference Page</a>
  */
-    public String glGetActiveUniform(int program, int index, int bufSize, IntBuffer size, IntBuffer type);
+@NativeType("void")
+    public String glGetActiveUniform(@NativeType("GLuint") int program, @NativeType("GLuint") int index, @NativeType("GLsizei") int bufSize, @NativeType("GLint *") IntBuffer size, @NativeType("GLenum *") IntBuffer type);
 
 /**
  * <a href="https://docs.gl/es3/glGetActiveUniform">Reference Page</a>
  */
-    public String glGetActiveUniform(int program, int index, IntBuffer size, IntBuffer type);
+@NativeType("void")
+    public String glGetActiveUniform(@NativeType("GLuint") int program, @NativeType("GLuint") int index, @NativeType("GLint *") IntBuffer size, @NativeType("GLenum *") IntBuffer type);
 
 /**
  * Array version of: {@link #glGetActiveUniform GetActiveUniform}
  *
  * @see <a href="https://docs.gl/es3/glGetActiveUniform">Reference Page</a>
  */
-    public void glGetActiveUniform(int program, int index, @Nullable int[] length, int[] size, int[] type, ByteBuffer name);
+    public void glGetActiveUniform(@NativeType("GLuint") int program, @NativeType("GLuint") int index, @Nullable @NativeType("GLsizei *") int[] length, @NativeType("GLint *") int[] size, @NativeType("GLenum *") int[] type, @NativeType("GLchar *") ByteBuffer name);
 
 }

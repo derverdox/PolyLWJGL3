@@ -18,6 +18,6 @@ public interface glDispatchCompute {
 /**
  * <a href="https://docs.gl/es3/glDispatchCompute">Reference Page</a>
  */
-    public void glDispatchCompute(int num_groups_x, int num_groups_y, int num_groups_z);
+    public void glDispatchCompute(@NativeType("GLuint") int num_groups_x, @NativeType("GLuint") int num_groups_y, @NativeType("GLuint") int num_groups_z);
 
 }

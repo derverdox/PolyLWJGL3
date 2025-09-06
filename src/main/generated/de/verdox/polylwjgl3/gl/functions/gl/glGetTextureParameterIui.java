@@ -23,6 +23,7 @@ public interface glGetTextureParameterIui {
  *
  * @see <a href="https://docs.gl/gl4/glGetTextureParameter">Reference Page</a>
  */
-    public int glGetTextureParameterIui(int texture, int pname);
+@NativeType("void")
+    public int glGetTextureParameterIui(@NativeType("GLuint") int texture, @NativeType("GLenum") int pname);
 
 }

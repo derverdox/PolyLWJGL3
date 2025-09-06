@@ -21,11 +21,13 @@ public interface glGetUniformBlockIndex {
 /**
  * <a href="https://docs.gl/es3/glGetUniformBlockIndex">Reference Page</a>
  */
-    public int glGetUniformBlockIndex(int program, ByteBuffer uniformBlockName);
+@NativeType("GLuint")
+    public int glGetUniformBlockIndex(@NativeType("GLuint") int program, @NativeType("GLchar const *") ByteBuffer uniformBlockName);
 
 /**
  * <a href="https://docs.gl/es3/glGetUniformBlockIndex">Reference Page</a>
  */
-    public int glGetUniformBlockIndex(int program, CharSequence uniformBlockName);
+@NativeType("GLuint")
+    public int glGetUniformBlockIndex(@NativeType("GLuint") int program, @NativeType("GLchar const *") CharSequence uniformBlockName);
 
 }

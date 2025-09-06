@@ -49,7 +49,7 @@ public interface glMultiDrawElementsIndirect {
  *
  * @see <a href="https://docs.gl/gl4/glMultiDrawElementsIndirect">Reference Page</a>
  */
-    public void glMultiDrawElementsIndirect(int mode, int type, ByteBuffer indirect, int drawcount, int stride);
+    public void glMultiDrawElementsIndirect(@NativeType("GLenum") int mode, @NativeType("GLenum") int type, @NativeType("void const *") ByteBuffer indirect, @NativeType("GLsizei") int drawcount, @NativeType("GLsizei") int stride);
 
 /**
  * Renders multiple indexed primitives from array data, taking parameters from memory.
@@ -85,7 +85,7 @@ public interface glMultiDrawElementsIndirect {
  *
  * @see <a href="https://docs.gl/gl4/glMultiDrawElementsIndirect">Reference Page</a>
  */
-    public void glMultiDrawElementsIndirect(int mode, int type, long indirect, int drawcount, int stride);
+    public void glMultiDrawElementsIndirect(@NativeType("GLenum") int mode, @NativeType("GLenum") int type, @NativeType("void const *") long indirect, @NativeType("GLsizei") int drawcount, @NativeType("GLsizei") int stride);
 
 /**
  * Renders multiple indexed primitives from array data, taking parameters from memory.
@@ -121,13 +121,13 @@ public interface glMultiDrawElementsIndirect {
  *
  * @see <a href="https://docs.gl/gl4/glMultiDrawElementsIndirect">Reference Page</a>
  */
-    public void glMultiDrawElementsIndirect(int mode, int type, IntBuffer indirect, int drawcount, int stride);
+    public void glMultiDrawElementsIndirect(@NativeType("GLenum") int mode, @NativeType("GLenum") int type, @NativeType("void const *") IntBuffer indirect, @NativeType("GLsizei") int drawcount, @NativeType("GLsizei") int stride);
 
 /**
  * Array version of: {@link #glMultiDrawElementsIndirect MultiDrawElementsIndirect}
  *
  * @see <a href="https://docs.gl/gl4/glMultiDrawElementsIndirect">Reference Page</a>
  */
-    public void glMultiDrawElementsIndirect(int mode, int type, int[] indirect, int drawcount, int stride);
+    public void glMultiDrawElementsIndirect(@NativeType("GLenum") int mode, @NativeType("GLenum") int type, @NativeType("void const *") int[] indirect, @NativeType("GLsizei") int drawcount, @NativeType("GLsizei") int stride);
 
 }

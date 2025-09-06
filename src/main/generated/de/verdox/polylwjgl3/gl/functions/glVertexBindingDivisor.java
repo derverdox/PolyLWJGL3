@@ -18,6 +18,6 @@ public interface glVertexBindingDivisor {
 /**
  * <a href="https://docs.gl/es3/glVertexBindingDivisor">Reference Page</a>
  */
-    public void glVertexBindingDivisor(int bindingindex, int divisor);
+    public void glVertexBindingDivisor(@NativeType("GLuint") int bindingindex, @NativeType("GLuint") int divisor);
 
 }

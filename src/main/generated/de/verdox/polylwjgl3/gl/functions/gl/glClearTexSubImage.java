@@ -46,7 +46,7 @@ public interface glClearTexSubImage {
  *
  * @see <a href="https://docs.gl/gl4/glClearTexSubImage">Reference Page</a>
  */
-    public void glClearTexSubImage(int texture, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format, int type, @Nullable ByteBuffer data);
+    public void glClearTexSubImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int yoffset, @NativeType("GLint") int zoffset, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLsizei") int depth, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") ByteBuffer data);
 
 /**
  * Fills all or part of a texture image with a constant value.
@@ -78,7 +78,7 @@ public interface glClearTexSubImage {
  *
  * @see <a href="https://docs.gl/gl4/glClearTexSubImage">Reference Page</a>
  */
-    public void glClearTexSubImage(int texture, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format, int type, @Nullable ShortBuffer data);
+    public void glClearTexSubImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int yoffset, @NativeType("GLint") int zoffset, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLsizei") int depth, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") ShortBuffer data);
 
 /**
  * Fills all or part of a texture image with a constant value.
@@ -110,7 +110,7 @@ public interface glClearTexSubImage {
  *
  * @see <a href="https://docs.gl/gl4/glClearTexSubImage">Reference Page</a>
  */
-    public void glClearTexSubImage(int texture, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format, int type, @Nullable IntBuffer data);
+    public void glClearTexSubImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int yoffset, @NativeType("GLint") int zoffset, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLsizei") int depth, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") IntBuffer data);
 
 /**
  * Fills all or part of a texture image with a constant value.
@@ -142,7 +142,7 @@ public interface glClearTexSubImage {
  *
  * @see <a href="https://docs.gl/gl4/glClearTexSubImage">Reference Page</a>
  */
-    public void glClearTexSubImage(int texture, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format, int type, @Nullable FloatBuffer data);
+    public void glClearTexSubImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int yoffset, @NativeType("GLint") int zoffset, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLsizei") int depth, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") FloatBuffer data);
 
 /**
  * Fills all or part of a texture image with a constant value.
@@ -174,34 +174,34 @@ public interface glClearTexSubImage {
  *
  * @see <a href="https://docs.gl/gl4/glClearTexSubImage">Reference Page</a>
  */
-    public void glClearTexSubImage(int texture, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format, int type, @Nullable DoubleBuffer data);
+    public void glClearTexSubImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int yoffset, @NativeType("GLint") int zoffset, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLsizei") int depth, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") DoubleBuffer data);
 
 /**
  * Array version of: {@link #glClearTexSubImage ClearTexSubImage}
  *
  * @see <a href="https://docs.gl/gl4/glClearTexSubImage">Reference Page</a>
  */
-    public void glClearTexSubImage(int texture, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format, int type, @Nullable short[] data);
+    public void glClearTexSubImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int yoffset, @NativeType("GLint") int zoffset, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLsizei") int depth, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") short[] data);
 
 /**
  * Array version of: {@link #glClearTexSubImage ClearTexSubImage}
  *
  * @see <a href="https://docs.gl/gl4/glClearTexSubImage">Reference Page</a>
  */
-    public void glClearTexSubImage(int texture, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format, int type, @Nullable int[] data);
+    public void glClearTexSubImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int yoffset, @NativeType("GLint") int zoffset, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLsizei") int depth, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") int[] data);
 
 /**
  * Array version of: {@link #glClearTexSubImage ClearTexSubImage}
  *
  * @see <a href="https://docs.gl/gl4/glClearTexSubImage">Reference Page</a>
  */
-    public void glClearTexSubImage(int texture, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format, int type, @Nullable float[] data);
+    public void glClearTexSubImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int yoffset, @NativeType("GLint") int zoffset, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLsizei") int depth, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") float[] data);
 
 /**
  * Array version of: {@link #glClearTexSubImage ClearTexSubImage}
  *
  * @see <a href="https://docs.gl/gl4/glClearTexSubImage">Reference Page</a>
  */
-    public void glClearTexSubImage(int texture, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format, int type, @Nullable double[] data);
+    public void glClearTexSubImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int yoffset, @NativeType("GLint") int zoffset, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLsizei") int depth, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") double[] data);
 
 }

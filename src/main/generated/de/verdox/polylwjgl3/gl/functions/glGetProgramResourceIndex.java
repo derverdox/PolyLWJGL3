@@ -20,11 +20,13 @@ public interface glGetProgramResourceIndex {
 /**
  * <a href="https://docs.gl/es3/glGetProgramResourceIndex">Reference Page</a>
  */
-    public int glGetProgramResourceIndex(int program, int programInterface, ByteBuffer name);
+@NativeType("GLuint")
+    public int glGetProgramResourceIndex(@NativeType("GLuint") int program, @NativeType("GLenum") int programInterface, @NativeType("GLchar const *") ByteBuffer name);
 
 /**
  * <a href="https://docs.gl/es3/glGetProgramResourceIndex">Reference Page</a>
  */
-    public int glGetProgramResourceIndex(int program, int programInterface, CharSequence name);
+@NativeType("GLuint")
+    public int glGetProgramResourceIndex(@NativeType("GLuint") int program, @NativeType("GLenum") int programInterface, @NativeType("GLchar const *") CharSequence name);
 
 }

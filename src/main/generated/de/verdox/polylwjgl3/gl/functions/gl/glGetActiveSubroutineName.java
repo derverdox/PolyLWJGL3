@@ -28,7 +28,7 @@ public interface glGetActiveSubroutineName {
  *
  * @see <a href="https://docs.gl/gl4/glGetActiveSubroutineName">Reference Page</a>
  */
-    public void glGetActiveSubroutineName(int program, int shadertype, int index, @Nullable IntBuffer length, ByteBuffer name);
+    public void glGetActiveSubroutineName(@NativeType("GLuint") int program, @NativeType("GLenum") int shadertype, @NativeType("GLuint") int index, @Nullable @NativeType("GLsizei *") IntBuffer length, @NativeType("GLchar *") ByteBuffer name);
 
 /**
  * Queries the name of an active shader subroutine.
@@ -40,7 +40,8 @@ public interface glGetActiveSubroutineName {
  *
  * @see <a href="https://docs.gl/gl4/glGetActiveSubroutineName">Reference Page</a>
  */
-    public String glGetActiveSubroutineName(int program, int shadertype, int index, int bufsize);
+@NativeType("void")
+    public String glGetActiveSubroutineName(@NativeType("GLuint") int program, @NativeType("GLenum") int shadertype, @NativeType("GLuint") int index, @NativeType("GLsizei") int bufsize);
 
 /**
  * Queries the name of an active shader subroutine.
@@ -51,13 +52,14 @@ public interface glGetActiveSubroutineName {
  *
  * @see <a href="https://docs.gl/gl4/glGetActiveSubroutineName">Reference Page</a>
  */
-    public String glGetActiveSubroutineName(int program, int shadertype, int index);
+@NativeType("void")
+    public String glGetActiveSubroutineName(@NativeType("GLuint") int program, @NativeType("GLenum") int shadertype, @NativeType("GLuint") int index);
 
 /**
  * Array version of: {@link #glGetActiveSubroutineName GetActiveSubroutineName}
  *
  * @see <a href="https://docs.gl/gl4/glGetActiveSubroutineName">Reference Page</a>
  */
-    public void glGetActiveSubroutineName(int program, int shadertype, int index, @Nullable int[] length, ByteBuffer name);
+    public void glGetActiveSubroutineName(@NativeType("GLuint") int program, @NativeType("GLenum") int shadertype, @NativeType("GLuint") int index, @Nullable @NativeType("GLsizei *") int[] length, @NativeType("GLchar *") ByteBuffer name);
 
 }

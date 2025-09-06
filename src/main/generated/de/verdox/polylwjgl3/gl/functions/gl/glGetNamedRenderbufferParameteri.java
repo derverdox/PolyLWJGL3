@@ -22,6 +22,7 @@ public interface glGetNamedRenderbufferParameteri {
  *
  * @see <a href="https://docs.gl/gl4/glGetRenderbufferParameter">Reference Page</a>
  */
-    public int glGetNamedRenderbufferParameteri(int renderbuffer, int pname);
+@NativeType("void")
+    public int glGetNamedRenderbufferParameteri(@NativeType("GLuint") int renderbuffer, @NativeType("GLenum") int pname);
 
 }

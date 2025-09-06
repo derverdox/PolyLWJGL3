@@ -37,6 +37,6 @@ public interface glFrustum {
  *
  * @see <a href="https://docs.gl/gl3/glFrustum">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glFrustum(double l, double r, double b, double t, double n, double f);
+    public void glFrustum(@NativeType("GLdouble") double l, @NativeType("GLdouble") double r, @NativeType("GLdouble") double b, @NativeType("GLdouble") double t, @NativeType("GLdouble") double n, @NativeType("GLdouble") double f);
 
 }

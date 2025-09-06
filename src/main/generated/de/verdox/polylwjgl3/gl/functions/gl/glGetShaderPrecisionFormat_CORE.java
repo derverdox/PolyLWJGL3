@@ -21,6 +21,7 @@ public interface glGetShaderPrecisionFormat_CORE extends glGetShaderPrecisionFor
  *
  * @see <a href="https://docs.gl/gl4/glGetShaderPrecisionFormat">Reference Page</a>
  */
-    public int glGetShaderPrecisionFormat(int shadertype, int precisiontype, IntBuffer range);
+@NativeType("void")
+    public int glGetShaderPrecisionFormat(@NativeType("GLenum") int shadertype, @NativeType("GLenum") int precisiontype, @NativeType("GLint *") IntBuffer range);
 
 }

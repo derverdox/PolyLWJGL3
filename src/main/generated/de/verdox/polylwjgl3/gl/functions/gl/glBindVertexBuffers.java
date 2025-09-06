@@ -50,13 +50,13 @@ public interface glBindVertexBuffers {
  *
  * @see <a href="https://docs.gl/gl4/glBindVertexBuffers">Reference Page</a>
  */
-    public void glBindVertexBuffers(int first, @Nullable IntBuffer buffers, @Nullable PointerBuffer offsets, @Nullable IntBuffer strides);
+    public void glBindVertexBuffers(@NativeType("GLuint") int first, @Nullable @NativeType("GLuint const *") IntBuffer buffers, @Nullable @NativeType("GLintptr const *") PointerBuffer offsets, @Nullable @NativeType("GLsizei const *") IntBuffer strides);
 
 /**
  * Array version of: {@link #glBindVertexBuffers BindVertexBuffers}
  *
  * @see <a href="https://docs.gl/gl4/glBindVertexBuffers">Reference Page</a>
  */
-    public void glBindVertexBuffers(int first, @Nullable int[] buffers, @Nullable PointerBuffer offsets, @Nullable int[] strides);
+    public void glBindVertexBuffers(@NativeType("GLuint") int first, @Nullable @NativeType("GLuint const *") int[] buffers, @Nullable @NativeType("GLintptr const *") PointerBuffer offsets, @Nullable @NativeType("GLsizei const *") int[] strides);
 
 }

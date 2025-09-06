@@ -16,6 +16,6 @@ public interface glColorMask {
 /**
  * <a href="https://docs.gl/es3/glColorMask">Reference Page</a>
  */
-    public void glColorMask(boolean red, boolean green, boolean blue, boolean alpha);
+    public void glColorMask(@NativeType("GLboolean") boolean red, @NativeType("GLboolean") boolean green, @NativeType("GLboolean") boolean blue, @NativeType("GLboolean") boolean alpha);
 
 }

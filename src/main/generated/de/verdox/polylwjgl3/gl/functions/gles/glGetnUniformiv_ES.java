@@ -25,13 +25,13 @@ public interface glGetnUniformiv_ES extends glGetnUniformiv {
  *
  * @see <a href="https://docs.gl/es3/glGetUniform">Reference Page</a>
  */
-    public void glGetnUniformiv(int program, int location, FloatBuffer params);
+    public void glGetnUniformiv(@NativeType("GLuint") int program, @NativeType("GLint") int location, @NativeType("GLfloat *") FloatBuffer params);
 
 /**
  * Array version of: {@link #glGetnUniformiv GetnUniformiv}
  *
  * @see <a href="https://docs.gl/es3/glGetUniform">Reference Page</a>
  */
-    public void glGetnUniformiv(int program, int location, float[] params);
+    public void glGetnUniformiv(@NativeType("GLuint") int program, @NativeType("GLint") int location, @NativeType("GLfloat *") float[] params);
 
 }

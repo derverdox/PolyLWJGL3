@@ -20,13 +20,13 @@ public interface glGetMultisamplefv {
 /**
  * <a href="https://docs.gl/es3/glGetMultisample">Reference Page</a>
  */
-    public void glGetMultisamplefv(int pname, int index, FloatBuffer val);
+    public void glGetMultisamplefv(@NativeType("GLenum") int pname, @NativeType("GLuint") int index, @NativeType("GLfloat *") FloatBuffer val);
 
 /**
  * Array version of: {@link #glGetMultisamplefv GetMultisamplefv}
  *
  * @see <a href="https://docs.gl/es3/glGetMultisample">Reference Page</a>
  */
-    public void glGetMultisamplefv(int pname, int index, float[] val);
+    public void glGetMultisamplefv(@NativeType("GLenum") int pname, @NativeType("GLuint") int index, @NativeType("GLfloat *") float[] val);
 
 }

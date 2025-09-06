@@ -33,7 +33,7 @@ public interface glCompressedTexSubImage1D {
  *
  * @see <a href="https://docs.gl/gl4/glCompressedTexSubImage1D">Reference Page</a>
  */
-    public void glCompressedTexSubImage1D(int target, int level, int xoffset, int width, int format, int imageSize, long data);
+    public void glCompressedTexSubImage1D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLsizei") int width, @NativeType("GLenum") int format, @NativeType("GLsizei") int imageSize, @NativeType("void const *") long data);
 
 /**
  * Respecifies only a subregion of an existing 1D texel array, with incoming data stored in a specific compressed image format.
@@ -47,6 +47,6 @@ public interface glCompressedTexSubImage1D {
  *
  * @see <a href="https://docs.gl/gl4/glCompressedTexSubImage1D">Reference Page</a>
  */
-    public void glCompressedTexSubImage1D(int target, int level, int xoffset, int width, int format, ByteBuffer data);
+    public void glCompressedTexSubImage1D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLsizei") int width, @NativeType("GLenum") int format, @NativeType("void const *") ByteBuffer data);
 
 }

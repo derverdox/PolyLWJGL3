@@ -23,6 +23,6 @@ public interface glFramebufferTexture3D {
  *
  * @see <a href="https://docs.gl/gl4/glFramebufferTexture3D">Reference Page</a>
  */
-    public void glFramebufferTexture3D(int target, int attachment, int textarget, int texture, int level, int layer);
+    public void glFramebufferTexture3D(@NativeType("GLenum") int target, @NativeType("GLenum") int attachment, @NativeType("GLenum") int textarget, @NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLint") int layer);
 
 }

@@ -13,11 +13,11 @@ public class GL21AccessorImpl extends GL20AccessorImpl implements GL21Accessor {
         org.lwjgl.opengl.GL21.nglUniformMatrix2x3fv(location, count, transpose, value);
     }
 
-    @Override public void glUniformMatrix2x3fv(int location, boolean transpose, FloatBuffer value) {
+    @Override public void glUniformMatrix2x3fv(@NativeType("GLint") int location, @NativeType("GLboolean") boolean transpose, @NativeType("GLfloat const *") FloatBuffer value) {
         org.lwjgl.opengl.GL21.glUniformMatrix2x3fv(location, transpose, value);
     }
 
-    @Override public void glUniformMatrix2x3fv(int location, boolean transpose, float[] value) {
+    @Override public void glUniformMatrix2x3fv(@NativeType("GLint") int location, @NativeType("GLboolean") boolean transpose, @NativeType("GLfloat const *") float[] value) {
         org.lwjgl.opengl.GL21.glUniformMatrix2x3fv(location, transpose, value);
     }
 
@@ -25,11 +25,11 @@ public class GL21AccessorImpl extends GL20AccessorImpl implements GL21Accessor {
         org.lwjgl.opengl.GL21.nglUniformMatrix3x2fv(location, count, transpose, value);
     }
 
-    @Override public void glUniformMatrix3x2fv(int location, boolean transpose, FloatBuffer value) {
+    @Override public void glUniformMatrix3x2fv(@NativeType("GLint") int location, @NativeType("GLboolean") boolean transpose, @NativeType("GLfloat const *") FloatBuffer value) {
         org.lwjgl.opengl.GL21.glUniformMatrix3x2fv(location, transpose, value);
     }
 
-    @Override public void glUniformMatrix3x2fv(int location, boolean transpose, float[] value) {
+    @Override public void glUniformMatrix3x2fv(@NativeType("GLint") int location, @NativeType("GLboolean") boolean transpose, @NativeType("GLfloat const *") float[] value) {
         org.lwjgl.opengl.GL21.glUniformMatrix3x2fv(location, transpose, value);
     }
 
@@ -37,11 +37,11 @@ public class GL21AccessorImpl extends GL20AccessorImpl implements GL21Accessor {
         org.lwjgl.opengl.GL21.nglUniformMatrix2x4fv(location, count, transpose, value);
     }
 
-    @Override public void glUniformMatrix2x4fv(int location, boolean transpose, FloatBuffer value) {
+    @Override public void glUniformMatrix2x4fv(@NativeType("GLint") int location, @NativeType("GLboolean") boolean transpose, @NativeType("GLfloat const *") FloatBuffer value) {
         org.lwjgl.opengl.GL21.glUniformMatrix2x4fv(location, transpose, value);
     }
 
-    @Override public void glUniformMatrix2x4fv(int location, boolean transpose, float[] value) {
+    @Override public void glUniformMatrix2x4fv(@NativeType("GLint") int location, @NativeType("GLboolean") boolean transpose, @NativeType("GLfloat const *") float[] value) {
         org.lwjgl.opengl.GL21.glUniformMatrix2x4fv(location, transpose, value);
     }
 
@@ -49,11 +49,11 @@ public class GL21AccessorImpl extends GL20AccessorImpl implements GL21Accessor {
         org.lwjgl.opengl.GL21.nglUniformMatrix4x2fv(location, count, transpose, value);
     }
 
-    @Override public void glUniformMatrix4x2fv(int location, boolean transpose, FloatBuffer value) {
+    @Override public void glUniformMatrix4x2fv(@NativeType("GLint") int location, @NativeType("GLboolean") boolean transpose, @NativeType("GLfloat const *") FloatBuffer value) {
         org.lwjgl.opengl.GL21.glUniformMatrix4x2fv(location, transpose, value);
     }
 
-    @Override public void glUniformMatrix4x2fv(int location, boolean transpose, float[] value) {
+    @Override public void glUniformMatrix4x2fv(@NativeType("GLint") int location, @NativeType("GLboolean") boolean transpose, @NativeType("GLfloat const *") float[] value) {
         org.lwjgl.opengl.GL21.glUniformMatrix4x2fv(location, transpose, value);
     }
 
@@ -61,11 +61,11 @@ public class GL21AccessorImpl extends GL20AccessorImpl implements GL21Accessor {
         org.lwjgl.opengl.GL21.nglUniformMatrix3x4fv(location, count, transpose, value);
     }
 
-    @Override public void glUniformMatrix3x4fv(int location, boolean transpose, FloatBuffer value) {
+    @Override public void glUniformMatrix3x4fv(@NativeType("GLint") int location, @NativeType("GLboolean") boolean transpose, @NativeType("GLfloat const *") FloatBuffer value) {
         org.lwjgl.opengl.GL21.glUniformMatrix3x4fv(location, transpose, value);
     }
 
-    @Override public void glUniformMatrix3x4fv(int location, boolean transpose, float[] value) {
+    @Override public void glUniformMatrix3x4fv(@NativeType("GLint") int location, @NativeType("GLboolean") boolean transpose, @NativeType("GLfloat const *") float[] value) {
         org.lwjgl.opengl.GL21.glUniformMatrix3x4fv(location, transpose, value);
     }
 
@@ -73,11 +73,11 @@ public class GL21AccessorImpl extends GL20AccessorImpl implements GL21Accessor {
         org.lwjgl.opengl.GL21.nglUniformMatrix4x3fv(location, count, transpose, value);
     }
 
-    @Override public void glUniformMatrix4x3fv(int location, boolean transpose, FloatBuffer value) {
+    @Override public void glUniformMatrix4x3fv(@NativeType("GLint") int location, @NativeType("GLboolean") boolean transpose, @NativeType("GLfloat const *") FloatBuffer value) {
         org.lwjgl.opengl.GL21.glUniformMatrix4x3fv(location, transpose, value);
     }
 
-    @Override public void glUniformMatrix4x3fv(int location, boolean transpose, float[] value) {
+    @Override public void glUniformMatrix4x3fv(@NativeType("GLint") int location, @NativeType("GLboolean") boolean transpose, @NativeType("GLfloat const *") float[] value) {
         org.lwjgl.opengl.GL21.glUniformMatrix4x3fv(location, transpose, value);
     }
 

@@ -19,6 +19,7 @@ public interface glGetSynci {
 /**
  * <a href="https://docs.gl/es3/glGetSync">Reference Page</a>
  */
-    public int glGetSynci(long sync, int pname, @Nullable IntBuffer length);
+@NativeType("void")
+    public int glGetSynci(@NativeType("GLsync") long sync, @NativeType("GLenum") int pname, @Nullable @NativeType("GLsizei *") IntBuffer length);
 
 }

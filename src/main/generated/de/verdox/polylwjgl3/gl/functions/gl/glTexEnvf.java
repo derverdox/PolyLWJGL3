@@ -22,6 +22,6 @@ public interface glTexEnvf {
  *
  * @see <a href="https://docs.gl/gl3/glTexEnvf">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glTexEnvf(int target, int pname, float param);
+    public void glTexEnvf(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLfloat") float param);
 
 }

@@ -21,6 +21,6 @@ public interface glPointParameterf {
  *
  * @see <a href="https://docs.gl/gl4/glPointParameterf">Reference Page</a>
  */
-    public void glPointParameterf(int pname, float param);
+    public void glPointParameterf(@NativeType("GLenum") int pname, @NativeType("GLfloat") float param);
 
 }

@@ -19,6 +19,7 @@ public interface glGetFloati {
  *
  * @see <a href="https://docs.gl/gl4/glGetFloati_v">Reference Page</a>
  */
-    public float glGetFloati(int target, int index);
+@NativeType("void")
+    public float glGetFloati(@NativeType("GLenum") int target, @NativeType("GLuint") int index);
 
 }

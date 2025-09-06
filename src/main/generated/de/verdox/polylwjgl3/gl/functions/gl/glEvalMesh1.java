@@ -22,6 +22,6 @@ public interface glEvalMesh1 {
  *
  * @see <a href="https://docs.gl/gl3/glEvalMesh1">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glEvalMesh1(int mode, int i1, int i2);
+    public void glEvalMesh1(@NativeType("GLenum") int mode, @NativeType("GLint") int i1, @NativeType("GLint") int i2);
 
 }

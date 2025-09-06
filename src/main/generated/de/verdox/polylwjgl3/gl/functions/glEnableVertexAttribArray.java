@@ -16,6 +16,6 @@ public interface glEnableVertexAttribArray {
 /**
  * <a href="https://docs.gl/es3/glEnableVertexAttribArray">Reference Page</a>
  */
-    public void glEnableVertexAttribArray(int index);
+    public void glEnableVertexAttribArray(@NativeType("GLuint") int index);
 
 }

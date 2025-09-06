@@ -31,7 +31,7 @@ public interface glClearTexImage {
  *
  * @see <a href="https://docs.gl/gl4/glClearTexImage">Reference Page</a>
  */
-    public void glClearTexImage(int texture, int level, int format, int type, @Nullable ByteBuffer data);
+    public void glClearTexImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") ByteBuffer data);
 
 /**
  * Is equivalent to calling {@link #glClearTexSubImage ClearTexSubImage} with {@code xoffset}, {@code yoffset}, and {@code zoffset} equal to -{@code b} and {@code width},
@@ -48,7 +48,7 @@ public interface glClearTexImage {
  *
  * @see <a href="https://docs.gl/gl4/glClearTexImage">Reference Page</a>
  */
-    public void glClearTexImage(int texture, int level, int format, int type, @Nullable ShortBuffer data);
+    public void glClearTexImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") ShortBuffer data);
 
 /**
  * Is equivalent to calling {@link #glClearTexSubImage ClearTexSubImage} with {@code xoffset}, {@code yoffset}, and {@code zoffset} equal to -{@code b} and {@code width},
@@ -65,7 +65,7 @@ public interface glClearTexImage {
  *
  * @see <a href="https://docs.gl/gl4/glClearTexImage">Reference Page</a>
  */
-    public void glClearTexImage(int texture, int level, int format, int type, @Nullable IntBuffer data);
+    public void glClearTexImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") IntBuffer data);
 
 /**
  * Is equivalent to calling {@link #glClearTexSubImage ClearTexSubImage} with {@code xoffset}, {@code yoffset}, and {@code zoffset} equal to -{@code b} and {@code width},
@@ -82,7 +82,7 @@ public interface glClearTexImage {
  *
  * @see <a href="https://docs.gl/gl4/glClearTexImage">Reference Page</a>
  */
-    public void glClearTexImage(int texture, int level, int format, int type, @Nullable FloatBuffer data);
+    public void glClearTexImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") FloatBuffer data);
 
 /**
  * Is equivalent to calling {@link #glClearTexSubImage ClearTexSubImage} with {@code xoffset}, {@code yoffset}, and {@code zoffset} equal to -{@code b} and {@code width},
@@ -99,34 +99,34 @@ public interface glClearTexImage {
  *
  * @see <a href="https://docs.gl/gl4/glClearTexImage">Reference Page</a>
  */
-    public void glClearTexImage(int texture, int level, int format, int type, @Nullable DoubleBuffer data);
+    public void glClearTexImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") DoubleBuffer data);
 
 /**
  * Array version of: {@link #glClearTexImage ClearTexImage}
  *
  * @see <a href="https://docs.gl/gl4/glClearTexImage">Reference Page</a>
  */
-    public void glClearTexImage(int texture, int level, int format, int type, @Nullable short[] data);
+    public void glClearTexImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") short[] data);
 
 /**
  * Array version of: {@link #glClearTexImage ClearTexImage}
  *
  * @see <a href="https://docs.gl/gl4/glClearTexImage">Reference Page</a>
  */
-    public void glClearTexImage(int texture, int level, int format, int type, @Nullable int[] data);
+    public void glClearTexImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") int[] data);
 
 /**
  * Array version of: {@link #glClearTexImage ClearTexImage}
  *
  * @see <a href="https://docs.gl/gl4/glClearTexImage">Reference Page</a>
  */
-    public void glClearTexImage(int texture, int level, int format, int type, @Nullable float[] data);
+    public void glClearTexImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") float[] data);
 
 /**
  * Array version of: {@link #glClearTexImage ClearTexImage}
  *
  * @see <a href="https://docs.gl/gl4/glClearTexImage">Reference Page</a>
  */
-    public void glClearTexImage(int texture, int level, int format, int type, @Nullable double[] data);
+    public void glClearTexImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @Nullable @NativeType("void const *") double[] data);
 
 }

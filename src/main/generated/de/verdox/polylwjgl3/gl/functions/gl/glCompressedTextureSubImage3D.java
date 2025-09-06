@@ -39,7 +39,7 @@ public interface glCompressedTextureSubImage3D {
  *
  * @see <a href="https://docs.gl/gl4/glCompressedTextureSubImage3D">Reference Page</a>
  */
-    public void glCompressedTextureSubImage3D(int texture, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format, int imageSize, long data);
+    public void glCompressedTextureSubImage3D(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int yoffset, @NativeType("GLint") int zoffset, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLsizei") int depth, @NativeType("GLenum") int format, @NativeType("GLsizei") int imageSize, @NativeType("void const *") long data);
 
 /**
  * DSA version of {@link GL13C#glCompressedTexSubImage3D CompressedTexSubImage3D}.
@@ -57,6 +57,6 @@ public interface glCompressedTextureSubImage3D {
  *
  * @see <a href="https://docs.gl/gl4/glCompressedTextureSubImage3D">Reference Page</a>
  */
-    public void glCompressedTextureSubImage3D(int texture, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format, ByteBuffer data);
+    public void glCompressedTextureSubImage3D(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int yoffset, @NativeType("GLint") int zoffset, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLsizei") int depth, @NativeType("GLenum") int format, @NativeType("void const *") ByteBuffer data);
 
 }

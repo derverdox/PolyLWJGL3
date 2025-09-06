@@ -29,7 +29,7 @@ public interface glDrawPixels {
  *
  * @see <a href="https://docs.gl/gl3/glDrawPixels">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glDrawPixels(int width, int height, int format, int type, ByteBuffer pixels);
+    public void glDrawPixels(@NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void const *") ByteBuffer pixels);
 
 /**
  * Draws a pixel rectangle to the active draw buffers.
@@ -42,7 +42,7 @@ public interface glDrawPixels {
  *
  * @see <a href="https://docs.gl/gl3/glDrawPixels">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glDrawPixels(int width, int height, int format, int type, long pixels);
+    public void glDrawPixels(@NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void const *") long pixels);
 
 /**
  * Draws a pixel rectangle to the active draw buffers.
@@ -55,7 +55,7 @@ public interface glDrawPixels {
  *
  * @see <a href="https://docs.gl/gl3/glDrawPixels">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glDrawPixels(int width, int height, int format, int type, ShortBuffer pixels);
+    public void glDrawPixels(@NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void const *") ShortBuffer pixels);
 
 /**
  * Draws a pixel rectangle to the active draw buffers.
@@ -68,7 +68,7 @@ public interface glDrawPixels {
  *
  * @see <a href="https://docs.gl/gl3/glDrawPixels">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glDrawPixels(int width, int height, int format, int type, IntBuffer pixels);
+    public void glDrawPixels(@NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void const *") IntBuffer pixels);
 
 /**
  * Draws a pixel rectangle to the active draw buffers.
@@ -81,27 +81,27 @@ public interface glDrawPixels {
  *
  * @see <a href="https://docs.gl/gl3/glDrawPixels">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glDrawPixels(int width, int height, int format, int type, FloatBuffer pixels);
+    public void glDrawPixels(@NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void const *") FloatBuffer pixels);
 
 /**
  * Array version of: {@link #glDrawPixels DrawPixels}
  *
  * @see <a href="https://docs.gl/gl3/glDrawPixels">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glDrawPixels(int width, int height, int format, int type, short[] pixels);
+    public void glDrawPixels(@NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void const *") short[] pixels);
 
 /**
  * Array version of: {@link #glDrawPixels DrawPixels}
  *
  * @see <a href="https://docs.gl/gl3/glDrawPixels">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glDrawPixels(int width, int height, int format, int type, int[] pixels);
+    public void glDrawPixels(@NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void const *") int[] pixels);
 
 /**
  * Array version of: {@link #glDrawPixels DrawPixels}
  *
  * @see <a href="https://docs.gl/gl3/glDrawPixels">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glDrawPixels(int width, int height, int format, int type, float[] pixels);
+    public void glDrawPixels(@NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void const *") float[] pixels);
 
 }

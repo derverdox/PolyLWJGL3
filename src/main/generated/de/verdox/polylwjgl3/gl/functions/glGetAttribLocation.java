@@ -18,11 +18,13 @@ public interface glGetAttribLocation {
 /**
  * <a href="https://docs.gl/es3/glGetAttribLocation">Reference Page</a>
  */
-    public int glGetAttribLocation(int program, ByteBuffer name);
+@NativeType("GLint")
+    public int glGetAttribLocation(@NativeType("GLuint") int program, @NativeType("GLchar const *") ByteBuffer name);
 
 /**
  * <a href="https://docs.gl/es3/glGetAttribLocation">Reference Page</a>
  */
-    public int glGetAttribLocation(int program, CharSequence name);
+@NativeType("GLint")
+    public int glGetAttribLocation(@NativeType("GLuint") int program, @NativeType("GLchar const *") CharSequence name);
 
 }

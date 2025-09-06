@@ -18,11 +18,12 @@ public interface glGenTextures {
 /**
  * <a href="https://docs.gl/es3/glGenTextures">Reference Page</a>
  */
-    public void glGenTextures(IntBuffer textures);
+    public void glGenTextures(@NativeType("GLuint *") IntBuffer textures);
 
 /**
  * <a href="https://docs.gl/es3/glGenTextures">Reference Page</a>
  */
+@NativeType("void")
     public int glGenTextures();
 
 /**
@@ -30,6 +31,6 @@ public interface glGenTextures {
  *
  * @see <a href="https://docs.gl/es3/glGenTextures">Reference Page</a>
  */
-    public void glGenTextures(int[] textures);
+    public void glGenTextures(@NativeType("GLuint *") int[] textures);
 
 }

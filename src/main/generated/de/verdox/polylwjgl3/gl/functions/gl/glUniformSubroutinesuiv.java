@@ -25,13 +25,13 @@ public interface glUniformSubroutinesuiv {
  *
  * @see <a href="https://docs.gl/gl4/glUniformSubroutines">Reference Page</a>
  */
-    public void glUniformSubroutinesuiv(int shadertype, IntBuffer indices);
+    public void glUniformSubroutinesuiv(@NativeType("GLenum") int shadertype, @NativeType("GLuint const *") IntBuffer indices);
 
 /**
  * Array version of: {@link #glUniformSubroutinesuiv UniformSubroutinesuiv}
  *
  * @see <a href="https://docs.gl/gl4/glUniformSubroutines">Reference Page</a>
  */
-    public void glUniformSubroutinesuiv(int shadertype, int[] indices);
+    public void glUniformSubroutinesuiv(@NativeType("GLenum") int shadertype, @NativeType("GLuint const *") int[] indices);
 
 }

@@ -28,6 +28,6 @@ public interface glVertexArrayAttribFormat {
  *
  * @see <a href="https://docs.gl/gl4/glVertexArrayAttribFormat">Reference Page</a>
  */
-    public void glVertexArrayAttribFormat(int vaobj, int attribindex, int size, int type, boolean normalized, int relativeoffset);
+    public void glVertexArrayAttribFormat(@NativeType("GLuint") int vaobj, @NativeType("GLuint") int attribindex, @NativeType("GLint") int size, @NativeType("GLenum") int type, @NativeType("GLboolean") boolean normalized, @NativeType("GLuint") int relativeoffset);
 
 }

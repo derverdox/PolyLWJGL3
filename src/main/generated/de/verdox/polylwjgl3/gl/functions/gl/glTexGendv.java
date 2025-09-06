@@ -27,13 +27,13 @@ public interface glTexGendv {
  *
  * @see <a href="https://docs.gl/gl3/glTexGen">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glTexGendv(int coord, int pname, DoubleBuffer params);
+    public void glTexGendv(@NativeType("GLenum") int coord, @NativeType("GLenum") int pname, @NativeType("GLdouble const *") DoubleBuffer params);
 
 /**
  * Array version of: {@link #glTexGendv TexGendv}
  *
  * @see <a href="https://docs.gl/gl3/glTexGen">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glTexGendv(int coord, int pname, double[] params);
+    public void glTexGendv(@NativeType("GLenum") int coord, @NativeType("GLenum") int pname, @NativeType("GLdouble const *") double[] params);
 
 }

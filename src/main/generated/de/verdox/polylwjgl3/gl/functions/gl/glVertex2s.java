@@ -21,6 +21,6 @@ public interface glVertex2s {
  *
  * @see <a href="https://docs.gl/gl3/glVertex">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glVertex2s(short x, short y);
+    public void glVertex2s(@NativeType("GLshort") short x, @NativeType("GLshort") short y);
 
 }

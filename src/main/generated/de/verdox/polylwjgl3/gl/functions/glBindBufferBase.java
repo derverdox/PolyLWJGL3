@@ -19,6 +19,6 @@ public interface glBindBufferBase {
 /**
  * <a href="https://docs.gl/es3/glBindBufferBase">Reference Page</a>
  */
-    public void glBindBufferBase(int target, int index, int buffer);
+    public void glBindBufferBase(@NativeType("GLenum") int target, @NativeType("GLuint") int index, @NativeType("GLuint") int buffer);
 
 }

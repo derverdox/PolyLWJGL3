@@ -26,7 +26,7 @@ public interface glGetQueryObjecti64v {
  *
  * @see <a href="https://docs.gl/gl4/glGetQueryObject">Reference Page</a>
  */
-    public void glGetQueryObjecti64v(int id, int pname, LongBuffer params);
+    public void glGetQueryObjecti64v(@NativeType("GLuint") int id, @NativeType("GLenum") int pname, @NativeType("GLint64 *") LongBuffer params);
 
 /**
  * Returns the 64bit integer value of query object parameter.
@@ -37,13 +37,13 @@ public interface glGetQueryObjecti64v {
  *
  * @see <a href="https://docs.gl/gl4/glGetQueryObject">Reference Page</a>
  */
-    public void glGetQueryObjecti64v(int id, int pname, long params);
+    public void glGetQueryObjecti64v(@NativeType("GLuint") int id, @NativeType("GLenum") int pname, @NativeType("GLint64 *") long params);
 
 /**
  * Array version of: {@link #glGetQueryObjecti64v GetQueryObjecti64v}
  *
  * @see <a href="https://docs.gl/gl4/glGetQueryObject">Reference Page</a>
  */
-    public void glGetQueryObjecti64v(int id, int pname, long[] params);
+    public void glGetQueryObjecti64v(@NativeType("GLuint") int id, @NativeType("GLenum") int pname, @NativeType("GLint64 *") long[] params);
 
 }

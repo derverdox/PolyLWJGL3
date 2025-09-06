@@ -19,6 +19,7 @@ public interface glIsQuery {
 /**
  * <a href="https://docs.gl/es3/glIsQuery">Reference Page</a>
  */
-    public boolean glIsQuery(int id);
+@NativeType("GLboolean")
+    public boolean glIsQuery(@NativeType("GLuint") int id);
 
 }

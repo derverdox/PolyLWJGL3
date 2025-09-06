@@ -29,13 +29,14 @@ public interface glCreateVertexArrays {
  *
  * @see <a href="https://docs.gl/gl4/glCreateVertexArrays">Reference Page</a>
  */
-    public void glCreateVertexArrays(IntBuffer arrays);
+    public void glCreateVertexArrays(@NativeType("GLuint *") IntBuffer arrays);
 
 /**
  * Returns {@code n} previously unused vertex array object names in {@code arrays}.
  *
  * @see <a href="https://docs.gl/gl4/glCreateVertexArrays">Reference Page</a>
  */
+@NativeType("void")
     public int glCreateVertexArrays();
 
 /**
@@ -43,6 +44,6 @@ public interface glCreateVertexArrays {
  *
  * @see <a href="https://docs.gl/gl4/glCreateVertexArrays">Reference Page</a>
  */
-    public void glCreateVertexArrays(int[] arrays);
+    public void glCreateVertexArrays(@NativeType("GLuint *") int[] arrays);
 
 }

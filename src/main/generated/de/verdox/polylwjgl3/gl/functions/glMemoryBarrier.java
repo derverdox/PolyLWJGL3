@@ -18,6 +18,6 @@ public interface glMemoryBarrier {
 /**
  * <a href="https://docs.gl/es3/glMemoryBarrier">Reference Page</a>
  */
-    public void glMemoryBarrier(int barriers);
+    public void glMemoryBarrier(@NativeType("GLbitfield") int barriers);
 
 }

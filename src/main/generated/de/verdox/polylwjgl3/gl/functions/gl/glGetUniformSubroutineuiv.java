@@ -24,13 +24,13 @@ public interface glGetUniformSubroutineuiv {
  *
  * @see <a href="https://docs.gl/gl4/glGetUniformSubroutine">Reference Page</a>
  */
-    public void glGetUniformSubroutineuiv(int shadertype, int location, IntBuffer params);
+    public void glGetUniformSubroutineuiv(@NativeType("GLenum") int shadertype, @NativeType("GLint") int location, @NativeType("GLuint *") IntBuffer params);
 
 /**
  * Array version of: {@link #glGetUniformSubroutineuiv GetUniformSubroutineuiv}
  *
  * @see <a href="https://docs.gl/gl4/glGetUniformSubroutine">Reference Page</a>
  */
-    public void glGetUniformSubroutineuiv(int shadertype, int location, int[] params);
+    public void glGetUniformSubroutineuiv(@NativeType("GLenum") int shadertype, @NativeType("GLint") int location, @NativeType("GLuint *") int[] params);
 
 }

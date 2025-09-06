@@ -25,7 +25,7 @@ public interface glBindFragDataLocation {
  *
  * @see <a href="https://docs.gl/gl4/glBindFragDataLocation">Reference Page</a>
  */
-    public void glBindFragDataLocation(int program, int colorNumber, ByteBuffer name);
+    public void glBindFragDataLocation(@NativeType("GLuint") int program, @NativeType("GLuint") int colorNumber, @NativeType("GLchar const *") ByteBuffer name);
 
 /**
  * Binds a user-defined varying out variable to a fragment shader color number.
@@ -36,6 +36,6 @@ public interface glBindFragDataLocation {
  *
  * @see <a href="https://docs.gl/gl4/glBindFragDataLocation">Reference Page</a>
  */
-    public void glBindFragDataLocation(int program, int colorNumber, CharSequence name);
+    public void glBindFragDataLocation(@NativeType("GLuint") int program, @NativeType("GLuint") int colorNumber, @NativeType("GLchar const *") CharSequence name);
 
 }

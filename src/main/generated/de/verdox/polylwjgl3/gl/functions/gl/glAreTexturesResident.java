@@ -30,7 +30,8 @@ public interface glAreTexturesResident {
  *
  * @see <a href="https://docs.gl/gl3/glAreTexturesResident">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public boolean glAreTexturesResident(IntBuffer textures, ByteBuffer residences);
+@NativeType("GLboolean")
+    public boolean glAreTexturesResident(@NativeType("GLuint const *") IntBuffer textures, @NativeType("GLboolean *") ByteBuffer residences);
 
 /**
  * Returns {@link #GL_TRUE TRUE} if all of the texture objects named in textures are resident, or if the implementation does not distinguish a working set. If
@@ -41,13 +42,15 @@ public interface glAreTexturesResident {
  *
  * @see <a href="https://docs.gl/gl3/glAreTexturesResident">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public boolean glAreTexturesResident(int texture, ByteBuffer residences);
+@NativeType("GLboolean")
+    public boolean glAreTexturesResident(@NativeType("GLuint const *") int texture, @NativeType("GLboolean *") ByteBuffer residences);
 
 /**
  * Array version of: {@link #glAreTexturesResident AreTexturesResident}
  *
  * @see <a href="https://docs.gl/gl3/glAreTexturesResident">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public boolean glAreTexturesResident(int[] textures, ByteBuffer residences);
+@NativeType("GLboolean")
+    public boolean glAreTexturesResident(@NativeType("GLuint const *") int[] textures, @NativeType("GLboolean *") ByteBuffer residences);
 
 }

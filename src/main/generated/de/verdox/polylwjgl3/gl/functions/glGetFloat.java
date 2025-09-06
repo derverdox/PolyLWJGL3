@@ -16,6 +16,7 @@ public interface glGetFloat {
 /**
  * <a href="https://docs.gl/es3/glGetFloatv">Reference Page</a>
  */
-    public float glGetFloat(int pname);
+@NativeType("void")
+    public float glGetFloat(@NativeType("GLenum") int pname);
 
 }

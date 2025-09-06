@@ -30,13 +30,13 @@ public interface glClipPlane {
  *
  * @see <a href="https://docs.gl/gl3/glClipPlane">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glClipPlane(int plane, DoubleBuffer equation);
+    public void glClipPlane(@NativeType("GLenum") int plane, @NativeType("GLdouble const *") DoubleBuffer equation);
 
 /**
  * Array version of: {@link #glClipPlane ClipPlane}
  *
  * @see <a href="https://docs.gl/gl3/glClipPlane">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glClipPlane(int plane, double[] equation);
+    public void glClipPlane(@NativeType("GLenum") int plane, @NativeType("GLdouble const *") double[] equation);
 
 }

@@ -21,13 +21,13 @@ public interface glGetInteger64v {
 /**
  * <a href="https://docs.gl/es3/glGetInteger64v">Reference Page</a>
  */
-    public void glGetInteger64v(int pname, LongBuffer data);
+    public void glGetInteger64v(@NativeType("GLenum") int pname, @NativeType("GLint64 *") LongBuffer data);
 
 /**
  * Array version of: {@link #glGetInteger64v GetInteger64v}
  *
  * @see <a href="https://docs.gl/es3/glGetInteger64v">Reference Page</a>
  */
-    public void glGetInteger64v(int pname, long[] data);
+    public void glGetInteger64v(@NativeType("GLenum") int pname, @NativeType("GLint64 *") long[] data);
 
 }

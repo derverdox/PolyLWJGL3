@@ -25,13 +25,13 @@ public interface glNormal3dv {
  *
  * @see <a href="https://docs.gl/gl3/glNormal">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glNormal3dv(DoubleBuffer v);
+    public void glNormal3dv(@NativeType("GLdouble const *") DoubleBuffer v);
 
 /**
  * Array version of: {@link #glNormal3dv Normal3dv}
  *
  * @see <a href="https://docs.gl/gl3/glNormal">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glNormal3dv(double[] v);
+    public void glNormal3dv(@NativeType("GLdouble const *") double[] v);
 
 }

@@ -27,13 +27,13 @@ public interface glGetLightiv {
  *
  * @see <a href="https://docs.gl/gl3/glGetLight">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glGetLightiv(int light, int pname, IntBuffer data);
+    public void glGetLightiv(@NativeType("GLenum") int light, @NativeType("GLenum") int pname, @NativeType("GLint *") IntBuffer data);
 
 /**
  * Array version of: {@link #glGetLightiv GetLightiv}
  *
  * @see <a href="https://docs.gl/gl3/glGetLight">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glGetLightiv(int light, int pname, int[] data);
+    public void glGetLightiv(@NativeType("GLenum") int light, @NativeType("GLenum") int pname, @NativeType("GLint *") int[] data);
 
 }

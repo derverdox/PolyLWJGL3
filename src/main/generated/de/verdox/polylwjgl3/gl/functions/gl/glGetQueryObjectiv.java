@@ -25,7 +25,7 @@ public interface glGetQueryObjectiv {
  *
  * @see <a href="https://docs.gl/gl4/glGetQueryObject">Reference Page</a>
  */
-    public void glGetQueryObjectiv(int id, int pname, IntBuffer params);
+    public void glGetQueryObjectiv(@NativeType("GLuint") int id, @NativeType("GLenum") int pname, @NativeType("GLint *") IntBuffer params);
 
 /**
  * Returns the integer value of a query object parameter.
@@ -36,13 +36,13 @@ public interface glGetQueryObjectiv {
  *
  * @see <a href="https://docs.gl/gl4/glGetQueryObject">Reference Page</a>
  */
-    public void glGetQueryObjectiv(int id, int pname, long params);
+    public void glGetQueryObjectiv(@NativeType("GLuint") int id, @NativeType("GLenum") int pname, @NativeType("GLint *") long params);
 
 /**
  * Array version of: {@link #glGetQueryObjectiv GetQueryObjectiv}
  *
  * @see <a href="https://docs.gl/gl4/glGetQueryObject">Reference Page</a>
  */
-    public void glGetQueryObjectiv(int id, int pname, int[] params);
+    public void glGetQueryObjectiv(@NativeType("GLuint") int id, @NativeType("GLenum") int pname, @NativeType("GLint *") int[] params);
 
 }

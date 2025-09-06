@@ -24,6 +24,6 @@ public interface glTextureParameterf {
  *
  * @see <a href="https://docs.gl/gl4/glTextureParameterf">Reference Page</a>
  */
-    public void glTextureParameterf(int texture, int pname, float param);
+    public void glTextureParameterf(@NativeType("GLuint") int texture, @NativeType("GLenum") int pname, @NativeType("GLfloat") float param);
 
 }

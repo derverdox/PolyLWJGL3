@@ -31,7 +31,7 @@ public interface glGetNamedBufferSubData {
  *
  * @see <a href="https://docs.gl/gl4/glGetBufferSubData">Reference Page</a>
  */
-    public void glGetNamedBufferSubData(int buffer, long offset, ByteBuffer data);
+    public void glGetNamedBufferSubData(@NativeType("GLuint") int buffer, @NativeType("GLintptr") long offset, @NativeType("void *") ByteBuffer data);
 
 /**
  * DSA version of {@link GL15C#glGetBufferSubData GetBufferSubData}.
@@ -42,7 +42,7 @@ public interface glGetNamedBufferSubData {
  *
  * @see <a href="https://docs.gl/gl4/glGetBufferSubData">Reference Page</a>
  */
-    public void glGetNamedBufferSubData(int buffer, long offset, ShortBuffer data);
+    public void glGetNamedBufferSubData(@NativeType("GLuint") int buffer, @NativeType("GLintptr") long offset, @NativeType("void *") ShortBuffer data);
 
 /**
  * DSA version of {@link GL15C#glGetBufferSubData GetBufferSubData}.
@@ -53,7 +53,7 @@ public interface glGetNamedBufferSubData {
  *
  * @see <a href="https://docs.gl/gl4/glGetBufferSubData">Reference Page</a>
  */
-    public void glGetNamedBufferSubData(int buffer, long offset, IntBuffer data);
+    public void glGetNamedBufferSubData(@NativeType("GLuint") int buffer, @NativeType("GLintptr") long offset, @NativeType("void *") IntBuffer data);
 
 /**
  * DSA version of {@link GL15C#glGetBufferSubData GetBufferSubData}.
@@ -64,7 +64,7 @@ public interface glGetNamedBufferSubData {
  *
  * @see <a href="https://docs.gl/gl4/glGetBufferSubData">Reference Page</a>
  */
-    public void glGetNamedBufferSubData(int buffer, long offset, LongBuffer data);
+    public void glGetNamedBufferSubData(@NativeType("GLuint") int buffer, @NativeType("GLintptr") long offset, @NativeType("void *") LongBuffer data);
 
 /**
  * DSA version of {@link GL15C#glGetBufferSubData GetBufferSubData}.
@@ -75,7 +75,7 @@ public interface glGetNamedBufferSubData {
  *
  * @see <a href="https://docs.gl/gl4/glGetBufferSubData">Reference Page</a>
  */
-    public void glGetNamedBufferSubData(int buffer, long offset, FloatBuffer data);
+    public void glGetNamedBufferSubData(@NativeType("GLuint") int buffer, @NativeType("GLintptr") long offset, @NativeType("void *") FloatBuffer data);
 
 /**
  * DSA version of {@link GL15C#glGetBufferSubData GetBufferSubData}.
@@ -86,41 +86,41 @@ public interface glGetNamedBufferSubData {
  *
  * @see <a href="https://docs.gl/gl4/glGetBufferSubData">Reference Page</a>
  */
-    public void glGetNamedBufferSubData(int buffer, long offset, DoubleBuffer data);
+    public void glGetNamedBufferSubData(@NativeType("GLuint") int buffer, @NativeType("GLintptr") long offset, @NativeType("void *") DoubleBuffer data);
 
 /**
  * Array version of: {@link #glGetNamedBufferSubData GetNamedBufferSubData}
  *
  * @see <a href="https://docs.gl/gl4/glGetBufferSubData">Reference Page</a>
  */
-    public void glGetNamedBufferSubData(int buffer, long offset, short[] data);
+    public void glGetNamedBufferSubData(@NativeType("GLuint") int buffer, @NativeType("GLintptr") long offset, @NativeType("void *") short[] data);
 
 /**
  * Array version of: {@link #glGetNamedBufferSubData GetNamedBufferSubData}
  *
  * @see <a href="https://docs.gl/gl4/glGetBufferSubData">Reference Page</a>
  */
-    public void glGetNamedBufferSubData(int buffer, long offset, int[] data);
+    public void glGetNamedBufferSubData(@NativeType("GLuint") int buffer, @NativeType("GLintptr") long offset, @NativeType("void *") int[] data);
 
 /**
  * Array version of: {@link #glGetNamedBufferSubData GetNamedBufferSubData}
  *
  * @see <a href="https://docs.gl/gl4/glGetBufferSubData">Reference Page</a>
  */
-    public void glGetNamedBufferSubData(int buffer, long offset, long[] data);
+    public void glGetNamedBufferSubData(@NativeType("GLuint") int buffer, @NativeType("GLintptr") long offset, @NativeType("void *") long[] data);
 
 /**
  * Array version of: {@link #glGetNamedBufferSubData GetNamedBufferSubData}
  *
  * @see <a href="https://docs.gl/gl4/glGetBufferSubData">Reference Page</a>
  */
-    public void glGetNamedBufferSubData(int buffer, long offset, float[] data);
+    public void glGetNamedBufferSubData(@NativeType("GLuint") int buffer, @NativeType("GLintptr") long offset, @NativeType("void *") float[] data);
 
 /**
  * Array version of: {@link #glGetNamedBufferSubData GetNamedBufferSubData}
  *
  * @see <a href="https://docs.gl/gl4/glGetBufferSubData">Reference Page</a>
  */
-    public void glGetNamedBufferSubData(int buffer, long offset, double[] data);
+    public void glGetNamedBufferSubData(@NativeType("GLuint") int buffer, @NativeType("GLintptr") long offset, @NativeType("void *") double[] data);
 
 }

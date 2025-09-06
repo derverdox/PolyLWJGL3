@@ -18,13 +18,13 @@ public interface glGetShaderPrecisionFormat {
 /**
  * <a href="https://docs.gl/es3/glGetShaderPrecisionFormat">Reference Page</a>
  */
-    public void glGetShaderPrecisionFormat(int shadertype, int precisiontype, IntBuffer range, IntBuffer precision);
+    public void glGetShaderPrecisionFormat(@NativeType("GLenum") int shadertype, @NativeType("GLenum") int precisiontype, @NativeType("GLint *") IntBuffer range, @NativeType("GLint *") IntBuffer precision);
 
 /**
  * Array version of: {@link #glGetShaderPrecisionFormat GetShaderPrecisionFormat}
  *
  * @see <a href="https://docs.gl/es3/glGetShaderPrecisionFormat">Reference Page</a>
  */
-    public void glGetShaderPrecisionFormat(int shadertype, int precisiontype, int[] range, int[] precision);
+    public void glGetShaderPrecisionFormat(@NativeType("GLenum") int shadertype, @NativeType("GLenum") int precisiontype, @NativeType("GLint *") int[] range, @NativeType("GLint *") int[] precision);
 
 }

@@ -37,7 +37,7 @@ public interface glCompressedTextureSubImage2D {
  *
  * @see <a href="https://docs.gl/gl4/glCompressedTextureSubImage2D">Reference Page</a>
  */
-    public void glCompressedTextureSubImage2D(int texture, int level, int xoffset, int yoffset, int width, int height, int format, int imageSize, long data);
+    public void glCompressedTextureSubImage2D(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int yoffset, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLsizei") int imageSize, @NativeType("void const *") long data);
 
 /**
  * DSA version of {@link GL13C#glCompressedTexSubImage2D CompressedTexSubImage2D}.
@@ -53,6 +53,6 @@ public interface glCompressedTextureSubImage2D {
  *
  * @see <a href="https://docs.gl/gl4/glCompressedTextureSubImage2D">Reference Page</a>
  */
-    public void glCompressedTextureSubImage2D(int texture, int level, int xoffset, int yoffset, int width, int height, int format, ByteBuffer data);
+    public void glCompressedTextureSubImage2D(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int yoffset, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("void const *") ByteBuffer data);
 
 }

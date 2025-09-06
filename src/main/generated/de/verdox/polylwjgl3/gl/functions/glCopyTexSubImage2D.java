@@ -16,6 +16,6 @@ public interface glCopyTexSubImage2D {
 /**
  * <a href="https://docs.gl/es3/glCopyTexSubImage2D">Reference Page</a>
  */
-    public void glCopyTexSubImage2D(int target, int level, int xoffset, int yoffset, int x, int y, int width, int height);
+    public void glCopyTexSubImage2D(@NativeType("GLenum") int target, @NativeType("GLint") int level, @NativeType("GLint") int xoffset, @NativeType("GLint") int yoffset, @NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height);
 
 }

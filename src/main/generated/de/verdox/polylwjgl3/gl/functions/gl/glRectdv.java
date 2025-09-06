@@ -26,13 +26,13 @@ public interface glRectdv {
  *
  * @see <a href="https://docs.gl/gl3/glRect">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glRectdv(DoubleBuffer v1, DoubleBuffer v2);
+    public void glRectdv(@NativeType("GLdouble const *") DoubleBuffer v1, @NativeType("GLdouble const *") DoubleBuffer v2);
 
 /**
  * Array version of: {@link #glRectdv Rectdv}
  *
  * @see <a href="https://docs.gl/gl3/glRect">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glRectdv(double[] v1, double[] v2);
+    public void glRectdv(@NativeType("GLdouble const *") double[] v1, @NativeType("GLdouble const *") double[] v2);
 
 }

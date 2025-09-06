@@ -19,6 +19,7 @@ public interface glGetDoublei {
  *
  * @see <a href="https://docs.gl/gl4/glGetDoublei_v">Reference Page</a>
  */
-    public double glGetDoublei(int target, int index);
+@NativeType("void")
+    public double glGetDoublei(@NativeType("GLenum") int target, @NativeType("GLuint") int index);
 
 }

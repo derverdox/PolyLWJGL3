@@ -25,6 +25,6 @@ public interface glGetQueryBufferObjectui64v {
  *
  * @see <a href="https://docs.gl/gl4/glGetQueryBufferObject">Reference Page</a>
  */
-    public void glGetQueryBufferObjectui64v(int id, int buffer, int pname, long offset);
+    public void glGetQueryBufferObjectui64v(@NativeType("GLuint") int id, @NativeType("GLuint") int buffer, @NativeType("GLenum") int pname, @NativeType("GLintptr") long offset);
 
 }

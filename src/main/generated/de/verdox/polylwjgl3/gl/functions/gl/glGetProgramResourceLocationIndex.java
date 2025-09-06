@@ -24,7 +24,8 @@ public interface glGetProgramResourceLocationIndex {
  *
  * @see <a href="https://docs.gl/gl4/glGetProgramResourceLocationIndex">Reference Page</a>
  */
-    public int glGetProgramResourceLocationIndex(int program, int programInterface, ByteBuffer name);
+@NativeType("GLint")
+    public int glGetProgramResourceLocationIndex(@NativeType("GLuint") int program, @NativeType("GLenum") int programInterface, @NativeType("GLchar const *") ByteBuffer name);
 
 /**
  * Queries the fragment color index of a named variable within a program.
@@ -35,6 +36,7 @@ public interface glGetProgramResourceLocationIndex {
  *
  * @see <a href="https://docs.gl/gl4/glGetProgramResourceLocationIndex">Reference Page</a>
  */
-    public int glGetProgramResourceLocationIndex(int program, int programInterface, CharSequence name);
+@NativeType("GLint")
+    public int glGetProgramResourceLocationIndex(@NativeType("GLuint") int program, @NativeType("GLenum") int programInterface, @NativeType("GLchar const *") CharSequence name);
 
 }

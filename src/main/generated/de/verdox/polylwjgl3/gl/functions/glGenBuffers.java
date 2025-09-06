@@ -18,11 +18,12 @@ public interface glGenBuffers {
 /**
  * <a href="https://docs.gl/es3/glGenBuffers">Reference Page</a>
  */
-    public void glGenBuffers(IntBuffer buffers);
+    public void glGenBuffers(@NativeType("GLuint *") IntBuffer buffers);
 
 /**
  * <a href="https://docs.gl/es3/glGenBuffers">Reference Page</a>
  */
+@NativeType("void")
     public int glGenBuffers();
 
 /**
@@ -30,6 +31,6 @@ public interface glGenBuffers {
  *
  * @see <a href="https://docs.gl/es3/glGenBuffers">Reference Page</a>
  */
-    public void glGenBuffers(int[] buffers);
+    public void glGenBuffers(@NativeType("GLuint *") int[] buffers);
 
 }

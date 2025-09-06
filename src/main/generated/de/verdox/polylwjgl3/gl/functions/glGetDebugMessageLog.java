@@ -56,13 +56,15 @@ public interface glGetDebugMessageLog {
  *
  * @see <a href="https://docs.gl/es3/glGetDebugMessageLog">Reference Page</a>
  */
-    public int glGetDebugMessageLog(int count, @Nullable IntBuffer sources, @Nullable IntBuffer types, @Nullable IntBuffer ids, @Nullable IntBuffer severities, @Nullable IntBuffer lengths, @Nullable ByteBuffer messageLog);
+@NativeType("GLuint")
+    public int glGetDebugMessageLog(@NativeType("GLuint") int count, @Nullable @NativeType("GLenum *") IntBuffer sources, @Nullable @NativeType("GLenum *") IntBuffer types, @Nullable @NativeType("GLuint *") IntBuffer ids, @Nullable @NativeType("GLenum *") IntBuffer severities, @Nullable @NativeType("GLsizei *") IntBuffer lengths, @Nullable @NativeType("GLchar *") ByteBuffer messageLog);
 
 /**
  * Array version of: {@link #glGetDebugMessageLog GetDebugMessageLog}
  *
  * @see <a href="https://docs.gl/es3/glGetDebugMessageLog">Reference Page</a>
  */
-    public int glGetDebugMessageLog(int count, @Nullable int[] sources, @Nullable int[] types, @Nullable int[] ids, @Nullable int[] severities, @Nullable int[] lengths, @Nullable ByteBuffer messageLog);
+@NativeType("GLuint")
+    public int glGetDebugMessageLog(@NativeType("GLuint") int count, @Nullable @NativeType("GLenum *") int[] sources, @Nullable @NativeType("GLenum *") int[] types, @Nullable @NativeType("GLuint *") int[] ids, @Nullable @NativeType("GLenum *") int[] severities, @Nullable @NativeType("GLsizei *") int[] lengths, @Nullable @NativeType("GLchar *") ByteBuffer messageLog);
 
 }

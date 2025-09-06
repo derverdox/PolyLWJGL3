@@ -25,13 +25,13 @@ public interface glFogCoordfv {
  *
  * @see <a href="https://docs.gl/gl3/glFogCoord">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glFogCoordfv(FloatBuffer coord);
+    public void glFogCoordfv(@NativeType("GLfloat const *") FloatBuffer coord);
 
 /**
  * Array version of: {@link #glFogCoordfv FogCoordfv}
  *
  * @see <a href="https://docs.gl/gl3/glFogCoord">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glFogCoordfv(float[] coord);
+    public void glFogCoordfv(@NativeType("GLfloat const *") float[] coord);
 
 }

@@ -21,18 +21,18 @@ public interface glInvalidateSubFramebuffer {
 /**
  * <a href="https://docs.gl/es3/glInvalidateSubFramebuffer">Reference Page</a>
  */
-    public void glInvalidateSubFramebuffer(int target, IntBuffer attachments, int x, int y, int width, int height);
+    public void glInvalidateSubFramebuffer(@NativeType("GLenum") int target, @NativeType("GLenum const *") IntBuffer attachments, @NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height);
 
 /**
  * <a href="https://docs.gl/es3/glInvalidateSubFramebuffer">Reference Page</a>
  */
-    public void glInvalidateSubFramebuffer(int target, int attachment, int x, int y, int width, int height);
+    public void glInvalidateSubFramebuffer(@NativeType("GLenum") int target, @NativeType("GLenum const *") int attachment, @NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height);
 
 /**
  * Array version of: {@link #glInvalidateSubFramebuffer InvalidateSubFramebuffer}
  *
  * @see <a href="https://docs.gl/es3/glInvalidateSubFramebuffer">Reference Page</a>
  */
-    public void glInvalidateSubFramebuffer(int target, int[] attachments, int x, int y, int width, int height);
+    public void glInvalidateSubFramebuffer(@NativeType("GLenum") int target, @NativeType("GLenum const *") int[] attachments, @NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height);
 
 }

@@ -26,6 +26,6 @@ public interface glTexImage3DMultisample {
  *
  * @see <a href="https://docs.gl/gl4/glTexImage3DMultisample">Reference Page</a>
  */
-    public void glTexImage3DMultisample(int target, int samples, int internalformat, int width, int height, int depth, boolean fixedsamplelocations);
+    public void glTexImage3DMultisample(@NativeType("GLenum") int target, @NativeType("GLsizei") int samples, @NativeType("GLint") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLsizei") int depth, @NativeType("GLboolean") boolean fixedsamplelocations);
 
 }

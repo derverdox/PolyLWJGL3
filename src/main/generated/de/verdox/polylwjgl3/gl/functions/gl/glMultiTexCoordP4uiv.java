@@ -26,13 +26,13 @@ public interface glMultiTexCoordP4uiv {
  *
  * @see <a href="https://docs.gl/gl3/glMultiTexCoord">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glMultiTexCoordP4uiv(int texture, int type, IntBuffer coords);
+    public void glMultiTexCoordP4uiv(@NativeType("GLenum") int texture, @NativeType("GLenum") int type, @NativeType("GLuint const *") IntBuffer coords);
 
 /**
  * Array version of: {@link #glMultiTexCoordP4uiv MultiTexCoordP4uiv}
  *
  * @see <a href="https://docs.gl/gl3/glMultiTexCoord">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glMultiTexCoordP4uiv(int texture, int type, int[] coords);
+    public void glMultiTexCoordP4uiv(@NativeType("GLenum") int texture, @NativeType("GLenum") int type, @NativeType("GLuint const *") int[] coords);
 
 }

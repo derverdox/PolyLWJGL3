@@ -1,0 +1,58 @@
+/**
+ * OpenGL 3.1 Accessor — Instanced drawing, buffer-to-buffer copies, primitive restart,
+ * texture buffer objects (TBO), and uniform buffer objects (UBO) with rich queries.
+ *
+ * <p>Extends {@link GL30Accessor} by adding efficient multi-instance draw calls, direct GPU-side
+ * buffer copies, an index value that triggers primitive restart for strip topologies, the
+ * texture-buffer target for large 1D texel arrays, and a full query/binding API for uniform
+ * blocks (UBOs).</p>
+ *
+ * <h2>Instanced Rendering</h2>
+ * <ul>
+ *   <li>{@code glDrawArraysInstanced} — Draw many instances of the same non-indexed geometry
+ *       with a single call, varying per-instance data via divisors/instanced attributes.</li>
+ *   <li>{@code glDrawElementsInstanced} — Instanced version for indexed geometry.</li>
+ * </ul>
+ *
+ * <h2>Buffer Management</h2>
+ * <ul>
+ *   <li>{@code glCopyBufferSubData} — GPU-to-GPU copy between buffer objects (no CPU round-trip);
+ *       useful for streaming, staging, or partial updates.</li>
+ * </ul>
+ *
+ * <h2>Primitive Restart</h2>
+ * <ul>
+ *   <li>{@code glPrimitiveRestartIndex} — Specify the special index value that restarts a primitive
+ *       when drawing indexed strips/fans, allowing multiple strips per draw call.</li>
+ * </ul>
+ *
+ * <h2>Texture Buffer Objects (TBO)</h2>
+ * <ul>
+ *   <li>{@code glTexBuffer} — Bind an entire buffer object as a 1D array of texels for random access in shaders
+ *       (huge “texture-sized” data sets; format chosen via internal format).</li>
+ * </ul>
+ *
+ * <h2>Uniform Buffer Objects (UBO) & Queries</h2>
+ * <ul>
+ *   <li>{@code glGetUniformIndices} / {@code glGetUniformIndices_CORE} — Map uniform names to indices.
+ *       The “_CORE” variant denotes desktop-only signatures.</li>
+ *   <li>{@code glGetActiveUniformsiv} / {@code glGetActiveUniformsi} — Query per-uniform properties
+ *       (type, size, block index, offsets, array strides, matrix strides, etc.).</li>
+ *   <li>{@code glGetActiveUniformName} — Retrieve the name of a uniform by index.</li>
+ *   <li>{@code glGetUniformBlockIndex} — Get the index of a named uniform block within a program.</li>
+ *   <li>{@code glGetActiveUniformBlockiv} / {@code glGetActiveUniformBlocki} — Query block-wide properties
+ *       (size, binding, data layout, active uniforms, referenced shader stages, etc.).</li>
+ *   <li>{@code glGetActiveUniformBlockName} — Retrieve a uniform block’s name by index.</li>
+ *   <li>{@code glUniformBlockBinding} — Assign a uniform block to a specific binding point; later
+ *       associate a buffer with that binding via {@code glBindBufferBase/Range}.</li>
+ * </ul>
+ *
+ * <h3>Notes</h3>
+ * <ul>
+ *   <li>Instancing dramatically reduces CPU overhead for repeated objects; combine with per-instance
+ *       attributes (via divisors) for maximum flexibility.</li>
+ *   <li>UBOs enable sharing constant data across programs and draw calls with predictable layouts
+ *       (e.g., {@code std140}); query offsets/strides to build correct CPU-side packing.</li>
+ *   <li>TBOs are ideal for large lookup tables and sparse/random access patterns in shaders.</li>
+ * </ul>
+ */

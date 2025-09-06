@@ -23,6 +23,7 @@ public interface glGetnMapd {
  *
  * @see <a href="https://docs.gl/gl4/glGetMap">Reference Page</a>
  */
-    public double glGetnMapd(int target, int query);
+@NativeType("void")
+    public double glGetnMapd(@NativeType("GLenum") int target, @NativeType("GLenum") int query);
 
 }

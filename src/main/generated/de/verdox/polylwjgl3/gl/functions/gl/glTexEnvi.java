@@ -23,6 +23,6 @@ public interface glTexEnvi {
  *
  * @see <a href="https://docs.gl/gl3/glTexEnvi">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glTexEnvi(int target, int pname, int param);
+    public void glTexEnvi(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLint") int param);
 
 }

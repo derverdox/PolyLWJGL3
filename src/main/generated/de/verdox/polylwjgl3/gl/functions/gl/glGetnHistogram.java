@@ -34,7 +34,7 @@ public interface glGetnHistogram {
  *
  * @see <a href="https://docs.gl/gl4/glGetnHistogram">Reference Page</a>
  */
-    public void glGetnHistogram(int target, boolean reset, int format, int type, int bufSize, long values);
+    public void glGetnHistogram(@NativeType("GLenum") int target, @NativeType("GLboolean") boolean reset, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("GLsizei") int bufSize, @NativeType("void *") long values);
 
 /**
  * Robust version of {@link ARBImaging#glGetHistogram GetHistogram}
@@ -47,6 +47,6 @@ public interface glGetnHistogram {
  *
  * @see <a href="https://docs.gl/gl4/glGetnHistogram">Reference Page</a>
  */
-    public void glGetnHistogram(int target, boolean reset, int format, int type, ByteBuffer values);
+    public void glGetnHistogram(@NativeType("GLenum") int target, @NativeType("GLboolean") boolean reset, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") ByteBuffer values);
 
 }

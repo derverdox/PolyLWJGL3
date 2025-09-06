@@ -24,6 +24,7 @@ public interface glGetDouble {
  *
  * @see <a href="https://docs.gl/gl4/glGetDoublev">Reference Page</a>
  */
-    public double glGetDouble(int pname);
+@NativeType("void")
+    public double glGetDouble(@NativeType("GLenum") int pname);
 
 }

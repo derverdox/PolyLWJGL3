@@ -18,6 +18,6 @@ public interface glBlendFuncSeparatei {
 /**
  * <a href="https://docs.gl/es3/glBlendFuncSeparatei">Reference Page</a>
  */
-    public void glBlendFuncSeparatei(int buf, int srcRGB, int dstRGB, int srcAlpha, int dstAlpha);
+    public void glBlendFuncSeparatei(@NativeType("GLuint") int buf, @NativeType("GLenum") int srcRGB, @NativeType("GLenum") int dstRGB, @NativeType("GLenum") int srcAlpha, @NativeType("GLenum") int dstAlpha);
 
 }

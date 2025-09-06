@@ -30,6 +30,6 @@ public interface glTexGeni {
  *
  * @see <a href="https://docs.gl/gl3/glTexGeni">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glTexGeni(int coord, int pname, int param);
+    public void glTexGeni(@NativeType("GLenum") int coord, @NativeType("GLenum") int pname, @NativeType("GLint") int param);
 
 }

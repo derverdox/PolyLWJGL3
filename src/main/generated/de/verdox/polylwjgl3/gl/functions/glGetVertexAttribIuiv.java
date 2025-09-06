@@ -21,13 +21,13 @@ public interface glGetVertexAttribIuiv {
 /**
  * <a href="https://docs.gl/es3/glGetVertexAttrib">Reference Page</a>
  */
-    public void glGetVertexAttribIuiv(int index, int pname, IntBuffer params);
+    public void glGetVertexAttribIuiv(@NativeType("GLuint") int index, @NativeType("GLenum") int pname, @NativeType("GLuint *") IntBuffer params);
 
 /**
  * Array version of: {@link #glGetVertexAttribIuiv GetVertexAttribIuiv}
  *
  * @see <a href="https://docs.gl/es3/glGetVertexAttrib">Reference Page</a>
  */
-    public void glGetVertexAttribIuiv(int index, int pname, int[] params);
+    public void glGetVertexAttribIuiv(@NativeType("GLuint") int index, @NativeType("GLenum") int pname, @NativeType("GLuint *") int[] params);
 
 }

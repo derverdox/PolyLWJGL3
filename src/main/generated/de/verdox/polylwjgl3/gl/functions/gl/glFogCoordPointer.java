@@ -27,7 +27,7 @@ public interface glFogCoordPointer {
  *
  * @see <a href="https://docs.gl/gl3/glFogCoordPointer">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glFogCoordPointer(int type, int stride, ByteBuffer pointer);
+    public void glFogCoordPointer(@NativeType("GLenum") int type, @NativeType("GLsizei") int stride, @NativeType("void const *") ByteBuffer pointer);
 
 /**
  * Specifies the location and organization of a fog coordinate array.
@@ -38,7 +38,7 @@ public interface glFogCoordPointer {
  *
  * @see <a href="https://docs.gl/gl3/glFogCoordPointer">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glFogCoordPointer(int type, int stride, long pointer);
+    public void glFogCoordPointer(@NativeType("GLenum") int type, @NativeType("GLsizei") int stride, @NativeType("void const *") long pointer);
 
 /**
  * Specifies the location and organization of a fog coordinate array.
@@ -49,7 +49,7 @@ public interface glFogCoordPointer {
  *
  * @see <a href="https://docs.gl/gl3/glFogCoordPointer">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glFogCoordPointer(int type, int stride, ShortBuffer pointer);
+    public void glFogCoordPointer(@NativeType("GLenum") int type, @NativeType("GLsizei") int stride, @NativeType("void const *") ShortBuffer pointer);
 
 /**
  * Specifies the location and organization of a fog coordinate array.
@@ -60,6 +60,6 @@ public interface glFogCoordPointer {
  *
  * @see <a href="https://docs.gl/gl3/glFogCoordPointer">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glFogCoordPointer(int type, int stride, FloatBuffer pointer);
+    public void glFogCoordPointer(@NativeType("GLenum") int type, @NativeType("GLsizei") int stride, @NativeType("void const *") FloatBuffer pointer);
 
 }

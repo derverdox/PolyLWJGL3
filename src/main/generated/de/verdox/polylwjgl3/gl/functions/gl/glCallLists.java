@@ -29,7 +29,7 @@ public interface glCallLists {
  *
  * @see <a href="https://docs.gl/gl3/glCallLists">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glCallLists(int type, ByteBuffer lists);
+    public void glCallLists(@NativeType("GLenum") int type, @NativeType("void const *") ByteBuffer lists);
 
 /**
  * Provides an efficient means for executing a number of display lists.
@@ -38,7 +38,7 @@ public interface glCallLists {
  *
  * @see <a href="https://docs.gl/gl3/glCallLists">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glCallLists(ByteBuffer lists);
+    public void glCallLists(@NativeType("void const *") ByteBuffer lists);
 
 /**
  * Provides an efficient means for executing a number of display lists.
@@ -47,7 +47,7 @@ public interface glCallLists {
  *
  * @see <a href="https://docs.gl/gl3/glCallLists">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glCallLists(ShortBuffer lists);
+    public void glCallLists(@NativeType("void const *") ShortBuffer lists);
 
 /**
  * Provides an efficient means for executing a number of display lists.
@@ -56,6 +56,6 @@ public interface glCallLists {
  *
  * @see <a href="https://docs.gl/gl3/glCallLists">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glCallLists(IntBuffer lists);
+    public void glCallLists(@NativeType("void const *") IntBuffer lists);
 
 }

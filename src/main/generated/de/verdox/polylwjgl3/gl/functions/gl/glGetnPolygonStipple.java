@@ -30,7 +30,7 @@ public interface glGetnPolygonStipple {
  *
  * @see <a href="https://docs.gl/gl4/glGetnPolygonStipple">Reference Page</a>
  */
-    public void glGetnPolygonStipple(int bufSize, long pattern);
+    public void glGetnPolygonStipple(@NativeType("GLsizei") int bufSize, @NativeType("GLubyte *") long pattern);
 
 /**
  * Robust version of {@link GL11#glGetPolygonStipple GetPolygonStipple}
@@ -39,6 +39,6 @@ public interface glGetnPolygonStipple {
  *
  * @see <a href="https://docs.gl/gl4/glGetnPolygonStipple">Reference Page</a>
  */
-    public void glGetnPolygonStipple(ByteBuffer pattern);
+    public void glGetnPolygonStipple(@NativeType("GLubyte *") ByteBuffer pattern);
 
 }

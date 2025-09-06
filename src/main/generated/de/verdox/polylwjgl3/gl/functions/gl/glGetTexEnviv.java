@@ -27,13 +27,13 @@ public interface glGetTexEnviv {
  *
  * @see <a href="https://docs.gl/gl3/glGetTexEnv">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glGetTexEnviv(int env, int pname, IntBuffer data);
+    public void glGetTexEnviv(@NativeType("GLenum") int env, @NativeType("GLenum") int pname, @NativeType("GLint *") IntBuffer data);
 
 /**
  * Array version of: {@link #glGetTexEnviv GetTexEnviv}
  *
  * @see <a href="https://docs.gl/gl3/glGetTexEnv">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glGetTexEnviv(int env, int pname, int[] data);
+    public void glGetTexEnviv(@NativeType("GLenum") int env, @NativeType("GLenum") int pname, @NativeType("GLint *") int[] data);
 
 }

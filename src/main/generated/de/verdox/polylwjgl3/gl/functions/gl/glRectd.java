@@ -23,6 +23,6 @@ public interface glRectd {
  *
  * @see <a href="https://docs.gl/gl3/glRectd">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glRectd(double x1, double y1, double x2, double y2);
+    public void glRectd(@NativeType("GLdouble") double x1, @NativeType("GLdouble") double y1, @NativeType("GLdouble") double x2, @NativeType("GLdouble") double y2);
 
 }

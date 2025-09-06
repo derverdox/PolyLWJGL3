@@ -21,11 +21,12 @@ public interface glGenSamplers {
 /**
  * <a href="https://docs.gl/es3/glGenSamplers">Reference Page</a>
  */
-    public void glGenSamplers(IntBuffer samplers);
+    public void glGenSamplers(@NativeType("GLuint *") IntBuffer samplers);
 
 /**
  * <a href="https://docs.gl/es3/glGenSamplers">Reference Page</a>
  */
+@NativeType("void")
     public int glGenSamplers();
 
 /**
@@ -33,6 +34,6 @@ public interface glGenSamplers {
  *
  * @see <a href="https://docs.gl/es3/glGenSamplers">Reference Page</a>
  */
-    public void glGenSamplers(int[] samplers);
+    public void glGenSamplers(@NativeType("GLuint *") int[] samplers);
 
 }

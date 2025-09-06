@@ -30,7 +30,7 @@ public interface glCreateBuffers {
  *
  * @see <a href="https://docs.gl/gl4/glCreateBuffers">Reference Page</a>
  */
-    public void glCreateBuffers(IntBuffer buffers);
+    public void glCreateBuffers(@NativeType("GLuint *") IntBuffer buffers);
 
 /**
  * Returns {@code n} previously unused buffer names in {@code buffers}, each representing a new buffer object initialized as if it had been bound to an
@@ -38,6 +38,7 @@ public interface glCreateBuffers {
  *
  * @see <a href="https://docs.gl/gl4/glCreateBuffers">Reference Page</a>
  */
+@NativeType("void")
     public int glCreateBuffers();
 
 /**
@@ -45,6 +46,6 @@ public interface glCreateBuffers {
  *
  * @see <a href="https://docs.gl/gl4/glCreateBuffers">Reference Page</a>
  */
-    public void glCreateBuffers(int[] buffers);
+    public void glCreateBuffers(@NativeType("GLuint *") int[] buffers);
 
 }

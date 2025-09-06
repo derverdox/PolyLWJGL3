@@ -25,13 +25,13 @@ public interface glIndexiv {
  *
  * @see <a href="https://docs.gl/gl3/glIndex">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glIndexiv(IntBuffer index);
+    public void glIndexiv(@NativeType("GLint const *") IntBuffer index);
 
 /**
  * Array version of: {@link #glIndexiv Indexiv}
  *
  * @see <a href="https://docs.gl/gl3/glIndex">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glIndexiv(int[] index);
+    public void glIndexiv(@NativeType("GLint const *") int[] index);
 
 }

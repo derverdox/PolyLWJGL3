@@ -16,6 +16,6 @@ public interface glGenerateMipmap {
 /**
  * <a href="https://docs.gl/es3/glGenerateMipmap">Reference Page</a>
  */
-    public void glGenerateMipmap(int target);
+    public void glGenerateMipmap(@NativeType("GLenum") int target);
 
 }

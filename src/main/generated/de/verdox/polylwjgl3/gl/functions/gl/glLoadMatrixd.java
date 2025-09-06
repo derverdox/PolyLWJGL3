@@ -25,13 +25,13 @@ public interface glLoadMatrixd {
  *
  * @see <a href="https://docs.gl/gl3/glLoadMatrixd">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glLoadMatrixd(DoubleBuffer m);
+    public void glLoadMatrixd(@NativeType("GLdouble const *") DoubleBuffer m);
 
 /**
  * Array version of: {@link #glLoadMatrixd LoadMatrixd}
  *
  * @see <a href="https://docs.gl/gl3/glLoadMatrixd">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glLoadMatrixd(double[] m);
+    public void glLoadMatrixd(@NativeType("GLdouble const *") double[] m);
 
 }

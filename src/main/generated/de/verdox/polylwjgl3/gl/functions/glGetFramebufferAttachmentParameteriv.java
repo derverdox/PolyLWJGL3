@@ -18,13 +18,13 @@ public interface glGetFramebufferAttachmentParameteriv {
 /**
  * <a href="https://docs.gl/es3/glGetFramebufferAttachmentParameter">Reference Page</a>
  */
-    public void glGetFramebufferAttachmentParameteriv(int target, int attachment, int pname, IntBuffer params);
+    public void glGetFramebufferAttachmentParameteriv(@NativeType("GLenum") int target, @NativeType("GLenum") int attachment, @NativeType("GLenum") int pname, @NativeType("GLint *") IntBuffer params);
 
 /**
  * Array version of: {@link #glGetFramebufferAttachmentParameteriv GetFramebufferAttachmentParameteriv}
  *
  * @see <a href="https://docs.gl/es3/glGetFramebufferAttachmentParameter">Reference Page</a>
  */
-    public void glGetFramebufferAttachmentParameteriv(int target, int attachment, int pname, int[] params);
+    public void glGetFramebufferAttachmentParameteriv(@NativeType("GLenum") int target, @NativeType("GLenum") int attachment, @NativeType("GLenum") int pname, @NativeType("GLint *") int[] params);
 
 }

@@ -18,26 +18,26 @@ public interface glVertexAttribPointer {
 /**
  * <a href="https://docs.gl/es3/glVertexAttribPointer">Reference Page</a>
  */
-    public void glVertexAttribPointer(int index, int size, int type, boolean normalized, int stride, ByteBuffer pointer);
+    public void glVertexAttribPointer(@NativeType("GLuint") int index, @NativeType("GLint") int size, @NativeType("GLenum") int type, @NativeType("GLboolean") boolean normalized, @NativeType("GLsizei") int stride, @NativeType("void const *") ByteBuffer pointer);
 
 /**
  * <a href="https://docs.gl/es3/glVertexAttribPointer">Reference Page</a>
  */
-    public void glVertexAttribPointer(int index, int size, int type, boolean normalized, int stride, long pointer);
+    public void glVertexAttribPointer(@NativeType("GLuint") int index, @NativeType("GLint") int size, @NativeType("GLenum") int type, @NativeType("GLboolean") boolean normalized, @NativeType("GLsizei") int stride, @NativeType("void const *") long pointer);
 
 /**
  * <a href="https://docs.gl/es3/glVertexAttribPointer">Reference Page</a>
  */
-    public void glVertexAttribPointer(int index, int size, int type, boolean normalized, int stride, ShortBuffer pointer);
+    public void glVertexAttribPointer(@NativeType("GLuint") int index, @NativeType("GLint") int size, @NativeType("GLenum") int type, @NativeType("GLboolean") boolean normalized, @NativeType("GLsizei") int stride, @NativeType("void const *") ShortBuffer pointer);
 
 /**
  * <a href="https://docs.gl/es3/glVertexAttribPointer">Reference Page</a>
  */
-    public void glVertexAttribPointer(int index, int size, int type, boolean normalized, int stride, IntBuffer pointer);
+    public void glVertexAttribPointer(@NativeType("GLuint") int index, @NativeType("GLint") int size, @NativeType("GLenum") int type, @NativeType("GLboolean") boolean normalized, @NativeType("GLsizei") int stride, @NativeType("void const *") IntBuffer pointer);
 
 /**
  * <a href="https://docs.gl/es3/glVertexAttribPointer">Reference Page</a>
  */
-    public void glVertexAttribPointer(int index, int size, int type, boolean normalized, int stride, FloatBuffer pointer);
+    public void glVertexAttribPointer(@NativeType("GLuint") int index, @NativeType("GLint") int size, @NativeType("GLenum") int type, @NativeType("GLboolean") boolean normalized, @NativeType("GLsizei") int stride, @NativeType("void const *") FloatBuffer pointer);
 
 }

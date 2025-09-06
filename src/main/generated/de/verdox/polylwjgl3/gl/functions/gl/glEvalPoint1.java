@@ -20,6 +20,6 @@ public interface glEvalPoint1 {
  *
  * @see <a href="https://docs.gl/gl3/glEvalPoint1">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glEvalPoint1(int i);
+    public void glEvalPoint1(@NativeType("GLint") int i);
 
 }

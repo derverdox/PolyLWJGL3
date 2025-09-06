@@ -34,7 +34,7 @@ public interface glGetTextureImage {
  *
  * @see <a href="https://docs.gl/gl4/glGetTextureImage">Reference Page</a>
  */
-    public void glGetTextureImage(int texture, int level, int format, int type, int bufSize, long pixels);
+    public void glGetTextureImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("GLsizei") int bufSize, @NativeType("void *") long pixels);
 
 /**
  * DSA version of {@link GL11C#glGetTexImage GetTexImage}.
@@ -47,7 +47,7 @@ public interface glGetTextureImage {
  *
  * @see <a href="https://docs.gl/gl4/glGetTextureImage">Reference Page</a>
  */
-    public void glGetTextureImage(int texture, int level, int format, int type, ByteBuffer pixels);
+    public void glGetTextureImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") ByteBuffer pixels);
 
 /**
  * DSA version of {@link GL11C#glGetTexImage GetTexImage}.
@@ -60,7 +60,7 @@ public interface glGetTextureImage {
  *
  * @see <a href="https://docs.gl/gl4/glGetTextureImage">Reference Page</a>
  */
-    public void glGetTextureImage(int texture, int level, int format, int type, ShortBuffer pixels);
+    public void glGetTextureImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") ShortBuffer pixels);
 
 /**
  * DSA version of {@link GL11C#glGetTexImage GetTexImage}.
@@ -73,7 +73,7 @@ public interface glGetTextureImage {
  *
  * @see <a href="https://docs.gl/gl4/glGetTextureImage">Reference Page</a>
  */
-    public void glGetTextureImage(int texture, int level, int format, int type, IntBuffer pixels);
+    public void glGetTextureImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") IntBuffer pixels);
 
 /**
  * DSA version of {@link GL11C#glGetTexImage GetTexImage}.
@@ -86,7 +86,7 @@ public interface glGetTextureImage {
  *
  * @see <a href="https://docs.gl/gl4/glGetTextureImage">Reference Page</a>
  */
-    public void glGetTextureImage(int texture, int level, int format, int type, FloatBuffer pixels);
+    public void glGetTextureImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") FloatBuffer pixels);
 
 /**
  * DSA version of {@link GL11C#glGetTexImage GetTexImage}.
@@ -99,34 +99,34 @@ public interface glGetTextureImage {
  *
  * @see <a href="https://docs.gl/gl4/glGetTextureImage">Reference Page</a>
  */
-    public void glGetTextureImage(int texture, int level, int format, int type, DoubleBuffer pixels);
+    public void glGetTextureImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") DoubleBuffer pixels);
 
 /**
  * Array version of: {@link #glGetTextureImage GetTextureImage}
  *
  * @see <a href="https://docs.gl/gl4/glGetTextureImage">Reference Page</a>
  */
-    public void glGetTextureImage(int texture, int level, int format, int type, short[] pixels);
+    public void glGetTextureImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") short[] pixels);
 
 /**
  * Array version of: {@link #glGetTextureImage GetTextureImage}
  *
  * @see <a href="https://docs.gl/gl4/glGetTextureImage">Reference Page</a>
  */
-    public void glGetTextureImage(int texture, int level, int format, int type, int[] pixels);
+    public void glGetTextureImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") int[] pixels);
 
 /**
  * Array version of: {@link #glGetTextureImage GetTextureImage}
  *
  * @see <a href="https://docs.gl/gl4/glGetTextureImage">Reference Page</a>
  */
-    public void glGetTextureImage(int texture, int level, int format, int type, float[] pixels);
+    public void glGetTextureImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") float[] pixels);
 
 /**
  * Array version of: {@link #glGetTextureImage GetTextureImage}
  *
  * @see <a href="https://docs.gl/gl4/glGetTextureImage">Reference Page</a>
  */
-    public void glGetTextureImage(int texture, int level, int format, int type, double[] pixels);
+    public void glGetTextureImage(@NativeType("GLuint") int texture, @NativeType("GLint") int level, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") double[] pixels);
 
 }

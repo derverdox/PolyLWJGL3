@@ -20,7 +20,7 @@ public class GLES32AccessorImpl extends GLES31AccessorImpl implements GLES32Acce
         org.lwjgl.opengles.GLES32.glBlendBarrier();
     }
 
-    @Override public void glCopyImageSubData(int srcName, int srcTarget, int srcLevel, int srcX, int srcY, int srcZ, int dstName, int dstTarget, int dstLevel, int dstX, int dstY, int dstZ, int srcWidth, int srcHeight, int srcDepth) {
+    @Override public void glCopyImageSubData(@NativeType("GLuint") int srcName, @NativeType("GLenum") int srcTarget, @NativeType("GLint") int srcLevel, @NativeType("GLint") int srcX, @NativeType("GLint") int srcY, @NativeType("GLint") int srcZ, @NativeType("GLuint") int dstName, @NativeType("GLenum") int dstTarget, @NativeType("GLint") int dstLevel, @NativeType("GLint") int dstX, @NativeType("GLint") int dstY, @NativeType("GLint") int dstZ, @NativeType("GLsizei") int srcWidth, @NativeType("GLsizei") int srcHeight, @NativeType("GLsizei") int srcDepth) {
         org.lwjgl.opengles.GLES32.glCopyImageSubData(srcName, srcTarget, srcLevel, srcX, srcY, srcZ, dstName, dstTarget, dstLevel, dstX, dstY, dstZ, srcWidth, srcHeight, srcDepth);
     }
 
@@ -28,15 +28,15 @@ public class GLES32AccessorImpl extends GLES31AccessorImpl implements GLES32Acce
         org.lwjgl.opengles.GLES32.nglDebugMessageControl(source, type, severity, count, ids, enabled);
     }
 
-    @Override public void glDebugMessageControl(int source, int type, int severity, IntBuffer ids, boolean enabled) {
+    @Override public void glDebugMessageControl(@NativeType("GLenum") int source, @NativeType("GLenum") int type, @NativeType("GLenum") int severity, @NativeType("GLuint const *") IntBuffer ids, @NativeType("GLboolean") boolean enabled) {
         org.lwjgl.opengles.GLES32.glDebugMessageControl(source, type, severity, ids, enabled);
     }
 
-    @Override public void glDebugMessageControl(int source, int type, int severity, int id, boolean enabled) {
+    @Override public void glDebugMessageControl(@NativeType("GLenum") int source, @NativeType("GLenum") int type, @NativeType("GLenum") int severity, @NativeType("GLuint const *") int id, @NativeType("GLboolean") boolean enabled) {
         org.lwjgl.opengles.GLES32.glDebugMessageControl(source, type, severity, id, enabled);
     }
 
-    @Override public void glDebugMessageControl(int source, int type, int severity, int[] ids, boolean enabled) {
+    @Override public void glDebugMessageControl(@NativeType("GLenum") int source, @NativeType("GLenum") int type, @NativeType("GLenum") int severity, @NativeType("GLuint const *") int[] ids, @NativeType("GLboolean") boolean enabled) {
         org.lwjgl.opengles.GLES32.glDebugMessageControl(source, type, severity, ids, enabled);
     }
 
@@ -44,11 +44,11 @@ public class GLES32AccessorImpl extends GLES31AccessorImpl implements GLES32Acce
         org.lwjgl.opengles.GLES32.nglDebugMessageInsert(source, type, id, severity, length, message);
     }
 
-    @Override public void glDebugMessageInsert(int source, int type, int id, int severity, ByteBuffer message) {
+    @Override public void glDebugMessageInsert(@NativeType("GLenum") int source, @NativeType("GLenum") int type, @NativeType("GLuint") int id, @NativeType("GLenum") int severity, @NativeType("GLchar const *") ByteBuffer message) {
         org.lwjgl.opengles.GLES32.glDebugMessageInsert(source, type, id, severity, message);
     }
 
-    @Override public void glDebugMessageInsert(int source, int type, int id, int severity, CharSequence message) {
+    @Override public void glDebugMessageInsert(@NativeType("GLenum") int source, @NativeType("GLenum") int type, @NativeType("GLuint") int id, @NativeType("GLenum") int severity, @NativeType("GLchar const *") CharSequence message) {
         org.lwjgl.opengles.GLES32.glDebugMessageInsert(source, type, id, severity, message);
     }
 
@@ -56,7 +56,7 @@ public class GLES32AccessorImpl extends GLES31AccessorImpl implements GLES32Acce
         org.lwjgl.opengles.GLES32.nglDebugMessageCallback(callback, userParam);
     }
 
-    @Override public void glDebugMessageCallback(@Nullable GLDebugMessageCallbackI callback, long userParam) {
+    @Override public void glDebugMessageCallback(@Nullable @NativeType("GLDEBUGPROC") GLDebugMessageCallbackI callback, @NativeType("void const *") long userParam) {
         org.lwjgl.opengles.GLES32.glDebugMessageCallback(callback, userParam);
     }
 
@@ -64,11 +64,13 @@ public class GLES32AccessorImpl extends GLES31AccessorImpl implements GLES32Acce
         return org.lwjgl.opengles.GLES32.nglGetDebugMessageLog(count, bufsize, sources, types, ids, severities, lengths, messageLog);
     }
 
-    @Override public int glGetDebugMessageLog(int count, @Nullable IntBuffer sources, @Nullable IntBuffer types, @Nullable IntBuffer ids, @Nullable IntBuffer severities, @Nullable IntBuffer lengths, @Nullable ByteBuffer messageLog) {
+@NativeType("GLuint")
+    @Override public int glGetDebugMessageLog(@NativeType("GLuint") int count, @Nullable @NativeType("GLenum *") IntBuffer sources, @Nullable @NativeType("GLenum *") IntBuffer types, @Nullable @NativeType("GLuint *") IntBuffer ids, @Nullable @NativeType("GLenum *") IntBuffer severities, @Nullable @NativeType("GLsizei *") IntBuffer lengths, @Nullable @NativeType("GLchar *") ByteBuffer messageLog) {
         return org.lwjgl.opengles.GLES32.glGetDebugMessageLog(count, sources, types, ids, severities, lengths, messageLog);
     }
 
-    @Override public int glGetDebugMessageLog(int count, @Nullable int[] sources, @Nullable int[] types, @Nullable int[] ids, @Nullable int[] severities, @Nullable int[] lengths, @Nullable ByteBuffer messageLog) {
+@NativeType("GLuint")
+    @Override public int glGetDebugMessageLog(@NativeType("GLuint") int count, @Nullable @NativeType("GLenum *") int[] sources, @Nullable @NativeType("GLenum *") int[] types, @Nullable @NativeType("GLuint *") int[] ids, @Nullable @NativeType("GLenum *") int[] severities, @Nullable @NativeType("GLsizei *") int[] lengths, @Nullable @NativeType("GLchar *") ByteBuffer messageLog) {
         return org.lwjgl.opengles.GLES32.glGetDebugMessageLog(count, sources, types, ids, severities, lengths, messageLog);
     }
 
@@ -76,11 +78,12 @@ public class GLES32AccessorImpl extends GLES31AccessorImpl implements GLES32Acce
         org.lwjgl.opengles.GLES32.nglGetPointerv(pname, params);
     }
 
-    @Override public void glGetPointerv(int pname, PointerBuffer params) {
+    @Override public void glGetPointerv(@NativeType("GLenum") int pname, @NativeType("void **") PointerBuffer params) {
         org.lwjgl.opengles.GLES32.glGetPointerv(pname, params);
     }
 
-    @Override public long glGetPointer(int pname) {
+@NativeType("void")
+    @Override public long glGetPointer(@NativeType("GLenum") int pname) {
         return org.lwjgl.opengles.GLES32.glGetPointer(pname);
     }
 
@@ -88,11 +91,11 @@ public class GLES32AccessorImpl extends GLES31AccessorImpl implements GLES32Acce
         org.lwjgl.opengles.GLES32.nglPushDebugGroup(source, id, length, message);
     }
 
-    @Override public void glPushDebugGroup(int source, int id, ByteBuffer message) {
+    @Override public void glPushDebugGroup(@NativeType("GLenum") int source, @NativeType("GLuint") int id, @NativeType("GLchar const *") ByteBuffer message) {
         org.lwjgl.opengles.GLES32.glPushDebugGroup(source, id, message);
     }
 
-    @Override public void glPushDebugGroup(int source, int id, CharSequence message) {
+    @Override public void glPushDebugGroup(@NativeType("GLenum") int source, @NativeType("GLuint") int id, @NativeType("GLchar const *") CharSequence message) {
         org.lwjgl.opengles.GLES32.glPushDebugGroup(source, id, message);
     }
 
@@ -104,11 +107,11 @@ public class GLES32AccessorImpl extends GLES31AccessorImpl implements GLES32Acce
         org.lwjgl.opengles.GLES32.nglObjectLabel(identifier, name, length, label);
     }
 
-    @Override public void glObjectLabel(int identifier, int name, ByteBuffer label) {
+    @Override public void glObjectLabel(@NativeType("GLenum") int identifier, @NativeType("GLuint") int name, @NativeType("GLchar const *") ByteBuffer label) {
         org.lwjgl.opengles.GLES32.glObjectLabel(identifier, name, label);
     }
 
-    @Override public void glObjectLabel(int identifier, int name, CharSequence label) {
+    @Override public void glObjectLabel(@NativeType("GLenum") int identifier, @NativeType("GLuint") int name, @NativeType("GLchar const *") CharSequence label) {
         org.lwjgl.opengles.GLES32.glObjectLabel(identifier, name, label);
     }
 
@@ -116,19 +119,21 @@ public class GLES32AccessorImpl extends GLES31AccessorImpl implements GLES32Acce
         org.lwjgl.opengles.GLES32.nglGetObjectLabel(identifier, name, bufSize, length, label);
     }
 
-    @Override public void glGetObjectLabel(int identifier, int name, @Nullable IntBuffer length, ByteBuffer label) {
+    @Override public void glGetObjectLabel(@NativeType("GLenum") int identifier, @NativeType("GLuint") int name, @Nullable @NativeType("GLsizei *") IntBuffer length, @NativeType("GLchar *") ByteBuffer label) {
         org.lwjgl.opengles.GLES32.glGetObjectLabel(identifier, name, length, label);
     }
 
-    @Override public String glGetObjectLabel(int identifier, int name, int bufSize) {
+@NativeType("void")
+    @Override public String glGetObjectLabel(@NativeType("GLenum") int identifier, @NativeType("GLuint") int name, @NativeType("GLsizei") int bufSize) {
         return org.lwjgl.opengles.GLES32.glGetObjectLabel(identifier, name, bufSize);
     }
 
-    @Override public String glGetObjectLabel(int identifier, int name) {
+@NativeType("void")
+    @Override public String glGetObjectLabel(@NativeType("GLenum") int identifier, @NativeType("GLuint") int name) {
         return org.lwjgl.opengles.GLES32.glGetObjectLabel(identifier, name);
     }
 
-    @Override public void glGetObjectLabel(int identifier, int name, @Nullable int[] length, ByteBuffer label) {
+    @Override public void glGetObjectLabel(@NativeType("GLenum") int identifier, @NativeType("GLuint") int name, @Nullable @NativeType("GLsizei *") int[] length, @NativeType("GLchar *") ByteBuffer label) {
         org.lwjgl.opengles.GLES32.glGetObjectLabel(identifier, name, length, label);
     }
 
@@ -136,11 +141,11 @@ public class GLES32AccessorImpl extends GLES31AccessorImpl implements GLES32Acce
         org.lwjgl.opengles.GLES32.nglObjectPtrLabel(ptr, length, label);
     }
 
-    @Override public void glObjectPtrLabel(long ptr, ByteBuffer label) {
+    @Override public void glObjectPtrLabel(@NativeType("void *") long ptr, @NativeType("GLchar const *") ByteBuffer label) {
         org.lwjgl.opengles.GLES32.glObjectPtrLabel(ptr, label);
     }
 
-    @Override public void glObjectPtrLabel(long ptr, CharSequence label) {
+    @Override public void glObjectPtrLabel(@NativeType("void *") long ptr, @NativeType("GLchar const *") CharSequence label) {
         org.lwjgl.opengles.GLES32.glObjectPtrLabel(ptr, label);
     }
 
@@ -148,51 +153,54 @@ public class GLES32AccessorImpl extends GLES31AccessorImpl implements GLES32Acce
         org.lwjgl.opengles.GLES32.nglGetObjectPtrLabel(ptr, bufSize, length, label);
     }
 
-    @Override public void glGetObjectPtrLabel(long ptr, @Nullable IntBuffer length, ByteBuffer label) {
+    @Override public void glGetObjectPtrLabel(@NativeType("void *") long ptr, @Nullable @NativeType("GLsizei *") IntBuffer length, @NativeType("GLchar *") ByteBuffer label) {
         org.lwjgl.opengles.GLES32.glGetObjectPtrLabel(ptr, length, label);
     }
 
-    @Override public String glGetObjectPtrLabel(long ptr, int bufSize) {
+@NativeType("void")
+    @Override public String glGetObjectPtrLabel(@NativeType("void *") long ptr, @NativeType("GLsizei") int bufSize) {
         return org.lwjgl.opengles.GLES32.glGetObjectPtrLabel(ptr, bufSize);
     }
 
-    @Override public String glGetObjectPtrLabel(long ptr) {
+@NativeType("void")
+    @Override public String glGetObjectPtrLabel(@NativeType("void *") long ptr) {
         return org.lwjgl.opengles.GLES32.glGetObjectPtrLabel(ptr);
     }
 
-    @Override public void glGetObjectPtrLabel(long ptr, @Nullable int[] length, ByteBuffer label) {
+    @Override public void glGetObjectPtrLabel(@NativeType("void *") long ptr, @Nullable @NativeType("GLsizei *") int[] length, @NativeType("GLchar *") ByteBuffer label) {
         org.lwjgl.opengles.GLES32.glGetObjectPtrLabel(ptr, length, label);
     }
 
-    @Override public void glEnablei(int target, int index) {
+    @Override public void glEnablei(@NativeType("GLenum") int target, @NativeType("GLuint") int index) {
         org.lwjgl.opengles.GLES32.glEnablei(target, index);
     }
 
-    @Override public void glDisablei(int target, int index) {
+    @Override public void glDisablei(@NativeType("GLenum") int target, @NativeType("GLuint") int index) {
         org.lwjgl.opengles.GLES32.glDisablei(target, index);
     }
 
-    @Override public void glBlendEquationi(int buf, int mode) {
+    @Override public void glBlendEquationi(@NativeType("GLuint") int buf, @NativeType("GLenum") int mode) {
         org.lwjgl.opengles.GLES32.glBlendEquationi(buf, mode);
     }
 
-    @Override public void glBlendEquationSeparatei(int buf, int modeRGB, int modeAlpha) {
+    @Override public void glBlendEquationSeparatei(@NativeType("GLuint") int buf, @NativeType("GLenum") int modeRGB, @NativeType("GLenum") int modeAlpha) {
         org.lwjgl.opengles.GLES32.glBlendEquationSeparatei(buf, modeRGB, modeAlpha);
     }
 
-    @Override public void glBlendFunci(int buf, int src, int dst) {
+    @Override public void glBlendFunci(@NativeType("GLuint") int buf, @NativeType("GLenum") int src, @NativeType("GLenum") int dst) {
         org.lwjgl.opengles.GLES32.glBlendFunci(buf, src, dst);
     }
 
-    @Override public void glBlendFuncSeparatei(int buf, int srcRGB, int dstRGB, int srcAlpha, int dstAlpha) {
+    @Override public void glBlendFuncSeparatei(@NativeType("GLuint") int buf, @NativeType("GLenum") int srcRGB, @NativeType("GLenum") int dstRGB, @NativeType("GLenum") int srcAlpha, @NativeType("GLenum") int dstAlpha) {
         org.lwjgl.opengles.GLES32.glBlendFuncSeparatei(buf, srcRGB, dstRGB, srcAlpha, dstAlpha);
     }
 
-    @Override public void glColorMaski(int index, boolean r, boolean g, boolean b, boolean a) {
+    @Override public void glColorMaski(@NativeType("GLuint") int index, @NativeType("GLboolean") boolean r, @NativeType("GLboolean") boolean g, @NativeType("GLboolean") boolean b, @NativeType("GLboolean") boolean a) {
         org.lwjgl.opengles.GLES32.glColorMaski(index, r, g, b, a);
     }
 
-    @Override public boolean glIsEnabledi(int target, int index) {
+@NativeType("GLboolean")
+    @Override public boolean glIsEnabledi(@NativeType("GLenum") int target, @NativeType("GLuint") int index) {
         return org.lwjgl.opengles.GLES32.glIsEnabledi(target, index);
     }
 
@@ -200,23 +208,23 @@ public class GLES32AccessorImpl extends GLES31AccessorImpl implements GLES32Acce
         org.lwjgl.opengles.GLES32.nglDrawElementsBaseVertex(mode, count, type, indices, basevertex);
     }
 
-    @Override public void glDrawElementsBaseVertex(int mode, int count, int type, long indices, int basevertex) {
+    @Override public void glDrawElementsBaseVertex(@NativeType("GLenum") int mode, @NativeType("GLsizei") int count, @NativeType("GLenum") int type, @NativeType("void const *") long indices, @NativeType("GLint") int basevertex) {
         org.lwjgl.opengles.GLES32.glDrawElementsBaseVertex(mode, count, type, indices, basevertex);
     }
 
-    @Override public void glDrawElementsBaseVertex(int mode, int type, ByteBuffer indices, int basevertex) {
+    @Override public void glDrawElementsBaseVertex(@NativeType("GLenum") int mode, @NativeType("GLenum") int type, @NativeType("void const *") ByteBuffer indices, @NativeType("GLint") int basevertex) {
         org.lwjgl.opengles.GLES32.glDrawElementsBaseVertex(mode, type, indices, basevertex);
     }
 
-    @Override public void glDrawElementsBaseVertex(int mode, ByteBuffer indices, int basevertex) {
+    @Override public void glDrawElementsBaseVertex(@NativeType("GLenum") int mode, @NativeType("void const *") ByteBuffer indices, @NativeType("GLint") int basevertex) {
         org.lwjgl.opengles.GLES32.glDrawElementsBaseVertex(mode, indices, basevertex);
     }
 
-    @Override public void glDrawElementsBaseVertex(int mode, ShortBuffer indices, int basevertex) {
+    @Override public void glDrawElementsBaseVertex(@NativeType("GLenum") int mode, @NativeType("void const *") ShortBuffer indices, @NativeType("GLint") int basevertex) {
         org.lwjgl.opengles.GLES32.glDrawElementsBaseVertex(mode, indices, basevertex);
     }
 
-    @Override public void glDrawElementsBaseVertex(int mode, IntBuffer indices, int basevertex) {
+    @Override public void glDrawElementsBaseVertex(@NativeType("GLenum") int mode, @NativeType("void const *") IntBuffer indices, @NativeType("GLint") int basevertex) {
         org.lwjgl.opengles.GLES32.glDrawElementsBaseVertex(mode, indices, basevertex);
     }
 
@@ -224,23 +232,23 @@ public class GLES32AccessorImpl extends GLES31AccessorImpl implements GLES32Acce
         org.lwjgl.opengles.GLES32.nglDrawRangeElementsBaseVertex(mode, start, end, count, type, indices, basevertex);
     }
 
-    @Override public void glDrawRangeElementsBaseVertex(int mode, int start, int end, int count, int type, long indices, int basevertex) {
+    @Override public void glDrawRangeElementsBaseVertex(@NativeType("GLenum") int mode, @NativeType("GLuint") int start, @NativeType("GLuint") int end, @NativeType("GLsizei") int count, @NativeType("GLenum") int type, @NativeType("void const *") long indices, @NativeType("GLint") int basevertex) {
         org.lwjgl.opengles.GLES32.glDrawRangeElementsBaseVertex(mode, start, end, count, type, indices, basevertex);
     }
 
-    @Override public void glDrawRangeElementsBaseVertex(int mode, int start, int end, int type, ByteBuffer indices, int basevertex) {
+    @Override public void glDrawRangeElementsBaseVertex(@NativeType("GLenum") int mode, @NativeType("GLuint") int start, @NativeType("GLuint") int end, @NativeType("GLenum") int type, @NativeType("void const *") ByteBuffer indices, @NativeType("GLint") int basevertex) {
         org.lwjgl.opengles.GLES32.glDrawRangeElementsBaseVertex(mode, start, end, type, indices, basevertex);
     }
 
-    @Override public void glDrawRangeElementsBaseVertex(int mode, int start, int end, ByteBuffer indices, int basevertex) {
+    @Override public void glDrawRangeElementsBaseVertex(@NativeType("GLenum") int mode, @NativeType("GLuint") int start, @NativeType("GLuint") int end, @NativeType("void const *") ByteBuffer indices, @NativeType("GLint") int basevertex) {
         org.lwjgl.opengles.GLES32.glDrawRangeElementsBaseVertex(mode, start, end, indices, basevertex);
     }
 
-    @Override public void glDrawRangeElementsBaseVertex(int mode, int start, int end, ShortBuffer indices, int basevertex) {
+    @Override public void glDrawRangeElementsBaseVertex(@NativeType("GLenum") int mode, @NativeType("GLuint") int start, @NativeType("GLuint") int end, @NativeType("void const *") ShortBuffer indices, @NativeType("GLint") int basevertex) {
         org.lwjgl.opengles.GLES32.glDrawRangeElementsBaseVertex(mode, start, end, indices, basevertex);
     }
 
-    @Override public void glDrawRangeElementsBaseVertex(int mode, int start, int end, IntBuffer indices, int basevertex) {
+    @Override public void glDrawRangeElementsBaseVertex(@NativeType("GLenum") int mode, @NativeType("GLuint") int start, @NativeType("GLuint") int end, @NativeType("void const *") IntBuffer indices, @NativeType("GLint") int basevertex) {
         org.lwjgl.opengles.GLES32.glDrawRangeElementsBaseVertex(mode, start, end, indices, basevertex);
     }
 
@@ -248,34 +256,35 @@ public class GLES32AccessorImpl extends GLES31AccessorImpl implements GLES32Acce
         org.lwjgl.opengles.GLES32.nglDrawElementsInstancedBaseVertex(mode, count, type, indices, instancecount, basevertex);
     }
 
-    @Override public void glDrawElementsInstancedBaseVertex(int mode, int count, int type, long indices, int instancecount, int basevertex) {
+    @Override public void glDrawElementsInstancedBaseVertex(@NativeType("GLenum") int mode, @NativeType("GLsizei") int count, @NativeType("GLenum") int type, @NativeType("void const *") long indices, @NativeType("GLsizei") int instancecount, @NativeType("GLint") int basevertex) {
         org.lwjgl.opengles.GLES32.glDrawElementsInstancedBaseVertex(mode, count, type, indices, instancecount, basevertex);
     }
 
-    @Override public void glDrawElementsInstancedBaseVertex(int mode, int type, ByteBuffer indices, int instancecount, int basevertex) {
+    @Override public void glDrawElementsInstancedBaseVertex(@NativeType("GLenum") int mode, @NativeType("GLenum") int type, @NativeType("void const *") ByteBuffer indices, @NativeType("GLsizei") int instancecount, @NativeType("GLint") int basevertex) {
         org.lwjgl.opengles.GLES32.glDrawElementsInstancedBaseVertex(mode, type, indices, instancecount, basevertex);
     }
 
-    @Override public void glDrawElementsInstancedBaseVertex(int mode, ByteBuffer indices, int instancecount, int basevertex) {
+    @Override public void glDrawElementsInstancedBaseVertex(@NativeType("GLenum") int mode, @NativeType("void const *") ByteBuffer indices, @NativeType("GLsizei") int instancecount, @NativeType("GLint") int basevertex) {
         org.lwjgl.opengles.GLES32.glDrawElementsInstancedBaseVertex(mode, indices, instancecount, basevertex);
     }
 
-    @Override public void glDrawElementsInstancedBaseVertex(int mode, ShortBuffer indices, int instancecount, int basevertex) {
+    @Override public void glDrawElementsInstancedBaseVertex(@NativeType("GLenum") int mode, @NativeType("void const *") ShortBuffer indices, @NativeType("GLsizei") int instancecount, @NativeType("GLint") int basevertex) {
         org.lwjgl.opengles.GLES32.glDrawElementsInstancedBaseVertex(mode, indices, instancecount, basevertex);
     }
 
-    @Override public void glDrawElementsInstancedBaseVertex(int mode, IntBuffer indices, int instancecount, int basevertex) {
+    @Override public void glDrawElementsInstancedBaseVertex(@NativeType("GLenum") int mode, @NativeType("void const *") IntBuffer indices, @NativeType("GLsizei") int instancecount, @NativeType("GLint") int basevertex) {
         org.lwjgl.opengles.GLES32.glDrawElementsInstancedBaseVertex(mode, indices, instancecount, basevertex);
     }
 
-    @Override public void glFramebufferTexture(int target, int attachment, int texture, int level) {
+    @Override public void glFramebufferTexture(@NativeType("GLenum") int target, @NativeType("GLenum") int attachment, @NativeType("GLuint") int texture, @NativeType("GLint") int level) {
         org.lwjgl.opengles.GLES32.glFramebufferTexture(target, attachment, texture, level);
     }
 
-    @Override public void glPrimitiveBoundingBox(float minX, float minY, float minZ, float minW, float maxX, float maxY, float maxZ, float maxW) {
+    @Override public void glPrimitiveBoundingBox(@NativeType("GLfloat") float minX, @NativeType("GLfloat") float minY, @NativeType("GLfloat") float minZ, @NativeType("GLfloat") float minW, @NativeType("GLfloat") float maxX, @NativeType("GLfloat") float maxY, @NativeType("GLfloat") float maxZ, @NativeType("GLfloat") float maxW) {
         org.lwjgl.opengles.GLES32.glPrimitiveBoundingBox(minX, minY, minZ, minW, maxX, maxY, maxZ, maxW);
     }
 
+@NativeType("GLenum")
     @Override public int glGetGraphicsResetStatus() {
         return org.lwjgl.opengles.GLES32.glGetGraphicsResetStatus();
     }
@@ -284,35 +293,35 @@ public class GLES32AccessorImpl extends GLES31AccessorImpl implements GLES32Acce
         org.lwjgl.opengles.GLES32.nglReadnPixels(x, y, width, height, format, type, bufSize, pixels);
     }
 
-    @Override public void glReadnPixels(int x, int y, int width, int height, int format, int type, int bufSize, long pixels) {
+    @Override public void glReadnPixels(@NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("GLsizei") int bufSize, @NativeType("void *") long pixels) {
         org.lwjgl.opengles.GLES32.glReadnPixels(x, y, width, height, format, type, bufSize, pixels);
     }
 
-    @Override public void glReadnPixels(int x, int y, int width, int height, int format, int type, ByteBuffer pixels) {
+    @Override public void glReadnPixels(@NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") ByteBuffer pixels) {
         org.lwjgl.opengles.GLES32.glReadnPixels(x, y, width, height, format, type, pixels);
     }
 
-    @Override public void glReadnPixels(int x, int y, int width, int height, int format, int type, ShortBuffer pixels) {
+    @Override public void glReadnPixels(@NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") ShortBuffer pixels) {
         org.lwjgl.opengles.GLES32.glReadnPixels(x, y, width, height, format, type, pixels);
     }
 
-    @Override public void glReadnPixels(int x, int y, int width, int height, int format, int type, IntBuffer pixels) {
+    @Override public void glReadnPixels(@NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") IntBuffer pixels) {
         org.lwjgl.opengles.GLES32.glReadnPixels(x, y, width, height, format, type, pixels);
     }
 
-    @Override public void glReadnPixels(int x, int y, int width, int height, int format, int type, FloatBuffer pixels) {
+    @Override public void glReadnPixels(@NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") FloatBuffer pixels) {
         org.lwjgl.opengles.GLES32.glReadnPixels(x, y, width, height, format, type, pixels);
     }
 
-    @Override public void glReadnPixels(int x, int y, int width, int height, int format, int type, short[] pixels) {
+    @Override public void glReadnPixels(@NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") short[] pixels) {
         org.lwjgl.opengles.GLES32.glReadnPixels(x, y, width, height, format, type, pixels);
     }
 
-    @Override public void glReadnPixels(int x, int y, int width, int height, int format, int type, int[] pixels) {
+    @Override public void glReadnPixels(@NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") int[] pixels) {
         org.lwjgl.opengles.GLES32.glReadnPixels(x, y, width, height, format, type, pixels);
     }
 
-    @Override public void glReadnPixels(int x, int y, int width, int height, int format, int type, float[] pixels) {
+    @Override public void glReadnPixels(@NativeType("GLint") int x, @NativeType("GLint") int y, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLenum") int format, @NativeType("GLenum") int type, @NativeType("void *") float[] pixels) {
         org.lwjgl.opengles.GLES32.glReadnPixels(x, y, width, height, format, type, pixels);
     }
 
@@ -320,15 +329,16 @@ public class GLES32AccessorImpl extends GLES31AccessorImpl implements GLES32Acce
         org.lwjgl.opengles.GLES32.nglGetnUniformfv(program, location, bufSize, params);
     }
 
-    @Override public void glGetnUniformfv(int program, int location, FloatBuffer params) {
+    @Override public void glGetnUniformfv(@NativeType("GLuint") int program, @NativeType("GLint") int location, @NativeType("GLfloat *") FloatBuffer params) {
         org.lwjgl.opengles.GLES32.glGetnUniformfv(program, location, params);
     }
 
-    @Override public void glGetnUniformfv(int program, int location, float[] params) {
+    @Override public void glGetnUniformfv(@NativeType("GLuint") int program, @NativeType("GLint") int location, @NativeType("GLfloat *") float[] params) {
         org.lwjgl.opengles.GLES32.glGetnUniformfv(program, location, params);
     }
 
-    @Override public float glGetnUniformf(int program, int location) {
+@NativeType("void")
+    @Override public float glGetnUniformf(@NativeType("GLuint") int program, @NativeType("GLint") int location) {
         return org.lwjgl.opengles.GLES32.glGetnUniformf(program, location);
     }
 
@@ -336,15 +346,16 @@ public class GLES32AccessorImpl extends GLES31AccessorImpl implements GLES32Acce
         org.lwjgl.opengles.GLES32.nglGetnUniformiv(program, location, bufSize, params);
     }
 
-    @Override public void glGetnUniformiv(int program, int location, FloatBuffer params) {
+    @Override public void glGetnUniformiv(@NativeType("GLuint") int program, @NativeType("GLint") int location, @NativeType("GLfloat *") FloatBuffer params) {
         org.lwjgl.opengles.GLES32.glGetnUniformiv(program, location, params);
     }
 
-    @Override public void glGetnUniformiv(int program, int location, float[] params) {
+    @Override public void glGetnUniformiv(@NativeType("GLuint") int program, @NativeType("GLint") int location, @NativeType("GLfloat *") float[] params) {
         org.lwjgl.opengles.GLES32.glGetnUniformiv(program, location, params);
     }
 
-    @Override public float glGetnUniformi(int program, int location) {
+@NativeType("void")
+    @Override public float glGetnUniformi(@NativeType("GLuint") int program, @NativeType("GLint") int location) {
         return org.lwjgl.opengles.GLES32.glGetnUniformi(program, location);
     }
 
@@ -352,23 +363,24 @@ public class GLES32AccessorImpl extends GLES31AccessorImpl implements GLES32Acce
         org.lwjgl.opengles.GLES32.nglGetnUniformuiv(program, location, bufSize, params);
     }
 
-    @Override public void glGetnUniformuiv(int program, int location, FloatBuffer params) {
+    @Override public void glGetnUniformuiv(@NativeType("GLuint") int program, @NativeType("GLint") int location, @NativeType("GLfloat *") FloatBuffer params) {
         org.lwjgl.opengles.GLES32.glGetnUniformuiv(program, location, params);
     }
 
-    @Override public void glGetnUniformuiv(int program, int location, float[] params) {
+    @Override public void glGetnUniformuiv(@NativeType("GLuint") int program, @NativeType("GLint") int location, @NativeType("GLfloat *") float[] params) {
         org.lwjgl.opengles.GLES32.glGetnUniformuiv(program, location, params);
     }
 
-    @Override public float glGetnUniformui(int program, int location) {
+@NativeType("void")
+    @Override public float glGetnUniformui(@NativeType("GLuint") int program, @NativeType("GLint") int location) {
         return org.lwjgl.opengles.GLES32.glGetnUniformui(program, location);
     }
 
-    @Override public void glMinSampleShading(float value) {
+    @Override public void glMinSampleShading(@NativeType("GLfloat") float value) {
         org.lwjgl.opengles.GLES32.glMinSampleShading(value);
     }
 
-    @Override public void glPatchParameteri(int pname, int value) {
+    @Override public void glPatchParameteri(@NativeType("GLenum") int pname, @NativeType("GLint") int value) {
         org.lwjgl.opengles.GLES32.glPatchParameteri(pname, value);
     }
 
@@ -376,15 +388,15 @@ public class GLES32AccessorImpl extends GLES31AccessorImpl implements GLES32Acce
         org.lwjgl.opengles.GLES32.nglTexParameterIiv(target, pname, params);
     }
 
-    @Override public void glTexParameterIiv(int target, int pname, IntBuffer params) {
+    @Override public void glTexParameterIiv(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLint const *") IntBuffer params) {
         org.lwjgl.opengles.GLES32.glTexParameterIiv(target, pname, params);
     }
 
-    @Override public void glTexParameterIiv(int target, int pname, int[] params) {
+    @Override public void glTexParameterIiv(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLint const *") int[] params) {
         org.lwjgl.opengles.GLES32.glTexParameterIiv(target, pname, params);
     }
 
-    @Override public void glTexParameterIi(int target, int pname, int param) {
+    @Override public void glTexParameterIi(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLint const *") int param) {
         org.lwjgl.opengles.GLES32.glTexParameterIi(target, pname, param);
     }
 
@@ -392,15 +404,15 @@ public class GLES32AccessorImpl extends GLES31AccessorImpl implements GLES32Acce
         org.lwjgl.opengles.GLES32.nglTexParameterIuiv(target, pname, params);
     }
 
-    @Override public void glTexParameterIuiv(int target, int pname, IntBuffer params) {
+    @Override public void glTexParameterIuiv(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLuint const *") IntBuffer params) {
         org.lwjgl.opengles.GLES32.glTexParameterIuiv(target, pname, params);
     }
 
-    @Override public void glTexParameterIuiv(int target, int pname, int[] params) {
+    @Override public void glTexParameterIuiv(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLuint const *") int[] params) {
         org.lwjgl.opengles.GLES32.glTexParameterIuiv(target, pname, params);
     }
 
-    @Override public void glTexParameterIui(int target, int pname, int param) {
+    @Override public void glTexParameterIui(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLuint const *") int param) {
         org.lwjgl.opengles.GLES32.glTexParameterIui(target, pname, param);
     }
 
@@ -408,15 +420,16 @@ public class GLES32AccessorImpl extends GLES31AccessorImpl implements GLES32Acce
         org.lwjgl.opengles.GLES32.nglGetTexParameterIiv(target, pname, params);
     }
 
-    @Override public void glGetTexParameterIiv(int target, int pname, IntBuffer params) {
+    @Override public void glGetTexParameterIiv(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLint *") IntBuffer params) {
         org.lwjgl.opengles.GLES32.glGetTexParameterIiv(target, pname, params);
     }
 
-    @Override public void glGetTexParameterIiv(int target, int pname, int[] params) {
+    @Override public void glGetTexParameterIiv(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLint *") int[] params) {
         org.lwjgl.opengles.GLES32.glGetTexParameterIiv(target, pname, params);
     }
 
-    @Override public int glGetTexParameterIi(int target, int pname) {
+@NativeType("void")
+    @Override public int glGetTexParameterIi(@NativeType("GLenum") int target, @NativeType("GLenum") int pname) {
         return org.lwjgl.opengles.GLES32.glGetTexParameterIi(target, pname);
     }
 
@@ -424,15 +437,16 @@ public class GLES32AccessorImpl extends GLES31AccessorImpl implements GLES32Acce
         org.lwjgl.opengles.GLES32.nglGetTexParameterIuiv(target, pname, params);
     }
 
-    @Override public void glGetTexParameterIuiv(int target, int pname, IntBuffer params) {
+    @Override public void glGetTexParameterIuiv(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLuint *") IntBuffer params) {
         org.lwjgl.opengles.GLES32.glGetTexParameterIuiv(target, pname, params);
     }
 
-    @Override public void glGetTexParameterIuiv(int target, int pname, int[] params) {
+    @Override public void glGetTexParameterIuiv(@NativeType("GLenum") int target, @NativeType("GLenum") int pname, @NativeType("GLuint *") int[] params) {
         org.lwjgl.opengles.GLES32.glGetTexParameterIuiv(target, pname, params);
     }
 
-    @Override public int glGetTexParameterIui(int target, int pname) {
+@NativeType("void")
+    @Override public int glGetTexParameterIui(@NativeType("GLenum") int target, @NativeType("GLenum") int pname) {
         return org.lwjgl.opengles.GLES32.glGetTexParameterIui(target, pname);
     }
 
@@ -440,15 +454,15 @@ public class GLES32AccessorImpl extends GLES31AccessorImpl implements GLES32Acce
         org.lwjgl.opengles.GLES32.nglSamplerParameterIiv(sampler, pname, params);
     }
 
-    @Override public void glSamplerParameterIiv(int sampler, int pname, IntBuffer params) {
+    @Override public void glSamplerParameterIiv(@NativeType("GLuint") int sampler, @NativeType("GLenum") int pname, @NativeType("GLint const *") IntBuffer params) {
         org.lwjgl.opengles.GLES32.glSamplerParameterIiv(sampler, pname, params);
     }
 
-    @Override public void glSamplerParameterIiv(int sampler, int pname, int[] params) {
+    @Override public void glSamplerParameterIiv(@NativeType("GLuint") int sampler, @NativeType("GLenum") int pname, @NativeType("GLint const *") int[] params) {
         org.lwjgl.opengles.GLES32.glSamplerParameterIiv(sampler, pname, params);
     }
 
-    @Override public void glSamplerParameterIi(int sampler, int pname, int param) {
+    @Override public void glSamplerParameterIi(@NativeType("GLuint") int sampler, @NativeType("GLenum") int pname, @NativeType("GLint const *") int param) {
         org.lwjgl.opengles.GLES32.glSamplerParameterIi(sampler, pname, param);
     }
 
@@ -456,15 +470,15 @@ public class GLES32AccessorImpl extends GLES31AccessorImpl implements GLES32Acce
         org.lwjgl.opengles.GLES32.nglSamplerParameterIuiv(sampler, pname, params);
     }
 
-    @Override public void glSamplerParameterIuiv(int sampler, int pname, IntBuffer params) {
+    @Override public void glSamplerParameterIuiv(@NativeType("GLuint") int sampler, @NativeType("GLenum") int pname, @NativeType("GLuint const *") IntBuffer params) {
         org.lwjgl.opengles.GLES32.glSamplerParameterIuiv(sampler, pname, params);
     }
 
-    @Override public void glSamplerParameterIuiv(int sampler, int pname, int[] params) {
+    @Override public void glSamplerParameterIuiv(@NativeType("GLuint") int sampler, @NativeType("GLenum") int pname, @NativeType("GLuint const *") int[] params) {
         org.lwjgl.opengles.GLES32.glSamplerParameterIuiv(sampler, pname, params);
     }
 
-    @Override public void glSamplerParameterIui(int sampler, int pname, int param) {
+    @Override public void glSamplerParameterIui(@NativeType("GLuint") int sampler, @NativeType("GLenum") int pname, @NativeType("GLuint const *") int param) {
         org.lwjgl.opengles.GLES32.glSamplerParameterIui(sampler, pname, param);
     }
 
@@ -472,15 +486,16 @@ public class GLES32AccessorImpl extends GLES31AccessorImpl implements GLES32Acce
         org.lwjgl.opengles.GLES32.nglGetSamplerParameterIiv(sampler, pname, params);
     }
 
-    @Override public void glGetSamplerParameterIiv(int sampler, int pname, IntBuffer params) {
+    @Override public void glGetSamplerParameterIiv(@NativeType("GLuint") int sampler, @NativeType("GLenum") int pname, @NativeType("GLint *") IntBuffer params) {
         org.lwjgl.opengles.GLES32.glGetSamplerParameterIiv(sampler, pname, params);
     }
 
-    @Override public void glGetSamplerParameterIiv(int sampler, int pname, int[] params) {
+    @Override public void glGetSamplerParameterIiv(@NativeType("GLuint") int sampler, @NativeType("GLenum") int pname, @NativeType("GLint *") int[] params) {
         org.lwjgl.opengles.GLES32.glGetSamplerParameterIiv(sampler, pname, params);
     }
 
-    @Override public int glGetSamplerParameterIi(int sampler, int pname) {
+@NativeType("void")
+    @Override public int glGetSamplerParameterIi(@NativeType("GLuint") int sampler, @NativeType("GLenum") int pname) {
         return org.lwjgl.opengles.GLES32.glGetSamplerParameterIi(sampler, pname);
     }
 
@@ -488,27 +503,28 @@ public class GLES32AccessorImpl extends GLES31AccessorImpl implements GLES32Acce
         org.lwjgl.opengles.GLES32.nglGetSamplerParameterIuiv(sampler, pname, params);
     }
 
-    @Override public void glGetSamplerParameterIuiv(int sampler, int pname, IntBuffer params) {
+    @Override public void glGetSamplerParameterIuiv(@NativeType("GLuint") int sampler, @NativeType("GLenum") int pname, @NativeType("GLuint *") IntBuffer params) {
         org.lwjgl.opengles.GLES32.glGetSamplerParameterIuiv(sampler, pname, params);
     }
 
-    @Override public void glGetSamplerParameterIuiv(int sampler, int pname, int[] params) {
+    @Override public void glGetSamplerParameterIuiv(@NativeType("GLuint") int sampler, @NativeType("GLenum") int pname, @NativeType("GLuint *") int[] params) {
         org.lwjgl.opengles.GLES32.glGetSamplerParameterIuiv(sampler, pname, params);
     }
 
-    @Override public int glGetSamplerParameterIui(int sampler, int pname) {
+@NativeType("void")
+    @Override public int glGetSamplerParameterIui(@NativeType("GLuint") int sampler, @NativeType("GLenum") int pname) {
         return org.lwjgl.opengles.GLES32.glGetSamplerParameterIui(sampler, pname);
     }
 
-    @Override public void glTexBuffer(int target, int internalformat, int buffer) {
+    @Override public void glTexBuffer(@NativeType("GLenum") int target, @NativeType("GLenum") int internalformat, @NativeType("GLuint") int buffer) {
         org.lwjgl.opengles.GLES32.glTexBuffer(target, internalformat, buffer);
     }
 
-    @Override public void glTexBufferRange(int target, int internalformat, int buffer, long offset, long size) {
+    @Override public void glTexBufferRange(@NativeType("GLenum") int target, @NativeType("GLenum") int internalformat, @NativeType("GLuint") int buffer, @NativeType("GLintptr") long offset, @NativeType("GLsizeiptr") long size) {
         org.lwjgl.opengles.GLES32.glTexBufferRange(target, internalformat, buffer, offset, size);
     }
 
-    @Override public void glTexStorage3DMultisample(int target, int samples, int internalformat, int width, int height, int depth, boolean fixedsamplelocations) {
+    @Override public void glTexStorage3DMultisample(@NativeType("GLenum") int target, @NativeType("GLsizei") int samples, @NativeType("GLenum") int internalformat, @NativeType("GLsizei") int width, @NativeType("GLsizei") int height, @NativeType("GLsizei") int depth, @NativeType("GLboolean") boolean fixedsamplelocations) {
         org.lwjgl.opengles.GLES32.glTexStorage3DMultisample(target, samples, internalformat, width, height, depth, fixedsamplelocations);
     }
 

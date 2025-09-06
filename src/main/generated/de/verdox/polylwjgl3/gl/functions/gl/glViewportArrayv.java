@@ -26,13 +26,13 @@ public interface glViewportArrayv {
  *
  * @see <a href="https://docs.gl/gl4/glViewportArrayv">Reference Page</a>
  */
-    public void glViewportArrayv(int first, FloatBuffer v);
+    public void glViewportArrayv(@NativeType("GLuint") int first, @NativeType("GLfloat const *") FloatBuffer v);
 
 /**
  * Array version of: {@link #glViewportArrayv ViewportArrayv}
  *
  * @see <a href="https://docs.gl/gl4/glViewportArrayv">Reference Page</a>
  */
-    public void glViewportArrayv(int first, float[] v);
+    public void glViewportArrayv(@NativeType("GLuint") int first, @NativeType("GLfloat const *") float[] v);
 
 }

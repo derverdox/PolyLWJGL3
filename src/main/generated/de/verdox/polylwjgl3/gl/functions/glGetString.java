@@ -19,6 +19,7 @@ public interface glGetString {
  * <a href="https://docs.gl/es3/glGetString">Reference Page</a>
  */
 @Nullable
-    public String glGetString(int name);
+@NativeType("GLubyte const *")
+    public String glGetString(@NativeType("GLenum") int name);
 
 }

@@ -21,6 +21,7 @@ public interface glGetMapi {
  *
  * @see <a href="https://docs.gl/gl3/glGetMap">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public int glGetMapi(int target, int query);
+@NativeType("void")
+    public int glGetMapi(@NativeType("GLenum") int target, @NativeType("GLenum") int query);
 
 }

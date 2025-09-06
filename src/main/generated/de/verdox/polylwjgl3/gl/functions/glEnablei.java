@@ -18,6 +18,6 @@ public interface glEnablei {
 /**
  * <a href="https://docs.gl/es3/glEnablei">Reference Page</a>
  */
-    public void glEnablei(int target, int index);
+    public void glEnablei(@NativeType("GLenum") int target, @NativeType("GLuint") int index);
 
 }

@@ -31,13 +31,13 @@ public interface glGetnMapfv {
  *
  * @see <a href="https://docs.gl/gl4/glGetMap">Reference Page</a>
  */
-    public void glGetnMapfv(int target, int query, FloatBuffer data);
+    public void glGetnMapfv(@NativeType("GLenum") int target, @NativeType("GLenum") int query, @NativeType("GLfloat *") FloatBuffer data);
 
 /**
  * Array version of: {@link #glGetnMapfv GetnMapfv}
  *
  * @see <a href="https://docs.gl/gl4/glGetMap">Reference Page</a>
  */
-    public void glGetnMapfv(int target, int query, float[] data);
+    public void glGetnMapfv(@NativeType("GLenum") int target, @NativeType("GLenum") int query, @NativeType("GLfloat *") float[] data);
 
 }

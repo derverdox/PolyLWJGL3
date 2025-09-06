@@ -19,6 +19,6 @@ public interface glVertexAttribI1i {
  *
  * @see <a href="https://docs.gl/gl4/glVertexAttrib">Reference Page</a>
  */
-    public void glVertexAttribI1i(int index, int x);
+    public void glVertexAttribI1i(@NativeType("GLuint") int index, @NativeType("GLint") int x);
 
 }

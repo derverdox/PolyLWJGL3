@@ -21,13 +21,13 @@ public interface glGetActiveUniformsiv {
 /**
  * <a href="https://docs.gl/es3/glGetActiveUniforms">Reference Page</a>
  */
-    public void glGetActiveUniformsiv(int program, IntBuffer uniformIndices, int pname, IntBuffer params);
+    public void glGetActiveUniformsiv(@NativeType("GLuint") int program, @NativeType("GLuint const *") IntBuffer uniformIndices, @NativeType("GLenum") int pname, @NativeType("GLint *") IntBuffer params);
 
 /**
  * Array version of: {@link #glGetActiveUniformsiv GetActiveUniformsiv}
  *
  * @see <a href="https://docs.gl/es3/glGetActiveUniforms">Reference Page</a>
  */
-    public void glGetActiveUniformsiv(int program, int[] uniformIndices, int pname, int[] params);
+    public void glGetActiveUniformsiv(@NativeType("GLuint") int program, @NativeType("GLuint const *") int[] uniformIndices, @NativeType("GLenum") int pname, @NativeType("GLint *") int[] params);
 
 }

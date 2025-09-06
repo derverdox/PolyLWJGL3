@@ -25,6 +25,6 @@ public interface glSecondaryColor3ubv {
  *
  * @see <a href="https://docs.gl/gl3/glSecondaryColor">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glSecondaryColor3ubv(ByteBuffer v);
+    public void glSecondaryColor3ubv(@NativeType("GLubyte const *") ByteBuffer v);
 
 }

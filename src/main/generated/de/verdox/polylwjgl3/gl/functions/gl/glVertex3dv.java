@@ -25,13 +25,13 @@ public interface glVertex3dv {
  *
  * @see <a href="https://docs.gl/gl3/glVertex">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glVertex3dv(DoubleBuffer coords);
+    public void glVertex3dv(@NativeType("GLdouble const *") DoubleBuffer coords);
 
 /**
  * Array version of: {@link #glVertex3dv Vertex3dv}
  *
  * @see <a href="https://docs.gl/gl3/glVertex">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glVertex3dv(double[] coords);
+    public void glVertex3dv(@NativeType("GLdouble const *") double[] coords);
 
 }

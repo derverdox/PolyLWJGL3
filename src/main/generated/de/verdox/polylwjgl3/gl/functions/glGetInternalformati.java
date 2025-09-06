@@ -19,6 +19,7 @@ public interface glGetInternalformati {
 /**
  * <a href="https://docs.gl/es3/glGetInternalformat">Reference Page</a>
  */
-    public int glGetInternalformati(int target, int internalformat, int pname);
+@NativeType("void")
+    public int glGetInternalformati(@NativeType("GLenum") int target, @NativeType("GLenum") int internalformat, @NativeType("GLenum") int pname);
 
 }

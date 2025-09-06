@@ -16,6 +16,7 @@ public interface glGetUniformf {
 /**
  * <a href="https://docs.gl/es3/glGetUniform">Reference Page</a>
  */
-    public float glGetUniformf(int program, int location);
+@NativeType("void")
+    public float glGetUniformf(@NativeType("GLuint") int program, @NativeType("GLint") int location);
 
 }

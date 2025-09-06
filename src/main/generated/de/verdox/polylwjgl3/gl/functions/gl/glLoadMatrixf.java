@@ -37,13 +37,13 @@ public interface glLoadMatrixf {
  *
  * @see <a href="https://docs.gl/gl3/glLoadMatrixf">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glLoadMatrixf(FloatBuffer m);
+    public void glLoadMatrixf(@NativeType("GLfloat const *") FloatBuffer m);
 
 /**
  * Array version of: {@link #glLoadMatrixf LoadMatrixf}
  *
  * @see <a href="https://docs.gl/gl3/glLoadMatrixf">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
  */
-    public void glLoadMatrixf(float[] m);
+    public void glLoadMatrixf(@NativeType("GLfloat const *") float[] m);
 
 }
