@@ -12,7 +12,7 @@ import java.util.List;
 public class GenerateWrappers {
     private static final Path projectRoot = Paths.get("./src");
     private static final Path outDir = projectRoot.resolve("main/generated");
-    private static final Path fnOutDir = outDir; // optional separater Ordner für Fn-Interfaces
+    private static final Path fnOutDir = outDir;
 
     public static void main(String[] args) throws IOException {
         List<GlWrapperAstGen.Spec> specs = new ArrayList<>();
@@ -56,7 +56,7 @@ public class GenerateWrappers {
                             GlWrapperAstGen.Flavor flavor) {
         String apiPkg = "de.verdox.polylwjgl3.gl.accessor." + tag.toLowerCase();
         String fnPkg  = "de.verdox.polylwjgl3.gl.functions";
-        String altFnPkg = fnPkg + "." + tag.toLowerCase(); // nur falls du die Alt-Ablage weiterhin brauchst
+        String altFnPkg = fnPkg + "." + tag.toLowerCase();
 
         String baseApiFqn  = parentTag == null ? null : "de.verdox.polylwjgl3.gl.accessor." + parentTag.toLowerCase() + "." + parentTag + "Accessor";
         String baseImplFqn = parentTag == null ? null : "de.verdox.polylwjgl3.gl.accessor." + parentTag.toLowerCase() + "." + parentTag + "AccessorImpl";
@@ -70,7 +70,7 @@ public class GenerateWrappers {
                 apiPkg,
                 fnPkg,
                 altFnPkg,
-                "",                 // fnIfacePrefix (leer lassen)
+                "",
                 baseApiFqn,
                 baseImplFqn,
                 flavor
