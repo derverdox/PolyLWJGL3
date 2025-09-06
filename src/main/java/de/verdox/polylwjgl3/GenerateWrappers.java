@@ -1,10 +1,7 @@
 package de.verdox.polylwjgl3;
 
 import org.lwjgl.opengl.*;
-import org.lwjgl.opengles.GLES20;
-import org.lwjgl.opengles.GLES30;
-import org.lwjgl.opengles.GLES31;
-import org.lwjgl.opengles.GLES32;
+import org.lwjgl.opengles.*;
 
 import java.io.IOException;
 import java.nio.file.Path;
