@@ -67,7 +67,25 @@ This matrix is especially useful to compare **desktop vs embedded feature sets**
 - Gradle
 - LWJGL3 dependencies on classpath
 
+## Code Patterns & Usage
+
+Because every OpenGL function is exposed as a **Java interface**, you can use them as **traits** in your own code.  
+This enables clean polymorphic design patterns that are usually not possible with monolithic APIs.
+
+Some examples:
+
+- **Trait-style APIs**: depend only on the minimal set of functions (`glBindBuffer`, `glBufferData`, …) instead of the whole `GL30Accessor`.
+- **Intersection types**: use generics like `<T extends glDrawArraysInstanced & glVertexAttribDivisor>` to require combined capabilities.
+- **Dynamic Proxies / Decorators**: wrap Accessors for logging, error checking, or telemetry without touching the real implementation.
+- **Capability-gated APIs**: functions that exist only in later GL/GLES versions can be enforced at compile-time by requiring the corresponding trait.
+- **Test Doubles**: easily mock GL interfaces for headless unit testing.
+
+We prepared a dedicated document with full code examples of these patterns:
+
+➡️ [Code Patterns](./CODE_PATTERNS.md)
+
 ### Generate Wrappers
+Keep in mind that some imports are not done automatically, and some functions may not have received a correct interface. When generating yourself, you will notice this.
 ```bash
 ./gradlew build
 ```
