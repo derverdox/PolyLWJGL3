@@ -1,0 +1,29 @@
+package de.verdox.polylwjgl3.gl.functions.gl;
+
+import de.verdox.polylwjgl3.gl.accessor.gl44.GL44Accessor;
+import de.verdox.polylwjgl3.gl.accessor.gl44.GL44AccessorImpl;
+import java.nio.*;
+import javax.annotation.*;
+import org.jetbrains.annotations.*;
+import org.lwjgl.*;
+import org.lwjgl.opengl.GL45;
+import org.lwjgl.system.*;
+import org.lwjgl.system.Checks.*;
+import org.lwjgl.system.JNI.*;
+import org.lwjgl.system.MemoryStack.*;
+import org.lwjgl.system.MemoryUtil.*;
+
+public interface glNamedRenderbufferStorage {
+
+/**
+ * DSA version of {@link GL30C#glRenderbufferStorage RenderbufferStorage}.
+ *
+ * @param internalformat the internal format to use for the renderbuffer object's image. Must be a color-renderable, depth-renderable, or stencil-renderable format.
+ * @param width          the width of the renderbuffer, in pixels
+ * @param height         the height of the renderbuffer, in pixels
+ *
+ * @see <a href="https://docs.gl/gl4/glRenderbufferStorage">Reference Page</a>
+ */
+    public void glNamedRenderbufferStorage(int renderbuffer, int internalformat, int width, int height);
+
+}

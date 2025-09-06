@@ -1,0 +1,65 @@
+package de.verdox.polylwjgl3.gl.accessor.gl40;
+
+import de.verdox.polylwjgl3.gl.accessor.gl33.GL33Accessor;
+import de.verdox.polylwjgl3.gl.accessor.gl33.GL33AccessorImpl;
+import de.verdox.polylwjgl3.gl.functions.gl.glBeginQueryIndexed;
+import de.verdox.polylwjgl3.gl.functions.gl.glDrawTransformFeedback;
+import de.verdox.polylwjgl3.gl.functions.gl.glDrawTransformFeedbackStream;
+import de.verdox.polylwjgl3.gl.functions.gl.glEndQueryIndexed;
+import de.verdox.polylwjgl3.gl.functions.gl.glGetActiveSubroutineName;
+import de.verdox.polylwjgl3.gl.functions.gl.glGetActiveSubroutineUniformName;
+import de.verdox.polylwjgl3.gl.functions.gl.glGetActiveSubroutineUniformi;
+import de.verdox.polylwjgl3.gl.functions.gl.glGetActiveSubroutineUniformiv;
+import de.verdox.polylwjgl3.gl.functions.gl.glGetProgramStagei;
+import de.verdox.polylwjgl3.gl.functions.gl.glGetProgramStageiv;
+import de.verdox.polylwjgl3.gl.functions.gl.glGetQueryIndexedi;
+import de.verdox.polylwjgl3.gl.functions.gl.glGetQueryIndexediv;
+import de.verdox.polylwjgl3.gl.functions.gl.glGetSubroutineIndex;
+import de.verdox.polylwjgl3.gl.functions.gl.glGetSubroutineUniformLocation;
+import de.verdox.polylwjgl3.gl.functions.gl.glGetUniformSubroutineui;
+import de.verdox.polylwjgl3.gl.functions.gl.glGetUniformSubroutineuiv;
+import de.verdox.polylwjgl3.gl.functions.gl.glGetUniformd;
+import de.verdox.polylwjgl3.gl.functions.gl.glGetUniformdv;
+import de.verdox.polylwjgl3.gl.functions.gl.glPatchParameterfv;
+import de.verdox.polylwjgl3.gl.functions.gl.glUniform1d;
+import de.verdox.polylwjgl3.gl.functions.gl.glUniform1dv;
+import de.verdox.polylwjgl3.gl.functions.gl.glUniform2d;
+import de.verdox.polylwjgl3.gl.functions.gl.glUniform2dv;
+import de.verdox.polylwjgl3.gl.functions.gl.glUniform3d;
+import de.verdox.polylwjgl3.gl.functions.gl.glUniform3dv;
+import de.verdox.polylwjgl3.gl.functions.gl.glUniform4d;
+import de.verdox.polylwjgl3.gl.functions.gl.glUniform4dv;
+import de.verdox.polylwjgl3.gl.functions.gl.glUniformMatrix2dv;
+import de.verdox.polylwjgl3.gl.functions.gl.glUniformMatrix2x3dv;
+import de.verdox.polylwjgl3.gl.functions.gl.glUniformMatrix2x4dv;
+import de.verdox.polylwjgl3.gl.functions.gl.glUniformMatrix3dv;
+import de.verdox.polylwjgl3.gl.functions.gl.glUniformMatrix3x2dv;
+import de.verdox.polylwjgl3.gl.functions.gl.glUniformMatrix3x4dv;
+import de.verdox.polylwjgl3.gl.functions.gl.glUniformMatrix4dv;
+import de.verdox.polylwjgl3.gl.functions.gl.glUniformMatrix4x2dv;
+import de.verdox.polylwjgl3.gl.functions.gl.glUniformMatrix4x3dv;
+import de.verdox.polylwjgl3.gl.functions.gl.glUniformSubroutinesui;
+import de.verdox.polylwjgl3.gl.functions.gl.glUniformSubroutinesuiv;
+import de.verdox.polylwjgl3.gl.functions.glBindTransformFeedback;
+import de.verdox.polylwjgl3.gl.functions.glBlendEquationSeparatei;
+import de.verdox.polylwjgl3.gl.functions.glBlendEquationi;
+import de.verdox.polylwjgl3.gl.functions.glBlendFuncSeparatei;
+import de.verdox.polylwjgl3.gl.functions.glBlendFunci;
+import de.verdox.polylwjgl3.gl.functions.glDeleteTransformFeedbacks;
+import de.verdox.polylwjgl3.gl.functions.glDrawArraysIndirect;
+import de.verdox.polylwjgl3.gl.functions.glDrawElementsIndirect;
+import de.verdox.polylwjgl3.gl.functions.glGenTransformFeedbacks;
+import de.verdox.polylwjgl3.gl.functions.glIsTransformFeedback;
+import de.verdox.polylwjgl3.gl.functions.glMinSampleShading;
+import de.verdox.polylwjgl3.gl.functions.glPatchParameteri;
+import de.verdox.polylwjgl3.gl.functions.glPauseTransformFeedback;
+import de.verdox.polylwjgl3.gl.functions.glResumeTransformFeedback;
+import java.nio.*;
+import javax.annotation.*;
+import org.jetbrains.annotations.*;
+import org.lwjgl.opengl.GL40;
+import org.lwjgl.system.*;
+
+public interface GL40Accessor extends GL33Accessor, glBlendEquationi, glBlendEquationSeparatei, glBlendFunci, glBlendFuncSeparatei, glDrawArraysIndirect, glDrawElementsIndirect, glUniform1d, glUniform2d, glUniform3d, glUniform4d, glUniform1dv, glUniform2dv, glUniform3dv, glUniform4dv, glUniformMatrix2dv, glUniformMatrix3dv, glUniformMatrix4dv, glUniformMatrix2x3dv, glUniformMatrix2x4dv, glUniformMatrix3x2dv, glUniformMatrix3x4dv, glUniformMatrix4x2dv, glUniformMatrix4x3dv, glGetUniformdv, glGetUniformd, glMinSampleShading, glGetSubroutineUniformLocation, glGetSubroutineIndex, glGetActiveSubroutineUniformiv, glGetActiveSubroutineUniformi, glGetActiveSubroutineUniformName, glGetActiveSubroutineName, glUniformSubroutinesuiv, glUniformSubroutinesui, glGetUniformSubroutineuiv, glGetUniformSubroutineui, glGetProgramStageiv, glGetProgramStagei, glPatchParameteri, glPatchParameterfv, glBindTransformFeedback, glDeleteTransformFeedbacks, glGenTransformFeedbacks, glIsTransformFeedback, glPauseTransformFeedback, glResumeTransformFeedback, glDrawTransformFeedback, glDrawTransformFeedbackStream, glBeginQueryIndexed, glEndQueryIndexed, glGetQueryIndexediv, glGetQueryIndexedi {
+
+}

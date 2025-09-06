@@ -1,0 +1,37 @@
+package de.verdox.polylwjgl3.gl.functions.gl;
+
+import de.verdox.polylwjgl3.gl.accessor.gl32.GL32Accessor;
+import de.verdox.polylwjgl3.gl.accessor.gl32.GL32AccessorImpl;
+import java.nio.*;
+import org.jetbrains.annotations.*;
+import org.lwjgl.opengl.GL33;
+import org.lwjgl.system.*;
+import org.lwjgl.system.Checks.*;
+import org.lwjgl.system.JNI.*;
+import org.lwjgl.system.MemoryUtil.*;
+
+public interface glNormalP3uiv {
+
+/**
+ * Unsafe version of: {@link #glNormalP3uiv NormalP3uiv}
+ */
+    public void nglNormalP3uiv(int type, long coords);
+
+/**
+ * Pointer version {@link #glNormalP3ui NormalP3ui}.
+ *
+ * @param type   type of packing used on the data. One of:<br><table><tr><td>{@link #GL_INT_2_10_10_10_REV INT_2_10_10_10_REV}</td><td>{@link GL12#GL_UNSIGNED_INT_2_10_10_10_REV UNSIGNED_INT_2_10_10_10_REV}</td></tr></table>
+ * @param coords the packed value
+ *
+ * @see <a href="https://docs.gl/gl3/glNormal">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
+ */
+    public void glNormalP3uiv(int type, IntBuffer coords);
+
+/**
+ * Array version of: {@link #glNormalP3uiv NormalP3uiv}
+ *
+ * @see <a href="https://docs.gl/gl3/glNormal">Reference Page</a> - <em>This function is deprecated and unavailable in the Core profile</em>
+ */
+    public void glNormalP3uiv(int type, int[] coords);
+
+}

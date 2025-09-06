@@ -1,0 +1,59 @@
+package de.verdox.polylwjgl3.gl.accessor.gl43;
+
+import de.verdox.polylwjgl3.gl.accessor.gl42.GL42Accessor;
+import de.verdox.polylwjgl3.gl.accessor.gl42.GL42AccessorImpl;
+import de.verdox.polylwjgl3.gl.functions.gl.glClearBufferData;
+import de.verdox.polylwjgl3.gl.functions.gl.glClearBufferSubData;
+import de.verdox.polylwjgl3.gl.functions.gl.glGetInternalformati64;
+import de.verdox.polylwjgl3.gl.functions.gl.glGetInternalformati64v;
+import de.verdox.polylwjgl3.gl.functions.gl.glGetProgramResourceLocationIndex;
+import de.verdox.polylwjgl3.gl.functions.gl.glInvalidateBufferData;
+import de.verdox.polylwjgl3.gl.functions.gl.glInvalidateBufferSubData;
+import de.verdox.polylwjgl3.gl.functions.gl.glInvalidateTexImage;
+import de.verdox.polylwjgl3.gl.functions.gl.glInvalidateTexSubImage;
+import de.verdox.polylwjgl3.gl.functions.gl.glMultiDrawArraysIndirect;
+import de.verdox.polylwjgl3.gl.functions.gl.glMultiDrawElementsIndirect;
+import de.verdox.polylwjgl3.gl.functions.gl.glShaderStorageBlockBinding;
+import de.verdox.polylwjgl3.gl.functions.gl.glTextureView;
+import de.verdox.polylwjgl3.gl.functions.gl.glVertexAttribLFormat;
+import de.verdox.polylwjgl3.gl.functions.glBindVertexBuffer;
+import de.verdox.polylwjgl3.gl.functions.glCopyImageSubData;
+import de.verdox.polylwjgl3.gl.functions.glDebugMessageCallback;
+import de.verdox.polylwjgl3.gl.functions.glDebugMessageControl;
+import de.verdox.polylwjgl3.gl.functions.glDebugMessageInsert;
+import de.verdox.polylwjgl3.gl.functions.glDispatchCompute;
+import de.verdox.polylwjgl3.gl.functions.glDispatchComputeIndirect;
+import de.verdox.polylwjgl3.gl.functions.glFramebufferParameteri;
+import de.verdox.polylwjgl3.gl.functions.glGetDebugMessageLog;
+import de.verdox.polylwjgl3.gl.functions.glGetFramebufferParameteri;
+import de.verdox.polylwjgl3.gl.functions.glGetFramebufferParameteriv;
+import de.verdox.polylwjgl3.gl.functions.glGetObjectLabel;
+import de.verdox.polylwjgl3.gl.functions.glGetObjectPtrLabel;
+import de.verdox.polylwjgl3.gl.functions.glGetProgramInterfacei;
+import de.verdox.polylwjgl3.gl.functions.glGetProgramInterfaceiv;
+import de.verdox.polylwjgl3.gl.functions.glGetProgramResourceIndex;
+import de.verdox.polylwjgl3.gl.functions.glGetProgramResourceLocation;
+import de.verdox.polylwjgl3.gl.functions.glGetProgramResourceName;
+import de.verdox.polylwjgl3.gl.functions.glGetProgramResourceiv;
+import de.verdox.polylwjgl3.gl.functions.glInvalidateFramebuffer;
+import de.verdox.polylwjgl3.gl.functions.glInvalidateSubFramebuffer;
+import de.verdox.polylwjgl3.gl.functions.glObjectLabel;
+import de.verdox.polylwjgl3.gl.functions.glObjectPtrLabel;
+import de.verdox.polylwjgl3.gl.functions.glPopDebugGroup;
+import de.verdox.polylwjgl3.gl.functions.glPushDebugGroup;
+import de.verdox.polylwjgl3.gl.functions.glTexBufferRange;
+import de.verdox.polylwjgl3.gl.functions.glTexStorage2DMultisample;
+import de.verdox.polylwjgl3.gl.functions.glTexStorage3DMultisample;
+import de.verdox.polylwjgl3.gl.functions.glVertexAttribBinding;
+import de.verdox.polylwjgl3.gl.functions.glVertexAttribFormat;
+import de.verdox.polylwjgl3.gl.functions.glVertexAttribIFormat;
+import de.verdox.polylwjgl3.gl.functions.glVertexBindingDivisor;
+import java.nio.*;
+import javax.annotation.*;
+import org.jetbrains.annotations.*;
+import org.lwjgl.opengl.GL43;
+import org.lwjgl.system.*;
+
+public interface GL43Accessor extends GL42Accessor, glClearBufferData, glClearBufferSubData, glDispatchCompute, glDispatchComputeIndirect, glCopyImageSubData, glDebugMessageControl, glDebugMessageInsert, glDebugMessageCallback, glGetDebugMessageLog, glPushDebugGroup, glPopDebugGroup, glObjectLabel, glGetObjectLabel, glObjectPtrLabel, glGetObjectPtrLabel, glFramebufferParameteri, glGetFramebufferParameteriv, glGetFramebufferParameteri, glGetInternalformati64v, glGetInternalformati64, glInvalidateTexSubImage, glInvalidateTexImage, glInvalidateBufferSubData, glInvalidateBufferData, glInvalidateFramebuffer, glInvalidateSubFramebuffer, glMultiDrawArraysIndirect, glMultiDrawElementsIndirect, glGetProgramInterfaceiv, glGetProgramInterfacei, glGetProgramResourceIndex, glGetProgramResourceName, glGetProgramResourceiv, glGetProgramResourceLocation, glGetProgramResourceLocationIndex, glShaderStorageBlockBinding, glTexBufferRange, glTexStorage2DMultisample, glTexStorage3DMultisample, glTextureView, glBindVertexBuffer, glVertexAttribFormat, glVertexAttribIFormat, glVertexAttribLFormat, glVertexAttribBinding, glVertexBindingDivisor {
+
+}
